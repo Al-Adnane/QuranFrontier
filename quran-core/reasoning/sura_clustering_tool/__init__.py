@@ -1,16 +1,17 @@
-"""Quantum Hilbert Space for Qira'at (7 Canonical Readings).
+"""Sura Clustering Tool — MPS-based analysis of Quranic structural patterns.
 
-Module 2 of FrontierQu framework implements quantum mechanics for Quranic
-exegesis, where 7 canonical readings exist in superposition until measured.
+Analyzes the 7 canonical readings (Qira'at) of Quranic verses using
+Matrix Product State (MPS) tensor networks to identify structural
+correlations between surahs.
 
 Key components:
-- Hilbert Space: 7D superposition of readings
+- Hilbert Space: 7D representation of canonical readings
 - Tensor Network: Matrix Product States for efficient correlation encoding
-- Entanglement: Quantum metrics (entropy, Bell pairs, GHZ states)
-- Simulator: GPU-accelerated quantum circuit simulation
+- Entanglement: Correlation metrics (entropy, state overlap, mutual information)
+- Clustering: MPS-based analysis for surah structure relationships
 
 Example:
-    >>> from frontier_neuro_symbolic.quantum_qiraat import QiraatHilbertSpace
+    >>> from frontier_neuro_symbolic.sura_clustering_tool import QiraatHilbertSpace
     >>> hs = QiraatHilbertSpace(dimension=7)
     >>> state = hs.uniform_superposition()
     >>> reading = state.measure(hs)  # Collapse to one reading
@@ -39,7 +40,7 @@ from .entanglement import (
     EntanglementEntropy,
 )
 
-from .quantum_simulator import (
+from .mps_clustering import (
     QuantumSimulator,
     QuantumCircuit,
     NoiseModel,

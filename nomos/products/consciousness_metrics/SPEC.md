@@ -61,6 +61,6 @@ FRONTIERQU's Φ=0.926 existing measurement is the proof-of-concept.
 Regulatory adoption (EU AI Act) creates mandatory demand.
 
 ## Implementation Notes
-- Builds directly on: `consciousness_orchestrator.py`
-- Core modules: `frontier_qu_v5/consciousness/` (all 6 modules)
-- Expose as FastAPI service wrapping ConsciousnessOrchestrator
+- Removed: Consciousness Orchestrator (pseudoscience: IIT Φ NP-hard approximations, GWT unfounded for text analysis)
+- Core modules: `frontier_qu_v5/consciousness/` (all 6 modules) — use individually without orchestrator
+- Implement as FastAPI service with direct module access

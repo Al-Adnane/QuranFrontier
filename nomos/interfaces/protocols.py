@@ -121,7 +121,7 @@ class AlignmentMetrics:
 class ValueAlignmentProtocol(ABC):
     """
     Layer 4: Consciousness metrics and value alignment measurement.
-    Generalizes ConsciousnessOrchestrator for any AI system.
+    Generic interface for consciousness metrics across AI systems.
     """
 
     @abstractmethod

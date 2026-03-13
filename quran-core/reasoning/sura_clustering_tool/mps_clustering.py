@@ -1,12 +1,12 @@
-"""Quantum Simulator with GPU Acceleration Support.
+"""MPS Clustering Module — Tensor network analysis for Quranic structure.
 
-Provides quantum circuit simulation with multiple backends:
+Provides simulation and analysis using Matrix Product States for analyzing
+correlations between canonical readings. Supports multiple backends:
 - cuQuantum (NVIDIA GPU): Fastest on NVIDIA hardware
 - PyTorch: CPU/GPU, good for medium systems
 - NumPy: Fallback on all systems
 
-Implements standard quantum gates (Pauli, Hadamard, CNOT, etc.)
-and measurements with collapse.
+Uses standard tensor network operations for efficient correlation analysis.
 """
 
 import numpy as np

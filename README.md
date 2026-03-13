@@ -1,46 +1,90 @@
-# QuranFrontier — 5-Layer Quranic AI Research System
+# QuranFrontier
 
-The world's most advanced computational framework for Quranic and Islamic
-reasoning — combining 218 neural architectures, neuro-symbolic AI, Z3 SMT
-constraint solving, consciousness modeling (IIT Φ=0.926), and Lean 4
-formal verification.
+Two distinct namespaces live here. Do not mix them.
 
-## Structure
+---
+
+## `quran-core/` — Quran & Islamic Sciences
+
+Everything specific to the Quran and Islamic intellectual tradition:
+
+- **Arabic NLP** — nahw (syntax), sarf (morphology), tajweed rules, qiraat variants
+- **Naskh theory** — abrogation DAG, Lean 4 formal proofs (`formal/lean/`)
+- **Qiraat engine** — quantum_qiraat, dag_naskh, embodied_tajweed
+- **Knowledge base** — hypergraph_kb (Quranic concept graph)
+- **Cosmology** — three_world (Nafs / Aql / Ruh model)
+- **Sheaf theory** — sheaf_nn applied to Quranic structure
+- **Spiritual tradition models** — 23 PyTorch models (`models/spiritual_traditions/`)
+- **Tests** — all Quran-specific tests in `quran-core/tests/`
 
 ```
-QuranFrontier/
-├── quran_core/               ← Islamic research core
-│   ├── frontierqu/           — Quranic NLP (qiraat, tajweed, nahw, sarf)
-│   ├── formal/               — 8 Lean 4 proofs (DeonticLogic, NaskhTheory…)
-│   ├── models/               — Quranic GNN + 20 spiritual tradition models
-│   └── neuro_symbolic/       — quantum_qiraat, dag_naskh, embodied_tajweed
-│
-├── frontier_models/          ← 218 neural architectures (40+ domains)
-├── frontier_qu_v5/           ← Consciousness modules (IIT, GWT, Dreaming)
-├── frontier_neuro_symbolic/  ← Three-World, Z3 SMT, Lean 4 integration
-├── frontier_formal/          ← Lean 4 formal proofs
-│
-├── pipeline_orchestrator.py  ← End-to-end 5-layer pipeline
-└── consciousness_orchestrator.py ← Consciousness metrics
+quran-core/
+├── reasoning/          # dag_naskh, embodied_tajweed, quantum_qiraat, rql,
+│                       # hypergraph_kb, three_world, sheaf_nn, integrations, multi_agent
+├── models/
+│   └── spiritual_traditions/
+├── formal/
+│   └── lean/           # Lean 4 NaskhTheory proofs
+├── src/                # linguistic/, logic/, geometry/, physics/, search/, topology/
+└── tests/              # all Quran-specific test files
 ```
+
+---
+
+## `nomos/` — NOMOS Ethics AI System
+
+General-purpose multi-tradition ethical reasoning, not tied to any single religion:
+
+- **ConsensusEngine** — cross-tradition ethical consensus (`core/`)
+- **Tradition adapters** — Islamic, Utilitarian, Kantian, Virtue ethics (`traditions/`)
+- **Consciousness metrics** — IIT Phi, GWT, orchestrator (`consciousness/`)
+- **Products** — ethics_core, complianceos, consciousness_metrics, formalverify,
+  neurosymbolic_sdk, normative_engine (`products/`)
+- **218+ neural architectures** — 40+ domain families (`architectures/`)
+- **General reasoning** — advanced_solvers (SMT/probabilistic), system_integration (`reasoning/`)
+- **ML infra** — automl, distributed, compression (`infra/`)
+- **Tests** — NOMOS-specific tests in `nomos/tests/`
+
+```
+nomos/
+├── core/               # ConsensusEngine, ConsensusReport
+├── traditions/         # TraditionAdapter implementations
+├── consciousness/      # IIT Phi, GWT, orchestrator
+├── interfaces/         # TraditionAdapter protocol
+├── products/           # deployable products
+├── reasoning/          # advanced_solvers, system_integration (general AI only)
+├── architectures/      # 218+ neural architectures
+├── infra/              # automl, distributed, compression, deployment
+├── integrations/       # external integrations
+├── research/           # research infrastructure
+├── viz/                # visualizations
+├── engine/             # dashboard / demos
+└── tests/              # test_consensus_engine.py, test_tradition_adapters.py,
+                        # test_consciousness_metrics.py, test_complianceos.py, ...
+```
+
+---
 
 ## Quick Start
 
 ```bash
 pip install -r requirements.txt
-python pipeline_orchestrator.py        # run full pipeline
-pytest tests/test_pipeline_integration.py -v   # 44/44 tests
+
+# Run NOMOS core tests (must pass 70/70)
+python -m pytest nomos/tests/test_consensus_engine.py \
+                 nomos/tests/test_tradition_adapters.py \
+                 nomos/tests/test_consciousness_metrics.py \
+                 nomos/tests/test_complianceos.py -v --tb=short -q
+
+# Run Quran-specific tests
+python -m pytest quran-core/tests/ -v --tb=short -q
 ```
 
-## Key Results
+---
 
-- IIT Φ = 0.926 (consciousness score)
-- 44/44 integration tests passing
-- Pipeline runtime ~360ms
-- 8 formally verified Lean 4 proofs
+## Decision Rule
 
-## Universal Framework
+When adding new code, ask: "Is this Quran/Islam-specific?"
 
-This project is the research foundation for **NOMOS** (github.com/Al-Adnane/nomos)
-— the universal ethical reasoning infrastructure that generalizes
-these techniques beyond Islamic context.
+- **Yes** — `quran-core/`
+- **No** (general AI, ethics, multi-tradition) — `nomos/`

@@ -1,34 +1,34 @@
-"""Tests for Quantum Hilbert Space Module - Qira'at Superposition.
+"""Tests for Sura Clustering Tool — MPS-based structural analysis.
 
 Tests cover:
-- Hilbert space superposition of 7 canonical readings
+- Hilbert space representation of 7 canonical readings
 - State collapse and measurement
 - Unitary transformations for recitation rules
 - Matrix Product States (MPS) representation
-- Entanglement metrics between verses
-- Quantum simulation with GPU acceleration
+- Correlation metrics between verses
+- MPS analysis with GPU acceleration
 """
 
 import pytest
 import numpy as np
 import torch
 
-from frontier_neuro_symbolic.quantum_qiraat.hilbert_space import (
+from frontier_neuro_symbolic.sura_clustering_tool.hilbert_space import (
     QiraatHilbertSpace,
     SuperpositionState,
     BasisVector,
 )
-from frontier_neuro_symbolic.quantum_qiraat.tensor_network import (
+from frontier_neuro_symbolic.sura_clustering_tool.tensor_network import (
     MatrixProductState,
     MPS,
 )
-from frontier_neuro_symbolic.quantum_qiraat.entanglement import (
+from frontier_neuro_symbolic.sura_clustering_tool.entanglement import (
     EntanglementMeasure,
     VonNeumannEntropy,
     BellDetector,
     GHZDetector,
 )
-from frontier_neuro_symbolic.quantum_qiraat.quantum_simulator import (
+from frontier_neuro_symbolic.sura_clustering_tool.mps_clustering import (
     QuantumSimulator,
 )
 
