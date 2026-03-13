@@ -11,38 +11,38 @@ import torch
 from typing import Dict, List, Optional, Any, Union
 
 # Import all frontier_models
-from frontier_models.wild import *
-from frontier_models.frontier import *
-from frontier_models.physics import *
-from frontier_models.bio import *
-from frontier_models.chem import *
-from frontier_models.math import *
-from frontier_models.art import *
-from frontier_models.psychology import *
-from frontier_models.divination import *
-from frontier_models.energy import *
-from frontier_models.hardware import *
-from frontier_models.tech import *
-from frontier_models.transport import *
-from frontier_models.agri import *
-from frontier_models.emerging import *
-from frontier_models.professional import *
-from frontier_models.cultural import *
-from frontier_models.natural import *
-from frontier_models.film import *
-from frontier_models.lit import *
-from frontier_models.social import *
-from frontier_models.econ import *
-from frontier_models.lingua import *
-from frontier_models.anthropology import *
-from frontier_models.alchemy import *
-from frontier_models.military import *
-from frontier_models.mythology import *
-from frontier_models.music_sport import *
-from frontier_models.architecture import *
-from frontier_models.eco import *
-from frontier_models.med import *
-from frontier_models.hardware.combinator import (
+from architectures.wild import *
+from architectures.frontier import *
+from architectures.physics import *
+from architectures.bio import *
+from architectures.chem import *
+from architectures.math import *
+from architectures.art import *
+from architectures.psychology import *
+from architectures.divination import *
+from architectures.energy import *
+from architectures.hardware import *
+from architectures.tech import *
+from architectures.transport import *
+from architectures.agri import *
+from architectures.emerging import *
+from architectures.professional import *
+from architectures.cultural import *
+from architectures.natural import *
+from architectures.film import *
+from architectures.lit import *
+from architectures.social import *
+from architectures.econ import *
+from architectures.lingua import *
+from architectures.anthropology import *
+from architectures.alchemy import *
+from architectures.military import *
+from architectures.mythology import *
+from architectures.music_sport import *
+from architectures.architecture import *
+from architectures.eco import *
+from architectures.med import *
+from architectures.hardware.combinator import (
     SequentialChain,
     ParallelEnsemble,
     CrossDomainFusion,
@@ -51,7 +51,7 @@ from frontier_models.hardware.combinator import (
     create_model_combination,
     generate_all_combinations
 )
-from frontier_models.hardware.novel_enhancements import (
+from architectures.hardware.novel_enhancements import (
     QuantumClassicalHybrid,
     ConsciousnessAttention,
     MythologicalPatternRecognition,
@@ -76,11 +76,11 @@ class FrontierQuAPI:
         # Wild models
         wild_creators = {
             'memetic': create_memetic_network,
-            'holographic': create_holographic_memory,
+            'holographic': create_holographic_network,
             'consciousness': create_consciousness_network,
             'dream': create_dream_network,
             'fractal': create_fractal_network,
-            'neuromorphic': create_neuromorphic_spiking,
+            'neuromorphic': create_neuromorphic_network,
             'diffusion': create_diffusion_model,
         }
         

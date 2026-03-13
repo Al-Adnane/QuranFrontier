@@ -28,10 +28,13 @@ class JungianArchetypesNetwork(nn.Module):
         activations = [a(x) for a in self.archetypes]
         mean_acts = torch.stack([a.mean(dim=-1) for a in activations], -1)
         dominant_idx = mean_acts.argmax(dim=-1)
+        # Handle batched output - get first element for dominant archetype name
+        dominant_name_idx = int(dominant_idx.flatten()[0])
         return {
             'archetypes': dict(zip(ARCHETYPES, activations)),
-            'dominant': ARCHETYPES[dominant_idx],
-            'integration': torch.sigmoid(self.integration(torch.cat(activations, -1)))
+            'dominant': ARCHETYPES[dominant_name_idx],
+            'integration': torch.sigmoid(self.integration(torch.cat(activations, -1))),
+            'dominant_scores': dominant_idx
         }
 
 
