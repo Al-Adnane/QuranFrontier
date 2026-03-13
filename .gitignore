@@ -17,3 +17,4 @@ data/*.pdf
 *.docx
 *.pages
 Q-t.txt
+data/chat-export-*.json
