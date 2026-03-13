@@ -336,6 +336,21 @@ class CatuskotiNetwork(nn.Module):
         }
 
 
+    @classmethod
+    def self_test(cls) -> bool:
+        """Create model, run forward pass, assert output shapes."""
+        model = cls(vocab_size=100, embed_dim=32, hidden_dim=64)
+        model.eval()
+        x = torch.randint(0, 100, (2, 8))
+        with torch.no_grad():
+            result = model(x, num_reasoning_steps=3)
+        assert result['output'].shape == (2, 1), f"output shape {result['output'].shape}"
+        assert result['final_truth_values'].shape == (2, 4), f"truth shape {result['final_truth_values'].shape}"
+        assert result['consistency_score'].shape[0] == 2
+        print("CatuskotiNetwork self_test PASSED")
+        return True
+
+
 def create_catuskoti_network(
     vocab_size: int = 10000,
     embed_dim: int = 128,

@@ -27,6 +27,7 @@ of simplicial complexes through sheaf theory. Implements:
 from frontier_neuro_symbolic.sheaf_nn.sheaf_layer import (
     SheafConvLayer,
     MultiSheafConvLayer,
+    SheafGluingValidator,
 )
 from frontier_neuro_symbolic.sheaf_nn.message_passing import (
     SheafMessagePassing,
@@ -45,6 +46,7 @@ from frontier_neuro_symbolic.sheaf_nn.training import (
 __all__ = [
     "SheafConvLayer",
     "MultiSheafConvLayer",
+    "SheafGluingValidator",
     "SheafMessagePassing",
     "SheafGluingConstraint",
     "MorphologicalEquivariance",

@@ -158,7 +158,7 @@ class ZoroastrianDualismNetwork(nn.Module):
         judgment = self.bridge(guardians['presence'])
         
         # Asha (truth)
-        asha = self.asha_head(judgment['can_cross'])
+        asha = self.asha_head(guardians['presence'])
         
         return {
             'battle': battle,

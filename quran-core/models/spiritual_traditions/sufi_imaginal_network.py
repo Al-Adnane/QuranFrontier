@@ -290,6 +290,21 @@ class SufiImaginalNetwork(nn.Module):
         }
 
 
+    @classmethod
+    def self_test(cls) -> bool:
+        """Create model, run forward pass, assert output shapes."""
+        model = cls(vocab_size=100, embed_dim=64, hidden_dim=128)
+        model.eval()
+        x = torch.randint(0, 100, (2, 8))
+        with torch.no_grad():
+            result = model(x)
+        assert result['haqiqa'].shape == (2, 1), f"haqiqa shape {result['haqiqa'].shape}"
+        assert result['imaginal_state'].material.shape == (2, 64)
+        assert result['barzakh']['unity'].shape == (2, 1)
+        print("SufiImaginalNetwork self_test PASSED")
+        return True
+
+
 def create_sufi_imaginal_network(
     vocab_size: int = 10000,
     embed_dim: int = 256,

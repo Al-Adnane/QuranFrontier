@@ -302,6 +302,21 @@ class PAdicNeuralNetwork(nn.Module):
         return distances
 
 
+    @classmethod
+    def self_test(cls) -> bool:
+        """Create model, run forward pass, assert output shapes."""
+        model = cls(vocab_size=100, embed_dim=32, hidden_dim=64, num_heads=4, tree_depth=3, p=2)
+        model.eval()
+        x = torch.randint(0, 100, (2, 8))
+        with torch.no_grad():
+            result = model(x)
+        assert result['output'].shape == (2, 32), f"output shape {result['output'].shape}"
+        assert result['global_repr'].shape == (2, 32), f"global shape {result['global_repr'].shape}"
+        assert result['p'] == 2
+        print("PAdicNeuralNetwork self_test PASSED")
+        return True
+
+
 def create_p_adic_network(
     vocab_size: int = 10000,
     embed_dim: int = 128,
