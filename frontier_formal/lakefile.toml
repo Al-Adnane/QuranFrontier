@@ -1,0 +1,27 @@
+# Lean 4 package configuration for FrontierQu formal verification
+# Defines Quranic types, tajweed axioms, naskh theory, and deontic logic
+
+name = "frontier_formal"
+version = "1.0.0"
+authors = ["FrontierQu Team"]
+description = "Formal Quranic semantics with Lean 4: tajweed, naskh, deontic logic"
+
+# Require Lean 4 and Mathlib
+require_lean = "4.0.0"
+packages = [
+  "mathlib @ >= 0.0.0"
+]
+
+# Package dependencies
+[dependencies]
+mathlib = { git = "https://github.com/leanprover-community/mathlib4.git", branch = "master" }
+
+# Build configuration
+[build]
+optimized = true
+warnings = true
+
+# Lake configuration for local development
+[server]
+autoImport = true
+editDelay = 100

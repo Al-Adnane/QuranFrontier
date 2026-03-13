@@ -1,0 +1,479 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Through Syria - April 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e8f5e9 0%, #fffde7 100%);
+            color: #424242;
+            line-height: 1.6;
+        }
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            padding: 15px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #1b5e20;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #d4a017;
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://www.transparenttextures.com/patterns/arabesque.png'), linear-gradient(rgba(27, 94, 32, 0.5), rgba(27, 94, 32, 0.5));
+            color: white;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        .hero .quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2em;
+            color: #d4a017;
+        }
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #1b5e20;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4a017;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        section p {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+        section img {
+            max-width: 70%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 3px solid #d4a017;
+            transition: transform 0.3s ease;
+        }
+        section img:hover {
+            transform: scale(1.05);
+        }
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #d4a017;
+            font-size: 1.2em;
+            margin: 20px 0;
+            background: rgba(212, 160, 23, 0.1);
+            padding: 10px 20px;
+            border-left: 4px solid #d4a017;
+            border-radius: 5px;
+        }
+        /* Infographic Styles */
+        .infographic {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .infographic svg {
+            margin: 10px;
+        }
+        .map-container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+        }
+        .map-container text {
+            font-size: 12px;
+            fill: #1b5e20;
+            font-weight: bold;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 150px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .bar {
+            background: #d4a017;
+            margin: 0 10px;
+            width: 50px;
+            text-align: center;
+            color: white;
+            font-size: 12px;
+            transition: height 0.5s ease;
+        }
+        .bar-label {
+            font-size: 12px;
+            color: #1b5e20;
+            margin-top: 5px;
+        }
+        .icon-label {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            font-size: 14px;
+            color: #424242;
+        }
+        .icon-label svg {
+            margin-right: 10px;
+        }
+        /* Footer */
+        footer {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        footer p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        footer a {
+            background: #d4a017;
+            color: #1b5e20;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        footer a:hover {
+            background: #fffde7;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p, .hero .quote {
+                font-size: 1em;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            section img {
+                max-width: 90%;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            nav ul li a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#daraa-jbab">Daraa: Jbab</a></li>
+            <li><a href="#daraa-revolution">Daraa: Revolution</a></li>
+            <li><a href="#damascus">Damascus</a></li>
+            <li><a href="#ghouta-duma">Ghouta & Duma</a></li>
+            <li><a href="#idlib">Idlib</a></li>
+            <li><a href="#aleppo">Aleppo</a></li>
+            <li><a href="#border">Border Crossing</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="intro">
+        <h1>A Journey Through "New" Syria</h1>
+        <p>April 2025</p>
+        <p>From Daraa to Idlib, witnessing resilience and hope after the fall of Assad.</p>
+        <p class="quote">"O people... We have made you peoples and tribes that you may know one another." (Quran 49:13)</p>
+        <!-- Infographic: Journey Map -->
+        <div class="infographic">
+            <div class="map-container">
+                <svg width="300" height="400" viewBox="0 0 300 400">
+                    <!-- Simplified Syria Outline -->
+                    <path d="M50,50 L150,30 L250,70 L270,150 L230,250 L200,350 L100,380 L50,300 Z" fill="#e8f5e9" stroke="#1b5e20" stroke-width="2"/>
+                    <!-- Route Path -->
+                    <path d="M100,350 Q150,300 180,200 Q200,150 220,70" fill="none" stroke="#d4a017" stroke-width="4" stroke-dasharray="5,5"/>
+                    <!-- Cities -->
+                    <circle cx="100" cy="350" r="8" fill="#1b5e20"/>
+                    <text x="120" y="355" text-anchor="start">Daraa</text>
+                    <circle cx="180" cy="200" r="8" fill="#1b5e20"/>
+                    <text x="200" y="205" text-anchor="start">Damascus</text>
+                    <circle cx="220" cy="70" r="8" fill="#1b5e20"/>
+                    <text x="240" y="75" text-anchor="start">Idlib</text>
+                    <circle cx="200" cy="120" r="8" fill="#1b5e20"/>
+                    <text x="220" y="125" text-anchor="start">Aleppo</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sections -->
+    <section id="daraa-jbab">
+        <h2>Daraa: Jbab Village</h2>
+        <p>Arrived at 2 AM under a bridge to join my friend Salam for his brother’s wedding.</p>
+        <p>Witnessed Syrian hospitality despite 2-3 hours of daily electricity. Met Imam, a young leader launching an educational movement post-Assad.</p>
+        <!-- Infographic: Hospitality Icon -->
+        <div class="infographic">
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>
+                </svg>
+                <span>Extreme Hospitality</span>
+            </div>
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M12 2L1 21h22L12 2zm0 3.36L19.36 19H4.64L12 5.36zM11 9h2v6h-2V9zm0 8h2v2h-2v-2z"/>
+                </svg>
+                <span>2-3 Hours Electricity/Day</span>
+            </div>
+        </div>
+        <!-- Placeholder for image: Wedding scene in Jbab -->
+        <img src="placeholder-jbab-wedding.jpg" alt="Wedding in Jbab village">
+    </section>
+
+    <section id="daraa-revolution">
+        <h2>Daraa: Roots of Revolution</h2>
+        <p>Visited the birthplace of the 2011 revolution—where teenagers’ graffiti sparked an uprising.</p>
+        <!-- Infographic: Economic Stats -->
+        <div class="infographic">
+            <div class="chart-container">
+                <div class="bar" style="height: 20px;">$20<div class="bar-label">Teacher Salary/Month</div></div>
+                <div class="bar" style="height: 90px;">90%<div class="bar-label">Unemployment Rate</div></div>
+                <div class="bar" style="height: 3px;">2-3<div class="bar-label">Doctors/30,000 People</div></div>
+            </div>
+        </div>
+        <p class="quote">"We learned to survive—some fled, others stayed."</p>
+        <!-- Placeholder for image: Graffiti wall or Daraa city -->
+        <img src="placeholder-daraa-revolution.jpg" alt="Birthplace of the Syrian revolution">
+    </section>
+
+    <section id="damascus">
+        <h2>Damascus: A Changed Capital</h2>
+        <p>Walked through the old city, Hamidiyah market, and Umayyad Mosque—saw the impact of sanctions since my 2009 visit.</p>
+        <p>Public transport now accessible post-liberation. Met a Christian doctor joyful about newfound freedom.</p>
+        <!-- Infographic: Freedom Icon -->
+        <div class="infographic">
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                <span>Newfound Freedom</span>
+            </div>
+        </div>
+        <!-- Placeholder for image: Umayyad Mosque or old city -->
+        <img src="placeholder-damascus-old-city.jpg" alt="Umayyad Mosque in Damascus">
+    </section>
+
+    <section id="ghouta-duma">
+        <h2>Ghouta & Duma: Scars and Recovery</h2>
+        <p>In Ghouta, people once ate grass to survive. Duma, despite destruction, is one of the cleanest cities—rebuilding slowly.</p>
+        <p class="quote">"Despite all Duma has been through, I found a fantastic soul."</p>
+        <!-- Infographic: Rebuilding Icon -->
+        <div class="infographic">
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M21 10h-3V7c0-2.76-2.24-5-5-5S8 4.24 8 7v3H5v11h14V10zm-8-6c1.66 0 3 1.34 3 3v3H8V7c0-1.66 1.34-3 3-3zm6 15H5v-5h14v5z"/>
+                </svg>
+                <span>Rebuilding Slowly</span>
+            </div>
+        </div>
+        <!-- Placeholder for image: Before/after of Duma -->
+        <img src="placeholder-duma-recovery.jpg" alt="Duma rebuilding efforts">
+    </section>
+
+    <section id="idlib">
+        <h2>Idlib: A Rebel Capital</h2>
+        <p>Supported by Turkey, Idlib has better infrastructure—cleaner, safer. Turkish lira and USDT everywhere.</p>
+        <p>Saw women walking alone at night, defying stereotypes of extremism. Lower cost of living, better services.</p>
+        <!-- Infographic: Safety and Currency Icons -->
+        <div class="infographic">
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                <span>Extremely Safe</span>
+            </div>
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                </svg>
+                <span>Turkish Lira & USDT</span>
+            </div>
+        </div>
+        <!-- Placeholder for image: Idlib market or street -->
+        <img src="placeholder-idlib-market.jpg" alt="Idlib city market">
+    </section>
+
+    <section id="aleppo">
+        <h2>Aleppo: Emptiness and Hope</h2>
+        <p>The old city around the Citadel is hauntingly empty—destroyed by war and earthquake.</p>
+        <p>Modern parts show signs of life: youth hanging out, clean hospitals. A Christian vendor at Abu George felt safe post-liberation.</p>
+        <!-- Infographic: Hope Icon -->
+        <div class="infographic">
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                <span>Signs of Life</span>
+            </div>
+        </div>
+        <!-- Placeholder for image: Aleppo Citadel or old city -->
+        <img src="placeholder-aleppo-citadel.jpg" alt="Aleppo Citadel and old city">
+    </section>
+
+    <section id="border">
+        <h2>Border Crossing: Syrian-Lebanese Challenges</h2>
+        <p>Walked across the Syrian border, stamped out with smiles. Hitched rides to Lebanese immigration.</p>
+        <p>Faced restrictions as a Moroccan passport holder—24-hour transit permit only. Met kindness from locals despite hurdles.</p>
+        <!-- Infographic: Kindness Icon -->
+        <div class="infographic">
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <span>Local Kindness</span>
+            </div>
+        </div>
+        <!-- Placeholder for image: Border crossing scene -->
+        <img src="placeholder-border-crossing.jpg" alt="Syrian-Lebanese border crossing">
+    </section>
+
+    <section id="reflections">
+        <h2>Reflections: Resilience & Solidarity</h2>
+        <p>No extreme poverty despite hardship—Syrians help each other. Palestinian cause ever-present in conversations.</p>
+        <p class="quote">"Come see us in five years! We’ll be great, inshallah."</p>
+        <p>Shared social innovation ideas to support rebuilding—a journey of connection and hope.</p>
+        <!-- Infographic: Solidarity Icons -->
+        <div class="infographic">
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                <span>No Extreme Poverty</span>
+            </div>
+            <div class="icon-label">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#d4a017">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <span>Palestinian Solidarity</span>
+            </div>
+        </div>
+        <!-- Placeholder for image: Group of Syrians or a mosque -->
+        <img src="placeholder-syrian-community.jpg" alt="Syrian community gathering">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Thank you for joining this journey through Syria. Help us support the rebuilding efforts!</p>
+        <a href="#support">Share This Story</a>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

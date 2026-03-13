@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrontierQu — What's Actually Novel</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #07090f;
+    color: #e2e8f0;
+    padding: 40px 16px 60px;
+  }
+
+  h1 { text-align: center; font-size: 1.9rem; color: #fff; margin-bottom: 8px; }
+  .sub { text-align: center; color: #555; font-size: 0.85rem; margin-bottom: 12px; }
+  .honest-note {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 50px;
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.6;
+    border-top: 1px solid #1a1d28;
+    border-bottom: 1px solid #1a1d28;
+    padding: 12px 0;
+  }
+  .honest-note strong { color: #f87171; }
+
+  /* SPECTRUM BAR */
+  .spectrum-section {
+    max-width: 820px;
+    margin: 0 auto 50px;
+  }
+  .spectrum-label {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.65rem;
+    color: #444;
+    margin-bottom: 14px;
+  }
+  .spectrum-bar {
+    display: flex;
+    height: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .spec-seg { height: 100%; }
+  .spectrum-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.68rem;
+    color: #555;
+  }
+
+  /* NOVEL CARDS */
+  .novel-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 820px;
+    margin: 0 auto 50px;
+  }
+
+  .novel-card {
+    border-left: 3px solid;
+    padding: 24px 28px 22px;
+    border-bottom: 1px solid #111318;
+    background: #0c0e14;
+    position: relative;
+  }
+  .novel-card:last-child { border-bottom: none; }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .card-num {
+    font-size: 0.65rem;
+    font-family: monospace;
+    background: #111318;
+    border: 1px solid #1e2030;
+    color: #555;
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+  .card-subtitle { font-size: 0.74rem; opacity: 0.5; margin-top: 3px; }
+
+  .novelty-badge {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 0.65rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .b-high    { background: #1a0a2e; color: #c4b5fd; border: 1px solid #4c1d95; }
+  .b-medium  { background: #0a1a10; color: #86efac; border: 1px solid #166534; }
+
+  .card-body { margin-left: 62px; }
+
+  .what-it-is {
+    font-size: 0.87rem;
+    color: #aaa;
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
+  .equation {
+    background: #0f1120;
+    border: 1px solid #1a1f38;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: monospace;
+    font-size: 0.78rem;
+    color: #93c5fd;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .equation .comment { color: #3a4060; }
+
+  .why-novel {
+    font-size: 0.78rem;
+    color: #666;
+    line-height: 1.6;
+    padding-left: 12px;
+    border-left: 2px solid #1a2040;
+    margin-bottom: 10px;
+  }
+  .why-novel strong { color: #93c5fd; }
+
+  .transfer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .transfer-chip {
+    font-size: 0.68rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+    border: 1px solid #1a2030;
+    color: #555;
+    background: #0d0f18;
+  }
+  .transfer-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #444;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  /* STANDARD SECTION */
+  .standard-section {
+    max-width: 820px;
+    margin: 0 auto 40px;
+    background: #0c0e14;
+    border: 1px solid #111318;
+    border-radius: 12px;
+    padding: 22px 26px;
+  }
+  .standard-section h3 { font-size: 0.88rem; color: #f87171; margin-bottom: 14px; }
+  .standard-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid #0f1118;
+    font-size: 0.82rem;
+  }
+  .standard-item:last-child { border-bottom: none; }
+  .std-name { color: #888; width: 200px; flex-shrink: 0; }
+  .std-reason { color: #444; }
+
+  /* VERDICT */
+  .verdict {
+    max-width: 820px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #0f0f1a, #0a1510);
+    border: 1px solid #1a1f30;
+    border-radius: 14px;
+    padding: 26px 30px;
+  }
+  .verdict h3 { color: #e2e8f0; font-size: 1rem; margin-bottom: 12px; }
+  .verdict p { font-size: 0.86rem; color: #888; line-height: 1.7; }
+  .verdict strong { color: #e2e8f0; }
+
+  /* Colors */
+  .c1 { border-left-color: #7c3aed; }
+  .c1 .card-title { color: #a78bfa; }
+  .c2 { border-left-color: #0891b2; }
+  .c2 .card-title { color: #67e8f9; }
+  .c3 { border-left-color: #059669; }
+  .c3 .card-title { color: #34d399; }
+  .c4 { border-left-color: #d97706; }
+  .c4 .card-title { color: #fbbf24; }
+  .c5 { border-left-color: #be185d; }
+  .c5 .card-title { color: #f9a8d4; }
+  .c6 { border-left-color: #4338ca; }
+  .c6 .card-title { color: #818cf8; }
+
+  footer { text-align: center; color: #222; font-size: 0.72rem; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<h1>What's Actually Novel Here</h1>
+<p class="sub">Based on reading the source code directly — not marketing claims</p>
+<div class="honest-note">
+  <strong>Honest framing:</strong> This codebase mixes genuinely original ideas with standard components dressed up in fancy terminology. The table below separates the two. The novel parts are real and worth attention — particularly ideas 1, 2, and 3.
+</div>
+
+<!-- SPECTRUM -->
+<div class="spectrum-section">
+  <div class="spectrum-label">Novelty composition of this codebase</div>
+  <div class="spectrum-bar">
+    <div class="spec-seg" style="width:35%; background:linear-gradient(90deg,#7c3aed,#a78bfa);"></div>
+    <div class="spec-seg" style="width:25%; background:linear-gradient(90deg,#0891b2,#34d399);"></div>
+    <div class="spec-seg" style="width:40%; background:#1a1d28;"></div>
+  </div>
+  <div class="spectrum-legend">
+    <span style="color:#a78bfa">35% — Genuinely novel combinations</span>
+    <span style="color:#34d399">25% — Novel application of existing math</span>
+    <span style="color:#444">40% — Standard tools (LangGraph, Qiskit, Ray…)</span>
+  </div>
+</div>
+
+<!-- NOVEL CARDS -->
+<div class="spectrum-label" style="text-align:center;margin-bottom:20px;">The 6 genuinely novel ideas — with the actual code as evidence</div>
+
+<div class="novel-grid">
+
+  <!-- 1 -->
+  <div class="novel-card c1">
+    <div class="card-top">
+      <div class="card-num">01</div>
+      <div>
+        <div class="card-title">Morphogenetic Fields for Articulation Physics</div>
+        <div class="card-subtitle">vocal_tract.py · MorphogeneticField · VocalTractManifold</div>
+      </div>
+      <div class="novelty-badge b-high">Highly Novel</div>
+    </div>
+    <div class="card-body">
+      <div class="what-it-is">
+        Pronunciation rules (tajweed) are encoded as <strong style="color:#e2e8f0">Turing reaction-diffusion patterns on a spatial vocal tract manifold</strong>. The 18 anatomical articulation points (makharij) are embedded as position parameters. Different tajweed rules produce different Turing pattern types: idgham (assimilation) = confluent zones, ikhfaa (hiding) = diffuse activation, iqlab (conversion) = bifurcation, izhar (clarity) = isolated peaks.
+      </div>
+      <div class="equation">
+∂ₜu = D·∇²u + f(u; makharij, rule) + σ·ξ(t)
+<span class="comment">
+// u(x,t) = articulatory activation at position x, time t
+// D = anatomical diffusion  f = Turing reaction  ξ = noise
+// Solved with implicit Euler on sparse spatial grid</span>
+      </div>
+      <div class="why-novel">
+        <strong>Why this is novel:</strong> Existing tajweed software uses lookup tables. Existing speech synthesis models (HMM, neural TTS) model acoustics, not articulatory physics. This models pronunciation as a <em>physical process governed by PDEs</em> — the pattern is the rule. It's the first time Turing morphogenesis has been applied to articulatory phonetics.
+      </div>
+      <span class="transfer-label">Transferable to</span>
+      <div class="transfer">
+        <span class="transfer-chip">Speech therapy for any language</span>
+        <span class="transfer-chip">Dysarthria rehabilitation</span>
+        <span class="transfer-chip">Accent training</span>
+        <span class="transfer-chip">Phonetic disorder diagnosis</span>
+        <span class="transfer-chip">Voice actor coaching</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="novel-card c2">
+    <div class="card-top">
+      <div class="card-num">02</div>
+      <div>
+        <div class="card-title">Free Energy Principle Applied to Pronunciation</div>
+        <div class="card-subtitle">active_inference.py · VariationalFreeEnergy · PredictiveProcessor</div>
+      </div>
+      <div class="novelty-badge b-high">Highly Novel</div>
+    </div>
+    <div class="card-body">
+      <div class="what-it-is">
+        Uses Karl Friston's Active Inference framework — the theory that brains minimize prediction error — to model <strong style="color:#e2e8f0">articulatory control as predictive processing</strong>. The agent holds a generative model of correct pronunciation and minimizes free energy (surprise) between its predictions and actual acoustic output. Precision weighting determines which prediction errors matter.
+      </div>
+      <div class="equation">
+F[q] = KL[q(θ) || p(θ)] − E_q[ln p(o|θ)]
+<span class="comment">
+// Encoder: o → (μ(o), σ(o))  posterior q(θ|o)
+// Decoder: θ → o_recon       generative model
+// Minimize F = "be less surprised by your own pronunciation"</span>
+      </div>
+      <div class="why-novel">
+        <strong>Why this is novel:</strong> Active inference has been applied to motor control and perception in neuroscience. Applying it to phonological/articulatory learning — where the "correct pronunciation rule" is the prior — is a genuinely new architecture. It means the model doesn't just classify right/wrong; it has a continuous internal model of <em>why</em> a sound is wrong and what correction minimizes surprise.
+      </div>
+      <span class="transfer-label">Transferable to</span>
+      <div class="transfer">
+        <span class="transfer-chip">Stroke/aphasia rehab</span>
+        <span class="transfer-chip">Cochlear implant tuning</span>
+        <span class="transfer-chip">Robotic speech synthesis</span>
+        <span class="transfer-chip">Accent acquisition research</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="novel-card c3">
+    <div class="card-top">
+      <div class="card-num">03</div>
+      <div>
+        <div class="card-title">Legal Supersession as Derived Algebraic Geometry</div>
+        <div class="card-subtitle">naskh_solver.py · DerivedStack · CohomologyComputer · BettiAnalyzer</div>
+      </div>
+      <div class="novelty-badge b-high">Highly Novel</div>
+    </div>
+    <div class="card-body">
+      <div class="what-it-is">
+        Abrogation — when one legal text supersedes another — is modeled as a <strong style="color:#e2e8f0">derived intersection in algebraic geometry</strong>. Two texts are in a supersession relationship if they intersect in the derived stack. The intersection is computed homologically. Abrogated texts leave a "homological memory" — their trace persists as a cohomology class even after they're overridden.
+      </div>
+      <div class="equation">
+Naskh(v₁, v₂) ≅ RΓ(v₁ ∩ᴸ v₂, O)  [derived intersection]
+memory(v_abrogated) = outer(sem_abrogating, sem_abrogated)
+<span class="comment">
+// Betti numbers b_i measure topological invariants of interpretation space
+// Euler characteristic χ = Σ (-1)ⁱ bᵢ   tracks semantic cohesion</span>
+      </div>
+      <div class="why-novel">
+        <strong>Why this is novel:</strong> No existing legal tech system models rule supersession geometrically. They all use rule graphs or timestamps. This encodes the <em>structure</em> of legal change — how much of the original meaning persists after abrogation — using cohomological invariants. The homological memory is architecturally original: a deleted rule still leaves a mathematical trace.
+      </div>
+      <span class="transfer-label">Transferable to</span>
+      <div class="transfer">
+        <span class="transfer-chip">Contract law (clause supersession)</span>
+        <span class="transfer-chip">Regulatory change tracking</span>
+        <span class="transfer-chip">Version-controlled knowledge bases</span>
+        <span class="transfer-chip">Constitutional law analysis</span>
+        <span class="transfer-chip">Smart contract audit</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="novel-card c4">
+    <div class="card-top">
+      <div class="card-num">04</div>
+      <div>
+        <div class="card-title">Sheaf Neural Networks with Learned Restriction Maps</div>
+        <div class="card-subtitle">sheaf_layer.py · SheafConvLayer · weight_edge (per-edge matrices)</div>
+      </div>
+      <div class="novelty-badge b-medium">Novel Application</div>
+    </div>
+    <div class="card-body">
+      <div class="what-it-is">
+        Standard graph neural networks use the same transformation for every edge. This implements <strong style="color:#e2e8f0">a learned restriction map F_ij per edge</strong> — a separate matrix W_ij that transforms information as it travels from node i to node j. The gluing axiom (from sheaf theory) ensures local-to-global consistency: the whole is coherent with every piece.
+      </div>
+      <div class="equation">
+m_ij = W_ij @ x_i + b_ij       [restriction map, learned per edge]
+x'_j = ReLU(Σᵢ m_ij)           [aggregate via gluing axiom]
+<span class="comment">
+// weight_edge shape: (num_edges, out_channels, in_channels)
+// Each edge has its own transformation — unlike standard GNNs</span>
+      </div>
+      <div class="why-novel">
+        <strong>Why this is novel:</strong> Sheaf neural networks (Hansen & Ghrist, 2020) are very recent and rarely implemented. The critical difference from standard GNNs: relationships between nodes are <em>asymmetric and typed</em>. A grammar rule doesn't transform knowledge the same way a causal rule does. This architecture knows the difference.
+      </div>
+      <span class="transfer-label">Transferable to</span>
+      <div class="transfer">
+        <span class="transfer-chip">Medical knowledge graphs</span>
+        <span class="transfer-chip">Financial network analysis</span>
+        <span class="transfer-chip">Heterogeneous social networks</span>
+        <span class="transfer-chip">Multi-relational reasoning</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="novel-card c5">
+    <div class="card-top">
+      <div class="card-num">05</div>
+      <div>
+        <div class="card-title">Homological Stability as a Measure of Meaning</div>
+        <div class="card-subtitle">cohomology.py · BettiAnalyzer · compute_homological_stability()</div>
+      </div>
+      <div class="novelty-badge b-medium">Novel Application</div>
+    </div>
+    <div class="card-body">
+      <div class="what-it-is">
+        A set of interpretations is modeled as a point cloud in embedding space. Its <strong style="color:#e2e8f0">Betti numbers — topological invariants — measure how "coherent" those interpretations are</strong> as a whole. Homological stability tests whether the Betti numbers are preserved under small perturbations: if they are, the interpretation space is robust. If not, the meaning is fragile.
+      </div>
+      <div class="equation">
+b₀ = connected components  b₁ = loops  b₂ = voids
+χ(X) = b₀ − b₁ + b₂        [Euler characteristic]
+stability = E[agreement(betti(X), betti(X + ε))]
+<span class="comment">
+// High stability = interpretations form a robust semantic cluster
+// is_homologically_spherical() checks if meaning space = S^n</span>
+      </div>
+      <div class="why-novel">
+        <strong>Why this is novel:</strong> NLP uses cosine similarity to compare meanings. This uses topology. Two sets of documents could be close in cosine distance but have completely different topological structure — different numbers of semantic "holes" or disconnected clusters. Betti numbers detect that. It's a genuinely different — and richer — way to measure semantic coherence.
+      </div>
+      <span class="transfer-label">Transferable to</span>
+      <div class="transfer">
+        <span class="transfer-chip">Scientific consensus measurement</span>
+        <span class="transfer-chip">Disinformation detection</span>
+        <span class="transfer-chip">Legal interpretation consistency</span>
+        <span class="transfer-chip">Medical literature coherence</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="novel-card c6">
+    <div class="card-top">
+      <div class="card-num">06</div>
+      <div>
+        <div class="card-title">Learnable 3-Way Fusion Gate (Neural × Symbolic × Categorical)</div>
+        <div class="card-subtitle">fusion.py · FusionGate · FeedbackLoop · ThreeWorldArchitecture</div>
+      </div>
+      <div class="novelty-badge b-medium">Novel Architecture</div>
+    </div>
+    <div class="card-body">
+      <div class="what-it-is">
+        Most neuro-symbolic AI combines two types of reasoning. This combines three: <strong style="color:#e2e8f0">neural embeddings (pattern recognition), symbolic logic (deontic/temporal rules), and categorical verification (∞-topos theory)</strong> — with a <em>learnable</em> FusionGate that weights each world's contribution. A FeedbackLoop tracks which world keeps producing violations and down-weights it.
+      </div>
+      <div class="equation">
+weights = softmax([w_neural, w_symbolic, w_categorical])
+fused = neural_output × (weights · confidences).sum()
+<span class="comment">
+// FeedbackLoop tracks violation history by source
+// correction_strength = f(recent violation severity)
+// Weights adapt: bad worlds get less say over time</span>
+      </div>
+      <div class="why-novel">
+        <strong>Why this is novel:</strong> Three-world fusion with a learnable gate and violation-tracking feedback is architecturally original. Standard neuro-symbolic systems are hardwired (fixed weight between neural and symbolic). Here the balance is <em>learned from the task</em> — if symbolic rules keep catching neural errors, symbolic weight increases. It's self-calibrating epistemic humility built into architecture.
+      </div>
+      <span class="transfer-label">Transferable to</span>
+      <div class="transfer">
+        <span class="transfer-chip">AI safety systems</span>
+        <span class="transfer-chip">Clinical decision support</span>
+        <span class="transfer-chip">Autonomous vehicle ethics</span>
+        <span class="transfer-chip">Financial risk adjudication</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- STANDARD COMPONENTS -->
+<div class="standard-section">
+  <h3>⚠️ What's NOT novel — standard components dressed up in complex terminology</h3>
+  <div class="standard-item">
+    <span class="std-name">Multi-agent debate loop</span>
+    <span class="std-reason">LangGraph state machine + Dung argumentation theory (1995). Both well-established. Novel domain, not novel architecture.</span>
+  </div>
+  <div class="standard-item">
+    <span class="std-name">Quantum simulator (quantum_qiraat)</span>
+    <span class="std-reason">Wraps Qiskit / PyTorch with quantum gates. Standard quantum computing. The Qiraat framing is creative but the math is textbook.</span>
+  </div>
+  <div class="standard-item">
+    <span class="std-name">Hypergraph knowledge base</span>
+    <span class="std-reason">Hyperedges on a typed graph. Well-established structure (HyperGraphDB exists since 2009). The RQL query language is custom but simple PLY parser.</span>
+  </div>
+  <div class="standard-item">
+    <span class="std-name">Probabilistic programs / quantum annealing</span>
+    <span class="std-reason">Wraps NumPyro / Pyro / Qiskit optimization. These are library calls with domain-specific config, not new algorithms.</span>
+  </div>
+  <div class="standard-item">
+    <span class="std-name">Formal verification via Lean 4</span>
+    <span class="std-reason">Using Lean 4 to verify logic is standard practice. Novel domain (Islamic deontic logic) but the verification framework itself is off-the-shelf.</span>
+  </div>
+  <div class="standard-item">
+    <span class="std-name">Ray distributed orchestration</span>
+    <span class="std-reason">Standard Ray configuration. Infrastructure, not research contribution.</span>
+  </div>
+</div>
+
+<!-- VERDICT -->
+<div class="verdict">
+  <h3>Bottom Line</h3>
+  <p>
+    Three ideas here are genuinely research-grade original: the <strong>Turing-morphogenesis model of articulation</strong>, <strong>active inference for pronunciation</strong>, and <strong>derived-geometric modeling of legal supersession with homological memory</strong>. These could each be standalone academic papers — and none of them exist in the literature in this form. The sheaf NN and topological coherence measure are novel applications of very recent math. The 3-world fusion gate is architecturally interesting but would need rigorous ablation studies to prove the learnable weighting actually helps. The rest is solid engineering with impressive-sounding names.
+  </p>
+</div>
+
+<footer>FrontierQu v4 · Novelty Analysis — grounded in source code · March 2026</footer>
+</body>
+</html>

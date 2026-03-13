@@ -1,0 +1,41 @@
+# FrontierQu Models - Additional Requirements
+# Install with: pip install -r frontier_models/requirements.txt
+
+# Core dependencies (already in main requirements)
+torch>=2.1.0
+numpy>=1.24.0
+
+# Topological models
+torch-geometric>=2.4.0
+scikit-tda>=0.2.0
+gudhi>=3.8.0
+
+# Quantum models
+qiskit>=0.43.0
+qiskit-aer>=0.13.0
+pennylane>=0.32.0
+
+# Symbolic models
+z3-solver>=4.12.0
+symengine>=0.10.0
+
+# Linguistic models
+# (uses existing Arabic NLP from main project)
+
+# Multi-agent models
+langgraph>=0.1.0
+langchain>=0.1.0
+
+# Visualization
+matplotlib>=3.8.0
+plotly>=5.18.0
+networkx>=3.2
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Development
+black>=23.7.0
+ruff>=0.0.280
+mypy>=1.4.1

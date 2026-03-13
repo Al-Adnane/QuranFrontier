@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrontierQu v4 — Plain English Overview</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #e8e8e8;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 48px;
+  }
+
+  /* BIG IDEA */
+  .big-idea {
+    background: linear-gradient(135deg, #1a1f35, #1e2a4a);
+    border: 1px solid #2a3a6a;
+    border-radius: 16px;
+    padding: 28px 32px;
+    max-width: 780px;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+  .big-idea .icon { font-size: 2.4rem; margin-bottom: 12px; }
+  .big-idea h2 { font-size: 1.3rem; color: #7eb8f7; margin-bottom: 10px; }
+  .big-idea p { color: #bbb; line-height: 1.7; font-size: 0.97rem; }
+
+  /* SECTION LABEL */
+  .section-label {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.72rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  /* LAYERS */
+  .layers {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 780px;
+    margin: 0 auto 52px;
+  }
+
+  .layer {
+    border-radius: 12px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid transparent;
+  }
+  .layer-icon { font-size: 1.7rem; flex-shrink: 0; margin-top: 2px; }
+  .layer-body {}
+  .layer-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+  .layer-desc { font-size: 0.88rem; color: #aaa; line-height: 1.6; }
+  .layer-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 0.72rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-family: monospace;
+    opacity: 0.8;
+  }
+
+  /* Layer colors */
+  .l-core    { background: #111827; border-color: #2563eb44; }
+  .l-core    .layer-title { color: #60a5fa; }
+  .l-core    .tag { background: #1e3a5f; color: #93c5fd; }
+
+  .l-nsai    { background: #111827; border-color: #7c3aed44; }
+  .l-nsai    .layer-title { color: #a78bfa; }
+  .l-nsai    .tag { background: #2e1a5e; color: #c4b5fd; }
+
+  .l-agents  { background: #111827; border-color: #059669aa; }
+  .l-agents  .layer-title { color: #34d399; }
+  .l-agents  .tag { background: #064e3b; color: #6ee7b7; }
+
+  .l-formal  { background: #111827; border-color: #d97706aa; }
+  .l-formal  .layer-title { color: #fbbf24; }
+  .l-formal  .tag { background: #451a03; color: #fde68a; }
+
+  .l-rust    { background: #111827; border-color: #dc2626aa; }
+  .l-rust    .layer-title { color: #f87171; }
+  .l-rust    .tag { background: #450a0a; color: #fca5a5; }
+
+  /* WHAT YOU CAN DO */
+  .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 780px;
+    margin: 0 auto 52px;
+  }
+  .action-card {
+    background: #16181f;
+    border: 1px solid #252830;
+    border-radius: 12px;
+    padding: 18px 18px 16px;
+  }
+  .action-card .action-icon { font-size: 1.5rem; margin-bottom: 10px; }
+  .action-card h4 { font-size: 0.95rem; color: #e2e8f0; margin-bottom: 6px; }
+  .action-card p  { font-size: 0.82rem; color: #888; line-height: 1.5; }
+
+  /* FLOW */
+  .flow {
+    max-width: 780px;
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .flow-step {
+    background: #16181f;
+    border: 1px solid #2a2d38;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 0.83rem;
+    color: #ccc;
+    text-align: center;
+    min-width: 100px;
+  }
+  .flow-arrow {
+    color: #444;
+    font-size: 1.2rem;
+    padding: 0 6px;
+  }
+
+  footer {
+    text-align: center;
+    color: #444;
+    font-size: 0.78rem;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>FrontierQu v4</h1>
+<p class="subtitle">Plain-English Guide — What This Project Is &amp; What You Can Do With It</p>
+
+<!-- BIG IDEA -->
+<div class="big-idea">
+  <div class="icon">📖</div>
+  <h2>The Big Idea</h2>
+  <p>
+    FrontierQu treats the <strong style="color:#e2e8f0">entire Quran as a single mathematical object</strong> and
+    applies cutting-edge AI &amp; mathematics to analyze it —
+    from Arabic grammar and pronunciation rules (<em>tajweed</em>), to Islamic legal reasoning
+    (<em>usul al-fiqh</em>), to quantum simulation and formal logic proofs.
+    Every verse is a <em>node</em>, and every relationship between verses (grammar, law, meaning) is an <em>edge</em>.
+  </p>
+</div>
+
+<!-- HOW DATA FLOWS -->
+<p class="section-label">How it works end-to-end</p>
+<div class="flow">
+  <div class="flow-step">📄 Quran Text<br><small style="color:#555">Arabic + metadata</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step">🔢 Math Model<br><small style="color:#555">Graph / topology</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step">🤖 AI Analysis<br><small style="color:#555">7 lenses</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step">⚖️ Agents Debate<br><small style="color:#555">Proposer/Critic</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step">✅ Verified Answer<br><small style="color:#555">Formal proof</small></div>
+</div>
+<br><br>
+
+<!-- LAYERS -->
+<p class="section-label">The 5 Building Blocks</p>
+<div class="layers">
+
+  <div class="layer l-core">
+    <div class="layer-icon">🏗️</div>
+    <div class="layer-body">
+      <div class="layer-title">Core Library — The Foundation</div>
+      <div class="layer-desc">
+        The main Python code that models the Quran. It handles Arabic linguistics
+        (grammar, morphology, rhetoric), Islamic concepts (tajweed pronunciation rules,
+        chain-of-narration, abrogation), topology, and a search/embedding system.
+        Also includes a REST API and a <em>tafsir</em> (interpretation) AI agent.
+      </div>
+      <div class="layer-tags">
+        <span class="tag">Arabic grammar (nahw/sarf)</span>
+        <span class="tag">Tajweed rules</span>
+        <span class="tag">Naskh (abrogation)</span>
+        <span class="tag">Isnad chains</span>
+        <span class="tag">REST API</span>
+        <span class="tag">Tafsir agent</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer l-nsai">
+    <div class="layer-icon">🧠</div>
+    <div class="layer-body">
+      <div class="layer-title">Neuro-Symbolic Extensions — The Advanced Brain</div>
+      <div class="layer-desc">
+        10 cutting-edge research modules that go beyond standard AI.
+        Includes a <em>quantum simulator</em> for modeling multiple Quranic reading variants
+        simultaneously, a <em>vocal tract model</em> for understanding pronunciation physically,
+        a <em>knowledge hypergraph</em> (a supercharged knowledge graph),
+        a <em>three-world fusion</em> (neural + symbolic + categorical reasoning combined),
+        and a <em>custom query language (RQL)</em> to interrogate all of it.
+      </div>
+      <div class="layer-tags">
+        <span class="tag">Quantum Qiraat simulator</span>
+        <span class="tag">Embodied Tajweed (vocal tract)</span>
+        <span class="tag">Sheaf Neural Networks</span>
+        <span class="tag">Hypergraph Knowledge Base</span>
+        <span class="tag">RQL query language</span>
+        <span class="tag">SMT / constraint solvers</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer l-agents">
+    <div class="layer-icon">🤝</div>
+    <div class="layer-body">
+      <div class="layer-title">Multi-Agent Debate Engine — The Scholars</div>
+      <div class="layer-desc">
+        Three AI agents that simulate how Islamic scholars reason together:
+        a <strong style="color:#34d399">Proposer</strong> puts forward an interpretation,
+        a <strong style="color:#34d399">Critic</strong> challenges it,
+        and a <strong style="color:#34d399">Verifier</strong> checks logical consistency.
+        They run in a loop (using LangGraph) until they converge on an answer.
+        Arguments are tracked formally using Dung argumentation theory.
+      </div>
+      <div class="layer-tags">
+        <span class="tag">Proposer agent</span>
+        <span class="tag">Critic agent</span>
+        <span class="tag">Verifier agent</span>
+        <span class="tag">Debate loop (LangGraph)</span>
+        <span class="tag">Scholar memory</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer l-formal">
+    <div class="layer-icon">📐</div>
+    <div class="layer-body">
+      <div class="layer-title">Formal Proofs (Lean 4) — The Mathematician</div>
+      <div class="layer-desc">
+        Uses <strong style="color:#fbbf24">Lean 4</strong>, a mathematical proof assistant,
+        to formally verify Islamic logic rules — like deontic logic (what is obligatory/forbidden),
+        the theory of abrogation (naskh), and tajweed axioms.
+        This means the rules aren't just stated — they are <em>mathematically proven correct</em>.
+        Connected back to the Python system via <code>lean_interface.py</code>.
+      </div>
+      <div class="layer-tags">
+        <span class="tag">DeonticLogic.lean</span>
+        <span class="tag">NaskhTheory.lean</span>
+        <span class="tag">TajweedAxioms.lean</span>
+        <span class="tag">Formal verification</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer l-rust">
+    <div class="layer-icon">⚡</div>
+    <div class="layer-body">
+      <div class="layer-title">Rust Core — The Speed Engine</div>
+      <div class="layer-desc">
+        Performance-critical hypergraph operations are written in <strong style="color:#f87171">Rust</strong>
+        — a language that runs much faster than Python.
+        Python calls into this via bindings when speed matters.
+        Compiled artifacts are in the <code>target/</code> directory.
+      </div>
+      <div class="layer-tags">
+        <span class="tag">hypergraph.rs</span>
+        <span class="tag">PyO3 Python bindings</span>
+        <span class="tag">High-performance compute</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- WHAT YOU CAN DO -->
+<p class="section-label">What you can actually do with this</p>
+<div class="actions-grid">
+
+  <div class="action-card">
+    <div class="action-icon">🔍</div>
+    <h4>Query the Quran Mathematically</h4>
+    <p>Use the RQL language to query relationships between verses, grammar patterns, and legal rulings across the entire corpus.</p>
+  </div>
+
+  <div class="action-card">
+    <div class="action-icon">🗣️</div>
+    <h4>Analyze Tajweed / Pronunciation</h4>
+    <p>Model how Arabic sounds are physically produced (vocal tract) and check recitation against formal tajweed rules.</p>
+  </div>
+
+  <div class="action-card">
+    <div class="action-icon">⚖️</div>
+    <h4>Run Scholarly Debates</h4>
+    <p>Feed an interpretive question to the multi-agent system and let three AI agents debate it until they reach a verified conclusion.</p>
+  </div>
+
+  <div class="action-card">
+    <div class="action-icon">🔬</div>
+    <h4>Simulate Qiraat Variants</h4>
+    <p>Use the quantum simulator to model all 7 canonical Quranic reading traditions as quantum superpositions — simultaneously.</p>
+  </div>
+
+  <div class="action-card">
+    <div class="action-icon">✅</div>
+    <h4>Verify Logic Formally</h4>
+    <p>Check that Islamic legal reasoning (deontic rules, naskh) is internally consistent using mathematical proof via Lean 4.</p>
+  </div>
+
+  <div class="action-card">
+    <div class="action-icon">🌐</div>
+    <h4>Serve via REST API</h4>
+    <p>Run the API server and expose Quranic analysis endpoints to external apps, dashboards, or research tools.</p>
+  </div>
+
+  <div class="action-card">
+    <div class="action-icon">🧪</div>
+    <h4>Run the Test Suite</h4>
+    <p>12 test files cover every module. Run <code>pytest</code> to verify everything works — useful after any code changes.</p>
+  </div>
+
+  <div class="action-card">
+    <div class="action-icon">📊</div>
+    <h4>Scale with Ray</h4>
+    <p>Use the Ray distributed computing config to run heavy computations (training, simulation) across multiple CPUs/GPUs.</p>
+  </div>
+
+</div>
+
+<footer>FrontierQu v4 — Generated overview · March 2026</footer>
+</body>
+</html>

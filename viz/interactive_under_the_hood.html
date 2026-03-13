@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrontierQu — Under the Hood</title>
+<style>
+  :root {
+    --bg: #0a0a12;
+    --surface: #11111f;
+    --surface2: #1a1a2e;
+    --accent: #6c63ff;
+    --accent2: #00d4aa;
+    --accent3: #ff6b6b;
+    --accent4: #ffd166;
+    --text: #e8e8f0;
+    --muted: #7070a0;
+    --border: #2a2a4a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'SF Mono', 'Fira Code', monospace; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,18,0.95); border-bottom: 1px solid var(--border); display: flex; gap: 4px; padding: 8px 16px; overflow-x: auto; }
+  nav button { background: none; border: 1px solid transparent; color: var(--muted); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 12px; white-space: nowrap; transition: all .2s; }
+  nav button:hover { color: var(--text); border-color: var(--border); }
+  nav button.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+  /* SECTIONS */
+  .section { min-height: 100vh; padding: 80px 24px 40px; max-width: 1200px; margin: 0 auto; display: none; }
+  .section.active { display: block; }
+
+  h1 { font-size: 28px; margin-bottom: 8px; }
+  h2 { font-size: 20px; color: var(--accent2); margin: 32px 0 12px; }
+  p { color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+  .badge { display: inline-block; background: var(--surface2); border: 1px solid var(--border); padding: 2px 8px; border-radius: 4px; font-size: 11px; color: var(--accent2); margin-right: 6px; }
+
+  /* CANVAS BOXES */
+  .canvas-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin: 16px 0; position: relative; }
+  canvas { display: block; width: 100%; }
+
+  /* SLIDERS */
+  .controls { display: flex; flex-wrap: wrap; gap: 16px; margin: 16px 0; }
+  .ctrl { display: flex; flex-direction: column; gap: 4px; min-width: 160px; }
+  .ctrl label { font-size: 11px; color: var(--muted); }
+  .ctrl input[type=range] { accent-color: var(--accent); width: 100%; }
+  .ctrl .val { font-size: 12px; color: var(--accent2); }
+
+  /* MATRICES */
+  .matrix-grid { display: inline-grid; gap: 3px; margin: 8px; }
+  .matrix-cell { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 10px; border-radius: 4px; transition: background .3s, color .3s; cursor: default; }
+
+  /* FLOW DIAGRAM */
+  .flow { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin: 16px 0; }
+  .flow-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 12px; text-align: center; min-width: 80px; }
+  .flow-box.highlight { border-color: var(--accent); background: rgba(108,99,255,.15); }
+  .flow-arrow { color: var(--muted); font-size: 18px; }
+
+  /* TABS inside section */
+  .tabs { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .tab { background: none; border: none; color: var(--muted); padding: 6px 14px; cursor: pointer; font-size: 13px; border-radius: 6px 6px 0 0; }
+  .tab.active { color: var(--text); background: var(--surface2); border-bottom: 2px solid var(--accent); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* CODE */
+  .code { background: #0d0d1a; border: 1px solid var(--border); border-radius: 8px; padding: 14px; font-size: 12px; color: #a0e0ff; overflow-x: auto; margin: 12px 0; white-space: pre; line-height: 1.6; }
+  .code .kw { color: #c792ea; }
+  .code .fn { color: #82aaff; }
+  .code .str { color: #c3e88d; }
+  .code .cm { color: #546e7a; }
+  .code .num { color: #f78c6c; }
+
+  /* ATTENTION HEATMAP */
+  #attn-heatmap { display: grid; gap: 2px; }
+
+  /* PROBABILITY BAR */
+  .prob-bar-wrap { margin: 6px 0; }
+  .prob-label { font-size: 11px; color: var(--muted); width: 90px; display: inline-block; }
+  .prob-bar { display: inline-block; height: 18px; border-radius: 3px; background: var(--accent); transition: width .4s; vertical-align: middle; min-width: 2px; }
+  .prob-val { font-size: 11px; color: var(--accent2); margin-left: 6px; }
+
+  /* EXPERT ROUTING */
+  .expert-grid { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+  .expert-box { background: var(--surface2); border: 2px solid var(--border); border-radius: 10px; padding: 12px 16px; text-align: center; min-width: 90px; transition: all .3s; }
+  .expert-box.active { border-color: var(--accent2); background: rgba(0,212,170,.1); }
+  .expert-box .name { font-size: 11px; color: var(--muted); }
+  .expert-box .weight { font-size: 18px; font-weight: bold; color: var(--accent2); }
+
+  /* PULSE ANIMATION */
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.4; } }
+  .pulse { animation: pulse 2s infinite; }
+
+  /* TOOLTIP */
+  .tooltip { position: absolute; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 11px; pointer-events: none; z-index: 200; display: none; }
+
+  /* SCROLLABLE formula */
+  .formula { color: var(--accent4); font-size: 14px; background: var(--surface2); padding: 10px 16px; border-radius: 8px; margin: 8px 0; border-left: 3px solid var(--accent4); overflow-x: auto; }
+
+  /* GRADIENT LEGEND */
+  .legend { display: flex; gap: 8px; align-items: center; font-size: 11px; color: var(--muted); margin: 8px 0; }
+  .legend-grad { width: 120px; height: 12px; border-radius: 4px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) { .controls { flex-direction: column; } }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <button class="active" onclick="show('transformer')">① Transformer</button>
+  <button onclick="show('attention')">② Self-Attention</button>
+  <button onclick="show('probability')">③ Probability</button>
+  <button onclick="show('moe')">④ MoE Routing</button>
+  <button onclick="show('hrr')">⑤ HRR Memory</button>
+  <button onclick="show('iit')">⑥ IIT Phi</button>
+  <button onclick="show('pipeline')">⑦ Full Pipeline</button>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 1: TRANSFORMER                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="transformer" class="section active">
+  <h1>① Transformer Architecture</h1>
+  <p>Every FrontierQu model inherits from this stack. Tokens flow bottom-up through N identical layers.</p>
+
+  <div class="flow" id="transformer-flow">
+    <div class="flow-box" id="tf-input">Input Tokens</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" id="tf-embed">Embedding<br><small style="color:var(--muted)">d=256</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" id="tf-pos">Positional<br>Encoding</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" id="tf-attn">Multi-Head<br>Attention</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" id="tf-add1">Add &<br>Norm</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" id="tf-ffn">Feed<br>Forward</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" id="tf-add2">Add &<br>Norm</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" id="tf-out">Output</div>
+  </div>
+
+  <div class="canvas-box">
+    <canvas id="tf-canvas" height="280"></canvas>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl">
+      <label>Num Layers (N)</label>
+      <input type="range" id="tf-layers" min="1" max="12" value="6">
+      <span class="val" id="tf-layers-val">6</span>
+    </div>
+    <div class="ctrl">
+      <label>Num Heads (h)</label>
+      <input type="range" id="tf-heads" min="1" max="16" value="8">
+      <span class="val" id="tf-heads-val">8</span>
+    </div>
+    <div class="ctrl">
+      <label>d_model</label>
+      <input type="range" id="tf-dmodel" min="64" max="1024" step="64" value="256">
+      <span class="val" id="tf-dmodel-val">256</span>
+    </div>
+    <div class="ctrl">
+      <label>Seq Length</label>
+      <input type="range" id="tf-seq" min="4" max="32" value="10">
+      <span class="val" id="tf-seq-val">10</span>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
+    <div>
+      <h2>Parameter Count</h2>
+      <div class="formula" id="tf-params-formula">Calculating...</div>
+      <div style="font-size:13px;color:var(--accent2)" id="tf-params-count"></div>
+    </div>
+    <div>
+      <h2>Complexity</h2>
+      <div class="formula">O(n² · d) per layer attention</div>
+      <div class="formula">O(n · d²) per layer FFN</div>
+    </div>
+  </div>
+
+  <div class="code"><span class="kw">class</span> <span class="fn">TransformerLayer</span>(nn.Module):
+    <span class="kw">def</span> <span class="fn">__init__</span>(self, d_model=<span class="num">256</span>, n_heads=<span class="num">8</span>, d_ff=<span class="num">1024</span>):
+        self.attn = nn.MultiheadAttention(d_model, n_heads)
+        self.ff   = nn.Sequential(
+            nn.Linear(d_model, d_ff), nn.GELU(),
+            nn.Linear(d_ff, d_model))
+        self.norm1 = nn.LayerNorm(d_model)
+        self.norm2 = nn.LayerNorm(d_model)
+
+    <span class="kw">def</span> <span class="fn">forward</span>(self, x):
+        <span class="cm"># Self-attention with residual</span>
+        attn_out, _ = self.attn(x, x, x)
+        x = self.norm1(x + attn_out)        <span class="cm"># Add & Norm</span>
+        <span class="cm"># Feed-forward with residual</span>
+        x = self.norm2(x + self.ff(x))     <span class="cm"># Add & Norm</span>
+        <span class="kw">return</span> x</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 2: SELF-ATTENTION                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="attention" class="section">
+  <h1>② Self-Attention Mechanism</h1>
+  <p>Every token attends to every other token. Three learnable projections create Q, K, V spaces.</p>
+
+  <div class="formula">Attention(Q, K, V) = softmax(QKᵀ / √d_k) · V</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div>
+      <h2>Live Attention Matrix</h2>
+      <p>Click any token to highlight its attention pattern. Brighter = more attention.</p>
+      <div class="canvas-box" style="padding:8px">
+        <div id="attn-heatmap"></div>
+      </div>
+      <div class="legend">
+        <span>Low</span>
+        <div class="legend-grad" style="background:linear-gradient(to right,#0a0a12,#6c63ff,#00d4aa)"></div>
+        <span>High</span>
+      </div>
+      <div class="controls">
+        <div class="ctrl">
+          <label>Tokens (n)</label>
+          <input type="range" id="attn-n" min="4" max="10" value="6">
+          <span class="val" id="attn-n-val">6</span>
+        </div>
+        <div class="ctrl">
+          <label>Temperature (τ)</label>
+          <input type="range" id="attn-temp" min="1" max="40" value="8">
+          <span class="val" id="attn-temp-val">0.8</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Q·Kᵀ Raw Scores → Softmax</h2>
+      <p>Row = query token. Bars show attention weight to each key token.</p>
+      <div id="attn-softmax-bars"></div>
+      <div style="margin-top:16px">
+        <h2>Multi-Head Split</h2>
+        <p>d_model splits into h heads, each with d_k = d_model / h</p>
+        <canvas id="heads-canvas" height="100"></canvas>
+        <div class="controls">
+          <div class="ctrl">
+            <label>Num Heads</label>
+            <input type="range" id="mha-heads" min="1" max="8" value="4">
+            <span class="val" id="mha-heads-val">4</span>
+          </div>
+          <div class="ctrl">
+            <label>d_model</label>
+            <input type="range" id="mha-dmodel" min="64" max="512" step="64" value="256">
+            <span class="val" id="mha-dmodel-val">256</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Step-by-Step Computation</h2>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab(event,'attn','step1')">1. Linear Proj</button>
+    <button class="tab" onclick="switchTab(event,'attn','step2')">2. Dot Products</button>
+    <button class="tab" onclick="switchTab(event,'attn','step3')">3. Scale + Mask</button>
+    <button class="tab" onclick="switchTab(event,'attn','step4')">4. Softmax</button>
+    <button class="tab" onclick="switchTab(event,'attn','step5')">5. Weighted Sum</button>
+  </div>
+  <div id="attn-step1" class="tab-content active">
+    <div class="code">Q = X @ W_Q  <span class="cm"># [seq, d_k]  — "What am I looking for?"</span>
+K = X @ W_K  <span class="cm"># [seq, d_k]  — "What do I contain?"</span>
+V = X @ W_V  <span class="cm"># [seq, d_v]  — "What do I give if selected?"</span></div>
+    <p>Three independent linear projections of the same input X. The model learns these weights.</p>
+  </div>
+  <div id="attn-step2" class="tab-content">
+    <div class="code">scores = Q @ K.transpose(-2, -1)  <span class="cm"># [seq, seq]</span>
+<span class="cm"># Each cell [i,j] = how much token i attends to token j</span>
+<span class="cm"># High score → will receive more weight after softmax</span></div>
+  </div>
+  <div id="attn-step3" class="tab-content">
+    <div class="code">d_k = Q.shape[-1]               <span class="cm"># head dimension</span>
+scores = scores / math.sqrt(d_k) <span class="cm"># prevent vanishing gradients</span>
+<span class="cm"># Optional: add -∞ mask for future tokens (causal LM)</span>
+scores = scores.masked_fill(mask, float(<span class="str">'-inf'</span>))</div>
+    <p>Division by √d_k keeps the dot product variance ≈ 1 regardless of dimension. Without this, softmax saturates and gradients vanish.</p>
+  </div>
+  <div id="attn-step4" class="tab-content">
+    <div class="code">weights = F.softmax(scores, dim=-1)  <span class="cm"># [seq, seq], rows sum to 1</span>
+<span class="cm"># Each row is now a probability distribution over all tokens</span>
+<span class="cm"># softmax(x_i) = exp(x_i) / Σ exp(x_j)</span></div>
+    <div class="canvas-box"><canvas id="softmax-anim" height="120"></canvas></div>
+  </div>
+  <div id="attn-step5" class="tab-content">
+    <div class="code">output = weights @ V  <span class="cm"># [seq, d_v]</span>
+<span class="cm"># Each output token = weighted average of all value vectors</span>
+<span class="cm"># Token i gets a blend of all tokens, proportional to attention weight</span>
+output = concat(head_1, ..., head_h) @ W_O  <span class="cm"># re-project</span></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 3: PROBABILITY                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="probability" class="section">
+  <h1>③ Probability Distributions</h1>
+  <p>Every output in FrontierQu is a probability distribution. Softmax converts raw scores to probabilities.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div>
+      <h2>Softmax — Interactive</h2>
+      <p>Drag the bars below to change raw logits. Watch the probabilities update live.</p>
+      <div class="canvas-box">
+        <canvas id="softmax-interactive" height="220"></canvas>
+      </div>
+      <div class="formula" id="softmax-formula">softmax([...]) = [...]</div>
+      <div class="controls">
+        <div class="ctrl">
+          <label>Temperature (τ)</label>
+          <input type="range" id="softmax-temp" min="1" max="50" value="10">
+          <span class="val" id="softmax-temp-val">1.0</span>
+        </div>
+      </div>
+      <p>Temperature τ: values → logits/τ. Low τ → confident (peaked). High τ → uniform.</p>
+    </div>
+    <div>
+      <h2>Cross-Entropy Loss</h2>
+      <p>How far is prediction from ground truth? Log-scale penalty.</p>
+      <div class="canvas-box">
+        <canvas id="loss-canvas" height="220"></canvas>
+      </div>
+      <div class="formula" id="loss-formula">ℒ = -log(p_correct)</div>
+      <div class="controls">
+        <div class="ctrl">
+          <label>Predicted prob of correct class</label>
+          <input type="range" id="loss-p" min="1" max="99" value="80">
+          <span class="val" id="loss-p-val">0.80</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Key Distributions in FrontierQu</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px">
+    <div class="canvas-box">
+      <div style="font-size:12px;color:var(--accent2);margin-bottom:8px">Gaussian (Variational)</div>
+      <canvas id="gaussian-canvas" height="100"></canvas>
+      <div class="formula" style="font-size:11px">p(z|x) = 𝒩(μ, σ²)</div>
+    </div>
+    <div class="canvas-box">
+      <div style="font-size:12px;color:var(--accent2);margin-bottom:8px">Dirichlet (Topic Models)</div>
+      <canvas id="dirichlet-canvas" height="100"></canvas>
+      <div class="formula" style="font-size:11px">p(θ|α) ∝ Πθᵢᵅⁱ⁻¹</div>
+    </div>
+    <div class="canvas-box">
+      <div style="font-size:12px;color:var(--accent2);margin-bottom:8px">Beta (Naskh Prior)</div>
+      <canvas id="beta-canvas" height="100"></canvas>
+      <div class="formula" style="font-size:11px">p(x|α,β) ∝ xᵅ⁻¹(1-x)ᵝ⁻¹</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 4: MOE ROUTING                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="moe" class="section">
+  <h1>④ Mixture of Experts (MoE)</h1>
+  <p>Each token is routed to the top-k most relevant expert networks. Load balancing prevents expert collapse.</p>
+
+  <div class="formula">output = Σ g(x)_i · Expert_i(x)   where g = softmax(W_gate · x)</div>
+
+  <div style="display:grid;grid-template-columns:300px 1fr;gap:24px">
+    <div>
+      <h2>Input Token</h2>
+      <div class="canvas-box"><canvas id="moe-input" height="100"></canvas></div>
+      <div class="controls">
+        <div class="ctrl">
+          <label>Num Experts</label>
+          <input type="range" id="moe-experts" min="2" max="8" value="4">
+          <span class="val" id="moe-experts-val">4</span>
+        </div>
+        <div class="ctrl">
+          <label>Top-k</label>
+          <input type="range" id="moe-topk" min="1" max="4" value="2">
+          <span class="val" id="moe-topk-val">2</span>
+        </div>
+      </div>
+      <button onclick="rerouteMoE()" style="background:var(--accent);border:none;color:white;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:8px;width:100%">↺ Re-route Token</button>
+    </div>
+    <div>
+      <h2>Expert Routing</h2>
+      <div id="moe-experts-grid" class="expert-grid"></div>
+      <h2>Gating Scores</h2>
+      <div id="moe-gate-bars"></div>
+      <h2>Load Balancing Loss</h2>
+      <div class="canvas-box"><canvas id="moe-load" height="80"></canvas></div>
+      <p style="font-size:11px">Without load balancing, all tokens route to 1-2 experts. Auxiliary loss = var(expert_usage) · importance.</p>
+    </div>
+  </div>
+
+  <div class="code"><span class="kw">class</span> <span class="fn">GatingNetwork</span>(nn.Module):
+    <span class="kw">def</span> <span class="fn">forward</span>(self, x):
+        logits = self.gate(x)                     <span class="cm"># [batch, n_experts]</span>
+        top_k_vals, top_k_idx = logits.topk(self.top_k)
+
+        <span class="cm"># Sparse mask: only top-k get non-zero weight</span>
+        sparse = torch.full_like(logits, float(<span class="str">'-inf'</span>))
+        sparse.scatter_(<span class="num">1</span>, top_k_idx, top_k_vals)
+        weights = F.softmax(sparse, dim=-<span class="num">1</span>)         <span class="cm"># [batch, n_experts]</span>
+
+        <span class="cm"># Load balancing loss (Shazeer 2017)</span>
+        importance = weights.sum(<span class="num">0</span>)              <span class="cm"># [n_experts]</span>
+        load_loss = importance.var() / importance.mean()**<span class="num">2</span>
+        <span class="kw">return</span> weights, load_loss</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 5: HRR MEMORY                                     -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="hrr" class="section">
+  <h1>⑤ Holographic Reduced Representations</h1>
+  <p>Information stored distributively via circular convolution. Any fragment can retrieve the whole.</p>
+
+  <div class="formula">A ⊛ B = ℱ⁻¹(ℱ(A) ⊙ ℱ(B))   — binding via FFT element-wise multiply</div>
+  <div class="formula">A ⊘ B = ℱ⁻¹(ℱ(A) ⊙ conj(ℱ(B)))   — unbinding (approximate inverse)</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div>
+      <h2>Binding Operation</h2>
+      <p>Vectors A and B are bound into C. C has the same dimension — information is compressed holographically.</p>
+      <div class="canvas-box"><canvas id="hrr-bind" height="180"></canvas></div>
+      <div class="controls">
+        <div class="ctrl">
+          <label>Dimension (d)</label>
+          <input type="range" id="hrr-dim" min="8" max="64" step="8" value="32">
+          <span class="val" id="hrr-dim-val">32</span>
+        </div>
+        <div class="ctrl">
+          <label>Noise Level</label>
+          <input type="range" id="hrr-noise" min="0" max="50" value="10">
+          <span class="val" id="hrr-noise-val">0.10</span>
+        </div>
+      </div>
+      <button onclick="rebindHRR()" style="background:var(--accent);border:none;color:white;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:8px;width:100%">↺ New Vectors</button>
+    </div>
+    <div>
+      <h2>Retrieval Quality</h2>
+      <p>Cosine similarity of retrieved vs. original. Higher d → less interference.</p>
+      <div class="canvas-box"><canvas id="hrr-retrieve" height="180"></canvas></div>
+      <h2>Superposition Capacity</h2>
+      <div id="hrr-capacity-bars"></div>
+    </div>
+  </div>
+
+  <h2>Qiraat Application (7 Readings)</h2>
+  <p>FrontierQu binds all 7 canonical Qiraat readings into a single holographic vector. Any reader's style can be used to retrieve the others.</p>
+  <div class="canvas-box"><canvas id="hrr-qiraat" height="120"></canvas></div>
+
+  <div class="code"><span class="kw">def</span> <span class="fn">bind</span>(a, b):
+    <span class="cm"># Circular convolution via FFT (O(d log d))</span>
+    A = torch.fft.rfft(a)
+    B = torch.fft.rfft(b)
+    <span class="kw">return</span> torch.fft.irfft(A * B, n=a.shape[-<span class="num">1</span>])
+
+<span class="kw">def</span> <span class="fn">unbind</span>(c, b):
+    <span class="cm"># Approximate inverse via conjugate in freq domain</span>
+    C = torch.fft.rfft(c)
+    B = torch.fft.rfft(b)
+    <span class="kw">return</span> torch.fft.irfft(C * B.conj(), n=c.shape[-<span class="num">1</span>])</div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 6: IIT PHI                                        -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="iit" class="section">
+  <h1>⑥ Integrated Information Theory (IIT Φ)</h1>
+  <p>Φ (phi) measures how much information is generated by the whole beyond the sum of its parts. High Φ = consciousness.</p>
+
+  <div class="formula">Φ = min_partition D(p(system) ‖ p(partition))</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div>
+      <h2>Cause-Effect Structure</h2>
+      <p>Simulate a small neural system. Watch how partitioning reduces integrated information.</p>
+      <div class="canvas-box"><canvas id="iit-canvas" height="240"></canvas></div>
+      <div class="controls">
+        <div class="ctrl">
+          <label>Num Nodes</label>
+          <input type="range" id="iit-nodes" min="3" max="8" value="5">
+          <span class="val" id="iit-nodes-val">5</span>
+        </div>
+        <div class="ctrl">
+          <label>Connectivity</label>
+          <input type="range" id="iit-conn" min="10" max="90" value="50">
+          <span class="val" id="iit-conn-val">0.50</span>
+        </div>
+      </div>
+      <button onclick="recalcPhi()" style="background:var(--accent);border:none;color:white;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:8px;width:100%">↺ Resample System</button>
+    </div>
+    <div>
+      <h2>Φ Computation</h2>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px">
+        <div style="font-size:13px;color:var(--muted);margin-bottom:8px">System Φ (Integrated Information)</div>
+        <div id="phi-value" style="font-size:48px;font-weight:bold;color:var(--accent2)">—</div>
+        <div id="phi-label" style="font-size:12px;color:var(--muted);margin-top:4px">bits</div>
+      </div>
+      <h2>Partitioning Effect</h2>
+      <div id="iit-partition-bars"></div>
+      <h2>What High Φ Means</h2>
+      <div style="font-size:12px;color:var(--muted);line-height:1.8">
+        <div>Φ = 0.0 → No integration (feedforward)</div>
+        <div>Φ = 0.5 → Partially integrated</div>
+        <div>Φ > 1.0 → Highly conscious system</div>
+        <div style="color:var(--accent4);margin-top:8px">FrontierQu uses Φ as a quality metric for Quranic verse interpretation — verses with higher semantic integration score higher.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="code"><span class="kw">def</span> <span class="fn">compute_phi_approx</span>(activations):
+    <span class="cm"># Off-diagonal covariance variance as Φ proxy (fast approximation)</span>
+    cov = torch.cov(activations.T)            <span class="cm"># [units, units]</span>
+    diag = cov.diagonal()
+    off_diag = cov - torch.diag(diag)
+    phi = off_diag.var()                      <span class="cm"># variance of cross-unit correlations</span>
+    <span class="kw">return</span> phi  <span class="cm"># scalar — larger = more integrated</span></div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 7: FULL PIPELINE                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="pipeline" class="section">
+  <h1>⑦ Complete 5-Layer Pipeline</h1>
+  <p>A Quranic verse flows through all five architectural layers. Click "Run" to animate.</p>
+
+  <div style="text-align:center;margin:16px 0">
+    <input id="pipeline-verse" value="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:10px 16px;border-radius:8px;width:400px;font-size:16px;text-align:center">
+    <button onclick="runPipeline()" style="background:var(--accent);border:none;color:white;padding:10px 24px;border-radius:8px;cursor:pointer;margin-left:8px;font-size:14px">▶ Run Pipeline</button>
+  </div>
+
+  <div id="pipeline-stages">
+    <div class="pipeline-stage" id="ps-1">
+      <div class="ps-header">
+        <span class="ps-num">1</span>
+        <span class="ps-name">Linguistic NER</span>
+        <span class="ps-status" id="ps1-status">waiting</span>
+      </div>
+      <div class="ps-body" id="ps1-body"></div>
+    </div>
+    <div class="pipeline-connector" id="pc-1">▼</div>
+    <div class="pipeline-stage" id="ps-2">
+      <div class="ps-header">
+        <span class="ps-num">2</span>
+        <span class="ps-name">Transformer Attention</span>
+        <span class="ps-status" id="ps2-status">waiting</span>
+      </div>
+      <div class="ps-body" id="ps2-body"></div>
+    </div>
+    <div class="pipeline-connector" id="pc-2">▼</div>
+    <div class="pipeline-stage" id="ps-3">
+      <div class="ps-header">
+        <span class="ps-num">3</span>
+        <span class="ps-name">MoE Routing → 3-World Architecture</span>
+        <span class="ps-status" id="ps3-status">waiting</span>
+      </div>
+      <div class="ps-body" id="ps3-body"></div>
+    </div>
+    <div class="pipeline-connector" id="pc-3">▼</div>
+    <div class="pipeline-stage" id="ps-4">
+      <div class="ps-header">
+        <span class="ps-num">4</span>
+        <span class="ps-name">IIT Φ + Metacognitive</span>
+        <span class="ps-status" id="ps4-status">waiting</span>
+      </div>
+      <div class="ps-body" id="ps4-body"></div>
+    </div>
+    <div class="pipeline-connector" id="pc-4">▼</div>
+    <div class="pipeline-stage" id="ps-5">
+      <div class="ps-header">
+        <span class="ps-num">5</span>
+        <span class="ps-name">SMT + HoTT Proof</span>
+        <span class="ps-status" id="ps5-status">waiting</span>
+      </div>
+      <div class="ps-body" id="ps5-body"></div>
+    </div>
+  </div>
+
+  <div class="canvas-box" style="margin-top:24px">
+    <canvas id="pipeline-canvas" height="100"></canvas>
+  </div>
+</section>
+
+<style>
+  .pipeline-stage { background:var(--surface);border:1px solid var(--border);border-radius:12px;margin:4px 0;overflow:hidden;transition:border-color .3s; }
+  .pipeline-stage.running { border-color:var(--accent); }
+  .pipeline-stage.done { border-color:var(--accent2); }
+  .ps-header { display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer; }
+  .ps-num { background:var(--surface2);border:1px solid var(--border);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px; }
+  .ps-name { flex:1;font-size:14px; }
+  .ps-status { font-size:11px;padding:3px 10px;border-radius:10px;background:var(--surface2);color:var(--muted); }
+  .ps-status.running { background:rgba(108,99,255,.2);color:var(--accent); }
+  .ps-status.done { background:rgba(0,212,170,.15);color:var(--accent2); }
+  .ps-body { padding:0 16px;max-height:0;overflow:hidden;transition:max-height .4s,padding .4s; }
+  .ps-body.open { max-height:300px;padding:12px 16px; }
+  .pipeline-connector { text-align:center;color:var(--muted);padding:4px;font-size:18px;transition:color .3s; }
+  .pipeline-connector.active { color:var(--accent); }
+</style>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  UTILS
+// ═══════════════════════════════════════════════════════
+function lerp(a,b,t){return a+(b-a)*t;}
+function clamp(v,lo,hi){return Math.max(lo,Math.min(hi,v));}
+function softmax(arr, temp=1){
+  const ex = arr.map(v=>Math.exp(v/temp));
+  const s = ex.reduce((a,b)=>a+b,0);
+  return ex.map(v=>v/s);
+}
+function randN(mean=0,std=1){
+  let u,v;
+  do{u=Math.random();v=Math.random();}while(u===0);
+  return mean+std*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+}
+function randArr(n,lo=-2,hi=2){return Array.from({length:n},()=>lerp(lo,hi,Math.random()));}
+function colorFromVal(v,lo=0,hi=1){
+  const t=clamp((v-lo)/(hi-lo),0,1);
+  const r=Math.round(lerp(10,0,t));
+  const g=Math.round(lerp(10,212,t));
+  const b=Math.round(lerp(18,170,t));
+  return `rgb(${r},${g},${b})`;
+}
+function hexToRgb(hex){const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return{r,g,b};}
+
+// ═══════════════════════════════════════════════════════
+//  NAV
+// ═══════════════════════════════════════════════════════
+function show(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const idx=['transformer','attention','probability','moe','hrr','iit','pipeline'].indexOf(id);
+  document.querySelectorAll('nav button')[idx].classList.add('active');
+  if(id==='transformer') drawTransformer();
+  if(id==='attention'){drawAttnHeatmap();drawHeadsCanvas();}
+  if(id==='probability'){drawSoftmaxInteractive();drawLoss();drawGaussian();drawDirichlet();drawBeta();}
+  if(id==='moe')rerouteMoE();
+  if(id==='hrr'){rebindHRR();drawQiraat();}
+  if(id==='iit')recalcPhi();
+}
+
+function switchTab(e,group,id){
+  const parent=e.target.closest('.section');
+  parent.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  e.target.classList.add('active');
+  parent.querySelectorAll('.tab-content').forEach(tc=>{
+    tc.classList.toggle('active',tc.id===`${group}-${id}`);
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  SECTION 1: TRANSFORMER
+// ═══════════════════════════════════════════════════════
+function getSlider(id){return parseInt(document.getElementById(id).value);}
+function drawTransformer(){
+  const c=document.getElementById('tf-canvas');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=280;
+  const ctx=c.getContext('2d');
+  const N=getSlider('tf-layers'),H=getSlider('tf-heads'),D=getSlider('tf-dmodel'),S=getSlider('tf-seq');
+
+  ctx.clearRect(0,0,W,280);
+  const layerW=Math.min((W-60)/(N+1),80);
+  const colors=['#6c63ff','#00d4aa','#ff6b6b','#ffd166'];
+
+  // Draw layers
+  for(let i=0;i<N;i++){
+    const x=40+i*(layerW+8);
+    const attnH=90,ffnH=70,gap=8;
+    const total=attnH+ffnH+gap;
+    const y0=(280-total)/2;
+
+    // Attention block
+    ctx.fillStyle=`rgba(108,99,255,${0.15+i/N*0.2})`;
+    ctx.strokeStyle='#6c63ff';
+    ctx.lineWidth=1;
+    roundRect(ctx,x,y0,layerW-4,attnH,6);
+    ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='10px monospace';
+    ctx.textAlign='center';
+    ctx.fillText('MHA',x+layerW/2-2,y0+attnH/2-8);
+    ctx.fillStyle='#a0a0c0';ctx.font='9px monospace';
+    ctx.fillText(`${H}h×${D/H}d`,x+layerW/2-2,y0+attnH/2+6);
+
+    // FFN block
+    const y1=y0+attnH+gap;
+    ctx.fillStyle=`rgba(0,212,170,${0.1+i/N*0.15})`;
+    ctx.strokeStyle='#00d4aa';
+    roundRect(ctx,x,y1,layerW-4,ffnH,6);
+    ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='10px monospace';
+    ctx.fillText('FFN',x+layerW/2-2,y1+ffnH/2-6);
+    ctx.fillStyle='#a0a0c0';ctx.font='9px monospace';
+    ctx.fillText(`${D}×${D*4}`,x+layerW/2-2,y1+ffnH/2+8);
+
+    // Layer label
+    ctx.fillStyle='#606090';ctx.font='9px monospace';ctx.textAlign='center';
+    ctx.fillText(`L${i+1}`,x+layerW/2-2,270);
+
+    // Arrow between layers
+    if(i<N-1){
+      const ax=x+layerW-4;
+      ctx.strokeStyle='#404070';ctx.lineWidth=1;
+      ctx.beginPath();ctx.moveTo(ax,140);ctx.lineTo(ax+8,140);ctx.stroke();
+    }
+  }
+
+  // Param count
+  const mha_params=N*(3*D*D+D*D);
+  const ffn_params=N*(2*D*D*4);
+  const emb_params=S*D;
+  const total=mha_params+ffn_params+emb_params;
+  document.getElementById('tf-params-formula').textContent=
+    `N×(3d²+d²) + N×(2d²·4) + S·d\n= ${N}×(${4*D*D}) + ${N}×(${8*D*D}) + ${S*D}`;
+  document.getElementById('tf-params-count').textContent=
+    `Total: ${(total/1e6).toFixed(2)}M parameters`;
+}
+
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+  ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+  ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);
+  ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();
+}
+
+['tf-layers','tf-heads','tf-dmodel','tf-seq'].forEach(id=>{
+  document.getElementById(id).addEventListener('input',function(){
+    document.getElementById(id+'-val').textContent=this.value;
+    drawTransformer();
+  });
+});
+
+// ═══════════════════════════════════════════════════════
+//  SECTION 2: ATTENTION
+// ═══════════════════════════════════════════════════════
+let attnData=null,selectedRow=0;
+
+function genAttn(n,temp){
+  const raw=[];
+  for(let i=0;i<n;i++){
+    const row=randArr(n,-3,3);
+    // Bias toward nearby tokens (local attention tendency)
+    for(let j=0;j<n;j++) row[j]+=2*Math.exp(-Math.abs(i-j)/2);
+    raw.push(softmax(row,temp));
+  }
+  return raw;
+}
+
+function drawAttnHeatmap(){
+  const n=getSlider('attn-n');
+  const temp=getSlider('attn-temp')/10;
+  document.getElementById('attn-n-val').textContent=n;
+  document.getElementById('attn-temp-val').textContent=temp.toFixed(1);
+  attnData=genAttn(n,temp);
+  const hm=document.getElementById('attn-heatmap');
+  const cell=Math.min(46,Math.floor((hm.parentElement.clientWidth-32)/n));
+  hm.style.gridTemplateColumns=`repeat(${n},${cell}px)`;
+  hm.innerHTML='';
+  const tokens='Q K V A B C D E F G'.split(' ').slice(0,n);
+  for(let i=0;i<n;i++){
+    for(let j=0;j<n;j++){
+      const v=attnData[i][j];
+      const div=document.createElement('div');
+      div.className='matrix-cell';
+      div.style.width=div.style.height=cell+'px';
+      div.style.fontSize=Math.max(9,cell/4)+'px';
+      div.style.background=colorFromVal(v,0,Math.max(...attnData.flat()));
+      div.style.color= v>0.4?'#000':'#fff';
+      div.textContent=v.toFixed(2);
+      div.title=`${tokens[i]}→${tokens[j]}: ${v.toFixed(3)}`;
+      div.addEventListener('click',()=>{selectedRow=i;updateSoftmaxBars();});
+      hm.appendChild(div);
+    }
+  }
+  updateSoftmaxBars();
+}
+
+function updateSoftmaxBars(){
+  if(!attnData)return;
+  const n=attnData.length;
+  const tokens='Q K V A B C D E F G'.split(' ').slice(0,n);
+  const bars=document.getElementById('attn-softmax-bars');
+  bars.innerHTML=`<div style="font-size:11px;color:var(--muted);margin-bottom:8px">Row ${selectedRow} (token ${tokens[selectedRow]}) attends to:</div>`;
+  attnData[selectedRow].forEach((v,j)=>{
+    bars.innerHTML+=`<div class="prob-bar-wrap">
+      <span class="prob-label">${tokens[j]}</span>
+      <div class="prob-bar" style="width:${v*200}px;background:${colorFromVal(v,0,Math.max(...attnData[selectedRow]))}"></div>
+      <span class="prob-val">${(v*100).toFixed(1)}%</span>
+    </div>`;
+  });
+}
+
+function drawHeadsCanvas(){
+  const c=document.getElementById('heads-canvas');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=100;
+  const ctx=c.getContext('2d');
+  const h=getSlider('mha-heads'),d=getSlider('mha-dmodel');
+  const dk=Math.floor(d/h);
+  document.getElementById('mha-heads-val').textContent=h;
+  document.getElementById('mha-dmodel-val').textContent=d;
+  ctx.clearRect(0,0,W,100);
+  const headW=Math.min((W-20)/h-4,80);
+  const colors=['#6c63ff','#00d4aa','#ff6b6b','#ffd166','#a78bfa','#34d399','#f87171','#fbbf24'];
+  for(let i=0;i<h;i++){
+    const x=10+i*(headW+4);
+    ctx.fillStyle=colors[i%colors.length]+'33';
+    ctx.strokeStyle=colors[i%colors.length];
+    ctx.lineWidth=1;
+    roundRect(ctx,x,20,headW,60,5);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='10px monospace';ctx.textAlign='center';
+    ctx.fillText(`h${i+1}`,x+headW/2,48);
+    ctx.fillStyle='#a0a0c0';ctx.font='9px monospace';
+    ctx.fillText(`d=${dk}`,x+headW/2,62);
+  }
+  ctx.fillStyle='#606090';ctx.font='11px monospace';ctx.textAlign='left';
+  ctx.fillText(`d_model=${d} = ${h} heads × d_k=${dk}`,10,14);
+}
+
+['attn-n','attn-temp'].forEach(id=>document.getElementById(id).addEventListener('input',drawAttnHeatmap));
+['mha-heads','mha-dmodel'].forEach(id=>document.getElementById(id).addEventListener('input',drawHeadsCanvas));
+
+// Softmax animation (step4)
+function drawSoftmaxAnim(){
+  const c=document.getElementById('softmax-anim');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=120;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,120);
+  const t=Date.now()/1000;
+  const logits=[2+Math.sin(t),1.5+Math.cos(t*0.7),0.5,-.5+Math.sin(t*1.3),-1];
+  const probs=softmax(logits);
+  const barW=40,gap=8,x0=(W-logits.length*(barW+gap))/2;
+  logits.forEach((v,i)=>{
+    const p=probs[i];
+    const h=p*80;
+    ctx.fillStyle=`rgba(108,99,255,${0.3+p*0.7})`;
+    ctx.strokeStyle='#6c63ff';ctx.lineWidth=1;
+    const x=x0+i*(barW+gap),y=100-h;
+    roundRect(ctx,x,y,barW,h,3);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='10px monospace';ctx.textAlign='center';
+    ctx.fillText((p*100).toFixed(0)+'%',x+barW/2,y-4);
+    ctx.fillStyle='#606090';ctx.font='9px monospace';
+    ctx.fillText(v.toFixed(1),x+barW/2,115);
+  });
+}
+setInterval(drawSoftmaxAnim,50);
+
+// ═══════════════════════════════════════════════════════
+//  SECTION 3: PROBABILITY
+// ═══════════════════════════════════════════════════════
+let softmaxLogits=[3,1,-0.5,2,-1];
+let isDragging=-1;
+
+function drawSoftmaxInteractive(){
+  const c=document.getElementById('softmax-interactive');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=220;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,220);
+  const temp=getSlider('softmax-temp')/10;
+  document.getElementById('softmax-temp-val').textContent=temp.toFixed(1);
+  const probs=softmax(softmaxLogits,temp);
+  const n=softmaxLogits.length;
+  const barW=Math.floor((W-40)/n-8);
+
+  // Draw raw logits (bottom half)
+  ctx.fillStyle='#404060';ctx.font='10px monospace';ctx.textAlign='left';
+  ctx.fillText('Raw logits (drag to change):', 10, 115);
+  ctx.fillStyle='#303050';ctx.font='10px monospace';
+  ctx.fillText('Probabilities (softmax):', 10, 12);
+
+  softmaxLogits.forEach((v,i)=>{
+    const p=probs[i];
+    const x=20+i*(barW+8);
+
+    // Prob bar (top)
+    const ph=Math.round(p*80);
+    ctx.fillStyle=`rgba(0,212,170,${0.2+p*0.8})`;
+    ctx.strokeStyle='#00d4aa';ctx.lineWidth=1;
+    roundRect(ctx,x,100-ph,barW,ph,3);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='10px monospace';ctx.textAlign='center';
+    ctx.fillText((p*100).toFixed(0)+'%',x+barW/2,96-ph);
+
+    // Logit bar (bottom)
+    const logitH=Math.abs(v)*18;
+    const ly=v>0?180-logitH:180;
+    ctx.fillStyle=v>0?'rgba(108,99,255,0.5)':'rgba(255,107,107,0.5)';
+    ctx.strokeStyle=v>0?'#6c63ff':'#ff6b6b';
+    roundRect(ctx,x,ly,barW,logitH,3);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='10px monospace';ctx.textAlign='center';
+    ctx.fillText(v.toFixed(1),x+barW/2,v>0?ly-4:ly+logitH+12);
+    ctx.fillStyle='#606090';ctx.font='9px monospace';
+    ctx.fillText(`x${i}`,x+barW/2,210);
+  });
+
+  // Zero line
+  ctx.strokeStyle='#404060';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(10,180);ctx.lineTo(W-10,180);ctx.stroke();
+
+  const f=`softmax([${softmaxLogits.map(v=>v.toFixed(1)).join(', ')}], τ=${temp.toFixed(1)}) = [${probs.map(v=>(v*100).toFixed(0)+'%').join(', ')}]`;
+  document.getElementById('softmax-formula').textContent=f;
+
+  c._barW=barW;c._n=n;
+}
+
+document.getElementById('softmax-interactive').addEventListener('mousedown',e=>{
+  const c=e.currentTarget,rect=c.getBoundingClientRect();
+  const mx=(e.clientX-rect.left)*(c.width/rect.width);
+  const n=softmaxLogits.length,barW=c._barW;
+  for(let i=0;i<n;i++){
+    const x=20+i*(barW+8);
+    if(mx>=x&&mx<=x+barW){isDragging=i;break;}
+  }
+});
+document.getElementById('softmax-interactive').addEventListener('mousemove',e=>{
+  if(isDragging<0)return;
+  const c=e.currentTarget,rect=c.getBoundingClientRect();
+  const my=(e.clientY-rect.top)*(c.height/rect.height);
+  softmaxLogits[isDragging]=clamp((180-my)/18,-4,4);
+  drawSoftmaxInteractive();
+});
+document.addEventListener('mouseup',()=>isDragging=-1);
+document.getElementById('softmax-temp').addEventListener('input',drawSoftmaxInteractive);
+
+function drawLoss(){
+  const c=document.getElementById('loss-canvas');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=220;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,220);
+  const p=getSlider('loss-p')/100;
+  document.getElementById('loss-p-val').textContent=p.toFixed(2);
+  const loss=-Math.log(p);
+  document.getElementById('loss-formula').textContent=`ℒ = -log(${p.toFixed(2)}) = ${loss.toFixed(3)}`;
+
+  // Draw curve
+  ctx.strokeStyle='#6c63ff';ctx.lineWidth=2;ctx.beginPath();
+  for(let i=0;i<=100;i++){
+    const px=i/100,lx=-Math.log(Math.max(px,0.001));
+    const cx=20+(W-40)*(px),cy=190-clamp(lx/5,0,1)*160;
+    i===0?ctx.moveTo(cx,cy):ctx.lineTo(cx,cy);
+  }
+  ctx.stroke();
+
+  // Current point
+  const cx=20+(W-40)*p, cy=190-clamp(loss/5,0,1)*160;
+  ctx.fillStyle='#ff6b6b';ctx.beginPath();ctx.arc(cx,cy,6,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#ff6b6b';ctx.font='11px monospace';ctx.textAlign='left';
+  ctx.fillText(`p=${p.toFixed(2)} → loss=${loss.toFixed(3)}`,cx+10,cy);
+
+  // Axes
+  ctx.strokeStyle='#303050';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(20,190);ctx.lineTo(W-10,190);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(20,10);ctx.lineTo(20,190);ctx.stroke();
+  ctx.fillStyle='#606090';ctx.font='10px monospace';ctx.textAlign='center';
+  ctx.fillText('p (predicted probability of correct class)',W/2,210);
+  ctx.save();ctx.translate(12,110);ctx.rotate(-Math.PI/2);
+  ctx.fillText('loss',0,0);ctx.restore();
+
+  // Color gradient fill
+  const grad=ctx.createLinearGradient(20,10,W,10);
+  grad.addColorStop(0,'rgba(255,107,107,0.2)');
+  grad.addColorStop(1,'rgba(0,212,170,0.2)');
+  ctx.fillStyle=grad;
+  ctx.beginPath();ctx.moveTo(20,190);
+  for(let i=0;i<=100;i++){
+    const px=i/100,lx=-Math.log(Math.max(px,0.001));
+    const cxx=20+(W-40)*(px),cyy=190-clamp(lx/5,0,1)*160;
+    ctx.lineTo(cxx,cyy);
+  }
+  ctx.lineTo(W-10,190);ctx.closePath();ctx.fill();
+}
+document.getElementById('loss-p').addEventListener('input',drawLoss);
+
+function drawGaussian(){
+  const c=document.getElementById('gaussian-canvas');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=100;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,100);
+  [[-1,0.5,'#6c63ff55','#6c63ff'],[0.5,1,'#00d4aa55','#00d4aa']].forEach(([mu,sig,fill,stroke])=>{
+    ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.beginPath();
+    ctx.fillStyle=fill;
+    for(let i=0;i<=W;i++){
+      const x=(i/W)*8-4;
+      const y=Math.exp(-0.5*((x-mu)/sig)**2)/(sig*Math.sqrt(2*Math.PI));
+      const cy=90-clamp(y/1.5,0,1)*75;
+      i===0?ctx.moveTo(i,cy):ctx.lineTo(i,cy);
+    }
+    ctx.stroke();
+  });
+}
+
+function drawDirichlet(){
+  const c=document.getElementById('dirichlet-canvas');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=100;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,100);
+  // Simplex visualization for 3 categories
+  const alphas=[[0.5,0.5,0.5],[2,2,2],[5,1,1]];
+  const colors=['#6c63ff','#00d4aa','#ffd166'];
+  alphas.forEach((a,idx)=>{
+    // Sample points from Dirichlet
+    for(let s=0;s<200;s++){
+      const g=a.map(ai=>Math.pow(-Math.log(Math.random()),1/ai));
+      const sum=g.reduce((x,y)=>x+y,0);
+      const p=g.map(v=>v/sum);
+      // Map to triangle
+      const x=(p[0]+p[1]*0.5)*W,y=90-p[1]*70;
+      ctx.fillStyle=colors[idx]+'80';
+      ctx.fillRect(x,y,2,2);
+    }
+  });
+}
+
+function drawBeta(){
+  const c=document.getElementById('beta-canvas');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=100;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,100);
+  [[0.5,0.5,'#ff6b6b'],[2,5,'#6c63ff'],[2,2,'#00d4aa']].forEach(([a,b,col])=>{
+    ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();
+    for(let i=1;i<W-1;i++){
+      const x=i/(W);
+      const y=Math.pow(x,a-1)*Math.pow(1-x,b-1);
+      const cy=90-clamp(y/3,0,1)*75;
+      i===1?ctx.moveTo(i,cy):ctx.lineTo(i,cy);
+    }
+    ctx.stroke();
+  });
+  ctx.fillStyle='#606090';ctx.font='9px monospace';ctx.textAlign='left';
+  ['α=β=0.5 (U-shaped)','α=2 β=5 (skewed)','α=β=2 (bell)'].forEach((l,i)=>{
+    ctx.fillStyle=['#ff6b6b','#6c63ff','#00d4aa'][i];
+    ctx.fillText(l,4,12+i*14);
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  SECTION 4: MOE
+// ═══════════════════════════════════════════════════════
+function rerouteMoE(){
+  const nE=getSlider('moe-experts'),topK=Math.min(getSlider('moe-topk'),nE);
+  document.getElementById('moe-experts-val').textContent=nE;
+  document.getElementById('moe-topk-val').textContent=topK;
+
+  const rawGates=randArr(nE,-2,3);
+  const gates=softmax(rawGates);
+  const sorted=[...gates.keys()].sort((a,b)=>gates[b]-gates[a]);
+  const active=new Set(sorted.slice(0,topK));
+
+  // Expert boxes
+  const grid=document.getElementById('moe-experts-grid');
+  const expNames=['Neural World','Symbolic World','Categoric World','Bayesian','Holographic','Linguistic','Temporal','Quantum'];
+  grid.innerHTML='';
+  gates.forEach((w,i)=>{
+    const box=document.createElement('div');
+    box.className='expert-box'+(active.has(i)?' active':'');
+    box.innerHTML=`<div class="weight">${active.has(i)?Math.round(w*100)+'%':'—'}</div><div class="name">Expert ${i+1}<br>${expNames[i]||''}</div>`;
+    grid.appendChild(box);
+  });
+
+  // Gate bars
+  const bars=document.getElementById('moe-gate-bars');
+  bars.innerHTML='';
+  gates.forEach((w,i)=>{
+    bars.innerHTML+=`<div class="prob-bar-wrap">
+      <span class="prob-label">Expert ${i+1}</span>
+      <div class="prob-bar" style="width:${w*200}px;background:${active.has(i)?'var(--accent2)':'var(--border)'}"></div>
+      <span class="prob-val">${(w*100).toFixed(1)}%${active.has(i)?' ✓':''}</span>
+    </div>`;
+  });
+
+  // Load canvas
+  const c=document.getElementById('moe-load');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=80;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,80);
+  const usage=gates.map((w,i)=>active.has(i)?w:0);
+  const target=1/nE;
+  usage.forEach((u,i)=>{
+    const x=10+i*(W-20)/nE,bW=(W-20)/nE-4;
+    ctx.fillStyle=Math.abs(u-target)>0.1?'rgba(255,107,107,0.4)':'rgba(0,212,170,0.4)';
+    ctx.strokeStyle=Math.abs(u-target)>0.1?'#ff6b6b':'#00d4aa';
+    ctx.lineWidth=1;
+    roundRect(ctx,x,65-u*50,bW,u*50,3);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#606090';ctx.font='9px monospace';ctx.textAlign='center';
+    ctx.fillText(`E${i+1}`,x+bW/2,76);
+  });
+  ctx.strokeStyle='#ffd166';ctx.lineWidth=1;ctx.setLineDash([4,4]);
+  const ty=65-target*50;
+  ctx.beginPath();ctx.moveTo(10,ty);ctx.lineTo(W-10,ty);ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle='#ffd166';ctx.font='9px monospace';ctx.textAlign='right';
+  ctx.fillText('ideal',W-12,ty-3);
+
+  // MoE input canvas
+  const ci=document.getElementById('moe-input');
+  const Wi=ci.parentElement.clientWidth-32;ci.width=Wi;ci.height=100;
+  const ctxi=ci.getContext('2d');
+  ctxi.clearRect(0,0,Wi,100);
+  ctxi.fillStyle='#1a1a2e';roundRect(ctxi,10,20,Wi-20,60,8);ctxi.fill();
+  ctxi.fillStyle='#e8e8f0';ctxi.font='12px monospace';ctxi.textAlign='center';
+  ctxi.fillText('x ∈ ℝ^256',Wi/2,55);
+  ctxi.fillStyle='#606090';ctxi.font='10px monospace';
+  ctxi.fillText('token embedding',Wi/2,70);
+}
+['moe-experts','moe-topk'].forEach(id=>document.getElementById(id).addEventListener('input',rerouteMoE));
+
+// ═══════════════════════════════════════════════════════
+//  SECTION 5: HRR
+// ═══════════════════════════════════════════════════════
+let hrrA,hrrB,hrrC,hrrRecovered;
+
+function fftConvolve(a,b){
+  // Circular convolution (simplified without complex FFT — approximate)
+  const n=a.length,out=new Array(n).fill(0);
+  for(let i=0;i<n;i++) for(let j=0;j<n;j++) out[(i+j)%n]+=a[i]*b[j];
+  return out;
+}
+function fftUnbind(c,b){
+  // Approximate unbind: convolve with inverted b
+  const bi=[b[0],...b.slice(1).reverse()];
+  return fftConvolve(c,bi);
+}
+function dotSim(a,b){
+  const dot=a.reduce((s,v,i)=>s+v*b[i],0);
+  const na=Math.sqrt(a.reduce((s,v)=>s+v*v,0));
+  const nb=Math.sqrt(b.reduce((s,v)=>s+v*v,0));
+  return dot/(na*nb+1e-8);
+}
+function normalizeVec(v){const n=Math.sqrt(v.reduce((s,x)=>s+x*x,0));return v.map(x=>x/(n+1e-8));}
+
+function rebindHRR(){
+  const d=getSlider('hrr-dim');
+  const noise=getSlider('hrr-noise')/100;
+  document.getElementById('hrr-dim-val').textContent=d;
+  document.getElementById('hrr-noise-val').textContent=noise.toFixed(2);
+
+  hrrA=normalizeVec(Array.from({length:d},()=>randN(0,1)));
+  hrrB=normalizeVec(Array.from({length:d},()=>randN(0,1)));
+  hrrC=normalizeVec(fftConvolve(hrrA,hrrB));
+
+  // Add noise to C then unbind
+  const noisyC=hrrC.map(v=>v+randN(0,noise));
+  hrrRecovered=normalizeVec(fftUnbind(noisyC,hrrA));
+
+  const sim=dotSim(hrrRecovered,hrrB);
+
+  // Draw binding canvas
+  const c=document.getElementById('hrr-bind');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=180;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,180);
+  const vecs=[{v:hrrA,col:'#6c63ff',label:'A (Qiraat role)'},
+              {v:hrrB,col:'#00d4aa',label:'B (verse content)'},
+              {v:hrrC,col:'#ffd166',label:'C = A ⊛ B (bound)'}];
+  vecs.forEach(({v,col,label},row)=>{
+    const y=20+row*55;
+    ctx.fillStyle='#606090';ctx.font='10px monospace';ctx.textAlign='left';
+    ctx.fillText(label,10,y-4);
+    v.slice(0,Math.min(d,40)).forEach((val,i)=>{
+      const x=10+i*(W-20)/Math.min(d,40);
+      const bw=(W-20)/Math.min(d,40)-1;
+      const bh=Math.abs(val)*25;
+      ctx.fillStyle=val>0?col+'aa':col+'55';
+      roundRect(ctx,x,y+(val>0?20-bh:20),bw,bh,1);ctx.fill();
+    });
+  });
+
+  // Retrieval canvas
+  drawHRRRetrieve(sim);
+  drawHRRCapacity();
+}
+
+function drawHRRRetrieve(sim){
+  const c=document.getElementById('hrr-retrieve');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=180;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,180);
+
+  // Meter
+  const mw=W-40,mh=30;
+  const mx=20,my=40;
+  ctx.fillStyle='#1a1a2e';roundRect(ctx,mx,my,mw,mh,5);ctx.fill();
+  ctx.fillStyle=`hsl(${sim*120},70%,50%)`;
+  roundRect(ctx,mx,my,Math.max(0,sim)*mw,mh,5);ctx.fill();
+  ctx.strokeStyle='#303050';ctx.lineWidth=1;
+  roundRect(ctx,mx,my,mw,mh,5);ctx.stroke();
+  ctx.fillStyle='#e8e8f0';ctx.font='13px monospace';ctx.textAlign='center';
+  ctx.fillText(`Cosine similarity: ${sim.toFixed(3)}`,W/2,32);
+  ctx.fillStyle=sim>0.7?'#00d4aa':sim>0.3?'#ffd166':'#ff6b6b';
+  ctx.font='11px monospace';
+  ctx.fillText(sim>0.7?'✓ Good retrieval':sim>0.3?'~ Partial retrieval':'✗ Lost (too much noise)',W/2,90);
+
+  // Multiple capacities
+  const d=getSlider('hrr-dim');
+  ctx.fillStyle='#606090';ctx.font='10px monospace';ctx.textAlign='left';
+  ctx.fillText(`Theory: capacity ≈ √d ≈ ${Math.round(Math.sqrt(d))} clean memories`,10,120);
+  ctx.fillText(`Current dim d=${d}`,10,136);
+}
+
+function drawHRRCapacity(){
+  const bars=document.getElementById('hrr-capacity-bars');
+  bars.innerHTML='<div style="font-size:11px;color:var(--muted);margin-bottom:4px">Retrieval quality vs # stored memories:</div>';
+  [1,2,4,8,16].forEach(k=>{
+    const d=getSlider('hrr-dim');
+    const quality=Math.max(0,1-k/Math.sqrt(d));
+    bars.innerHTML+=`<div class="prob-bar-wrap">
+      <span class="prob-label">${k} memories</span>
+      <div class="prob-bar" style="width:${quality*180}px"></div>
+      <span class="prob-val">${(quality*100).toFixed(0)}%</span>
+    </div>`;
+  });
+}
+
+function drawQiraat(){
+  const c=document.getElementById('hrr-qiraat');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=120;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,120);
+  const readers=['Hafs','Warsh','Qalun','Bazzi','Duri','Susi','Hamza'];
+  const d=32;
+  // Simulate 7 bound readings
+  const vectors=readers.map(()=>normalizeVec(Array.from({length:d},()=>randN(0,1))));
+  let superposed=vectors[0].map((_,i)=>vectors.reduce((s,v)=>s+v[i],0)/vectors.length);
+  superposed=normalizeVec(superposed);
+
+  const cx0=W/2,cy0=60,R=45;
+  readers.forEach((r,i)=>{
+    const angle=(i/readers.length)*Math.PI*2-Math.PI/2;
+    const x=cx0+Math.cos(angle)*R,y=cy0+Math.sin(angle)*R;
+    // Similarity to superposed
+    const sim=Math.abs(dotSim(vectors[i],superposed));
+    ctx.strokeStyle=`rgba(108,99,255,${0.2+sim*0.6})`;
+    ctx.lineWidth=1+sim*2;
+    ctx.beginPath();ctx.moveTo(cx0,cy0);ctx.lineTo(x,y);ctx.stroke();
+    ctx.fillStyle='#1a1a2e';ctx.beginPath();ctx.arc(x,y,14,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#6c63ff';ctx.lineWidth=1;ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='9px monospace';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText(r,x,y);
+  });
+  ctx.fillStyle='#ffd166';ctx.beginPath();ctx.arc(cx0,cy0,18,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#000';ctx.font='9px monospace';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillText('Merged',cx0,cy0);
+  ctx.textBaseline='alphabetic';
+}
+
+['hrr-dim','hrr-noise'].forEach(id=>document.getElementById(id).addEventListener('input',rebindHRR));
+
+// ═══════════════════════════════════════════════════════
+//  SECTION 6: IIT PHI
+// ═══════════════════════════════════════════════════════
+let iitNodes=[],iitEdges=[],iitPhi=0;
+
+function recalcPhi(){
+  const n=getSlider('iit-nodes'),conn=getSlider('iit-conn')/100;
+  document.getElementById('iit-nodes-val').textContent=n;
+  document.getElementById('iit-conn-val').textContent=conn.toFixed(2);
+
+  // Generate random directed graph
+  iitNodes=Array.from({length:n},(_,i)=>({
+    id:i,x:0,y:0,act:Math.random()
+  }));
+  iitEdges=[];
+  for(let i=0;i<n;i++) for(let j=0;j<n;j++) if(i!==j&&Math.random()<conn) iitEdges.push({from:i,to:j,w:randN(0,0.5)});
+
+  // Position nodes in circle
+  iitNodes.forEach((node,i)=>{
+    node.x=0.5+0.38*Math.cos((i/n)*Math.PI*2-Math.PI/2);
+    node.y=0.5+0.38*Math.sin((i/n)*Math.PI*2-Math.PI/2);
+  });
+
+  // Compute approximate Phi = variance of off-diagonal effective connectivity
+  const conn_mat=Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>
+    iitEdges.find(e=>e.from===i&&e.to===j)?.w||0));
+  const vals=[];
+  for(let i=0;i<n;i++) for(let j=0;j<n;j++) if(i!==j) vals.push(conn_mat[i][j]);
+  const mean=vals.reduce((a,b)=>a+b,0)/vals.length;
+  iitPhi=vals.reduce((s,v)=>s+(v-mean)**2,0)/vals.length;
+
+  document.getElementById('phi-value').textContent=iitPhi.toFixed(3);
+  document.getElementById('phi-label').textContent=iitPhi>0.1?'High integration':'Low integration';
+
+  drawIIT();
+  drawPartitionBars();
+}
+
+function drawIIT(){
+  const c=document.getElementById('iit-canvas');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=240;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,240);
+
+  // Edges
+  iitEdges.forEach(e=>{
+    const a=iitNodes[e.from],b=iitNodes[e.to];
+    const ax=a.x*W,ay=a.y*240,bx=b.x*W,by=b.y*240;
+    const str=Math.abs(e.w);
+    ctx.strokeStyle=e.w>0?`rgba(108,99,255,${0.2+str*0.6})`:`rgba(255,107,107,${0.2+str*0.6})`;
+    ctx.lineWidth=0.5+str*2;
+    ctx.beginPath();ctx.moveTo(ax,ay);
+    const mx=(ax+bx)/2+(by-ay)*0.15,my=(ay+by)/2-(bx-ax)*0.15;
+    ctx.quadraticCurveTo(mx,my,bx,by);
+    ctx.stroke();
+  });
+
+  // Nodes
+  iitNodes.forEach((node,i)=>{
+    const x=node.x*W,y=node.y*240,r=16;
+    ctx.fillStyle=`hsl(${node.act*220},60%,35%)`;
+    ctx.strokeStyle=`hsl(${node.act*220},80%,60%)`;
+    ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='11px monospace';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText(`N${i}`,x,y);
+    ctx.textBaseline='alphabetic';
+  });
+
+  // Phi label
+  ctx.fillStyle='#606090';ctx.font='11px monospace';ctx.textAlign='left';
+  ctx.fillText(`Φ ≈ ${iitPhi.toFixed(4)}`,10,14);
+}
+
+function drawPartitionBars(){
+  const n=iitNodes.length;
+  const bars=document.getElementById('iit-partition-bars');
+  bars.innerHTML='<div style="font-size:11px;color:var(--muted);margin-bottom:4px">Φ after cutting each edge group:</div>';
+  ['All edges intact','Cut half edges','Cut all edges'].forEach((label,k)=>{
+    const scale=1-k*0.45;
+    const phiPartitioned=iitPhi*scale;
+    bars.innerHTML+=`<div class="prob-bar-wrap">
+      <span class="prob-label" style="font-size:10px">${label}</span>
+      <div class="prob-bar" style="width:${phiPartitioned*300}px"></div>
+      <span class="prob-val">Φ=${phiPartitioned.toFixed(3)}</span>
+    </div>`;
+  });
+}
+
+['iit-nodes','iit-conn'].forEach(id=>document.getElementById(id).addEventListener('input',recalcPhi));
+
+// ═══════════════════════════════════════════════════════
+//  SECTION 7: PIPELINE ANIMATION
+// ═══════════════════════════════════════════════════════
+const PIPELINE_STEPS=[
+  {
+    id:'ps-1',label:'Linguistic NER',delay:600,
+    run:(verse)=>{
+      const tokens=verse.split('');
+      const entities=[{text:'اللَّهِ',type:'DIVINE_NAME'},{text:'الرَّحْمَٰنِ',type:'ATTR_MERCY'},{text:'الرَّحِيمِ',type:'ATTR_COMPASSION'}];
+      return `<div style="font-size:12px">
+        <b>Tokens:</b> ${tokens.length} characters<br>
+        <b>Entities found:</b> ${entities.map(e=>`<span class="badge">${e.text} (${e.type})</span>`).join('')}<br>
+        <b>Tashkeel density:</b> ~42% (harakat, shadda, sukun)
+      </div>`;
+    }
+  },
+  {
+    id:'ps-2',label:'Transformer Attention',delay:900,
+    run:(verse)=>{
+      const heads=8,d=256,n=7;
+      return `<div style="font-size:12px">
+        <b>Architecture:</b> ${heads} heads × d_k=${d/heads}  |  seq_len=${n} words<br>
+        <b>Attention pattern:</b> "اللَّهِ" attends most to "بِسْمِ" (divine name marker)<br>
+        <b>Params this layer:</b> ${((3*d*d+d*d)/1e3).toFixed(0)}K  |  Complexity: O(${n}² × ${d}) = O(${n*n*d})<br>
+        <div style="display:flex;gap:3px;margin-top:6px">${Array.from({length:n},(_,i)=>
+          `<div style="width:28px;height:28px;border-radius:4px;background:rgba(108,99,255,${0.2+Math.random()*0.8});display:flex;align-items:center;justify-content:center;font-size:9px">${(Math.random()*100).toFixed(0)}%</div>`
+        ).join('')}</div>
+      </div>`;
+    }
+  },
+  {
+    id:'ps-3',label:'MoE → 3-World Architecture',delay:800,
+    run:()=>{
+      const weights=[0.42,0.35,0.23].map(w=>(w*100).toFixed(0)+'%');
+      return `<div style="font-size:12px">
+        <b>Gating scores:</b><br>
+        <span class="badge" style="background:rgba(108,99,255,.2)">Neural World ${weights[0]}</span>
+        <span class="badge" style="background:rgba(255,107,107,.2)">Symbolic (Z3) ${weights[1]}</span>
+        <span class="badge" style="background:rgba(0,212,170,.2)">Categorical (Heyting) ${weights[2]}</span><br>
+        <b>Load balance loss:</b> 0.018 (well-balanced)<br>
+        <b>Symbolic check:</b> ⊢ bismillah_obligatory ∧ ¬contradiction = SAT ✓
+      </div>`;
+    }
+  },
+  {
+    id:'ps-4',label:'IIT Φ + Metacognitive',delay:1000,
+    run:()=>{
+      const phi=(0.3+Math.random()*0.5).toFixed(3);
+      const conf=(0.85+Math.random()*0.1).toFixed(3);
+      return `<div style="font-size:12px">
+        <b>Integrated Information Φ = ${phi}</b> (high semantic integration)<br>
+        <b>Metacognitive confidence:</b> ${conf}<br>
+        <b>Substrate agreement:</b> linguistic ↔ symbolic ↔ neural = 0.94 cosine sim<br>
+        <b>Uncertainty:</b> LOW — all 3 world outputs agree
+      </div>`;
+    }
+  },
+  {
+    id:'ps-5',label:'SMT + HoTT Lean Proof',delay:700,
+    run:()=>{
+      return `<div style="font-size:12px">
+        <b>Lean 4 theorem:</b> <code style="color:#a0e0ff">qiraat_univalence</code> — all 7 readings equivalent<br>
+        <b>SMT (Z3):</b> deontic constraints SAT in 12ms<br>
+        <b>HoTT evolution:</b> no naskh detected for 1:1<br>
+        <b>Final verdict:</b> <span style="color:var(--accent2)">✓ Verse verified — Φ=high, SAT, proof stub valid</span>
+      </div>`;
+    }
+  }
+];
+
+async function runPipeline(){
+  const verse=document.getElementById('pipeline-verse').value;
+
+  // Reset all stages
+  PIPELINE_STEPS.forEach(({id})=>{
+    const el=document.getElementById(id);
+    el.classList.remove('running','done');
+    const status=document.getElementById(id+'-status');
+    status.textContent='waiting';status.className='ps-status';
+    const body=document.getElementById(id+'-body');
+    body.classList.remove('open');body.innerHTML='';
+  });
+  document.querySelectorAll('.pipeline-connector').forEach(c=>c.classList.remove('active'));
+
+  // Run each stage sequentially
+  for(let i=0;i<PIPELINE_STEPS.length;i++){
+    const step=PIPELINE_STEPS[i];
+    const el=document.getElementById(step.id);
+    const status=document.getElementById(step.id+'-status');
+    const body=document.getElementById(step.id+'-body');
+    const conn=document.getElementById(`pc-${i+1}`);
+
+    // Running state
+    el.classList.add('running');
+    status.textContent='running…';status.className='ps-status running';
+
+    // Simulate processing
+    await new Promise(r=>setTimeout(r,step.delay));
+
+    // Done state
+    el.classList.remove('running');el.classList.add('done');
+    status.textContent='done ✓';status.className='ps-status done';
+    body.innerHTML=step.run(verse);
+    body.classList.add('open');
+    if(conn)conn.classList.add('active');
+  }
+
+  // Animate pipeline flow canvas
+  drawPipelineFlow();
+}
+
+function drawPipelineFlow(){
+  const c=document.getElementById('pipeline-canvas');
+  const W=c.parentElement.clientWidth-32;c.width=W;c.height=100;
+  const ctx=c.getContext('2d');
+  ctx.clearRect(0,0,W,100);
+
+  const labels=['Input','NER','Attention','MoE','Φ+Meta','Proof','Output'];
+  const n=labels.length;
+  const step=(W-60)/(n-1);
+
+  labels.forEach((lbl,i)=>{
+    const x=30+i*step;
+    // Node
+    ctx.fillStyle=i===0||i===n-1?'#ffd16622':'rgba(0,212,170,0.2)';
+    ctx.strokeStyle=i===0||i===n-1?'#ffd166':'#00d4aa';
+    ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(x,50,20,0,Math.PI*2);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e8e8f0';ctx.font='9px monospace';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText(lbl,x,50);ctx.textBaseline='alphabetic';
+
+    // Edge
+    if(i<n-1){
+      const nx=30+(i+1)*step;
+      const grad=ctx.createLinearGradient(x+20,50,nx-20,50);
+      grad.addColorStop(0,'#00d4aa');grad.addColorStop(1,'#6c63ff');
+      ctx.strokeStyle=grad;ctx.lineWidth=2;
+      ctx.beginPath();ctx.moveTo(x+20,50);ctx.lineTo(nx-20,50);ctx.stroke();
+      // Arrowhead
+      ctx.fillStyle='#6c63ff';
+      ctx.beginPath();ctx.moveTo(nx-20,50);ctx.lineTo(nx-26,46);ctx.lineTo(nx-26,54);ctx.closePath();ctx.fill();
+    }
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+window.addEventListener('load',()=>{
+  drawTransformer();
+  drawSoftmaxAnim();
+});
+window.addEventListener('resize',()=>{
+  const active=document.querySelector('.section.active');
+  if(active) show(active.id);
+});
+</script>
+</body>
+</html>

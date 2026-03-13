@@ -1,0 +1,78 @@
+# FrontierQu v4 Ray Cluster Configuration
+# Multi-node distributed computing setup for neuro-symbolic AI
+
+cluster_name: frontier-qu-cluster
+max_workers: 8
+
+# Head node configuration
+head_node_type: head
+
+head_node_resources:
+  CPU: 8
+  GPU: 2
+  memory: 67108864000  # 64GB in bytes
+  custom_resource: {}
+
+# Worker node types
+worker_node_types:
+  - node_config:
+      InstanceType: ml.p3.8xlarge  # GPU worker
+    resources:
+      CPU: 16
+      GPU: 4
+      memory: 134217728000  # 128GB in bytes
+      worker_type: gpu
+    min_workers: 1
+    max_workers: 4
+
+  - node_config:
+      InstanceType: ml.c5.24xlarge  # CPU-heavy quantum simulation worker
+    resources:
+      CPU: 32
+      GPU: 0
+      memory: 268435456000  # 256GB in bytes
+      worker_type: quantum
+      quantum_sim: 1
+    min_workers: 0
+    max_workers: 4
+
+# Setup commands to run on cluster initialization
+setup_commands:
+  - pip install frontier-qu-v4[quantum,dev]
+  - mkdir -p /tmp/frontier-qu-cache
+
+# Teardown commands
+teardown_commands:
+  - rm -rf /tmp/frontier-qu-cache
+
+# Enable autoscaling
+autoscaling:
+  upscaling_speed: 1.0
+  downscaling_speed: 1.0
+  idle_timeout_minutes: 5
+
+# Ray runtime configuration
+runtime_env:
+  env_vars:
+    RAY_memory: "1000000000"  # 1GB object store
+    RAY_object_store_memory: "2000000000"  # 2GB per worker
+
+# Monitoring and logging
+ray_logging:
+  log_to_driver: true
+  level: INFO
+
+# Storage and persistence
+file_mounts:
+  /root/frontier-qu-data: /data
+
+# Ray Tune configuration for hyperparameter tuning
+tune:
+  max_parallel_trials: 8
+  trial_executor_type: ray
+
+# Ray Serve configuration for model serving
+serve:
+  http_options:
+    port: 8000
+    host: "0.0.0.0"

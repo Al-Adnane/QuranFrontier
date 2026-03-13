@@ -1,0 +1,113 @@
+# FrontierQu v5.0+ Configuration
+# Pure frontier research - no commercial constraints
+
+simulation:
+  version: "5.0.1-year1"
+  tick_rate_ms: 10
+  max_steps: 10000
+  integration_mode: "unified_field"
+
+substrates:
+  active:
+    - quantum_symbolic
+    - neuromorphic_consciousness
+    - optical_sheaf
+    - biocomputing_enzymatic
+    - topological_anyonic
+    - causal_set
+
+  quantum_symbolic:
+    qubit_count: 12
+    entanglement_threshold: 0.85
+    decoherence_rate: 0.001
+    hamiltonian_type: "ising_with_disorder"
+
+  neuromorphic_consciousness:
+    neuron_count: 1000
+    plasticity_rule: "STDP"
+    firing_threshold: 0.7
+    integration_time_constant: 20.0  # ms
+    phi_calculation_method: "spectral_approximation"
+
+  optical_sheaf:
+    field_dimension: 64
+    wavelength_nm: 780
+    refractive_index_variation: 0.1
+    sheaf_level_max: 3
+
+  biocomputing_enzymatic:
+    reaction_pool_size: 10000
+    enzyme_types: 15
+    substrate_concentration: 1.0
+    temperature_celsius: 37.0
+
+  topological_anyonic:
+    anyon_type: "fibonacci"
+    braiding_dim: 100
+    fusion_channel_count: 20
+    topological_order: 3
+
+  causal_set:
+    spacetime_dimension: 4
+    event_generation_rate: 10  # events per step
+    causality_fraction: 0.3
+    planck_scale_factor: 1e-35
+
+safety:
+  containment_level: "MAXIMUM"
+  phi_threshold_halt: 15.0
+  entropy_spike_limit: 5.0
+  kill_switch_enabled: true
+
+  emergency_halt_triggers:
+    - causal_loop_detected
+    - memory_overflow
+    - consciousness_emergence_unbound
+    - substrate_divergence
+    - hott_coherence_failure
+
+  thresholds:
+    consciousness_proxy: 0.85
+    quantum_entropy: 0.95
+    reaction_rate: 1000
+    topological_defect_density: 0.1
+
+monitoring:
+  enable_phi_calculation: true
+  enable_telemetry: true
+  enable_anomaly_detection: true
+  telemetry_interval_steps: 100
+
+  consciousness_metrics:
+    - integrated_information
+    - global_workspace_theory
+    - recurrent_processing_theory
+    - higher_order_theories
+
+  substrate_metrics:
+    quantum: [entropy, purity, entanglement_degree]
+    neural: [firing_rate, synchrony, phi]
+    optical: [field_energy, intensity_variance, coherence]
+    molecular: [protein_diversity, metabolic_rate, reaction_flux]
+    topological: [betti_numbers, persistent_homology, curvature]
+    causal: [event_density, causal_volume, spacetime_dimension]
+
+hott_middleware:
+  universe_levels: 10
+  path_induction_enabled: true
+  univalence_axiom_enforcement: true
+  coherence_check_tolerance: 1e-6
+
+  substrate_equivalences:
+    - [quantum_symbolic, neuromorphic_consciousness]
+    - [optical_sheaf, topological_anyonic]
+    - [biocomputing_enzymatic, causal_set]
+    - [quantum_symbolic, optical_sheaf]
+    - [neuromorphic_consciousness, biocomputing_enzymatic]
+
+execution:
+  start_mode: "full_orchestration"  # or "single_substrate"
+  sync_interval_steps: 10
+  unified_field_merge_strategy: "pushout_construction"
+  checkpoint_interval: 1000
+  checkpoint_path: "./checkpoints/"
