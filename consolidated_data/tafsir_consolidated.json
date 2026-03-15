@@ -1,0 +1,59 @@
+[
+  {
+    "surah": 1,
+    "verse": 1,
+    "tafsir_text": "الفاتحة هي أم الكتاب",
+    "tafsir_author": "الطبري",
+    "tafsir_source": "altafsir",
+    "language": "ar",
+    "commentary_type": "general",
+    "primary_source": "altafsir",
+    "sources": {
+      "altafsir": {
+        "text": "الفاتحة هي أم الكتاب",
+        "metadata": {}
+      }
+    },
+    "hash_text": "93bf088153c175aae8e4e7f53966124638aa6258a93ee7fe083dc4696238c6c4",
+    "canonical_id": "1:1:الطبري",
+    "reference": "1:1:الطبري:altafsir"
+  },
+  {
+    "surah": 1,
+    "verse": 2,
+    "tafsir_text": "الحمد: الثناء على الله",
+    "tafsir_author": "الرازي",
+    "tafsir_source": "altafsir",
+    "language": "ar",
+    "commentary_type": "general",
+    "primary_source": "altafsir",
+    "sources": {
+      "altafsir": {
+        "text": "الحمد: الثناء على الله",
+        "metadata": {}
+      }
+    },
+    "hash_text": "26e556c55840b26135badc587ea1d2ee7b3d811d2cfdc9cac2fb99dc2049fdfa",
+    "canonical_id": "1:2:الرازي",
+    "reference": "1:2:الرازي:altafsir"
+  },
+  {
+    "surah": 112,
+    "verse": 1,
+    "tafsir_text": "التوحيد المطلق",
+    "tafsir_author": "ابن تيمية",
+    "tafsir_source": "study_quran",
+    "language": "ar",
+    "commentary_type": "general",
+    "primary_source": "study_quran",
+    "sources": {
+      "study_quran": {
+        "text": "التوحيد المطلق",
+        "metadata": {}
+      }
+    },
+    "hash_text": "ef30dd88c65289e6682b3dd8babd17b4ce1511f731d26b1c2af3649780aad2ab",
+    "canonical_id": "112:1:ابن تيمية",
+    "reference": "112:1:ابن تيمية:study_quran"
+  }
+]

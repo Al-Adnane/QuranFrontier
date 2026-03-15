@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Buddhism (Abhidharma)",
+    "model_type": "Graph Theory / Causal Network / Taxonomy",
+    "source": "Pali Canon, Abhidharma Pitaka",
+    "accuracy": "REQUIRES VERIFICATION with Buddhist scholars",
+    "extraction_date": "2026-03-15"
+  },
+  "dependent_origination": {
+    "name": "Paticca-samuppada",
+    "description": "12-link chain of dependent origination",
+    "mathematical_structure": {
+      "type": "Directed Acyclic Graph (DAG)",
+      "nodes": 12,
+      "edges": 11,
+      "properties": ["transitive", "irreflexive", "asymmetric"]
+    },
+    "nidanas": [
+      {"index": 1, "name": "Avijja", "translation": "Ignorance", "edges_to": [2]},
+      {"index": 2, "name": "Sankhara", "translation": "Volitional formations", "edges_to": [3]},
+      {"index": 3, "name": "Vinnana", "translation": "Consciousness", "edges_to": [4]},
+      {"index": 4, "name": "Namarupa", "translation": "Name-form", "edges_to": [5]},
+      {"index": 5, "name": "Salayatana", "translation": "Six sense bases", "edges_to": [6]},
+      {"index": 6, "name": "Phassa", "translation": "Contact", "edges_to": [7]},
+      {"index": 7, "name": "Vedana", "translation": "Feeling", "edges_to": [8]},
+      {"index": 8, "name": "Tanha", "translation": "Craving", "edges_to": [9]},
+      {"index": 9, "name": "Upadana", "translation": "Clinging", "edges_to": [10]},
+      {"index": 10, "name": "Bhava", "translation": "Becoming", "edges_to": [11]},
+      {"index": 11, "name": "Jati", "translation": "Birth", "edges_to": [12]},
+      {"index": 12, "name": "Jaramarana", "translation": "Aging-death", "edges_to": []}
+    ],
+    "cycle_analysis": {
+      "feedback_loop": "Jaramarana → Avijja (samsara cycle)",
+      "cutting_points": ["Avijja", "Tanha", "Upadana"],
+      "liberation_model": "Graph disconnection at cutting points"
+    }
+  },
+  "four_noble_truths": {
+    "description": "Logical proposition structure",
+    "mathematical_structure": {
+      "type": "Propositional Logic",
+      "form": "If-Then implications",
+      "structure": [
+        {"truth": 1, "proposition": "Dukkha exists", "type": "Existential"},
+        {"truth": 2, "proposition": "Dukkha has cause", "type": "Causal"},
+        {"truth": 3, "proposition": "Dukkha can cease", "type": "Possibility"},
+        {"truth": 4, "proposition": "Path leads to cessation", "type": "Implication"}
+      ]
+    },
+    "logical_form": "∃x(D(x)) ∧ ∀x(D(x)→∃y(C(y,x))) ∧ ∃z(¬D(z)) ∧ ∀w(P(w)→¬D(w))"
+  },
+  "abhidharma_taxonomy": {
+    "description": "Classification of all phenomena (dharmas)",
+    "mathematical_structure": {
+      "type": "Hierarchical Classification Tree",
+      "root": "All phenomena (sabbe dhamma)",
+      "depth": 4
+    },
+    "classification": {
+      "level_1": {
+        "name": "Two-fold classification",
+        "categories": ["Nama (mental)", "Rupa (physical)"]
+      },
+      "level_2": {
+        "name": "Five aggregates (Khandhas)",
+        "categories": ["Rupa", "Vedana", "Sanna", "Sankhara", "Vinnana"]
+      },
+      "level_3": {
+        "name": "Twelve ayatanas",
+        "categories": ["6 internal bases", "6 external bases"]
+      },
+      "level_4": {
+        "name": "Eighteen dhatus",
+        "categories": ["6 sense organs", "6 sense objects", "6 consciousnesses"]
+      }
+    },
+    "theravada_dhammas": {
+      "total": 82,
+      "categories": {
+        "consciousness": 89,
+        "mental_factors": 52,
+        "matter": 28,
+        "nibbana": 1
+      }
+    }
+  },
+  "cosmology_31_planes": {
+    "description": "31 planes of existence",
+    "mathematical_structure": {
+      "type": "Hierarchical Graph",
+      "levels": 3,
+      "total_nodes": 31
+    },
+    "planes": {
+      "kamaloka": {
+        "name": "Sense-sphere realm",
+        "count": 11,
+        "sublevels": ["4 apayas", "1 human", "6 devas"]
+      },
+      "rupaloka": {
+        "name": "Fine-material realm",
+        "count": 16,
+        "sublevels": ["16 brahma realms by jhana"]
+      },
+      "arupaloka": {
+        "name": "Immaterial realm",
+        "count": 4,
+        "sublevels": ["4 arupa brahmas"]
+      }
+    },
+    "rebirth_dynamics": {
+      "type": "Markov Chain",
+      "states": 31,
+      "transition_matrix": "Karma-weighted probabilities"
+    }
+  },
+  "eightfold_path": {
+    "description": "Noble Eightfold Path",
+    "mathematical_structure": {
+      "type": "Directed Graph with 3 clusters",
+      "nodes": 8,
+      "clusters": ["Sila (ethics)", "Samadhi (concentration)", "Panna (wisdom)"]
+    },
+    "factors": [
+      {"index": 1, "name": "Samma Ditthi", "cluster": "Panna"},
+      {"index": 2, "name": "Samma Sankappa", "cluster": "Panna"},
+      {"index": 3, "name": "Samma Vaca", "cluster": "Sila"},
+      {"index": 4, "name": "Samma Kammanta", "cluster": "Sila"},
+      {"index": 5, "name": "Samma Ajiva", "cluster": "Sila"},
+      {"index": 6, "name": "Samma Vayama", "cluster": "Samadhi"},
+      {"index": 7, "name": "Samma Sati", "cluster": "Samadhi"},
+      {"index": 8, "name": "Samma Samadhi", "cluster": "Samadhi"}
+    ],
+    "graph_properties": {
+      "strongly_connected": true,
+      "cyclic": true,
+      "weighted": true
+    }
+  },
+  "numerology": {
+    "sacred_numbers": {
+      "1": "One path to liberation",
+      "2": "Two truths (conventional/ultimate)",
+      "3": "Three jewels, Three characteristics",
+      "4": "Four Noble Truths",
+      "5": "Five precepts, Five aggregates",
+      "8": "Eightfold Path",
+      "12": "Twelve nidanas",
+      "31": "Planes of existence"
+    }
+  },
+  "verification_required": {
+    "dhamma_count": "Verify against Abhidhammattha Sangaha",
+    "dependent_origination": "Verify with Buddhist scholars",
+    "cosmology": "Verify against Sutta Pitaka"
+  },
+  "hash": "buddhism_math_model_v1_2026"
+}

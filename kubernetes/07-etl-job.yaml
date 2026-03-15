@@ -1,0 +1,220 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: etl-corpus-ingestion
+  namespace: quran-system
+  labels:
+    app: etl
+    job-type: corpus-ingestion
+spec:
+  completions: 1
+  parallelism: 1
+  backoffLimit: 3
+  ttlSecondsAfterFinished: 86400  # Keep finished job for 24 hours
+  template:
+    metadata:
+      labels:
+        app: etl
+        job-type: corpus-ingestion
+    spec:
+      restartPolicy: OnFailure
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 1000
+
+      initContainers:
+      - name: wait-for-postgres
+        image: busybox:latest
+        command:
+        - sh
+        - -c
+        - |
+          until nc -z postgres-0.postgres-service.quran-system.svc.cluster.local 5432; do
+            echo "Waiting for PostgreSQL..."
+            sleep 2
+          done
+          echo "PostgreSQL is ready"
+      - name: wait-for-neo4j
+        image: busybox:latest
+        command:
+        - sh
+        - -c
+        - |
+          until nc -z neo4j-0.neo4j-service.quran-system.svc.cluster.local 7687; do
+            echo "Waiting for Neo4j..."
+            sleep 2
+          done
+          echo "Neo4j is ready"
+
+      containers:
+      - name: etl-pipeline
+        image: quran-frontier-etl:latest
+        imagePullPolicy: Always
+
+        env:
+        - name: DATABASE_URL
+          value: "postgresql://$(DB_USER):$(DB_PASSWORD)@postgres-0.postgres-service.quran-system.svc.cluster.local:5432/$(DB_NAME)"
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: quran-secrets
+              key: DB_USER
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: quran-secrets
+              key: DB_PASSWORD
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: quran-config
+              key: DB_NAME
+        - name: NEO4J_URI
+          value: "bolt://neo4j-0.neo4j-service.quran-system.svc.cluster.local:7687"
+        - name: NEO4J_USER
+          valueFrom:
+            secretKeyRef:
+              name: quran-secrets
+              key: NEO4J_USER
+        - name: NEO4J_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: quran-secrets
+              key: NEO4J_PASSWORD
+        - name: REDIS_URL
+          value: "redis://redis-0.redis-service.quran-system.svc.cluster.local:6379"
+        - name: MILVUS_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: quran-config
+              key: MILVUS_HOST
+        - name: MILVUS_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: quran-config
+              key: MILVUS_PORT
+        - name: ETL_MODE
+          value: "once"
+        - name: PYTHONUNBUFFERED
+          valueFrom:
+            configMapKeyRef:
+              name: quran-config
+              key: PYTHONUNBUFFERED
+
+        resources:
+          requests:
+            cpu: 1
+            memory: 2Gi
+          limits:
+            cpu: 2
+            memory: 4Gi
+
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+          capabilities:
+            drop:
+            - ALL
+
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: etl-scheduled-sync
+  namespace: quran-system
+  labels:
+    app: etl
+    job-type: scheduled-sync
+spec:
+  schedule: "0 2 * * *"  # Run at 2 AM UTC daily
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      completions: 1
+      parallelism: 1
+      backoffLimit: 2
+      ttlSecondsAfterFinished: 86400
+      template:
+        metadata:
+          labels:
+            app: etl
+            job-type: scheduled-sync
+        spec:
+          restartPolicy: OnFailure
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            fsGroup: 1000
+
+          containers:
+          - name: etl-sync
+            image: quran-frontier-etl:latest
+            imagePullPolicy: Always
+
+            env:
+            - name: DATABASE_URL
+              value: "postgresql://$(DB_USER):$(DB_PASSWORD)@postgres-0.postgres-service.quran-system.svc.cluster.local:5432/$(DB_NAME)"
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: quran-secrets
+                  key: DB_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: quran-secrets
+                  key: DB_PASSWORD
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: quran-config
+                  key: DB_NAME
+            - name: NEO4J_URI
+              value: "bolt://neo4j-0.neo4j-service.quran-system.svc.cluster.local:7687"
+            - name: NEO4J_USER
+              valueFrom:
+                secretKeyRef:
+                  name: quran-secrets
+                  key: NEO4J_USER
+            - name: NEO4J_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: quran-secrets
+                  key: NEO4J_PASSWORD
+            - name: REDIS_URL
+              value: "redis://redis-0.redis-service.quran-system.svc.cluster.local:6379"
+            - name: MILVUS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: quran-config
+                  key: MILVUS_HOST
+            - name: MILVUS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: quran-config
+                  key: MILVUS_PORT
+            - name: ETL_MODE
+              value: "sync"
+            - name: PYTHONUNBUFFERED
+              valueFrom:
+                configMapKeyRef:
+                  name: quran-config
+                  key: PYTHONUNBUFFERED
+
+            resources:
+              requests:
+                cpu: 500m
+                memory: 1Gi
+              limits:
+                cpu: 1
+                memory: 2Gi
+
+            securityContext:
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: false
+              capabilities:
+                drop:
+                - ALL

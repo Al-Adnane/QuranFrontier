@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Dogon Religion",
+    "language": "Dogon",
+    "script": "Latin (transliteration)",
+    "date_range": "3000 BCE-present",
+    "text_type": "Cosmogony, Prayers",
+    "source": "Oral Tradition",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "dogon_cosmogony",
+      "text_name_dog": "Dogon Cosmogony",
+      "text_name_en": "Dogon Creation Story",
+      "date": "~3000 BCE-present",
+      "passages": [
+        {
+          "passage_id": "dog_c1",
+          "name": "Amma the Creator",
+          "dogon": "Amma, o kreyono",
+          "translation_en": "Amma, the creator"
+        },
+        {
+          "passage_id": "dog_c2",
+          "name": "The Cosmic Egg",
+          "dogon": "O po, o togo",
+          "translation_en": "The egg, the seed"
+        },
+        {
+          "passage_id": "dog_c3",
+          "name": "Nommo the Ancestors",
+          "dogon": "Nommo, o nommo",
+          "translation_en": "Nommo, the ancestors"
+        },
+        {
+          "passage_id": "dog_c4",
+          "name": "Sirius Connection",
+          "dogon": "Sigi tolo, o po tolo",
+          "translation_en": "Sirius star, the seed star"
+        }
+      ]
+    },
+    {
+      "text_id": "dogon_precepts",
+      "text_name_dog": "Dogon Precepts",
+      "text_name_en": "Dogon Precepts",
+      "date": "~3000 BCE-present",
+      "precepts": [
+        {
+          "precept_id": "dog_p1",
+          "dogon": "Amma la, i bo",
+          "translation_en": "With Amma, you are"
+        },
+        {
+          "precept_id": "dog_p2",
+          "dogon": "Nommo la, i ye",
+          "translation_en": "With Nommo, you see"
+        },
+        {
+          "precept_id": "dog_p3",
+          "dogon": "Kinye, o bo",
+          "translation_en": "Peace, be"
+        }
+      ]
+    }
+  ],
+  "deities": [
+    {"name": "Amma", "role": "Creator God", "domain": "Creation"},
+    {"name": "Nommo", "role": "Ancestral Spirits", "domain": "Water/Wisdom"},
+    {"name": "Lebe", "role": "Earth God", "domain": "Earth/Agriculture"}
+  ],
+  "hash": "f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3"
+}

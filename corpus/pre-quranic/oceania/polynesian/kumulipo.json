@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Polynesian Religion",
+    "language": "Proto-Polynesian/Hawaiian/Maori",
+    "script": "Latin",
+    "date_range": "3000 BCE-1800 CE",
+    "text_type": "Creation Chants, Genealogies",
+    "source": "Oral Tradition, Kumulipo",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "kumulipo",
+      "text_name_haw": "Kumulipo",
+      "text_name_en": "Kumulipo (Hawaiian Creation Chant)",
+      "date": "~1500 CE (oral tradition older)",
+      "sections": [
+        {
+          "section_id": "kum_1",
+          "name": "The Deep Darkness",
+          "hawaiian": "Auē ka pō, uliuli, loliloli",
+          "translation_en": "Deep is the night, dark, very dark"
+        },
+        {
+          "section_id": "kum_2",
+          "name": "First Life",
+          "hawaiian": "Hanau ka ʻopeʻope, hanau ka ʻalaelae",
+          "translation_en": "Born was the coral polyp, born was the coral"
+        },
+        {
+          "section_id": "kum_3",
+          "name": "Sea Creatures",
+          "hawaiian": "Hanau ka heʻe, hanau ka ʻōpelu",
+          "translation_en": "Born was the octopus, born was the mackerel"
+        },
+        {
+          "section_id": "kum_4",
+          "name": "Land Plants",
+          "hawaiian": "Hanau ka limu, hanau koʻokoʻo",
+          "translation_en": "Born was the seaweed, born was the grass"
+        },
+        {
+          "section_id": "kum_5",
+          "name": "Insects",
+          "hawaiian": "Hanau ka ʻuʻuku, hanau ka lele",
+          "translation_en": "Born was the ant, born was the grasshopper"
+        },
+        {
+          "section_id": "kum_6",
+          "name": "Birds",
+          "hawaiian": "Hanau ka manu, hanau ka ʻiʻiwi",
+          "translation_en": "Born was the bird, born was the honeycreeper"
+        },
+        {
+          "section_id": "kum_7",
+          "name": "Humans",
+          "hawaiian": "Hanau ka lāʻau, hanau ke kanaka",
+          "translation_en": "Born was the plant, born was man"
+        }
+      ]
+    },
+    {
+      "text_id": "polynesian_prayers",
+      "text_name_haw": "Pule",
+      "text_name_en": "Polynesian Prayers",
+      "date": "~1000 BCE-1800 CE",
+      "prayers": [
+        {
+          "prayer_id": "poly_p1",
+          "name": "To Kane",
+          "hawaiian": "Kane, e ke akua, e ola",
+          "translation_en": "Kane, O god, give life"
+        },
+        {
+          "prayer_id": "poly_p2",
+          "name": "To Ku",
+          "hawaiian": "Ku, e ke akua, e ikaika",
+          "translation_en": "Ku, O god, give strength"
+        },
+        {
+          "prayer_id": "poly_p3",
+          "name": "To Lono",
+          "hawaiian": "Lono, e ke akua, e ua",
+          "translation_en": "Lono, O god, bring rain"
+        },
+        {
+          "prayer_id": "poly_p4",
+          "name": "To Kanaloa",
+          "hawaiian": "Kanaloa, e ke akua, e kai",
+          "translation_en": "Kanaloa, O god, bless the ocean"
+        }
+      ]
+    },
+    {
+      "text_id": "maori_whakapapa",
+      "text_name_mi": "Whakapapa",
+      "text_name_en": "Maori Genealogy",
+      "date": "~1000-1800 CE",
+      "passages": [
+        {
+          "passage_id": "mao_1",
+          "name": "From the Void",
+          "maori": "Te Kore, Te Pō, Te Ao",
+          "translation_en": "The Void, The Night, The Light"
+        },
+        {
+          "passage_id": "mao_2",
+          "name": "Sky and Earth",
+          "maori": "Ranginui, Papatūānuku",
+          "translation_en": "Sky Father, Earth Mother"
+        },
+        {
+          "passage_id": "mao_3",
+          "name": "The Children",
+          "maori": "Tāne, Tangaroa, Tāwhirimātea, Tū, Haumia, Rongo",
+          "translation_en": "Tāne, Tangaroa, Tāwhirimātea, Tū, Haumia, Rongo"
+        },
+        {
+          "passage_id": "mao_4",
+          "name": "Separation",
+          "maori": "Tāne pushed, the sky rose",
+          "translation_en": "Tāne pushed apart his parents, light came"
+        }
+      ]
+    },
+    {
+      "text_id": "polynesian_precepts",
+      "text_name_haw": "Kapu",
+      "text_name_en": "Polynesian Precepts (Kapu)",
+      "date": "~1000 BCE-1800 CE",
+      "precepts": [
+        {
+          "precept_id": "poly_c1",
+          "hawaiian": "E mālama ka ʻāina",
+          "translation_en": "Care for the land"
+        },
+        {
+          "precept_id": "poly_c2",
+          "hawaiian": "E mālama ka kai",
+          "translation_en": "Care for the sea"
+        },
+        {
+          "precept_id": "poly_c3",
+          "hawaiian": "E hoʻohanohano i nā kūpuna",
+          "translation_en": "Honor the ancestors"
+        },
+        {
+          "precept_id": "poly_c4",
+          "hawaiian": "E mālama i ka ʻohana",
+          "translation_en": "Care for the family"
+        },
+        {
+          "precept_id": "poly_c5",
+          "hawaiian": "E haʻahaʻa",
+          "translation_en": "Be humble"
+        }
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "Kane", "role": "Creator God", "domain": "Life/Creation"},
+    {"name": "Ku", "role": "God of War", "domain": "War/Strength"},
+    {"name": "Lono", "role": "God of Peace", "domain": "Rain/Agriculture"},
+    {"name": "Kanaloa", "role": "God of Ocean", "domain": "Sea/Healing"},
+    {"name": "Tāne", "role": "God of Forests", "domain": "Trees/Birds"},
+    {"name": "Tangaroa", "role": "God of Sea", "domain": "Ocean/Fish"},
+    {"name": "Pele", "role": "Goddess of Volcanoes", "domain": "Fire/Lava"}
+  ],
+  "hash": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3"
+}

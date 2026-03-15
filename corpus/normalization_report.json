@@ -1,0 +1,20 @@
+{
+  "normalization_id": "norm_2026-03-14T17:45:07.939581",
+  "timestamp": "2026-03-14T17:45:07.939592",
+  "total_verses_processed": 6236,
+  "total_verses_normalized": 6236,
+  "unicode_normalization_form": "NFC (Canonical Composition)",
+  "hash_algorithm": "SHA-256",
+  "output_files": {
+    "normalized_quran": "/Users/mac/Desktop/QuranFrontier/corpus/normalized_quran.json",
+    "normalized_quran_searchable": "/Users/mac/Desktop/QuranFrontier/corpus/normalized_quran_searchable.json",
+    "normalized_tafsir": "/Users/mac/Desktop/QuranFrontier/corpus/normalized_tafsir.json",
+    "normalized_hadith": "/Users/mac/Desktop/QuranFrontier/corpus/normalized_hadith.json"
+  },
+  "validation_stats": {
+    "verses_with_hash": 6236,
+    "verses_in_nfc": 6236,
+    "errors": 0
+  },
+  "errors": []
+}

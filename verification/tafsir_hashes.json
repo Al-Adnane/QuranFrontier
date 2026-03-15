@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "count": 3,
+    "algorithm": "SHA-256 v1.0",
+    "generated": "2026-03-14T17:24:23.112396+00:00",
+    "format_version": "1.0"
+  },
+  "hashes": [
+    {
+      "tafsir_id": "tafsir_tabari_1_1",
+      "commentary_text": "بسم الله الرحمن الرحيم: دعاء واستعاذة",
+      "scholar_name": "Al-Tabari",
+      "edition": "Classic Edition 1898",
+      "verse_reference": "1:1",
+      "hash_sha256": "68508c718e3aba5d6614c8bd348a7d2c7cfbcae05ae3ff9ba95490e0f3f3ee83",
+      "algorithm": "SHA-256 v1.0"
+    },
+    {
+      "tafsir_id": "tafsir_ibn_kathir_1_1",
+      "commentary_text": "بسم الله: إسم من أسماء الله تعالى",
+      "scholar_name": "Ibn Kathir",
+      "edition": "Standard Edition 1999",
+      "verse_reference": "1:1",
+      "hash_sha256": "0d440bce3e91e4f2a68c08255446f204ec1eb7119361e9b55f5e7afcfd0dde62",
+      "algorithm": "SHA-256 v1.0"
+    },
+    {
+      "tafsir_id": "tafsir_qurtubi_1_2",
+      "commentary_text": "الحمد: ثناء عليه تعالى",
+      "scholar_name": "Al-Qurtubi",
+      "edition": "Fiqh Edition 2001",
+      "verse_reference": "1:2",
+      "hash_sha256": "c79479d815be8e3aab1354a554aaa97defc7546beb3ccc842c7a0580bac5d9ca",
+      "algorithm": "SHA-256 v1.0"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Elamite Religion",
+    "language": "Elamite",
+    "script": "Elamite Cuneiform",
+    "date_range": "2700-500 BCE",
+    "text_type": "Inscriptions, Temple Records",
+    "source": "Elamite Inscriptions, Persepolis Fortification",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+12000-U+123FF",
+    "accuracy_notice": {
+      "status": "FRAGMENTARY",
+      "warning": "Elamite language is poorly understood - translations uncertain",
+      "recommendation": "Verify against Elamite Dictionary (Hinz, 1987)",
+      "scholarly_sources": [
+        "Hinz, W. (1987). Altiranisches Wörterbuch.",
+        "König, F.W. (1965). Die elamischen Königsinschriften.",
+        "Cameron, G.G. (1936). Persepolis Treasury Tablets."
+      ],
+      "unicode_reference": "https://unicode.org/charts/PDF/U12000.pdf",
+      "note": "Elamite is language isolate - not related to known language families"
+    }
+  },
+  "texts": [
+    {
+      "text_id": "elamite_inscriptions",
+      "text_name_elam": "Elamite Inscriptions",
+      "text_name_en": "Elamite Royal Inscriptions",
+      "date": "~2700-500 BCE",
+      "accuracy": "FRAGMENTARY - Elamite poorly understood",
+      "inscriptions": [
+        {
+          "inscription_id": "elam_i1",
+          "name": "Untash-Napirisha Inscription",
+          "note": "Cuneiform signs require Assyriologist verification",
+          "translation_en": "Fragment: Temple dedication at Chogha Zanbil"
+        },
+        {
+          "inscription_id": "elam_i2",
+          "name": "Shutruk-Nahhunte Inscription",
+          "note": "Cuneiform signs require Assyriologist verification",
+          "translation_en": "Fragment: Victory inscription"
+        }
+      ]
+    },
+    {
+      "text_id": "elamite_gods",
+      "text_name_elam": "Elamite Gods",
+      "text_name_en": "Elamite Pantheon",
+      "date": "~2700-500 BCE",
+      "accuracy": "Via inscriptions - verify against König 1965",
+      "gods": [
+        {
+          "god_id": "elam_g1",
+          "name": "Napirisha",
+          "role": "Supreme God",
+          "domain": "Sky/Protection",
+          "note": "Chief deity of Elamite pantheon"
+        },
+        {
+          "god_id": "elam_g2",
+          "name": "Inshushinak",
+          "role": "National God",
+          "domain": "Susa/Protection",
+          "note": "Patron deity of Susa"
+        },
+        {
+          "god_id": "elam_g3",
+          "name": "Kiririsha",
+          "role": "Mother Goddess",
+          "domain": "Earth/Fertility",
+          "note": "Consort of Napirisha"
+        },
+        {
+          "god_id": "elam_g4",
+          "name": "Humban",
+          "role": "Sky God",
+          "domain": "Sky/Kingship",
+          "note": "Early head of pantheon"
+        }
+      ]
+    },
+    {
+      "text_id": "elamite_precepts",
+      "text_name_elam": "Elamite Precepts",
+      "text_name_en": "Elamite Precepts",
+      "date": "~2700-500 BCE",
+      "accuracy": "FRAGMENTARY",
+      "precepts": [
+        {
+          "precept_id": "elam_c1",
+          "note": "Limited textual evidence for Elamite religious precepts"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "cuneiform": "REQUIRES Elamite specialist verification",
+    "translation": "Elamite is language isolate - translations highly uncertain",
+    "fragmentary": "Most texts are fragmentary royal inscriptions"
+  },
+  "hash": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7"
+}

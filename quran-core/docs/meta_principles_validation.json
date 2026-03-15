@@ -1,0 +1,192 @@
+{
+  "timestamp": "2026-03-15",
+  "total_principles": 5,
+  "principles": [
+    {
+      "name": "Tayyib (Good Food/Nutrition)",
+      "quranic_reference": "Q2:168",
+      "domain": "Healthcare",
+      "validity_score": 0.8700700000000001,
+      "is_valid": true,
+      "scores": {
+        "tawhid": 0.92,
+        "mizan": 0.87,
+        "tadarruj": 0.85,
+        "maqasid": 0.88,
+        "fitrah": 0.84,
+        "observer": 0.85
+      },
+      "balance": {
+        "individual_collective": 0.85,
+        "effort_result": 0.9,
+        "short_long_term": 0.88,
+        "rigor_mercy": 0.92,
+        "certainty_flexibility": 0.8
+      },
+      "fitrah": {
+        "survival_instinct": 0.95,
+        "social_bonding": 0.85,
+        "parental_love": 0.9,
+        "intellectual_curiosity": 0.8,
+        "fairness_justice": 0.88,
+        "autonomy_freedom": 0.75,
+        "achievement_mastery": 0.85,
+        "transcendence_meaning": 0.7
+      },
+      "maqasid": {
+        "NAFS": 0.8,
+        "AQL": 0.15,
+        "DEEN": 0.05
+      }
+    },
+    {
+      "name": "Knowledge Acquisition",
+      "quranic_reference": "Q96:1-5",
+      "domain": "Cognition",
+      "validity_score": 0.9068099999999999,
+      "is_valid": true,
+      "scores": {
+        "tawhid": 0.95,
+        "mizan": 0.87,
+        "tadarruj": 0.88,
+        "maqasid": 0.92,
+        "fitrah": 0.86,
+        "observer": 0.95
+      },
+      "balance": {
+        "individual_collective": 0.85,
+        "effort_result": 0.88,
+        "short_long_term": 0.9,
+        "rigor_mercy": 0.82,
+        "certainty_flexibility": 0.9
+      },
+      "fitrah": {
+        "survival_instinct": 0.7,
+        "social_bonding": 0.8,
+        "parental_love": 0.75,
+        "intellectual_curiosity": 0.98,
+        "fairness_justice": 0.85,
+        "autonomy_freedom": 0.9,
+        "achievement_mastery": 0.95,
+        "transcendence_meaning": 0.95
+      },
+      "maqasid": {
+        "AQL": 0.5,
+        "NAFS": 0.3,
+        "DEEN": 0.15,
+        "MAL": 0.05
+      }
+    },
+    {
+      "name": "Seven Structural Layers",
+      "quranic_reference": "Q39:6",
+      "domain": "Engineering",
+      "validity_score": 0.8650600000000002,
+      "is_valid": true,
+      "scores": {
+        "tawhid": 0.93,
+        "mizan": 0.84,
+        "tadarruj": 0.9,
+        "maqasid": 0.85,
+        "fitrah": 0.84,
+        "observer": 0.82
+      },
+      "balance": {
+        "individual_collective": 0.82,
+        "effort_result": 0.88,
+        "short_long_term": 0.85,
+        "rigor_mercy": 0.78,
+        "certainty_flexibility": 0.85
+      },
+      "fitrah": {
+        "survival_instinct": 0.88,
+        "social_bonding": 0.82,
+        "parental_love": 0.8,
+        "intellectual_curiosity": 0.85,
+        "fairness_justice": 0.85,
+        "autonomy_freedom": 0.78,
+        "achievement_mastery": 0.92,
+        "transcendence_meaning": 0.75
+      },
+      "maqasid": {
+        "NAFS": 0.6,
+        "AQL": 0.25,
+        "MAL": 0.15
+      }
+    },
+    {
+      "name": "Riba (Interest) Prohibition",
+      "quranic_reference": "Q2:275",
+      "domain": "Finance",
+      "validity_score": 0.86172,
+      "is_valid": true,
+      "scores": {
+        "tawhid": 0.91,
+        "mizan": 0.87,
+        "tadarruj": 0.82,
+        "maqasid": 0.94,
+        "fitrah": 0.77,
+        "observer": 0.85
+      },
+      "balance": {
+        "individual_collective": 0.9,
+        "effort_result": 0.85,
+        "short_long_term": 0.92,
+        "rigor_mercy": 0.88,
+        "certainty_flexibility": 0.8
+      },
+      "fitrah": {
+        "survival_instinct": 0.45,
+        "social_bonding": 0.7,
+        "parental_love": 0.75,
+        "intellectual_curiosity": 0.85,
+        "fairness_justice": 0.95,
+        "autonomy_freedom": 0.8,
+        "achievement_mastery": 0.8,
+        "transcendence_meaning": 0.85
+      },
+      "maqasid": {
+        "MAL": 0.7,
+        "NAFS": 0.2,
+        "AQL": 0.1
+      }
+    },
+    {
+      "name": "Struggle-Driven Learning",
+      "quranic_reference": "Q29:69",
+      "domain": "Cognition",
+      "validity_score": 0.90013,
+      "is_valid": true,
+      "scores": {
+        "tawhid": 0.94,
+        "mizan": 0.88,
+        "tadarruj": 0.87,
+        "maqasid": 0.9,
+        "fitrah": 0.88,
+        "observer": 0.92
+      },
+      "balance": {
+        "individual_collective": 0.85,
+        "effort_result": 0.92,
+        "short_long_term": 0.9,
+        "rigor_mercy": 0.85,
+        "certainty_flexibility": 0.85
+      },
+      "fitrah": {
+        "survival_instinct": 0.75,
+        "social_bonding": 0.85,
+        "parental_love": 0.8,
+        "intellectual_curiosity": 0.92,
+        "fairness_justice": 0.88,
+        "autonomy_freedom": 0.9,
+        "achievement_mastery": 0.98,
+        "transcendence_meaning": 0.92
+      },
+      "maqasid": {
+        "AQL": 0.6,
+        "NAFS": 0.25,
+        "DEEN": 0.15
+      }
+    }
+  ]
+}

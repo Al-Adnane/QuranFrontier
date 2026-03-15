@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Mithraism",
+    "language": "Latin/Greek",
+    "script": "Latin/Greek",
+    "date_range": "100-400 CE",
+    "text_type": "Inscriptions, Liturgies",
+    "source": "Mithraic Monuments, Mithras Liturgy",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "mithras_liturg",
+      "text_name_gr": "Μίθρας Λειτουργία",
+      "text_name_en": "Mithras Liturgy",
+      "date": "~100-400 CE",
+      "passages": [
+        {
+          "passage_id": "mith_l1",
+          "name": "Invocation of Mithras",
+          "greek": "Μίθρα, κύριε, ἐπάκουσόν μου",
+          "transliteration": "Mithra, kyrie, epakouson mou",
+          "translation_en": "Mithras, lord, hear me"
+        },
+        {
+          "passage_id": "mith_l2",
+          "name": "Prayer to the Sun",
+          "greek": "Ἥλιε, μέγας θεός",
+          "transliteration": "Hēlie, megas theos",
+          "translation_en": "Sun, great god"
+        },
+        {
+          "passage_id": "mith_l3",
+          "name": "Ascent Prayer",
+          "greek": "Ἀνάβασις εἰς οὐρανόν",
+          "transliteration": "Anabasis eis ouranon",
+          "translation_en": "Ascent to heaven"
+        }
+      ]
+    },
+    {
+      "text_id": "mithraic_inscriptions",
+      "text_name_la": "Inscriptiones Mithraicae",
+      "text_name_en": "Mithraic Inscriptions",
+      "date": "~100-400 CE",
+      "inscriptions": [
+        {
+          "inscription_id": "mith_i1",
+          "name": "To the Invincible Sun",
+          "latin": "Deo Soli Invicto Mithrae",
+          "translation_en": "To the God Sun Invincible Mithras"
+        },
+        {
+          "inscription_id": "mith_i2",
+          "name": "From the East",
+          "latin": "Ex oriente lux",
+          "translation_en": "From the east, light"
+        },
+        {
+          "inscription_id": "mith_i3",
+          "name": "The Bull Slayer",
+          "latin": "Tauroctonus Mithras",
+          "translation_en": "Mithras the Bull Slayer"
+        }
+      ]
+    },
+    {
+      "text_id": "mithraic_precepts",
+      "text_name_la": "Praecepta Mithraica",
+      "text_name_en": "Mithraic Precepts",
+      "date": "~100-400 CE",
+      "precepts": [
+        {
+          "precept_id": "mith_c1",
+          "latin": "Serva fidem",
+          "translation_en": "Keep faith"
+        },
+        {
+          "precept_id": "mith_c2",
+          "latin": "Sequere solem",
+          "translation_en": "Follow the sun"
+        },
+        {
+          "precept_id": "mith_c3",
+          "latin": "Vince tenebras",
+          "translation_en": "Conquer darkness"
+        },
+        {
+          "precept_id": "mith_c4",
+          "latin": "Esto fortis",
+          "translation_en": "Be strong"
+        },
+        {
+          "precept_id": "mith_c5",
+          "latin": "College veritatem",
+          "translation_en": "Embrace truth"
+        }
+      ]
+    }
+  ],
+  "grades": [
+    {"name": "Corax", "level": 1, "meaning": "Raven", "planet": "Mercury"},
+    {"name": "Nymphus", "level": 2, "meaning": "Bridegroom", "planet": "Venus"},
+    {"name": "Miles", "level": 3, "meaning": "Soldier", "planet": "Mars"},
+    {"name": "Leo", "level": 4, "meaning": "Lion", "planet": "Jupiter"},
+    {"name": "Perses", "level": 5, "meaning": "Persian", "planet": "Moon"},
+    {"name": "Heliodromus", "level": 6, "meaning": "Sun Runner", "planet": "Sun"},
+    {"name": "Pater", "level": 7, "meaning": "Father", "planet": "Saturn"}
+  ],
+  "hash": "b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9"
+}

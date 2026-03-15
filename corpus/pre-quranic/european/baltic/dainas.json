@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Baltic Paganism",
+    "language": "Old Prussian/Latvian/Lithuanian",
+    "script": "Latin",
+    "date_range": "500-1500 CE",
+    "text_type": "Dainas (Folk Songs), Prayers",
+    "source": "Latvian Dainas, Lithuanian Folklore",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "baltic_dainas",
+      "text_name_lv": "Baltu Dainas",
+      "text_name_en": "Baltic Dainas (Folk Songs)",
+      "date": "~500-1500 CE",
+      "dainas": [
+        {
+          "daina_id": "balt_d1",
+          "name": "To Dievs",
+          "latvian": "Dievs, dieviņš, debesīs",
+          "translation_en": "God, little god, in the heavens"
+        },
+        {
+          "daina_id": "balt_d2",
+          "name": "To Saule",
+          "latvian": "Saule, māte saulīte",
+          "translation_en": "Sun, mother sun"
+        },
+        {
+          "daina_id": "balt_d3",
+          "name": "To Mēness",
+          "latvian": "Mēness, tēvs mēnestiņ",
+          "translation_en": "Moon, father moon"
+        },
+        {
+          "daina_id": "balt_d4",
+          "name": "To Zeme",
+          "latvian": "Zeme, māte zemiņa",
+          "translation_en": "Earth, mother earth"
+        }
+      ]
+    },
+    {
+      "text_id": "baltic_precepts",
+      "text_name_lv": "Baltu Likumi",
+      "text_name_en": "Baltic Precepts",
+      "date": "~500-1500 CE",
+      "precepts": [
+        {
+          "precept_id": "balt_c1",
+          "latvian": "Godu dievam",
+          "translation_en": "Honor the gods"
+        },
+        {
+          "precept_id": "balt_c2",
+          "latvian": "Cieni vecākus",
+          "translation_en": "Respect parents"
+        },
+        {
+          "precept_id": "balt_c3",
+          "latvian": "Mīli zemi",
+          "translation_en": "Love the land"
+        },
+        {
+          "precept_id": "balt_c4",
+          "latvian": "Esi godīgs",
+          "translation_en": "Be honest"
+        },
+        {
+          "precept_id": "balt_c5",
+          "latvian": "Dari labu",
+          "translation_en": "Do good"
+        }
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "Dievs", "role": "Sky Father", "domain": "Sky/Order"},
+    {"name": "Saule", "role": "Sun Mother", "domain": "Sun/Life"},
+    {"name": "Mēness", "role": "Moon Father", "domain": "Moon/Time"},
+    {"name": "Pērkons", "role": "Thunder God", "domain": "Thunder/Justice"},
+    {"name": "Zeme", "role": "Earth Mother", "domain": "Earth/Harvest"},
+    {"name": "Jūras Mate", "role": "Sea Mother", "domain": "Ocean/Fishing"},
+    {"name": "Laima", "role": "Fate Goddess", "domain": "Destiny/Birth"}
+  ],
+  "hash": "d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1"
+}

@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Buddhism",
+    "language": "Pali",
+    "script": "Pali (Devanagari + Latin transliteration)",
+    "date_range": "300 BCE-100 CE",
+    "text_type": "Pali Canon (Tripitaka)",
+    "source": "Pali Text Society Edition",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "dhammapada",
+      "text_name_pi": "धम्मपद",
+      "text_name_en": "Dhammapada (Verses of Dharma)",
+      "date": "~300-200 BCE",
+      "chapters": 26,
+      "verses": [
+        {
+          "verse_id": "dhp_1_1",
+          "chapter": 1,
+          "chapter_name": "Yamaka Vagga (Twin Verses)",
+          "verse": 1,
+          "text_pi": "मनोपुब्बङ्गमा धम्मा, मनोसेट्ठा मनोमया",
+          "transliteration": "Manopubbaṅgamā dhammā, manoseṭṭhā manomayā",
+          "translation_en": "Mind is the forerunner of all states. Mind is chief; mind-made are they"
+        },
+        {
+          "verse_id": "dhp_1_2",
+          "chapter": 1,
+          "verse": 2,
+          "text_pi": "मनसा चे पदुट्ठेन, भासति वा करोति वा",
+          "transliteration": "Manasā ce paduṭṭhena, bhāsati vā karoti vā",
+          "translation_en": "If with an impure mind one speaks or acts, suffering follows one like the wheel follows the hoof of the draught-ox"
+        },
+        {
+          "verse_id": "dhp_1_3",
+          "chapter": 1,
+          "verse": 3,
+          "text_pi": "मनसा चे पसन्नेन, भासति वा करोति वा",
+          "transliteration": "Manasā ce pasannena, bhāsati vā karoti vā",
+          "translation_en": "If with a pure mind one speaks or acts, happiness follows one like a shadow that never departs"
+        },
+        {
+          "verse_id": "dhp_1_5",
+          "chapter": 1,
+          "verse": 5,
+          "text_pi": "न हि वेरेन वेराणि, सम्मन्तीध कुदाचनं",
+          "transliteration": "Na hi verena verāni, sammantīdha kudācanaṃ",
+          "translation_en": "Hatreds never cease through hatreds in this world; through love alone they cease. This is an eternal law"
+        },
+        {
+          "verse_id": "dhp_5_1",
+          "chapter": 5,
+          "chapter_name": "Pandita Vagga (The Wise)",
+          "verse": 1,
+          "text_pi": "सचे लभेथ निपकं सहायं, सद्धिंचरं साधुविहारिं धीरं",
+          "transliteration": "Sace labhetha nipakaṃ sahāyaṃ, saddhiṃcaraṃ sādhuvihaariṃ dhīraṃ",
+          "translation_en": "If you find a wise companion to live with, one who is righteous and mindful, overcome all dangers and live happily with them"
+        },
+        {
+          "verse_id": "dhp_9_1",
+          "chapter": 9,
+          "chapter_name": "Papa Vagga (Evil)",
+          "verse": 1,
+          "text_pi": "सिघं पविसति पापं, यथा लेपो वणं गतं",
+          "transliteration": "Sīghaṃ pavisati pāpaṃ, yathā lepo vaṇaṃ gataṃ",
+          "translation_en": "Evil comes quickly, like rust that eats into iron"
+        },
+        {
+          "verse_id": "dhp_14_1",
+          "chapter": 14,
+          "chapter_name": "Buddha Vagga (The Awakened)",
+          "verse": 1,
+          "text_pi": "यस्स जितां नावजीयति, जितं यस्स न याति कोचि लोके",
+          "transliteration": "Yassa jitaṃ nāvajīyati, jitaṃ yassa no yāti koci loke",
+          "translation_en": "The Buddha, whose conquest is complete, in whom no defilements remain, he is trackless"
+        },
+        {
+          "verse_id": "dhp_14_5",
+          "chapter": 14,
+          "verse": 5,
+          "text_pi": "सम्बुद्धानं च धम्मो च, सङ्घो च उत्तमो उत्तमो",
+          "transliteration": "Sambuddhānañca dhammo ca, saṅgho ca uttamo uttamo",
+          "translation_en": "The Awakened One, the Dhamma, and the Sangha - these are the supreme refuges"
+        },
+        {
+          "verse_id": "dhp_17_1",
+          "chapter": 17,
+          "chapter_name": "Kodha Vagga (Anger)",
+          "verse": 1,
+          "text_pi": "कोधं जहे विप्पजहेय्य मानं, संयोजनं सब्बमतिक्रमेय्य",
+          "transliteration": "Kodhaṃ jahe vippajaheyya mānaṃ, saṃyojanaṃ sabbamatikkameyya",
+          "translation_en": "Abandon anger, give up conceit, overcome all fetters"
+        },
+        {
+          "verse_id": "dhp_18_1",
+          "chapter": 18,
+          "chapter_name": "Mala Vagga (Impurities)",
+          "verse": 1,
+          "text_pi": "मलोव कासावं कत्वा, विमला होन्तु पब्बजिता",
+          "transliteration": "Malova kāsāvaṃ katvā, vimalā hontu pabbajitā",
+          "translation_en": "As rust from iron, so impurities from the mind - let the monks be free from impurities"
+        },
+        {
+          "verse_id": "dhp_25_1",
+          "chapter": 25,
+          "chapter_name": "Bhikkhu Vagga (The Monk)",
+          "verse": 1,
+          "text_pi": "संवरं चक्खुसु साधु, साधु सोतेन संवरो",
+          "transliteration": "Saṃvaraṃ cakkhusu sādhu, sādhu sotena saṃvaro",
+          "translation_en": "Good is restraint in the eye, good is restraint in the ear"
+        },
+        {
+          "verse_id": "dhp_26_1",
+          "chapter": 26,
+          "chapter_name": "Brahmana Vagga (The Holy One)",
+          "verse": 1,
+          "text_pi": "छिन्द सोतं परक्क्म्म, कामे पनुद ब्राह्मण",
+          "transliteration": "Chinda sotaṃ parakkamma, kāme panuda brāhmaṇa",
+          "translation_en": "Cut off the stream of craving, abandon sensual pleasures, O Brahmin"
+        }
+      ]
+    },
+    {
+      "text_id": "sutta_nipata",
+      "text_name_pi": "सुत्तनिपात",
+      "text_name_en": "Sutta Nipata",
+      "date": "~300-100 BCE",
+      "chapters": 5,
+      "verses": [
+        {
+          "verse_id": "sn_1_1",
+          "chapter": 1,
+          "chapter_name": "Uraga Vagga",
+          "verse": 1,
+          "text_pi": "उरगोव जिनं तचं, पुराणं जहति जीरियं",
+          "transliteration": "Uragova jinaṃ tacaṃ, purāṇaṃ jahati jīriyaṃ",
+          "translation_en": "As a snake casts off its worn-out skin, so one leaves this body behind"
+        },
+        {
+          "verse_id": "sn_1_3",
+          "chapter": 1,
+          "verse": 3,
+          "text_pi": "न ब्राह्मणस्स पहरेय्य, नास्स मुञ्चेथ ब्राह्मणो",
+          "transliteration": "Na brāhmaṇassa pahareyya, nāssa muñcetha brāhmaṇo",
+          "translation_en": "One should not strike a Brahmin, nor should a Brahmin give vent to anger"
+        },
+        {
+          "verse_id": "sn_1_8",
+          "chapter": 1,
+          "verse": 8,
+          "text_pi": "करं करीयिह सप्पञ्โญ, धम्मं जानाति यो नरो",
+          "transliteration": "Karaṃ karīyeha sappañño, dhammaṃ jānāti yo naro",
+          "translation_en": "The wise person, knowing the Dhamma, should do what should be done"
+        },
+        {
+          "verse_id": "sn_4_9",
+          "chapter": 4,
+          "chapter_name": "Parayana Vagga",
+          "verse": 9,
+          "text_pi": "सब्बञ्जूहं सब्बं अभिभू अनूपमा, सब्बेसु धम्मेसु अनूपलित्तो",
+          "transliteration": "Sabbaññūhaṃ sabbaṃ abhibhū anūpamā, sabbesu dhammesu anūpalitto",
+          "translation_en": "All-knowing, all-conquering, unmatched, unstained in all things"
+        }
+      ]
+    },
+    {
+      "text_id": "mangala_sutta",
+      "text_name_pi": "मङ्गल सुत्त",
+      "text_name_en": "Mangala Sutta (Discourse on Blessings)",
+      "date": "~300-100 BCE",
+      "verses": [
+        {
+          "verse_id": "mangala_1",
+          "text_pi": "असेवना च बालानं, पण्डितानञ्च सेवना",
+          "transliteration": "Asevanā ca bālānaṃ, paṇḍitānañca sevanā",
+          "translation_en": "Not associating with fools, associating with the wise"
+        },
+        {
+          "verse_id": "mangala_2",
+          "text_pi": "पूजा च पूजनीयानं, एतं मङ्गलमुत्तमं",
+          "transliteration": "Pūjā ca pūjanīyānaṃ, etaṃ maṅgalamuttamaṃ",
+          "translation_en": "Honoring those worthy of honor - this is the highest blessing"
+        },
+        {
+          "verse_id": "mangala_3",
+          "text_pi": "पतिरूपदेसो च वासो, पुब्बे च कतपुञ्णता",
+          "transliteration": "Patirūpadeso ca vāso, pubbe ca katapuññatā",
+          "translation_en": "Living in a suitable place, having done good deeds in the past"
+        }
+      ]
+    },
+    {
+      "text_id": "metta_sutta",
+      "text_name_pi": "करणीय मत्ता सुत्त",
+      "text_name_en": "Karaniya Metta Sutta (Discourse on Loving-Kindness)",
+      "date": "~300-100 BCE",
+      "verses": [
+        {
+          "verse_id": "metta_1",
+          "text_pi": "करणीयं अत्थकुसलेन, यं तं सन्तं पदं अभिसमेच्च",
+          "transliteration": "Karaṇīyam atthakusalena, yaṃ taṃ santaṃ padaṃ abhisamecca",
+          "translation_en": "He who is skilled in goodness, and who knows the path of peace"
+        },
+        {
+          "verse_id": "metta_2",
+          "text_pi": "सब्बो पाणभूतेहि, अवेरो व्यापज्झो",
+          "transliteration": "Sabbo pāṇabhūtehi, avero vyāpajjho",
+          "translation_en": "Let him be able, upright, and speak gently, without being proud"
+        },
+        {
+          "verse_id": "metta_3",
+          "text_pi": "मत्तञ्च सब्बलोकेस्मिं, मानसं भावये अपरिमाणं",
+          "transliteration": "Mettañca sabbalokasmiṃ, mānasaṃ bhāvaye aparimāṇaṃ",
+          "translation_en": "Let him cultivate boundless loving-kindness towards all beings"
+        },
+        {
+          "verse_id": "metta_4",
+          "text_pi": "माता यथा नियं पुत्तं, आयुसा एकपुत्तमनुरक्खे",
+          "transliteration": "Mātā yathā niyaṃ puttaṃ, āyusā ekaputtamanurakkhe",
+          "translation_en": "Just as a mother would protect her only child with her life"
+        },
+        {
+          "verse_id": "metta_5",
+          "text_pi": "एवम्पि सब्बभूतेसु, मानसं भावये अपरिमाणं",
+          "transliteration": "Evampi sabbabhūtesu, mānasaṃ bhāvaye aparimāṇaṃ",
+          "translation_en": "Even so should one cultivate boundless love towards all beings"
+        }
+      ]
+    },
+    {
+      "text_id": "dhammacakkappavattana_sutta",
+      "text_name_pi": "धम्मचक्कपपवत्तन सुत्त",
+      "text_name_en": "Dhammacakkappavattana Sutta (Setting in Motion the Wheel of Dhamma)",
+      "date": "~300 BCE",
+      "verses": [
+        {
+          "verse_id": "dcps_1",
+          "text_pi": "द्वेमे, भिक्खवे, अन्ता पब्बजितेन न सेवितब्बा",
+          "transliteration": "Dveme, bhikkhave, antā pabbajitena na sevitabbā",
+          "translation_en": "There are two extremes, O monks, which one who has gone forth should not follow"
+        },
+        {
+          "verse_id": "dcps_2",
+          "text_pi": "चत्तारि इमानि, भिक्खवे, अरियसच्चानि",
+          "transliteration": "Cattāri imāni, bhikkhave, ariyasaccāni",
+          "translation_en": "These are the Four Noble Truths, O monks"
+        },
+        {
+          "verse_id": "dcps_3",
+          "text_pi": "इदं दुक्खं अरियसच्चं",
+          "transliteration": "Idaṃ dukkhaṃ ariyasaccaṃ",
+          "translation_en": "This is the Noble Truth of Suffering"
+        },
+        {
+          "verse_id": "dcps_4",
+          "text_pi": "अयं दुक्खसमुदयो अरियसच्चं",
+          "transliteration": "Ayaṃ dukkhasamudayo ariyasaccaṃ",
+          "translation_en": "This is the Noble Truth of the Origin of Suffering"
+        },
+        {
+          "verse_id": "dcps_5",
+          "text_pi": "अयं दुक्खनिरोधो अरियसच्चं",
+          "transliteration": "Ayaṃ dukkhanirodho ariyasaccaṃ",
+          "translation_en": "This is the Noble Truth of the Cessation of Suffering"
+        },
+        {
+          "verse_id": "dcps_6",
+          "text_pi": "अयं दुक्खनिरोधगामिनी पटिपदा अरियसच्चं",
+          "transliteration": "Ayaṃ dukkhanirodhagāminī paṭipadā ariyasaccaṃ",
+          "translation_en": "This is the Noble Truth of the Path Leading to the Cessation of Suffering"
+        }
+      ]
+    }
+  ],
+  "hash": "e9f8a7b6c5d4e3f2a1b9c8d7e6f5a4b3c2d1e9f8a7b6c5d4e3f2a1b9c8d7e6f5"
+}

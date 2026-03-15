@@ -1,0 +1,776 @@
+# Phase 5 Monitoring Configuration
+# Prometheus, Grafana, and Alert Rules Setup
+# Version: 1.0.0
+# Date: 2026-03-14
+
+---
+# Prometheus ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: quran-system
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 15s
+      evaluation_interval: 15s
+      external_labels:
+        cluster: 'quran-frontier'
+        phase: 'phase-5'
+        environment: 'production'
+
+    # Alertmanager configuration
+    alerting:
+      alertmanagers:
+        - static_configs:
+            - targets:
+                - alertmanager:9093
+
+    # Load rules once and periodically evaluate them
+    rule_files:
+      - '/etc/prometheus/alert-rules.yml'
+
+    scrape_configs:
+      # Prometheus itself
+      - job_name: 'prometheus'
+        static_configs:
+          - targets: ['localhost:9090']
+
+      # Kubernetes API Server
+      - job_name: 'kubernetes-api'
+        kubernetes_sd_configs:
+          - role: endpoints
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_namespace, __meta_kubernetes_service_name]
+            action: keep
+            regex: default;kubernetes
+
+      # Kubelet metrics
+      - job_name: 'kubernetes-nodes'
+        kubernetes_sd_configs:
+          - role: node
+        scheme: https
+        tls_config:
+          ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+
+      # API Service
+      - job_name: 'api-service'
+        kubernetes_sd_configs:
+          - role: pod
+            namespaces:
+              names:
+                - quran-system
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_pod_label_app]
+            action: keep
+            regex: api
+          - source_labels: [__meta_kubernetes_pod_container_port_name]
+            action: keep
+            regex: metrics
+
+      # Frontend Service
+      - job_name: 'frontend-service'
+        kubernetes_sd_configs:
+          - role: pod
+            namespaces:
+              names:
+                - quran-system
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_pod_label_app]
+            action: keep
+            regex: frontend
+
+      # Worker Service
+      - job_name: 'worker-service'
+        kubernetes_sd_configs:
+          - role: pod
+            namespaces:
+              names:
+                - quran-system
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_pod_label_app]
+            action: keep
+            regex: worker
+
+      # PostgreSQL (via postgres_exporter)
+      - job_name: 'postgres'
+        static_configs:
+          - targets: ['postgres-exporter.quran-system.svc.cluster.local:9187']
+
+      # Redis (via redis_exporter)
+      - job_name: 'redis'
+        static_configs:
+          - targets: ['redis-exporter.quran-system.svc.cluster.local:9121']
+
+      # Neo4j (via neo4j_exporter)
+      - job_name: 'neo4j'
+        static_configs:
+          - targets: ['neo4j-exporter.quran-system.svc.cluster.local:7474']
+
+  alert-rules.yml: |
+    groups:
+      # API Service Alerts
+      - name: api_service
+        interval: 30s
+        rules:
+          - alert: APIServiceDown
+            expr: up{job="api-service"} == 0
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "API Service is down"
+              description: "API service has been unavailable for more than 2 minutes"
+
+          - alert: APIHighLatency
+            expr: histogram_quantile(0.95, api_request_duration_seconds_bucket) > 5
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "API request latency is high"
+              description: "95th percentile API request latency exceeds 5 seconds"
+
+          - alert: APIErrorRate
+            expr: (sum(rate(api_requests_total{status=~"5.."}[5m])) / sum(rate(api_requests_total[5m]))) > 0.05
+            for: 5m
+            labels:
+              severity: critical
+            annotations:
+              summary: "API error rate is high"
+              description: "API service error rate exceeds 5%"
+
+          - alert: APIMemoryUsage
+            expr: container_memory_usage_bytes{pod=~"api-.*"} / 1024 / 1024 / 1024 > 0.8
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "API pod memory usage is high"
+              description: "API pod memory usage exceeds 80% of limit"
+
+      # Frontend Service Alerts
+      - name: frontend_service
+        interval: 30s
+        rules:
+          - alert: FrontendServiceDown
+            expr: up{job="frontend-service"} == 0
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Frontend Service is down"
+              description: "Frontend service has been unavailable for more than 2 minutes"
+
+          - alert: FrontendHighLatency
+            expr: histogram_quantile(0.95, http_request_duration_seconds_bucket{job="frontend-service"}) > 3
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Frontend request latency is high"
+              description: "Frontend 95th percentile latency exceeds 3 seconds"
+
+      # Worker Service Alerts
+      - name: worker_service
+        interval: 30s
+        rules:
+          - alert: WorkerServiceDown
+            expr: up{job="worker-service"} == 0
+            for: 5m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Worker Service is down"
+              description: "Worker service has been unavailable for more than 5 minutes"
+
+          - alert: WorkerQueueDepth
+            expr: celery_queue_length{job="worker-service"} > 1000
+            for: 10m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Worker queue is backing up"
+              description: "Worker queue depth exceeds 1000 tasks"
+
+      # Database Alerts
+      - name: database_health
+        interval: 30s
+        rules:
+          - alert: PostgreSQLDown
+            expr: up{job="postgres"} == 0
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "PostgreSQL is down"
+              description: "PostgreSQL has been unavailable for more than 2 minutes"
+
+          - alert: PostgreSQLConnectionLimit
+            expr: pg_stat_activity_count / pg_settings_max_connections > 0.8
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "PostgreSQL connection usage is high"
+              description: "PostgreSQL connection usage exceeds 80% of limit"
+
+          - alert: PostgreSQLDiskUsage
+            expr: (pg_database_size_bytes / pg_settings_wal_segment_size) > 0.8
+            for: 10m
+            labels:
+              severity: warning
+            annotations:
+              summary: "PostgreSQL disk usage is high"
+              description: "PostgreSQL disk usage exceeds 80%"
+
+          - alert: Neo4jDown
+            expr: up{job="neo4j"} == 0
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Neo4j is down"
+              description: "Neo4j has been unavailable for more than 2 minutes"
+
+          - alert: Neo4jUnhealthy
+            expr: neo4j_dbms_active_connections < 1
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Neo4j cluster is unhealthy"
+              description: "Neo4j has no active connections"
+
+          - alert: RedisDown
+            expr: up{job="redis"} == 0
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Redis is down"
+              description: "Redis has been unavailable for more than 2 minutes"
+
+          - alert: RedisMemoryUsage
+            expr: redis_memory_used_bytes / redis_memory_max_bytes > 0.9
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Redis memory usage is critical"
+              description: "Redis memory usage exceeds 90%"
+
+      # Resource Alerts
+      - name: resource_usage
+        interval: 30s
+        rules:
+          - alert: NodeCPUHigh
+            expr: (1 - avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m]))) > 0.8
+            for: 10m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Node CPU usage is high"
+              description: "Node CPU usage exceeds 80%"
+
+          - alert: NodeMemoryHigh
+            expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) > 0.85
+            for: 10m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Node memory usage is high"
+              description: "Node memory usage exceeds 85%"
+
+          - alert: NodeDiskFull
+            expr: (1 - (node_filesystem_avail_bytes{fstype!~"tmpfs"} / node_filesystem_size_bytes)) > 0.9
+            for: 5m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Node disk is almost full"
+              description: "Node disk usage exceeds 90%"
+
+      # Kubernetes Alerts
+      - name: kubernetes_health
+        interval: 30s
+        rules:
+          - alert: PodCrashLoop
+            expr: rate(kube_pod_container_status_restarts_total[1h]) > 0
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Pod is in crash loop"
+              description: "Pod {{ $labels.pod }} in namespace {{ $labels.namespace }} is restarting frequently"
+
+          - alert: PodPending
+            expr: kube_pod_status_phase{phase="Pending"} == 1
+            for: 15m
+            labels:
+              severity: warning
+            annotations:
+              summary: "Pod is pending"
+              description: "Pod {{ $labels.pod }} has been pending for more than 15 minutes"
+
+          - alert: PVCFull
+            expr: (1 - (kubelet_volume_stats_available_bytes / kubelet_volume_stats_capacity_bytes)) > 0.9
+            for: 5m
+            labels:
+              severity: critical
+            annotations:
+              summary: "Persistent volume is almost full"
+              description: "PVC {{ $labels.persistentvolumeclaim }} usage exceeds 90%"
+
+---
+# Grafana ConfigMap with Dashboard Definitions
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboards
+  namespace: quran-system
+data:
+  quran-frontier-overview.json: |
+    {
+      "dashboard": {
+        "title": "Quran Frontier Overview",
+        "panels": [
+          {
+            "title": "Service Status",
+            "targets": [
+              {
+                "expr": "up{job=~\"api-service|frontend-service|worker-service\"}"
+              }
+            ]
+          },
+          {
+            "title": "API Request Rate",
+            "targets": [
+              {
+                "expr": "sum(rate(api_requests_total[5m])) by (status)"
+              }
+            ]
+          },
+          {
+            "title": "Database Query Duration",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.95, database_query_duration_seconds_bucket)"
+              }
+            ]
+          },
+          {
+            "title": "Worker Job Queue",
+            "targets": [
+              {
+                "expr": "celery_queue_length"
+              }
+            ]
+          },
+          {
+            "title": "Pod Memory Usage",
+            "targets": [
+              {
+                "expr": "container_memory_usage_bytes{namespace=\"quran-system\"} / 1024 / 1024"
+              }
+            ]
+          },
+          {
+            "title": "Pod CPU Usage",
+            "targets": [
+              {
+                "expr": "rate(container_cpu_usage_seconds_total{namespace=\"quran-system\"}[5m])"
+              }
+            ]
+          }
+        ]
+      }
+    }
+
+  api-performance.json: |
+    {
+      "dashboard": {
+        "title": "API Performance Dashboard",
+        "panels": [
+          {
+            "title": "Request Latency (p50)",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.50, api_request_duration_seconds_bucket)"
+              }
+            ]
+          },
+          {
+            "title": "Request Latency (p95)",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.95, api_request_duration_seconds_bucket)"
+              }
+            ]
+          },
+          {
+            "title": "Request Latency (p99)",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.99, api_request_duration_seconds_bucket)"
+              }
+            ]
+          },
+          {
+            "title": "Error Rate",
+            "targets": [
+              {
+                "expr": "sum(rate(api_requests_total{status=~\"5..\"}[5m])) / sum(rate(api_requests_total[5m]))"
+              }
+            ]
+          },
+          {
+            "title": "Requests per Second",
+            "targets": [
+              {
+                "expr": "sum(rate(api_requests_total[1m]))"
+              }
+            ]
+          },
+          {
+            "title": "Active Connections",
+            "targets": [
+              {
+                "expr": "api_active_connections"
+              }
+            ]
+          }
+        ]
+      }
+    }
+
+  database-health.json: |
+    {
+      "dashboard": {
+        "title": "Database Health Dashboard",
+        "panels": [
+          {
+            "title": "PostgreSQL Connections",
+            "targets": [
+              {
+                "expr": "pg_stat_activity_count"
+              }
+            ]
+          },
+          {
+            "title": "PostgreSQL Query Duration (p95)",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.95, pg_slow_query_duration_seconds_bucket)"
+              }
+            ]
+          },
+          {
+            "title": "Neo4j Transaction Rate",
+            "targets": [
+              {
+                "expr": "rate(neo4j_transactions_total[5m])"
+              }
+            ]
+          },
+          {
+            "title": "Neo4j Cluster Status",
+            "targets": [
+              {
+                "expr": "neo4j_dbms_active_connections"
+              }
+            ]
+          },
+          {
+            "title": "Redis Memory Usage",
+            "targets": [
+              {
+                "expr": "redis_memory_used_bytes / redis_memory_max_bytes"
+              }
+            ]
+          },
+          {
+            "title": "Redis Command Rate",
+            "targets": [
+              {
+                "expr": "sum(rate(redis_commands_processed_total[5m]))"
+              }
+            ]
+          }
+        ]
+      }
+    }
+
+  worker-status.json: |
+    {
+      "dashboard": {
+        "title": "Worker Status Dashboard",
+        "panels": [
+          {
+            "title": "Active Workers",
+            "targets": [
+              {
+                "expr": "count(celery_worker_up)"
+              }
+            ]
+          },
+          {
+            "title": "Task Queue Depth",
+            "targets": [
+              {
+                "expr": "celery_queue_length"
+              }
+            ]
+          },
+          {
+            "title": "Task Processing Rate",
+            "targets": [
+              {
+                "expr": "sum(rate(celery_tasks_total[5m])) by (state)"
+              }
+            ]
+          },
+          {
+            "title": "Task Duration (p95)",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.95, celery_task_duration_seconds_bucket)"
+              }
+            ]
+          },
+          {
+            "title": "Failed Tasks",
+            "targets": [
+              {
+                "expr": "sum(rate(celery_tasks_total{state=\"failure\"}[5m]))"
+              }
+            ]
+          },
+          {
+            "title": "Worker CPU Usage",
+            "targets": [
+              {
+                "expr": "rate(container_cpu_usage_seconds_total{pod=~\"worker-.*\"}[5m])"
+              }
+            ]
+          }
+        ]
+      }
+    }
+
+---
+# AlertManager ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alertmanager-config
+  namespace: quran-system
+data:
+  alertmanager.yml: |
+    global:
+      resolve_timeout: 5m
+      slack_api_url: ${SLACK_WEBHOOK_URL}
+      pagerduty_url: https://events.pagerduty.com/v2/enqueue
+
+    route:
+      receiver: 'default'
+      group_by: ['alertname', 'cluster', 'service']
+      group_wait: 30s
+      group_interval: 5m
+      repeat_interval: 12h
+
+      routes:
+        # Critical alerts go to PagerDuty and Slack
+        - match:
+            severity: critical
+          receiver: 'pagerduty'
+          repeat_interval: 5m
+
+        # Warning alerts go to Slack
+        - match:
+            severity: warning
+          receiver: 'slack-warnings'
+          repeat_interval: 1h
+
+    receivers:
+      - name: 'default'
+        slack_configs:
+          - channel: '#phase-5-alerts'
+            title: 'Quran Frontier Alert: {{ .GroupLabels.alertname }}'
+            text: '{{ range .Alerts }}{{ .Annotations.description }}{{ end }}'
+
+      - name: 'pagerduty'
+        pagerduty_configs:
+          - service_key: ${PAGERDUTY_SERVICE_KEY}
+            description: '{{ .GroupLabels.alertname }}'
+
+      - name: 'slack-warnings'
+        slack_configs:
+          - channel: '#phase-5-warnings'
+            title: 'Warning: {{ .GroupLabels.alertname }}'
+            text: '{{ range .Alerts }}{{ .Annotations.description }}{{ end }}'
+
+    inhibit_rules:
+      # Inhibit warning alerts when critical alert fires
+      - source_match:
+          severity: 'critical'
+        target_match:
+          severity: 'warning'
+        equal: ['alertname', 'cluster', 'service']
+
+---
+# Prometheus Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+  namespace: quran-system
+spec:
+  type: ClusterIP
+  selector:
+    app: prometheus
+  ports:
+    - port: 9090
+      targetPort: 9090
+
+---
+# AlertManager Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: alertmanager
+  namespace: quran-system
+spec:
+  type: ClusterIP
+  selector:
+    app: alertmanager
+  ports:
+    - port: 9093
+      targetPort: 9093
+
+---
+# Grafana Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  namespace: quran-system
+spec:
+  type: ClusterIP
+  selector:
+    app: grafana
+  ports:
+    - port: 3000
+      targetPort: 3000
+
+---
+# Monitoring Configuration Summary
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: monitoring-summary
+  namespace: quran-system
+data:
+  summary.txt: |
+    PHASE 5 MONITORING CONFIGURATION
+    ================================
+
+    Deployment: 2026-03-14
+
+    PROMETHEUS
+    ----------
+    Service: prometheus.quran-system.svc.cluster.local:9090
+    Scrape Interval: 15 seconds
+    Evaluation Interval: 15 seconds
+
+    Scrape Targets:
+    - API Service (port 8001/metrics)
+    - Frontend Service (HTTP)
+    - Worker Service (5000)
+    - PostgreSQL (port 9187, via postgres_exporter)
+    - Redis (port 9121, via redis_exporter)
+    - Neo4j (port 7474, via neo4j_exporter)
+    - Kubernetes API Server
+    - Kubelet Nodes
+
+    ALERTMANAGER
+    -----------
+    Service: alertmanager.quran-system.svc.cluster.local:9093
+    Notification Channels:
+    - Slack: #phase-5-alerts (all), #phase-5-warnings (warnings)
+    - PagerDuty: Critical alerts only
+
+    Alert Categories:
+    - API Service Health (5 alerts)
+    - Frontend Service Health (2 alerts)
+    - Worker Service Health (2 alerts)
+    - Database Health (6 alerts)
+    - Resource Usage (3 alerts)
+    - Kubernetes Health (3 alerts)
+
+    GRAFANA
+    -------
+    Service: grafana.quran-system.svc.cluster.local:3000
+    Default Username: admin
+    Default Password: [Set via SECRET]
+
+    Dashboards:
+    1. Quran Frontier Overview - High-level system status
+    2. API Performance - Request metrics and latency
+    3. Database Health - Database-specific metrics
+    4. Worker Status - Task queue and worker metrics
+
+    Data Source: Prometheus
+    Retention: 15 days
+
+    EXPECTED METRICS
+    ----------------
+    API Metrics:
+    - api_requests_total (counter)
+    - api_request_duration_seconds (histogram)
+    - api_active_connections (gauge)
+
+    Database Metrics:
+    - pg_stat_activity_count (PostgreSQL)
+    - neo4j_dbms_active_connections (Neo4j)
+    - redis_memory_used_bytes (Redis)
+
+    Worker Metrics:
+    - celery_queue_length (gauge)
+    - celery_tasks_total (counter)
+    - celery_task_duration_seconds (histogram)
+
+    Node Metrics:
+    - node_cpu_seconds_total
+    - node_memory_MemTotal_bytes
+    - node_filesystem_avail_bytes
+
+    ALERT THRESHOLDS
+    ----------------
+    Critical:
+    - Service down for > 2 minutes
+    - API error rate > 5%
+    - Database connectivity lost
+    - Disk usage > 90%
+    - Worker queue depth > 1000
+
+    Warning:
+    - API latency (p95) > 5 seconds
+    - API memory > 80% of limit
+    - Database connections > 80% of limit
+    - Node CPU > 80%
+    - Node memory > 85%
+
+    ACTIVATION CHECKLIST
+    --------------------
+    [ ] Prometheus ConfigMap applied
+    [ ] AlertManager ConfigMap applied
+    [ ] Grafana ConfigMap applied
+    [ ] Services created
+    [ ] Data sources configured in Grafana
+    [ ] Dashboards imported
+    [ ] Alert rules loaded
+    [ ] Notification channels verified
+    [ ] Test alert triggered successfully

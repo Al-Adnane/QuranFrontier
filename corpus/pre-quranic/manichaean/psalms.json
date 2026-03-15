@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Manichaeism",
+    "language": "Middle Persian/Coptic/Sogdian",
+    "script": "Manichaean Script/Coptic",
+    "date_range": "200-700 CE",
+    "text_type": "Psalms, Prayers, Epistles",
+    "source": "Manichaean Psalms, Turfan Fragments",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "manichaean_psalms",
+      "text_name_cop": "Ⲯⲁⲗⲙⲟⲓ ⲛⲧⲉ Ⲙⲁⲛⲓ",
+      "text_name_en": "Manichaean Psalms",
+      "date": "~200-500 CE",
+      "psalms": [
+        {
+          "psalm_id": "man_ps1",
+          "name": "Psalm of the Living Soul",
+          "coptic": "Ⲯⲁⲗⲙⲟⲥ ⲛⲧⲉ ⲯⲩⲭⲏ ⲉⲧⲟⲛϩ",
+          "transliteration": "Psalmos nte psychē etonh",
+          "translation_en": "Psalm of the Living Soul"
+        },
+        {
+          "psalm_id": "man_ps2",
+          "name": "Psalm of Light",
+          "coptic": "Ⲯⲁⲗⲙⲟⲥ ⲛⲧⲉ ⲟⲩⲟⲓⲛ",
+          "transliteration": "Psalmos nte ouoin",
+          "translation_en": "Psalm of Light"
+        },
+        {
+          "psalm_id": "man_ps3",
+          "name": "Prayer for Deliverance",
+          "coptic": "Ⲡⲣⲟⲥⲉⲩⲭⲏ ⲛⲧⲉ ⲥⲱⲧⲙ",
+          "transliteration": "Proseuchē nte sōtm",
+          "translation_en": "Prayer for Deliverance"
+        }
+      ]
+    },
+    {
+      "text_id": "manichaean_precepts",
+      "text_name_cop": "Ⲉⲛⲧⲟⲗⲏ ⲛⲧⲉ Ⲙⲁⲛⲓ",
+      "text_name_en": "Manichaean Precepts",
+      "date": "~200-500 CE",
+      "precepts": [
+        {
+          "precept_id": "man_c1",
+          "name": "First Seal",
+          "coptic": "Ⲧⲁⲅⲁⲛⲏ ⲛⲧⲉ ⲥⲧⲟⲙⲁ",
+          "transliteration": "Taganē nte stoma",
+          "translation_en": "Seal of the Mouth (dietary restrictions)"
+        },
+        {
+          "precept_id": "man_c2",
+          "name": "Second Seal",
+          "coptic": "Ⲧⲁⲅⲁⲛⲏ ⲛⲧⲉ ⲭⲉⲓⲣ",
+          "transliteration": "Taganē nte cheir",
+          "translation_en": "Seal of the Hands (non-violence)"
+        },
+        {
+          "precept_id": "man_c3",
+          "name": "Third Seal",
+          "coptic": "Ⲧⲁⲅⲁⲛⲏ ⲛⲧⲉ ⲕⲟⲗⲡⲟⲥ",
+          "transliteration": "Taganē nte kolpos",
+          "translation_en": "Seal of the Bosom (chastity)"
+        }
+      ]
+    },
+    {
+      "text_id": "manichaean_hymns",
+      "text_name_cop": "Ϩⲩⲙⲛⲟⲓ ⲛⲧⲉ Ⲛⲟⲩⲥ",
+      "text_name_en": "Hymns to Light",
+      "date": "~200-500 CE",
+      "hymns": [
+        {
+          "hymn_id": "man_h1",
+          "name": "Hymn to the Father of Light",
+          "coptic": "Ⲡⲉϫⲉ ⲡⲓⲱⲧ ⲛⲟⲩⲟⲓⲛ",
+          "transliteration": "Peje piōt nouoin",
+          "translation_en": "The Father of Light says"
+        },
+        {
+          "hymn_id": "man_h2",
+          "name": "Hymn to Jesus the Splendor",
+          "coptic": "Ⲓⲏⲥⲟⲩⲥ ⲡⲓⲟⲩⲟⲉⲓⲛ",
+          "transliteration": "Iēsous piouoein",
+          "translation_en": "Jesus the Splendor"
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {"name": "Light", "meaning": "Divine Realm", "coptic": "ⲟⲩⲟⲓⲛ"},
+    {"name": "Darkness", "meaning": "Material Realm", "coptic": "ⲕⲁⲕⲓⲁ"},
+    {"name": "Soul", "meaning": "Divine Spark", "coptic": "ⲯⲩⲭⲏ"},
+    {"name": "Father of Light", "meaning": "Supreme God", "coptic": "ⲡⲓⲱⲧ ⲛⲟⲩⲟⲓⲛ"},
+    {"name": "Jesus the Splendor", "meaning": "Savior Figure", "coptic": "Ⲓⲏⲥⲟⲩⲥ ⲡⲓⲟⲩⲟⲉⲓⲛ"}
+  ],
+  "hash": "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8"
+}

@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-14T17:23:33.238314",
+    "total_processing_time_seconds": 0.137308,
+    "normalization_method": "Unicode NFC",
+    "diacritics_handled": true,
+    "variant_recitations_tracked": true
+  },
+  "corpus_statistics": [
+    {
+      "source": "quran",
+      "total_entries": 6236,
+      "processed": 6236,
+      "with_diacritics_entries": 0,
+      "without_diacritics_entries": 6236,
+      "unicode_errors": 0,
+      "reference_resolved": 0,
+      "reference_failed": 0,
+      "variant_recitations": 0,
+      "narrative_chains": 0,
+      "processing_time_seconds": 0.0
+    },
+    {
+      "source": "tafsir",
+      "total_entries": 3,
+      "processed": 3,
+      "with_diacritics_entries": 0,
+      "without_diacritics_entries": 3,
+      "unicode_errors": 0,
+      "reference_resolved": 2,
+      "reference_failed": 1,
+      "variant_recitations": 0,
+      "narrative_chains": 0,
+      "processing_time_seconds": 0.0
+    },
+    {
+      "source": "hadith",
+      "total_entries": 2,
+      "processed": 2,
+      "with_diacritics_entries": 2,
+      "without_diacritics_entries": 2,
+      "unicode_errors": 0,
+      "reference_resolved": 2,
+      "reference_failed": 0,
+      "variant_recitations": 0,
+      "narrative_chains": 2,
+      "processing_time_seconds": 0.0
+    }
+  ],
+  "quality_checks": {
+    "quran_encoding": {
+      "total_entries_checked": 6236,
+      "encoding_errors": 0,
+      "error_details": []
+    },
+    "tafsir_encoding": {
+      "total_entries_checked": 3,
+      "encoding_errors": 0,
+      "error_details": []
+    },
+    "hadith_encoding": {
+      "total_entries_checked": 2,
+      "encoding_errors": 0,
+      "error_details": []
+    },
+    "verse_reference_sample": {
+      "sample_size": 100,
+      "verified": 100,
+      "failed": 0,
+      "success_rate": 1.0
+    }
+  },
+  "summary": {
+    "total_verses_processed": 6236,
+    "total_tafsir_processed": 3,
+    "total_hadith_processed": 2,
+    "total_entries": 6241,
+    "total_with_diacritics": 2,
+    "total_without_diacritics": 6241,
+    "total_encoding_errors": 0,
+    "total_references_resolved": 4
+  }
+}

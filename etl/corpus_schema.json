@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "corpus_type": "unified_islamic_knowledge_base",
+  "description": "Unified corpus containing Quranic verses, tafsir commentary, hadith references, and Islamic scholarship",
+  "structure": {
+    "metadata": {
+      "description": "Corpus-level metadata",
+      "fields": {
+        "corpus_id": "UUID for corpus version",
+        "created_at": "ISO 8601 timestamp",
+        "last_updated": "ISO 8601 timestamp",
+        "total_verses": "Number of Quranic verses (6236)",
+        "total_hadiths": "Number of hadith records",
+        "total_commentary_entries": "Number of tafsir entries",
+        "sources": "Array of source metadata",
+        "language": "ar-SA for Arabic, en-US for English",
+        "schema_version": "Current schema version"
+      }
+    },
+    "verses": {
+      "description": "Core Quranic text and metadata",
+      "item_schema": {
+        "verse_id": "Unique identifier (surah_ayah format, e.g., '1_1')",
+        "surah_number": "Surah index (1-114)",
+        "surah_name_ar": "Arabic surah name",
+        "surah_name_en": "English surah name",
+        "ayah_number": "Verse index within surah",
+        "text_ar": "Arabic Quranic text (King Fahd Madinah Mushaf)",
+        "text_en": "English translation",
+        "text_hash": "SHA-256 hash of original Arabic text",
+        "source": {
+          "name": "King Fahd Madinah Mushaf",
+          "version": "1.0",
+          "url": "https://quran.com"
+        },
+        "revelation_context": {
+          "revelation_type": "Meccan or Medinan",
+          "revelation_order": "Order of revelation (1-114)",
+          "asbab_al_nuzul": "Occasions of revelation (optional)",
+          "related_verses": "Array of related verse IDs"
+        },
+        "tafsir": [
+          {
+            "commentary_id": "UUID",
+            "tafsir_name": "Name of tafsir source",
+            "tafsir_author": "Author of tafsir",
+            "text": "Commentary text",
+            "source": "Source attribution",
+            "source_hash": "SHA-256 hash",
+            "madhhab": "School of law (if applicable)",
+            "confidence_score": "0.0-1.0",
+            "verified_by": "Scholar verification status"
+          }
+        ],
+        "hadith_references": [
+          {
+            "hadith_id": "Collection_book_number format",
+            "collection": "Sahih Bukhari, etc.",
+            "grading": "Sahih/Hasan/Dhaif",
+            "grader_authority": "Approved grader name",
+            "relevance": "Connection to verse"
+          }
+        ]
+      }
+    },
+    "hadiths": {
+      "description": "Hadith collection index",
+      "item_schema": {
+        "hadith_id": "Unique identifier",
+        "collection": "Source collection name",
+        "book": "Book within collection",
+        "number": "Hadith number",
+        "text_ar": "Arabic hadith text",
+        "text_en": "English translation",
+        "chain_ar": "Isnad (chain of narration)",
+        "grading": "Sahih/Hasan/Dhaif/Mursal",
+        "grader_authority": "Who graded it",
+        "related_verses": "Array of related verse IDs",
+        "source_hash": "SHA-256 hash",
+        "source": {
+          "name": "Source collection",
+          "version": "Edition version"
+        }
+      }
+    }
+  },
+  "validation_rules": {
+    "verse_completeness": "All 6236 verses must be present",
+    "verse_structure": "Every verse must have text_ar, text_en, verse_id",
+    "utf8_encoding": "All Arabic text must be valid UTF-8",
+    "hash_verification": "Each verse hash must match source text",
+    "no_duplicates": "No duplicate verse IDs or hadith IDs",
+    "source_attribution": "Every source must be documented",
+    "copyright_compliance": "All sources must have verified legal status",
+    "encoding_consistency": "No mixed encodings within single corpus"
+  },
+  "quality_gates": [
+    {
+      "gate_name": "UTF-8 Validation",
+      "description": "All Arabic text must be valid UTF-8",
+      "criterion": "No encoding errors in corpus",
+      "pass_condition": "100% of text valid UTF-8"
+    },
+    {
+      "gate_name": "Verse Completeness",
+      "description": "All 6,236 Quranic verses present",
+      "criterion": "verse_count == 6236",
+      "pass_condition": "All verses 1:1 through 114:6 present"
+    },
+    {
+      "gate_name": "Copyright Clearance",
+      "description": "No copyright violations in final corpus",
+      "criterion": "All sources verified for legal use",
+      "pass_condition": "100% of sources documented as legal"
+    },
+    {
+      "gate_name": "Source Documentation",
+      "description": "All sources documented in metadata",
+      "criterion": "Every verse references source",
+      "pass_condition": "0 verses without source attribution"
+    },
+    {
+      "gate_name": "Hash Verification",
+      "description": "Source integrity hashes match",
+      "criterion": "hash(text) == stored_hash",
+      "pass_condition": "100% of hashes verified"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "quran_mushaf",
+      "name": "King Fahd Madinah Mushaf",
+      "type": "Canonical Text",
+      "language": "ar-SA",
+      "verses_count": 6236,
+      "copyright_status": "Public Domain (Saudi Government)",
+      "verification_status": "VERIFIED",
+      "hash": "SHA-256 of entire corpus",
+      "last_verified": "2026-03-14"
+    },
+    {
+      "source_id": "study_quran",
+      "name": "The Study Quran (English Commentary)",
+      "type": "Classical Commentary",
+      "language": "en-US",
+      "verses_count": 6236,
+      "copyright_status": "Licensed - HarperOne",
+      "verification_status": "PENDING_LICENSE",
+      "contributors": ["Sohail Hanif (Editor)", "Classical Scholars"],
+      "last_verified": "2026-03-14"
+    },
+    {
+      "source_id": "tafsir_api",
+      "name": "Tafsir.com API",
+      "type": "Modern Tafsir",
+      "language": "en-US",
+      "copyright_status": "MIT License",
+      "verification_status": "VERIFIED",
+      "url": "https://api.tafsir.app",
+      "last_verified": "2026-03-14"
+    },
+    {
+      "source_id": "hadith_dorar",
+      "name": "Dorar.net Hadith Database",
+      "type": "Hadith Collection",
+      "language": "ar-SA",
+      "copyright_status": "Open Access",
+      "verification_status": "VERIFIED",
+      "url": "https://dorar.net",
+      "last_verified": "2026-03-14"
+    },
+    {
+      "source_id": "quran_com",
+      "name": "Quran.com Reference Data",
+      "type": "Quranic Reference",
+      "language": "Multiple",
+      "copyright_status": "Open License",
+      "verification_status": "VERIFIED",
+      "url": "https://quran.com",
+      "last_verified": "2026-03-14"
+    },
+    {
+      "source_id": "tanzil",
+      "name": "Tanzil.net Quranic Text Variants",
+      "type": "Text Variants",
+      "language": "ar-SA",
+      "copyright_status": "LGPL",
+      "verification_status": "VERIFIED",
+      "url": "https://tanzil.net",
+      "last_verified": "2026-03-14"
+    }
+  ]
+}

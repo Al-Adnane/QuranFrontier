@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Slavic Paganism",
+    "language": "Old Church Slavonic/Proto-Slavic",
+    "script": "Cyrillic/Latin",
+    "date_range": "500-1200 CE",
+    "text_type": "Hymns, Incantations",
+    "source": "Oral Tradition, Primary Chronicle",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "slavic_hymns",
+      "text_name_slav": "Словѣньскъ Химнꙑ",
+      "text_name_en": "Slavic Hymns",
+      "date": "~600-1200 CE",
+      "hymns": [
+        {
+          "hymn_id": "slav_h1",
+          "name": "To Perun",
+          "slavic": "Перуне, громовержецъ",
+          "transliteration": "Perune, gromoveržecŭ",
+          "translation_en": "Perun, thunderer"
+        },
+        {
+          "hymn_id": "slav_h2",
+          "name": "To Veles",
+          "slavic": "Велесъ, скотий богъ",
+          "transliteration": "Velesŭ, skotij bogŭ",
+          "translation_en": "Veles, god of cattle"
+        },
+        {
+          "hymn_id": "slav_h3",
+          "name": "To Mokosh",
+          "slavic": "Мокошь, мати сыра земля",
+          "transliteration": "Mokošŭ, mati syra zemlja",
+          "translation_en": "Mokosh, mother damp earth"
+        },
+        {
+          "hymn_id": "slav_h4",
+          "name": "To Dazhbog",
+          "slavic": "Дажьбогъ, солнце даритель",
+          "transliteration": "Dažŭbogŭ, solnce daritelŭ",
+          "translation_en": "Dazhbog, sun giver"
+        }
+      ]
+    },
+    {
+      "text_id": "slavic_precepts",
+      "text_name_slav": "Словѣньскъ Заповѣди",
+      "text_name_en": "Slavic Precepts",
+      "date": "~500-1200 CE",
+      "precepts": [
+        {
+          "precept_id": "slav_c1",
+          "slavic": "Почитай боговъ",
+          "transliteration": "Počitaj bogovŭ",
+          "translation_en": "Honor the gods"
+        },
+        {
+          "precept_id": "slav_c2",
+          "slavic": "Почитай предкъ",
+          "transliteration": "Počitaj predkŭ",
+          "translation_en": "Honor the ancestors"
+        },
+        {
+          "precept_id": "slav_c3",
+          "slavic": "Буди честенъ",
+          "transliteration": "Budi čestenŭ",
+          "translation_en": "Be honest"
+        },
+        {
+          "precept_id": "slav_c4",
+          "slavic": "Защищай родъ",
+          "transliteration": "Zaščiščaj rodŭ",
+          "translation_en": "Protect your kin"
+        },
+        {
+          "precept_id": "slav_c5",
+          "slavic": "Гости примаи",
+          "transliteration": "Gosti primai",
+          "translation_en": "Welcome guests"
+        },
+        {
+          "precept_id": "slav_c6",
+          "slavic": "Землю чті",
+          "transliteration": "Zemlju čti",
+          "translation_en": "Respect the earth"
+        }
+      ]
+    },
+    {
+      "text_id": "slavic_incantations",
+      "text_name_slav": "Заговоры",
+      "text_name_en": "Slavic Incantations",
+      "date": "~500-1200 CE",
+      "incantations": [
+        {
+          "incantation_id": "slav_i1",
+          "name": "For Protection",
+          "slavic": "Боже, защити мя",
+          "transliteration": "Bože, zaštiti mę",
+          "translation_en": "God, protect me"
+        },
+        {
+          "incantation_id": "slav_i2",
+          "name": "For Healing",
+          "slavic": "Здрава буди",
+          "transliteration": "Zdrava budi",
+          "translation_en": "Be healthy"
+        },
+        {
+          "incantation_id": "slav_i3",
+          "name": "For Harvest",
+          "slavic": "Жито расти",
+          "transliteration": "Žito rasti",
+          "translation_en": "Grain, grow"
+        }
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "Perun", "role": "Thunder God", "domain": "Thunder/War"},
+    {"name": "Veles", "role": "God of Cattle", "domain": "Underworld/Cattle"},
+    {"name": "Mokosh", "role": "Earth Mother", "domain": "Earth/Women"},
+    {"name": "Dazhbog", "role": "Sun God", "domain": "Sun/Giving"},
+    {"name": "Svarog", "role": "Sky Father", "domain": "Sky/Forge"},
+    {"name": "Lada", "role": "Love Goddess", "domain": "Love/Beauty"},
+    {"name": "Morana", "role": "Death Goddess", "domain": "Death/Winter"}
+  ],
+  "hash": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+}

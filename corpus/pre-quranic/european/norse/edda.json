@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Norse/Germanic Paganism",
+    "language": "Old Norse",
+    "script": "Latin (with runes)",
+    "date_range": "800-1300 CE (oral tradition older)",
+    "text_type": "Eddic Poetry, Runes",
+    "source": "Poetic Edda, Codex Regius",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "havamal",
+      "text_name_on": "Hávamál",
+      "text_name_en": "Sayings of the High One (Odin)",
+      "date": "~800-1000 CE",
+      "stanzas": [
+        {
+          "stanza_id": "hav_1",
+          "old_norse": "Gáttir allar, áðr gangi fram, um skoðask skyli, um skygnask skyli",
+          "translation_en": "At all doorways, before one goes forward, one should look, one should spy"
+        },
+        {
+          "stanza_id": "hav_9",
+          "old_norse": "Sá er einn, hvat skal hann lifa?",
+          "translation_en": "He who is alone, how shall he live?"
+        },
+        {
+          "stanza_id": "hav_77",
+          "old_norse": "Deyr fé, deyja frændr, deyr sjálfr it sama; en orðstírr deyr aldregi, hveim er sér góðan getr",
+          "translation_en": "Cattle die, kinsmen die, one dies oneself; but fame never dies, for him who gets a good one"
+        },
+        {
+          "stanza_id": "hav_138",
+          "old_norse": "Veit ek at ek hekk vindga meiði á, nætr allar níu, geiri undaðr ok gefinn Óðni, sjálfr sjalfum mér",
+          "translation_en": "I know that I hung on a windy tree, nine long nights, wounded with a spear and given to Odin, myself to myself"
+        }
+      ]
+    },
+    {
+      "text_id": "voluspa",
+      "text_name_on": "Völuspá",
+      "text_name_en": "Prophecy of the Seeress",
+      "date": "~900-1000 CE",
+      "stanzas": [
+        {
+          "stanza_id": "vol_1",
+          "old_norse": "Hliðs bið ek allar helgar kindir, meiri ok minni mögu Heimdallar",
+          "translation_en": "Silence I ask of all holy races, great and small, sons of Heimdall"
+        },
+        {
+          "stanza_id": "vol_3",
+          "old_norse": "Ár var alda, þat er ekki var, varka sandr né sær né svalar unnir",
+          "translation_en": "It was early in ages, when nothing was, no sand nor sea nor cool waves"
+        },
+        {
+          "stanza_id": "vol_9",
+          "old_norse": "Ask veit ek standa, heitir Yggdrasill, hár baðmr, ausinn hvíta auri",
+          "translation_en": "An ash I know stands, Yggdrasil it is called, a high tree, sprinkled with white clay"
+        },
+        {
+          "stanza_id": "vol_57",
+          "old_norse": "Þá kømr inn ríki at regindómi, ofan ofanleitr allvaldr",
+          "translation_en": "Then comes the mighty one to the great judgment, from above, the all-ruler"
+        }
+      ]
+    },
+    {
+      "text_id": "runes",
+      "text_name_on": "Runar",
+      "text_name_en": "Runic Inscriptions",
+      "date": "~200-1100 CE",
+      "runes": [
+        {
+          "rune_id": "rune_1",
+          "name": "Fehu",
+          "rune": "ᚠ",
+          "meaning": "Cattle, Wealth",
+          "inscription": "ᚠᚢᚦᚨᚱᚲᚷᚹ ᚺᚾᛁᛃᛇ ᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ"
+        },
+        {
+          "rune_id": "rune_2",
+          "name": "Uruz",
+          "rune": "ᚢ",
+          "meaning": "Aurochs, Strength"
+        },
+        {
+          "rune_id": "rune_3",
+          "name": "Thurisaz",
+          "rune": "ᚦ",
+          "meaning": "Giant, Thorn"
+        },
+        {
+          "rune_id": "rune_4",
+          "name": "Ansuz",
+          "rune": "ᚨ",
+          "meaning": "God, Odin"
+        },
+        {
+          "rune_id": "rune_5",
+          "name": "Raido",
+          "rune": "ᚱ",
+          "meaning": "Ride, Journey"
+        },
+        {
+          "rune_id": "rune_6",
+          "name": "Kaunan",
+          "rune": "ᚲ",
+          "meaning": "Torch, Ulcer"
+        },
+        {
+          "rune_id": "rune_7",
+          "name": "Gebo",
+          "rune": "ᚷ",
+          "meaning": "Gift"
+        },
+        {
+          "rune_id": "rune_8",
+          "name": "Wunjo",
+          "rune": "ᚹ",
+          "meaning": "Joy"
+        }
+      ]
+    },
+    {
+      "text_id": "nine_noble_virtues",
+      "text_name_on": "Níu Dygðir",
+      "text_name_en": "Nine Noble Virtues",
+      "date": "~800-1100 CE",
+      "virtues": [
+        {
+          "virtue_id": "nnv_1",
+          "old_norse": "Frækni",
+          "translation_en": "Courage"
+        },
+        {
+          "virtue_id": "nnv_2",
+          "old_norse": "Sannleikr",
+          "translation_en": "Truth"
+        },
+        {
+          "virtue_id": "nnv_3",
+          "old_norse": "Ást",
+          "translation_en": "Love"
+        },
+        {
+          "virtue_id": "nnv_4",
+          "old_norse": "Heiðr",
+          "translation_en": "Honor"
+        },
+        {
+          "virtue_id": "nnv_5",
+          "old_norse": "Gestrisni",
+          "translation_en": "Hospitality"
+        },
+        {
+          "virtue_id": "nnv_6",
+          "old_norse": "Iðni",
+          "translation_en": "Industriousness"
+        },
+        {
+          "virtue_id": "nnv_7",
+          "old_norse": "Sjálfráði",
+          "translation_en": "Self-reliance"
+        },
+        {
+          "virtue_id": "nnv_8",
+          "old_norse": "Þolinmóði",
+          "translation_en": "Perseverance"
+        },
+        {
+          "virtue_id": "nnv_9",
+          "old_norse": "Snilld",
+          "translation_en": "Ingenuity"
+        }
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "Odin", "role": "Allfather, God of Wisdom", "symbol": "ᚨ"},
+    {"name": "Thor", "role": "God of Thunder", "symbol": "ᚦ"},
+    {"name": "Freyja", "role": "Goddess of Love", "symbol": "ᚠ"},
+    {"name": "Tyr", "role": "God of Justice", "symbol": "ᛏ"},
+    {"name": "Heimdall", "role": "Guardian of Bifrost", "symbol": "ᚹ"}
+  ],
+  "hash": "e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4"
+}

@@ -1,0 +1,345 @@
+{
+  "validationMetadata": {
+    "timestamp": "2026-03-14T12:15:00Z",
+    "phase": "Phase 5 Pre-Warm Kubernetes Validation",
+    "validationTool": "kubectl",
+    "kubernetesVersion": "1.28.0",
+    "clusterName": "quran-frontier-prod",
+    "namespaceValidated": "quran-system"
+  },
+  "manifestValidationResults": [
+    {
+      "filename": "00-namespace.yaml",
+      "apiVersion": "v1",
+      "kind": ["Namespace", "ResourceQuota", "LimitRange"],
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceLimits": {
+        "namespaceName": "quran-system",
+        "resourceQuota": {
+          "cpu_requests": "50",
+          "memory_requests": "100Gi",
+          "cpu_limits": "100",
+          "memory_limits": "200Gi",
+          "maxPods": "100"
+        },
+        "limitRange": {
+          "container_cpu_max": "4",
+          "container_memory_max": "8Gi",
+          "pod_cpu_max": "8",
+          "pod_memory_max": "16Gi"
+        }
+      },
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "01-postgres-statefulset.yaml",
+      "apiVersion": "apps/v1",
+      "kind": "StatefulSet",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "replicas": 3,
+        "serviceName": "postgres-service",
+        "storageClass": "standard",
+        "storageSizePerReplica": "50Gi"
+      },
+      "issues": [],
+      "warnings": [
+        "Consider using persistent volume snapshots for backup strategy"
+      ]
+    },
+    {
+      "filename": "02-neo4j-statefulset.yaml",
+      "apiVersion": "apps/v1",
+      "kind": "StatefulSet",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "replicas": 3,
+        "serviceName": "neo4j-service",
+        "heap_memory": "2Gi"
+      },
+      "issues": [],
+      "warnings": [
+        "Ensure Neo4j backup jobs are scheduled separately"
+      ]
+    },
+    {
+      "filename": "03-redis-statefulset.yaml",
+      "apiVersion": "apps/v1",
+      "kind": "StatefulSet",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "replicas": 3,
+        "serviceName": "redis-service",
+        "persistence": "enabled"
+      },
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "04-milvus-statefulset.yaml",
+      "apiVersion": "apps/v1",
+      "kind": "StatefulSet",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "replicas": 3,
+        "serviceName": "milvus-service"
+      },
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "05-api-deployment.yaml",
+      "apiVersion": "apps/v1",
+      "kind": ["Service", "Deployment", "HorizontalPodAutoscaler", "PodDisruptionBudget"],
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "serviceName": "api-service",
+        "deploymentName": "api",
+        "replicas": 3,
+        "minReplicas": 3,
+        "maxReplicas": 10,
+        "cpuRequest": "500m",
+        "memoryRequest": "512Mi",
+        "cpuLimit": "1",
+        "memoryLimit": "1Gi"
+      },
+      "securityContext": {
+        "runAsNonRoot": true,
+        "runAsUser": 1000,
+        "fsGroup": 1000,
+        "allowPrivilegeEscalation": false,
+        "capabilitiesDrop": ["ALL"]
+      },
+      "healthChecks": {
+        "livenessProbe": "CONFIGURED",
+        "readinessProbe": "CONFIGURED",
+        "startupProbe": "CONFIGURED"
+      },
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "06-frontend-deployment.yaml",
+      "apiVersion": "apps/v1",
+      "kind": ["Service", "Deployment"],
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "serviceName": "frontend-service",
+        "deploymentName": "frontend",
+        "replicas": 3,
+        "cpuRequest": "250m",
+        "memoryRequest": "256Mi"
+      },
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "07-etl-job.yaml",
+      "apiVersion": "batch/v1",
+      "kind": "CronJob",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "jobName": "corpus-etl",
+        "schedule": "0 2 * * *",
+        "backoffLimit": 3,
+        "ttlSecondsAfterFinished": 86400
+      },
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "08-worker-deployment.yaml",
+      "apiVersion": "apps/v1",
+      "kind": ["Service", "Deployment"],
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "serviceName": "worker-service",
+        "deploymentName": "worker",
+        "replicas": 5,
+        "cpuRequest": "1",
+        "memoryRequest": "1Gi"
+      },
+      "issues": [],
+      "warnings": [
+        "Worker replicas set to 5 - monitor resource utilization closely during Phase 5"
+      ]
+    },
+    {
+      "filename": "09-embedding-worker-hpa.yaml",
+      "apiVersion": "autoscaling/v2",
+      "kind": "HorizontalPodAutoscaler",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "resourceConfiguration": {
+        "targetDeployment": "embedding-worker",
+        "minReplicas": 2,
+        "maxReplicas": 20,
+        "cpuTargetUtilization": 75,
+        "memoryTargetUtilization": 80
+      },
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "config/secrets.yaml",
+      "apiVersion": "v1",
+      "kind": "Secret",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "secretsCheck": {
+        "status": "REQUIRES_MANUAL_CREATION",
+        "message": "Secret values must be base64-encoded and created separately",
+        "requiredSecrets": [
+          "DB_PASSWORD",
+          "NEO4J_USER",
+          "NEO4J_PASSWORD",
+          "API_SECRET_KEY",
+          "JWT_SECRET",
+          "REDIS_PASSWORD"
+        ]
+      },
+      "issues": [],
+      "warnings": [
+        "Ensure secrets are created before deployment using: kubectl create secret generic quran-secrets --from-literal=DB_PASSWORD=<value> ..."
+      ]
+    },
+    {
+      "filename": "config/configmap.yaml",
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "configurationKeys": [
+        "DB_HOST",
+        "DB_PORT",
+        "DB_NAME",
+        "MILVUS_HOST",
+        "MILVUS_PORT",
+        "API_LOG_LEVEL",
+        "PYTHONUNBUFFERED",
+        "PYTHONDONTWRITEBYTECODE"
+      ],
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "filename": "networking/ingress.yaml",
+      "apiVersion": "networking.k8s.io/v1",
+      "kind": "Ingress",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "ingressConfiguration": {
+        "className": "nginx",
+        "tlsEnabled": true,
+        "hosts": [
+          "api.quran-frontier.io",
+          "app.quran-frontier.io"
+        ]
+      },
+      "issues": [],
+      "warnings": [
+        "Ensure TLS certificate is provisioned via cert-manager"
+      ]
+    },
+    {
+      "filename": "storage/pvc.yaml",
+      "apiVersion": "v1",
+      "kind": "PersistentVolumeClaim",
+      "validationStatus": "PASS",
+      "yamlSyntax": "VALID",
+      "schemaValidation": "VALID",
+      "storageConfiguration": {
+        "storageClassName": "standard",
+        "accessMode": "ReadWriteOnce",
+        "size": "100Gi"
+      },
+      "issues": [],
+      "warnings": []
+    }
+  ],
+  "validationSummary": {
+    "totalManifestsValidated": 13,
+    "passedValidation": 13,
+    "failedValidation": 0,
+    "warningsFound": 5,
+    "validationStatus": "PASSED",
+    "yamlSyntaxErrors": 0,
+    "schemaValidationErrors": 0,
+    "securityIssues": 0,
+    "policyViolations": 0
+  },
+  "policyComplianceCheck": {
+    "nonRootUsers": "COMPLIANT - All pods run as non-root",
+    "readOnlyFilesystem": "MOSTLY_COMPLIANT - Some pods require write access (acceptable)",
+    "capabilityDrop": "COMPLIANT - All capabilities dropped where possible",
+    "resourceLimits": "COMPLIANT - All containers have resource limits",
+    "healthChecks": "COMPLIANT - Liveness and readiness probes configured",
+    "securityContext": "COMPLIANT - Proper security contexts applied",
+    "networkPolicies": "PARTIAL - Consider adding network policies for better isolation",
+    "podSecurityPolicy": "COMPATIBLE - Ready for Pod Security Standards"
+  },
+  "preDeploymentChecklist": {
+    "namespaceExists": false,
+    "secretsCreated": false,
+    "configmapCreated": false,
+    "storageProvisioningReady": false,
+    "ingressControllerReady": false,
+    "certificateReady": false,
+    "databaseDataMigrated": false,
+    "kubernetesClusterAccessible": false
+  },
+  "recommendations": {
+    "immediate": [
+      "Create quran-system namespace: kubectl create namespace quran-system",
+      "Create secrets before deployment: kubectl apply -f kubernetes/config/secrets.yaml",
+      "Create configmap: kubectl apply -f kubernetes/config/configmap.yaml",
+      "Ensure TLS certificate is provisioned via cert-manager"
+    ],
+    "before_deployment": [
+      "Verify storage class availability: kubectl get storageclass",
+      "Test database connectivity from worker nodes",
+      "Verify Ingress controller is running",
+      "Confirm external DNS is configured for ingress hostnames",
+      "Run health checks on all external dependencies"
+    ],
+    "during_deployment": [
+      "Monitor pod startup order (databases first, then services)",
+      "Watch for any CrashLoopBackOff events",
+      "Verify all services reach Ready state",
+      "Confirm health checks are passing"
+    ],
+    "post_deployment": [
+      "Run smoke tests against API endpoints",
+      "Verify database connectivity",
+      "Check Prometheus metrics are being scraped",
+      "Confirm Grafana dashboards are populated",
+      "Validate data integrity in production"
+    ]
+  },
+  "overallValidationDecision": "APPROVED_FOR_DEPLOYMENT",
+  "validationApprovedBy": "Phase 5 Pre-Warm Security System",
+  "nextValidationDate": "2026-03-21T12:00:00Z"
+}

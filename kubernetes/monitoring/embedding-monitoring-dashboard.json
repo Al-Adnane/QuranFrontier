@@ -1,0 +1,455 @@
+{
+  "dashboard": {
+    "title": "Phase 3 Embedding Service - Memory & Throughput Optimization",
+    "description": "Monitor embedding worker scaling, Neo4j memory, queue depth, and throughput",
+    "tags": ["embedding", "phase3", "scaling", "memory"],
+    "timezone": "browser",
+    "refresh": "5s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Embedding Throughput (vec/sec)",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "rate(embedding_vectors_processed_total[1m])",
+            "legendFormat": "{{pod_name}}",
+            "refId": "A"
+          }
+        ],
+        "yaxes": [
+          {
+            "label": "Vectors/Second",
+            "format": "short",
+            "min": 0,
+            "show": true
+          }
+        ],
+        "thresholds": [
+          {
+            "value": 250,
+            "color": "green",
+            "op": "gt"
+          },
+          {
+            "value": 120,
+            "color": "orange",
+            "op": "lt"
+          }
+        ],
+        "alert": {
+          "name": "Low Embedding Throughput",
+          "message": "Throughput below 200 vec/sec",
+          "conditions": [
+            {
+              "evaluator": {"type": "lt", "params": [200]},
+              "operator": {"type": "and"},
+              "query": {"params": ["A", "1m", "now"]}
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "title": "Worker Pod Replicas",
+        "type": "stat",
+        "gridPos": {"x": 12, "y": 0, "w": 6, "h": 4},
+        "targets": [
+          {
+            "expr": "count(kube_pod_labels{label_app='worker',namespace='quran-system'})",
+            "refId": "A"
+          }
+        ],
+        "colorMode": "value",
+        "graphMode": "none",
+        "unit": "short",
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {"color": "red", "value": null},
+            {"color": "yellow", "value": 2},
+            {"color": "green", "value": 4}
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "title": "Worker Replica Target",
+        "type": "stat",
+        "gridPos": {"x": 18, "y": 0, "w": 6, "h": 4},
+        "targets": [
+          {
+            "expr": "kube_hpa_status_desired_replicas{horizontal_pod_autoscaler='embedding-worker-hpa'}",
+            "refId": "A"
+          }
+        ],
+        "colorMode": "value",
+        "graphMode": "none",
+        "unit": "short"
+      },
+      {
+        "id": 4,
+        "title": "Neo4j Memory Usage",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "neo4j_memory_heap_used_bytes / 1024 / 1024",
+            "legendFormat": "Used (MB)",
+            "refId": "A"
+          },
+          {
+            "expr": "neo4j_memory_heap_committed_bytes / 1024 / 1024",
+            "legendFormat": "Committed (MB)",
+            "refId": "B"
+          },
+          {
+            "expr": "neo4j_memory_heap_max_bytes / 1024 / 1024",
+            "legendFormat": "Max (MB)",
+            "refId": "C"
+          }
+        ],
+        "yaxes": [
+          {
+            "label": "Memory (MB)",
+            "format": "short",
+            "min": 0,
+            "show": true
+          }
+        ],
+        "thresholds": [
+          {
+            "value": 85,
+            "color": "red",
+            "op": "gt",
+            "fill": true,
+            "line": true
+          }
+        ],
+        "alert": {
+          "name": "Neo4j High Memory",
+          "message": "Neo4j memory usage > 85%",
+          "conditions": [
+            {
+              "evaluator": {"type": "gt", "params": [435]},
+              "operator": {"type": "and"},
+              "query": {"params": ["A", "5m", "now"]}
+            }
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "title": "Embedding Queue Depth",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "redis_queue_depth{queue_name='embedding:queue'}",
+            "legendFormat": "Queue Depth",
+            "refId": "A"
+          }
+        ],
+        "yaxes": [
+          {
+            "label": "Items in Queue",
+            "format": "short",
+            "min": 0,
+            "show": true
+          }
+        ],
+        "thresholds": [
+          {
+            "value": 1000,
+            "color": "red",
+            "op": "gt"
+          },
+          {
+            "value": 500,
+            "color": "orange",
+            "op": "gt"
+          }
+        ],
+        "alert": {
+          "name": "Queue Overflow",
+          "message": "Embedding queue depth > 1000",
+          "conditions": [
+            {
+              "evaluator": {"type": "gt", "params": [1000]},
+              "operator": {"type": "and"},
+              "query": {"params": ["A", "2m", "now"]}
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "title": "Worker CPU Utilization",
+        "type": "heatmap",
+        "gridPos": {"x": 0, "y": 16, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "rate(container_cpu_usage_seconds_total{pod=~'worker-.*',namespace='quran-system'}[1m]) * 100",
+            "refId": "A"
+          }
+        ],
+        "yaxis": {
+          "label": "Pod",
+          "show": true
+        },
+        "xaxis": {
+          "label": "Time"
+        },
+        "color": {
+          "mode": "spectrum",
+          "scheme": "Spectral",
+          "reverse": true
+        },
+        "thresholds": {
+          "value": 70,
+          "color": "orange"
+        }
+      },
+      {
+        "id": 7,
+        "title": "Worker Memory Usage",
+        "type": "heatmap",
+        "gridPos": {"x": 12, "y": 16, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "container_memory_usage_bytes{pod=~'worker-.*',namespace='quran-system'} / 1024 / 1024",
+            "refId": "A"
+          }
+        ],
+        "yaxis": {
+          "label": "Pod",
+          "show": true
+        },
+        "xaxis": {
+          "label": "Time"
+        },
+        "color": {
+          "mode": "spectrum",
+          "scheme": "RdYlGr-r",
+          "reverse": true
+        },
+        "thresholds": {
+          "value": 800,
+          "color": "red"
+        }
+      },
+      {
+        "id": 8,
+        "title": "Neo4j Query Cache Hit Rate",
+        "type": "gauge",
+        "gridPos": {"x": 0, "y": 24, "w": 6, "h": 6},
+        "targets": [
+          {
+            "expr": "neo4j_query_cache_hits / (neo4j_query_cache_hits + neo4j_query_cache_misses) * 100",
+            "refId": "A"
+          }
+        ],
+        "unit": "percent",
+        "min": 0,
+        "max": 100,
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {"color": "red", "value": null},
+            {"color": "yellow", "value": 40},
+            {"color": "green", "value": 60}
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "title": "Neo4j Batch Transaction Time",
+        "type": "stat",
+        "gridPos": {"x": 6, "y": 24, "w": 6, "h": 6},
+        "targets": [
+          {
+            "expr": "rate(neo4j_transaction_total_duration_seconds_sum[5m]) / rate(neo4j_transaction_total_duration_seconds_count[5m]) * 1000",
+            "refId": "A"
+          }
+        ],
+        "unit": "ms",
+        "colorMode": "value",
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {"color": "green", "value": null},
+            {"color": "yellow", "value": 500},
+            {"color": "red", "value": 1000}
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "title": "GC Collection Events",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 24, "w": 12, "h": 6},
+        "targets": [
+          {
+            "expr": "increase(python_gc_collections_total[1m])",
+            "legendFormat": "{{pod_name}}",
+            "refId": "A"
+          }
+        ],
+        "yaxes": [
+          {
+            "label": "Collections/min",
+            "format": "short",
+            "min": 0,
+            "show": true
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Embedding Generation Rate Comparison",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 30, "w": 24, "h": 8},
+        "targets": [
+          {
+            "expr": "rate(embedding_vectors_processed_total[5m])",
+            "legendFormat": "Current Rate",
+            "refId": "A"
+          }
+        ],
+        "yaxes": [
+          {
+            "label": "Vectors/Second",
+            "format": "short",
+            "min": 0,
+            "max": 300,
+            "show": true
+          }
+        ],
+        "alert": {
+          "name": "Target Throughput Achieved",
+          "message": "Embedding throughput > 250 vec/sec",
+          "conditions": [
+            {
+              "evaluator": {"type": "gt", "params": [250]},
+              "operator": {"type": "and"},
+              "query": {"params": ["A", "5m", "now"]}
+            }
+          ]
+        },
+        "annotations": [
+          {
+            "name": "Baseline",
+            "datasource": "Prometheus",
+            "value": 120,
+            "color": "orange"
+          },
+          {
+            "name": "Target",
+            "datasource": "Prometheus",
+            "value": 250,
+            "color": "green"
+          }
+        ]
+      }
+    ],
+    "templating": {
+      "list": [
+        {
+          "name": "namespace",
+          "type": "query",
+          "datasource": "Prometheus",
+          "query": "label_values(kube_pod_info, namespace)",
+          "current": {
+            "value": "quran-system",
+            "text": "quran-system"
+          },
+          "multi": false
+        },
+        {
+          "name": "pod",
+          "type": "query",
+          "datasource": "Prometheus",
+          "query": "label_values(kube_pod_info{namespace='$namespace', label_app='worker'}, pod)",
+          "current": {
+            "value": "All",
+            "text": "All"
+          },
+          "multi": true,
+          "includeAll": true
+        }
+      ]
+    },
+    "schemaVersion": 37,
+    "style": "dark",
+    "version": 1
+  },
+  "monitoring_rules": {
+    "alerts": [
+      {
+        "name": "EmbeddingThroughputBelowTarget",
+        "expr": "rate(embedding_vectors_processed_total[5m]) < 200",
+        "duration": "5m",
+        "severity": "warning",
+        "annotations": {
+          "summary": "Embedding throughput below 200 vec/sec",
+          "description": "Current throughput: {{ $value | humanize }} vec/sec"
+        }
+      },
+      {
+        "name": "Neo4jMemoryHigh",
+        "expr": "neo4j_memory_heap_used_bytes / neo4j_memory_heap_max_bytes > 0.85",
+        "duration": "5m",
+        "severity": "critical",
+        "annotations": {
+          "summary": "Neo4j heap memory usage > 85%",
+          "description": "Memory: {{ $value | humanizePercentage }}"
+        }
+      },
+      {
+        "name": "EmbeddingQueueOverflow",
+        "expr": "redis_queue_depth{queue_name='embedding:queue'} > 1000",
+        "duration": "2m",
+        "severity": "critical",
+        "annotations": {
+          "summary": "Embedding queue depth > 1000",
+          "description": "Queue depth: {{ $value | humanize }} items"
+        }
+      },
+      {
+        "name": "WorkerPodOOM",
+        "expr": "container_last_seen{pod=~'worker-.*'} == 0",
+        "duration": "1m",
+        "severity": "critical",
+        "annotations": {
+          "summary": "Worker pod restarted (possible OOM)",
+          "description": "Pod: {{ $labels.pod }}"
+        }
+      },
+      {
+        "name": "HighCPUUtilization",
+        "expr": "rate(container_cpu_usage_seconds_total{pod=~'worker-.*',namespace='quran-system'}[1m]) > 0.7",
+        "duration": "3m",
+        "severity": "warning",
+        "annotations": {
+          "summary": "Worker CPU utilization > 70%",
+          "description": "Pod: {{ $labels.pod }}, CPU: {{ $value | humanizePercentage }}"
+        }
+      }
+    ],
+    "recording_rules": [
+      {
+        "name": "embedding:throughput:5m",
+        "expr": "rate(embedding_vectors_processed_total[5m])"
+      },
+      {
+        "name": "neo4j:memory:ratio",
+        "expr": "neo4j_memory_heap_used_bytes / neo4j_memory_heap_max_bytes"
+      },
+      {
+        "name": "worker:queue:depth",
+        "expr": "redis_queue_depth{queue_name='embedding:queue'}"
+      }
+    ]
+  }
+}

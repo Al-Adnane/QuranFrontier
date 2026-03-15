@@ -1,0 +1,109 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: milvus-service
+  namespace: quran-system
+  labels:
+    app: milvus
+spec:
+  clusterIP: None
+  selector:
+    app: milvus
+  ports:
+  - port: 19530
+    targetPort: 19530
+    name: grpc
+  - port: 9091
+    targetPort: 9091
+    name: metrics
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: milvus
+  namespace: quran-system
+  labels:
+    app: milvus
+spec:
+  serviceName: milvus-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: milvus
+  template:
+    metadata:
+      labels:
+        app: milvus
+    spec:
+      securityContext:
+        fsGroup: 999
+        runAsUser: 999
+        runAsNonRoot: true
+
+      containers:
+      - name: milvus
+        image: milvusdb/milvus:v0.4.19
+        imagePullPolicy: IfNotPresent
+        command:
+        - milvus
+        - run
+        - standalone
+
+        ports:
+        - name: grpc
+          containerPort: 19530
+          protocol: TCP
+        - name: metrics
+          containerPort: 9091
+          protocol: TCP
+
+        env:
+        - name: COMMON_STORAGETYPE
+          value: "local"
+        - name: COMMON_LOGLEVEL
+          value: "info"
+        - name: KNOWHERE_GPU_MEM_POOL_SIZE
+          value: "512"
+
+        resources:
+          requests:
+            cpu: 1
+            memory: 1Gi
+          limits:
+            cpu: 4
+            memory: 4Gi
+
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 9091
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 9091
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+
+        volumeMounts:
+        - name: milvus-storage
+          mountPath: /var/lib/milvus
+
+  volumeClaimTemplates:
+  - metadata:
+      name: milvus-storage
+      labels:
+        app: milvus
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      storageClassName: standard
+      resources:
+        requests:
+          storage: 200Gi

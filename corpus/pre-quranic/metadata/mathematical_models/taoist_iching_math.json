@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Taoism/I Ching",
+    "model_type": "Combinatorics / Binary Algebra",
+    "source": "I Ching (Zhou Yi)",
+    "accuracy": "REQUIRES VERIFICATION with Sinologists",
+    "extraction_date": "2026-03-15"
+  },
+  "iching_system": {
+    "description": "I Ching uses 64 hexagrams generated from binary yin/yang lines",
+    "base_structure": {
+      "line_type": "binary",
+      "yin": {"symbol": "⚋", "value": 0, "name": "broken"},
+      "yang": {"symbol": "⚊", "value": 1, "name": "solid"}
+    },
+    "mathematical_structure": {
+      "type": "Binary Combinatorics",
+      "formula": "2^6 = 64",
+      "representation": "6-tuples over {0,1}",
+      "group_structure": "Z_2^6 (elementary abelian 2-group)"
+    }
+  },
+  "trigrams": {
+    "count": 8,
+    "name": "Ba Gua",
+    "binary_representation": "2^3 = 8",
+    "trigram_list": [
+      {"name": "Qian", "element": "Heaven", "binary": "111", "decimal": 7},
+      {"name": "Kun", "element": "Earth", "binary": "000", "decimal": 0},
+      {"name": "Zhen", "element": "Thunder", "binary": "001", "decimal": 1},
+      {"name": "Xun", "element": "Wind", "binary": "110", "decimal": 6},
+      {"name": "Kan", "element": "Water", "binary": "010", "decimal": 2},
+      {"name": "Li", "element": "Fire", "binary": "101", "decimal": 5},
+      {"name": "Gen", "element": "Mountain", "binary": "100", "decimal": 4},
+      {"name": "Dui", "element": "Lake", "binary": "011", "decimal": 3}
+    ],
+    "graph_structure": {
+      "type": "Cube Graph Q3",
+      "vertices": 8,
+      "edges": 12,
+      "symmetry_group": "Oh (octahedral symmetry)"
+    }
+  },
+  "hexagrams": {
+    "count": 64,
+    "generation": "Cartesian product of trigrams",
+    "formula": "8 × 8 = 64",
+    "structure": {
+      "upper_trigram": "positions 4,5,6",
+      "lower_trigram": "positions 1,2,3",
+      "changing_lines": "Dynamic transformation model"
+    },
+    "king_wen_sequence": {
+      "description": "Traditional ordering with mathematical properties",
+      "pairing_rule": "Each hexagram paired with its inverse/complement",
+      "symmetry": "Non-trivial group action"
+    }
+  },
+  "wu_xing": {
+    "name": "Five Elements/Phases",
+    "type": "Directed Cycle Graph",
+    "elements": [
+      {"name": "Wood", "chinese": "木", "generates": "Fire", "overcomes": "Earth"},
+      {"name": "Fire", "chinese": "火", "generates": "Earth", "overcomes": "Metal"},
+      {"name": "Earth", "chinese": "土", "generates": "Metal", "overcomes": "Water"},
+      {"name": "Metal", "chinese": "金", "generates": "Water", "overcomes": "Wood"},
+      {"name": "Water", "chinese": "水", "generates": "Wood", "overcomes": "Fire"}
+    ],
+    "graph_properties": {
+      "generating_cycle": "C5 (directed)",
+      "overcoming_cycle": "C5* (star pentagon)",
+      "combined_structure": "Complete directed graph K5"
+    }
+  },
+  "taoist_cosmology": {
+    "type": "Hierarchical Graph",
+    "levels": [
+      {"level": 0, "name": "Wuji", "description": "Undifferentiated void"},
+      {"level": 1, "name": "Taiji", "description": "Supreme Ultimate (Yin-Yang)"},
+      {"level": 2, "name": "Liangyi", "description": "Two Forms (Yin, Yang)"},
+      {"level": 3, "name": "Sixiang", "description": "Four Images"},
+      {"level": 4, "name": "Ba Gua", "description": "Eight Trigrams"},
+      {"level": 5, "name": "64 Hexagrams", "description": "All phenomena"}
+    ],
+    "mathematical_structure": {
+      "type": "Binary Tree",
+      "depth": 6,
+      "branching": "Dichotomous",
+      "formula": "2^n at each level"
+    }
+  },
+  "numerology": {
+    "sacred_numbers": {
+      "1": "Unity (Tao)",
+      "2": "Duality (Yin-Yang)",
+      "3": "Trinity (Heaven-Earth-Human)",
+      "5": "Elements (Wu Xing)",
+      "8": "Trigrams (Ba Gua)",
+      "64": "Hexagrams"
+    },
+    "numerical_relationships": {
+      "1+2+3": "6 (hexagram lines)",
+      "8×8": "64 (hexagrams)",
+      "64×6": "384 (total line positions)"
+    }
+  },
+  "verification_required": {
+    "hexagram_order": "Verify against Zhou Yi texts",
+    "binary_mapping": "Verify with I Ching scholars",
+    "wu_xing_graph": "Verify with TCM practitioners"
+  },
+  "hash": "iching_math_model_v1_2026"
+}

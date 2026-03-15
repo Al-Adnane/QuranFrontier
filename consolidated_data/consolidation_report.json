@@ -1,0 +1,34 @@
+{
+  "consolidation_timestamp": "2026-03-14T17:23:35.206085",
+  "statistics": {
+    "total_verses_processed": 6,
+    "total_verses_consolidated": 4,
+    "duplicates_removed_verses": 0,
+    "total_tafsirs_processed": 3,
+    "total_tafsirs_consolidated": 3,
+    "duplicates_removed_tafsirs": 0,
+    "total_hadiths_processed": 2,
+    "total_hadiths_consolidated": 2,
+    "duplicates_removed_hadiths": 0
+  },
+  "conflicts": {
+    "total_conflicts_resolved": 0,
+    "conflicts_by_type": {}
+  },
+  "authority_hierarchy_applied": true,
+  "source_authority_tiers": {
+    "quran.com": 1,
+    "tanzil.net": 2,
+    "study_quran": 3,
+    "sunnah.com": 4,
+    "altafsir": 5,
+    "dorar": 5,
+    "default": 6
+  },
+  "summary": {
+    "verses": "4 unique verses with unified structure",
+    "tafsirs": "3 unique tafsir entries with deduplication",
+    "hadiths": "2 unique hadith entries with narrator consolidation",
+    "deduplication_effectiveness": "0 total duplicates removed"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Celtic Religion",
+    "language": "Old Irish/Welsh/Gaulish",
+    "script": "Latin/Ogham",
+    "date_range": "800 BCE-1200 CE",
+    "text_type": "Irish Mythology, Welsh Mabinogion, Ogham Inscriptions",
+    "source": "Lebor Gabála Érenn, Mabinogion",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "ogham_inscriptions",
+      "text_name_gaul": "Ogam",
+      "text_name_en": "Ogham Inscriptions",
+      "date": "~400-800 CE",
+      "inscriptions": [
+        {
+          "inscription_id": "ogh_1",
+          "ogham": "᚛ᚃᚐᚂᚂᚐᚄᚋᚐᚊᚊᚔᚏᚐᚔᚊᚔᚊᚔᚅᚐ᚜",
+          "transliteration": "VALLASAMACCIQIQIQINA",
+          "translation_en": "Of Vallas, son of Macca"
+        },
+        {
+          "inscription_id": "ogh_2",
+          "ogham": "᚛ᚔᚊᚊᚔᚅᚐᚃᚐᚂᚂᚐᚄᚋᚐᚊᚊᚔᚏᚐᚔᚊᚔᚊᚔᚅᚐ᚜",
+          "transliteration": "IQIQINAVALLASAMACCIQIQIQINA",
+          "translation_en": "Of Icicina, daughter of Vallas"
+        },
+        {
+          "inscription_id": "ogh_3",
+          "ogham": "᚛ᚋᚐᚊᚊᚔᚏᚐᚔᚊᚔᚊᚔᚅᚐᚃᚐᚂᚂᚐᚄᚋᚐᚊᚊᚔᚏᚐᚔᚊᚔᚊᚔᚅᚐ᚜",
+          "transliteration": "MACCIQIQIQINAVALLASAMACCIQIQIQINA",
+          "translation_en": "Of Macci, son of Icicina"
+        }
+      ]
+    },
+    {
+      "text_id": "irish_mythology",
+      "text_name_ga": "Miotaseolaíocht na nGael",
+      "text_name_en": "Irish Mythology",
+      "date": "~800-1200 CE (oral tradition older)",
+      "passages": [
+        {
+          "passage_id": "irish_1",
+          "name": "The Dagda's Cauldron",
+          "old_irish": "Coire ansic, in Dagda",
+          "translation_en": "The Undry Cauldron, of the Dagda"
+        },
+        {
+          "passage_id": "irish_2",
+          "name": "The Well of Wisdom",
+          "old_irish": "Tobar Segais, na n-ecna",
+          "translation_en": "The Well of Segais, of wisdom"
+        },
+        {
+          "passage_id": "irish_3",
+          "name": "The Salmon of Knowledge",
+          "old_irish": "Bradán feasa, ón tobar",
+          "translation_en": "The Salmon of Knowledge, from the well"
+        },
+        {
+          "passage_id": "irish_4",
+          "name": "The Morrigan",
+          "old_irish": "An Mhorrígan, banríon na cath",
+          "translation_en": "The Morrigan, queen of battles"
+        },
+        {
+          "passage_id": "irish_5",
+          "name": "Lugh of the Long Arm",
+          "old_irish": "Lugh Lámhfhada, mac Ethlenn",
+          "translation_en": "Lugh of the Long Arm, son of Ethliu"
+        },
+        {
+          "passage_id": "irish_6",
+          "name": "Brigid the Poet",
+          "old_irish": "Brigid, banfhile, banleighis",
+          "translation_en": "Brigid, woman poet, woman healer"
+        }
+      ]
+    },
+    {
+      "text_id": "celtic_precepts",
+      "text_name_ga": "Bunrialta Ceilteach",
+      "text_name_en": "Celtic Precepts",
+      "date": "~500 BCE-800 CE",
+      "precepts": [
+        {
+          "precept_id": "celt_1",
+          "old_irish": "Fir flatha, fir fer",
+          "translation_en": "The truth of rulers, the truth of men"
+        },
+        {
+          "precept_id": "celt_2",
+          "old_irish": "Díles do charait",
+          "translation_en": "Be loyal to your friend"
+        },
+        {
+          "precept_id": "celt_3",
+          "old_irish": "Géill do cheile",
+          "translation_en": "Honor your spouse"
+        },
+        {
+          "precept_id": "celt_4",
+          "old_irish": "Uasal do thír",
+          "translation_en": "Be noble to your land"
+        },
+        {
+          "precept_id": "celt_5",
+          "old_irish": "Cairde do chine",
+          "translation_en": "Be kind to your kin"
+        },
+        {
+          "precept_id": "celt_6",
+          "old_irish": "Onóir do dhia",
+          "translation_en": "Honor your god"
+        },
+        {
+          "precept_id": "celt_7",
+          "old_irish": "Grá do gach ní",
+          "translation_en": "Love all things"
+        }
+      ]
+    },
+    {
+      "text_id": "tree_alphabet",
+      "text_name_ga": "Beth Luis Nion",
+      "text_name_en": "Celtic Tree Alphabet",
+      "date": "~500 BCE-500 CE",
+      "trees": [
+        {"letter": "B", "ogham": "ᚁ", "name": "Beth", "tree": "Birch", "meaning": "Beginning"},
+        {"letter": "L", "ogham": "ᚂ", "name": "Luis", "tree": "Rowan", "meaning": "Fire"},
+        {"letter": "N", "ogham": "ᚅ", "name": "Nion", "tree": "Ash", "meaning": "Heaven"},
+        {"letter": "F", "ogham": "ᚃ", "name": "Fearn", "tree": "Alder", "meaning": "Bridge"},
+        {"letter": "S", "ogham": "ᚄ", "name": "Saille", "tree": "Willow", "meaning": "Water"},
+        {"letter": "H", "ogham": "ᚆ", "name": "Uath", "tree": "Hawthorn", "meaning": "Hedge"},
+        {"letter": "D", "ogham": "ᚇ", "name": "Dair", "tree": "Oak", "meaning": "Door/Strength"},
+        {"letter": "T", "ogham": "ᚈ", "name": "Tinne", "tree": "Holly", "meaning": "Holly"},
+        {"letter": "C", "ogham": "ᚉ", "name": "Coll", "tree": "Hazel", "meaning": "Wisdom"},
+        {"letter": "Q", "ogham": "ᚋ", "name": "Muin", "tree": "Vine", "meaning": "Joy"},
+        {"letter": "G", "ogham": "ᚌ", "name": "Gort", "tree": "Ivy", "meaning": "Field"},
+        {"letter": "P", "ogham": "ᚐ", "name": "Pethboc", "tree": "Boxwood", "meaning": "End"},
+        {"letter": "R", "ogham": "ᚏ", "name": "Ruis", "tree": "Elder", "meaning": "Red"},
+        {"letter": "A", "ogham": "ᚐ", "name": "Ailm", "tree": "Silver Fir", "meaning": "Pine"},
+        {"letter": "O", "ogham": "ᚑ", "name": "Onn", "tree": "Furze", "meaning": "Desire"},
+        {"letter": "U", "ogham": "ᚒ", "name": "Ur", "tree": "Heather", "meaning": "Earth"},
+        {"letter": "E", "ogham": "ᚓ", "name": "Eadha", "tree": "Aspen", "meaning": "Aspen"},
+        {"letter": "I", "ogham": "ᚔ", "name": "Iodhadh", "tree": "Yew", "meaning": "Yew"},
+        {"letter": "M", "ogham": "ᚋ", "name": "Míl", "tree": "Wormwood", "meaning": "Worm"}
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "The Dagda", "role": "Father God", "domain": "Earth/Magic"},
+    {"name": "Brigid", "role": "Triple Goddess", "domain": "Poetry/Healing/Smithcraft"},
+    {"name": "Lugh", "role": "Sun God", "domain": "Skills/War"},
+    {"name": "The Morrigan", "role": "War Goddess", "domain": "Battle/Fate"},
+    {"name": "Manannán", "role": "Sea God", "domain": "Ocean/Otherworld"},
+    {"name": "Dian Cecht", "role": "Healing God", "domain": "Medicine"},
+    {"name": "Goibniu", "role": "Smith God", "domain": "Metalwork"}
+  ],
+  "hash": "d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9"
+}

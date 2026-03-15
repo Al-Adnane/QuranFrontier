@@ -1,0 +1,50 @@
+-- Alembic Migration: 001_initial_schema
+-- Create: 2026-03-14T00:00:00Z
+-- Description: Initialize complete Quran Frontier database schema
+
+-- This migration creates all core tables for:
+-- - Quranic verses with metadata
+-- - Tafsir (exegesis) entries with scholar attribution
+-- - Hadith collections with narrator chains
+-- - Islamic schools (madhabs) and their rulings
+-- - Full-text search support for Arabic text
+
+-- ============================================================================
+-- UPGRADE: Apply schema from schema.sql
+-- ============================================================================
+
+-- Source: schema.sql
+-- Run the complete schema initialization
+
+-- ============================================================================
+-- DOWNGRADE: Cleanup procedure
+-- ============================================================================
+--
+-- DROP TRIGGER IF EXISTS trigger_madhabs_update ON madhabs;
+-- DROP TRIGGER IF EXISTS trigger_narrators_update ON narrators;
+-- DROP TRIGGER IF EXISTS trigger_hadiths_update ON hadiths;
+-- DROP TRIGGER IF EXISTS trigger_tafsirs_update ON tafsirs;
+-- DROP TRIGGER IF EXISTS trigger_verses_update ON verses;
+-- DROP FUNCTION IF EXISTS update_timestamp();
+--
+-- DROP VIEW IF EXISTS hadith_reliability_summary;
+-- DROP VIEW IF EXISTS verse_tafsir_summary;
+-- DROP VIEW IF EXISTS surah_statistics;
+--
+-- DROP TABLE IF EXISTS bulk_load_metadata;
+-- DROP TABLE IF EXISTS data_audit_log;
+-- DROP TABLE IF EXISTS sources;
+-- DROP TABLE IF EXISTS verse_madhab_links;
+-- DROP TABLE IF EXISTS madhabs;
+-- DROP TABLE IF EXISTS narrator_chains;
+-- DROP TABLE IF EXISTS narrators;
+-- DROP TABLE IF EXISTS hadiths;
+-- DROP TABLE IF EXISTS hadith_collections;
+-- DROP TABLE IF EXISTS tafsirs;
+-- DROP TABLE IF EXISTS tafsir_editions;
+-- DROP TABLE IF EXISTS tafsir_scholars;
+-- DROP TABLE IF EXISTS verses;
+-- DROP TABLE IF EXISTS surahs;
+--
+-- DROP EXTENSION IF EXISTS "pg_trgm";
+-- DROP EXTENSION IF EXISTS "uuid-ossp";

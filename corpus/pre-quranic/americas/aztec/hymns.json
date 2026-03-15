@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Aztec Religion",
+    "language": "Nahuatl",
+    "script": "Latin (orthography - MULTIPLE SYSTEMS)",
+    "date_range": "1300-1521 CE",
+    "text_type": "Codices, Hymns (Cantares Mexicanos)",
+    "source": "Florentine Codex, Cantares Mexicanos (REFERENCE ONLY)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Nahuatl orthography - MULTIPLE SYSTEMS EXIST, may not match sources",
+      "recommendation": "Verify against INAH archives and scholarly editions",
+      "orthography_systems": [
+        "Classical Nahuatl (Simeón)",
+        "Modern Nahuatl (INALI standard)",
+        "Florentine Codex orthography",
+        "Chimalpahin orthography"
+      ],
+      "scholarly_sources": [
+        "Sahagún, B. de (1577). Florentine Codex. (Dibble & Anderson trans., 1950-1982).",
+        "León-Portilla, M. (1956). La Filosofía Náhuatl. UNAM.",
+        "Bierhorst, J. (1985). Cantares Mexicanos: Songs of the Aztecs. Stanford University Press."
+      ],
+      "digital_editions": [
+        "http://www.worlddigitalibrary.org/universal?ql=aztec",
+        "https://www.britishmuseum.org/collection/term/64666"
+      ],
+      "living_tradition_notice": "Nahuatl is still spoken - consult INALI and native speakers"
+    }
+  },
+  "texts": [
+    {
+      "text_id": "aztec_hymns",
+      "text_name_nah": "Cuicatl",
+      "text_name_en": "Aztec Hymns (Cantares Mexicanos)",
+      "date": "~1400-1521 CE",
+      "accuracy": "UNVERIFIED - Specify orthography system used",
+      "orthography_system": "Classical Nahuatl (Simeón) - VERIFY",
+      "hymns": [
+        {
+          "hymn_id": "azt_h1",
+          "name": "To Ometeotl",
+          "nahuatl": "Ometeotl, in tlāltecutli",
+          "translation_en": "Ometeotl, the lord of the earth",
+          "note": "ORTHOGRAPHY: May use different system than source manuscripts",
+          "scholarly_reference": "Bierhorst 1985, Cantares Mexicanos, Folio 10r"
+        },
+        {
+          "hymn_id": "azt_h2",
+          "name": "To Huitzilopochtli",
+          "nahuatl": "Huitzilopochtli, in teōtl",
+          "translation_en": "Huitzilopochtli, the god",
+          "note": "ORTHOGRAPHY: May use different system than source manuscripts",
+          "scholarly_reference": "Sahagún, Florentine Codex, Book 1"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "orthography": "REQUIRES specification of which Nahuatl orthography system is used",
+    "transliteration": "Compare with Bierhorst 1985, León-Portilla 1956",
+    "cultural_accuracy": "REQUIRES consultation with Nahuatl scholars and INALI",
+    "living_tradition": "Nahuatl has 1.5 million speakers - obtain community input"
+  },
+  "hash": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4"
+}

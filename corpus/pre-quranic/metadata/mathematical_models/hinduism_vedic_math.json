@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Hinduism (Vedic)",
+    "model_type": "Geometry / Prosody / Cosmology / Combinatorics",
+    "source": "Vedas, Sulba Sutras, Chandahsastra",
+    "accuracy": "REQUIRES VERIFICATION with Indologists",
+    "extraction_date": "2026-03-15"
+  },
+  "sulba_sutra_geometry": {
+    "description": "Vedic altar construction mathematics",
+    "date": "~800-500 BCE",
+    "mathematical_content": {
+      "type": "Practical Geometry",
+      "applications": ["Fire altar construction", "Temple geometry"]
+    },
+    "pythagorean_theorem": {
+      "statement": "Diagonal of rectangle produces area of both sides",
+      "sutra": "Dirghacaturasrasya aksnayaa rajjuH parsvamani, tiryagmani, ca yatprthagbhute kurutastadubhayam karoti",
+      "date": "~800 BCE (predates Pythagoras)",
+      "formula": "a² + b² = c²"
+    },
+    "square_root_2": {
+      "approximation": "1 + 1/3 + 1/(3×4) - 1/(3×4×34) = 1.4142156...",
+      "actual_value": "1.4142135...",
+      "accuracy": "5 decimal places",
+      "method": "Geometric construction"
+    },
+    "circle_squaring": {
+      "problem": "Construct square equal area to circle",
+      "approximation": "π ≈ 3.088",
+      "note": "Later improved to better approximations"
+    },
+    "altar_shapes": {
+      "falcon": "Syena-cit",
+      "wheel": "Ratha-cakra-cit",
+      "tortoise": "Kurma-cit",
+      "mathematical_constraint": "Same area, different shapes"
+    }
+  },
+  "chandahsastra_prosody": {
+    "description": "Sanskrit prosody by Pingala (~300 BCE)",
+    "mathematical_content": {
+      "type": "Combinatorics",
+      "applications": ["Verse meter classification"]
+    },
+    "binary_system": {
+      "description": "First known binary representation",
+      "laghu": {"symbol": "L", "value": 0, "duration": 1},
+      "guru": {"symbol": "G", "value": 1, "duration": 2},
+      "notation": "Precedes European binary by 1800 years"
+    },
+    "meruprastara": {
+      "name": "Mountain of Combinations",
+      "modern_name": "Pascal's Triangle",
+      "date": "~300 BCE (predates Pascal by 1800 years)",
+      "application": "Meter combinations"
+    },
+    "fibonacci_numbers": {
+      "description": "Hemachandra numbers (~1150 CE)",
+      "sequence": "1, 2, 3, 5, 8, 13, 21...",
+      "formula": "F(n) = F(n-1) + F(n-2)",
+      "application": "Meter patterns",
+      "note": "Predates Fibonacci by ~50 years"
+    },
+    "combinatorics": {
+      "pratyaya": "Operations on meters",
+      "prastara": "Enumeration of all combinations",
+      "sankhya": "Counting formulas",
+      "formula": "2^n for n-syllable meters"
+    }
+  },
+  "yuga_cosmology": {
+    "description": "Hindu time cycles",
+    "mathematical_structure": {
+      "type": "Cyclic Time Model",
+      "periods": "Geometric progression"
+    },
+    "chatur_yuga": {
+      "satya_yuga": {"duration": 1728000, "ratio": 4},
+      "treta_yuga": {"duration": 1296000, "ratio": 3},
+      "dvapara_yuga": {"duration": 864000, "ratio": 2},
+      "kali_yuga": {"duration": 432000, "ratio": 1},
+      "total": 4320000,
+      "unit": "human years"
+    },
+    "larger_cycles": {
+      "manvantara": "71 chatur-yugas",
+      "kalpa": "14 manvantaras = 1000 chatur-yugas",
+      "brahma_day": "1 kalpa = 4.32 billion years",
+      "note": "Comparable to modern cosmological timescales"
+    }
+  },
+  "panchang_astronomy": {
+    "description": "Vedic astronomical calculations",
+    "mathematical_content": {
+      "type": "Spherical Astronomy",
+      "applications": ["Calendar", "Ritual timing"]
+    },
+    "nakshatras": {
+      "count": 27,
+      "description": "Lunar mansions",
+      "spacing": "360°/27 = 13°20' each"
+    },
+    "rasis": {
+      "count": 12,
+      "description": "Zodiac signs",
+      "spacing": "360°/12 = 30° each"
+    }
+  },
+  "numerology": {
+    "sacred_numbers": {
+      "1": "Brahman (ultimate reality)",
+      "3": "Three worlds, Three gunas",
+      "4": "Four Vedas, Four purusharthas",
+      "7": "Seven worlds, Seven chakras",
+      "12": "Twelve adityas",
+      "27": "Nakshatras",
+      "108": "Sacred number (1² × 2² × 3³)",
+      "432000": "Kali Yuga duration"
+    },
+    "mathematical_significance": {
+      "108": "Distance ratios (Sun-Earth, Moon-Earth)"
+    }
+  },
+  "deity_network": {
+    "description": "33 koti devas hierarchy",
+    "mathematical_structure": {
+      "type": "Hierarchical Graph",
+      "total_nodes": 33
+    },
+    "categories": {
+      "adityas": 12,
+      "vasus": 8,
+      "rudras": 11,
+      "ashvins": 2,
+      "total": 33
+    },
+    "note": "'Koti' means type/category, not crore"
+  },
+  "verification_required": {
+    "sulba_sutras": "Verify against critical editions",
+    "pingala": "Verify Chandahsastra dating",
+    "yuga_calculations": "Verify against Puranic sources"
+  },
+  "hash": "hinduism_math_model_v1_2026"
+}

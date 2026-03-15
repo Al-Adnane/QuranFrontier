@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Taoism/Confucianism",
+    "language": "Classical Chinese",
+    "script": "Chinese Characters",
+    "date_range": "1000-300 BCE",
+    "text_type": "Tao Te Ching, I Ching, Analects",
+    "source": "Wang Bi / Mawangdui / Received Text",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "tao_te_ching",
+      "text_name_zh": "道德經",
+      "text_name_en": "Tao Te Ching (Classic of the Way and Virtue)",
+      "author": "Laozi (老子)",
+      "date": "~400-300 BCE",
+      "chapters": 81,
+      "verses": [
+        {
+          "verse_id": "ttc_1_1",
+          "chapter": 1,
+          "text_zh": "道可道，非常道",
+          "pinyin": "Dào kě dào, fēi cháng dào",
+          "translation_en": "The Tao that can be told is not the eternal Tao"
+        },
+        {
+          "verse_id": "ttc_1_2",
+          "chapter": 1,
+          "text_zh": "名可名，非常名",
+          "pinyin": "Míng kě míng, fēi cháng míng",
+          "translation_en": "The name that can be named is not the eternal name"
+        },
+        {
+          "verse_id": "ttc_2_1",
+          "chapter": 2,
+          "text_zh": "天下皆知美之為美，斯惡已",
+          "pinyin": "Tiānxià jiē zhī měi zhī wéi měi, sī è yǐ",
+          "translation_en": "When everyone knows beauty as beauty, there is already ugliness"
+        },
+        {
+          "verse_id": "ttc_8_1",
+          "chapter": 8,
+          "text_zh": "上善若水",
+          "pinyin": "Shàng shàn ruò shuǐ",
+          "translation_en": "The highest good is like water"
+        },
+        {
+          "verse_id": "ttc_8_2",
+          "chapter": 8,
+          "text_zh": "水善利萬物而不爭",
+          "pinyin": "Shuǐ shàn lì wàn wù ér bù zhēng",
+          "translation_en": "Water benefits all things without contention"
+        },
+        {
+          "verse_id": "ttc_25_1",
+          "chapter": 25,
+          "text_zh": "有物混成，先天地生",
+          "pinyin": "Yǒu wù hùn chéng, xiān tiāndì shēng",
+          "translation_en": "There was something undifferentiated and yet complete, born before heaven and earth"
+        },
+        {
+          "verse_id": "ttc_25_2",
+          "chapter": 25,
+          "text_zh": "寂兮寥兮，獨立而不改，周行而不殆",
+          "pinyin": "Jì xī liáo xī, dú lì ér bù gǎi, zhōu xíng ér bù dài",
+          "translation_en": "Silent and void, it stands alone and does not change, goes around without peril"
+        },
+        {
+          "verse_id": "ttc_25_3",
+          "chapter": 25,
+          "text_zh": "可以為天下母",
+          "pinyin": "Kě yǐ wéi tiānxià mǔ",
+          "translation_en": "It can be considered the mother of the universe"
+        },
+        {
+          "verse_id": "ttc_25_4",
+          "chapter": 25,
+          "text_zh": "吾不知其名，字之曰道",
+          "pinyin": "Wú bù zhī qí míng, zì zhī yuē dào",
+          "translation_en": "I do not know its name; I call it Tao"
+        },
+        {
+          "verse_id": "ttc_40_1",
+          "chapter": 40,
+          "text_zh": "反者道之動",
+          "pinyin": "Fǎn zhě dào zhī dòng",
+          "translation_en": "Reversion is the movement of the Tao"
+        },
+        {
+          "verse_id": "ttc_40_2",
+          "chapter": 40,
+          "text_zh": "弱者道之用",
+          "pinyin": "Ruò zhě dào zhī yòng",
+          "translation_en": "Weakness is the function of the Tao"
+        },
+        {
+          "verse_id": "ttc_42_1",
+          "chapter": 42,
+          "text_zh": "道生一，一生二，二生三，三生萬物",
+          "pinyin": "Dào shēng yī, yī shēng èr, èr shēng sān, sān shēng wàn wù",
+          "translation_en": "The Tao produced One; One produced Two; Two produced Three; Three produced all things"
+        },
+        {
+          "verse_id": "ttc_63_1",
+          "chapter": 63,
+          "text_zh": "為無為，事無事，味無味",
+          "pinyin": "Wéi wú wéi, shì wú shì, wèi wú wèi",
+          "translation_en": "Practice non-action, work without doing, taste the tasteless"
+        },
+        {
+          "verse_id": "ttc_67_1",
+          "chapter": 67,
+          "text_zh": "我有三寶，持而保之",
+          "pinyin": "Wǒ yǒu sān bǎo, chí ér bǎo zhī",
+          "translation_en": "I have three treasures; hold and keep them"
+        },
+        {
+          "verse_id": "ttc_67_2",
+          "chapter": 67,
+          "text_zh": "一曰慈，二曰儉，三曰不敢為天下先",
+          "pinyin": "Yī yuē cí, èr yuē jiǎn, sān yuē bù gǎn wéi tiānxià xiān",
+          "translation_en": "First is compassion, second is frugality, third is not daring to be first in the world"
+        }
+      ]
+    },
+    {
+      "text_id": "i_ching",
+      "text_name_zh": "易經",
+      "text_name_en": "I Ching (Book of Changes)",
+      "date": "~1000-700 BCE",
+      "type": "Divination/Philosophy",
+      "hexagrams": [
+        {
+          "hexagram_id": 1,
+          "name_zh": "乾",
+          "name_en": "The Creative",
+          "text_zh": "元亨利貞",
+          "pinyin": "Yuán hēng lì zhēn",
+          "translation_en": "Supreme success, furthering through perseverance"
+        },
+        {
+          "hexagram_id": 2,
+          "name_zh": "坤",
+          "name_en": "The Receptive",
+          "text_zh": "元亨，利牝馬之貞",
+          "pinyin": "Yuán hēng, lì pìn mǎ zhī zhēn",
+          "translation_en": "Supreme success, perseverance of a mare brings good fortune"
+        },
+        {
+          "hexagram_id": 11,
+          "name_zh": "泰",
+          "name_en": "Peace",
+          "text_zh": "小往大來，吉亨",
+          "pinyin": "Xiǎo wǎng dà lái, jí hēng",
+          "translation_en": "The small departs, the great arrives. Good fortune, success"
+        },
+        {
+          "hexagram_id": 12,
+          "name_zh": "否",
+          "name_en": "Standstill",
+          "text_zh": "否之匪人，不利君子貞",
+          "pinyin": "Pǐ zhī fěi rén, bù lì jūn zǐ zhēn",
+          "translation_en": "Standstill. It does not further the perseverance of the superior person"
+        }
+      ]
+    },
+    {
+      "text_id": "analects",
+      "text_name_zh": "論語",
+      "text_name_en": "Analects of Confucius",
+      "author": "Confucius (孔子) and disciples",
+      "date": "~500-400 BCE",
+      "books": 20,
+      "verses": [
+        {
+          "verse_id": "ana_1_1",
+          "book": 1,
+          "chapter": 1,
+          "text_zh": "學而時習之，不亦說乎",
+          "pinyin": "Xué ér shí xí zhī, bù yì yuè hū",
+          "translation_en": "Is it not pleasant to learn and practice what one has learned?"
+        },
+        {
+          "verse_id": "ana_1_2",
+          "book": 1,
+          "chapter": 2,
+          "text_zh": "有朋自遠方來，不亦樂乎",
+          "pinyin": "Yǒu péng zì yuǎn fāng lái, bù yì lè hū",
+          "translation_en": "Is it not delightful to have friends coming from distant quarters?"
+        },
+        {
+          "verse_id": "ana_2_4",
+          "book": 2,
+          "chapter": 4,
+          "text_zh": "吾十有五而志于學",
+          "pinyin": "Wú shí yǒu wǔ ér zhì yú xué",
+          "translation_en": "At fifteen, I set my heart upon learning"
+        },
+        {
+          "verse_id": "ana_2_17",
+          "book": 2,
+          "chapter": 17,
+          "text_zh": "知之為知之，不知為不知，是知也",
+          "pinyin": "Zhī zhī wéi zhī zhī, bù zhī wéi bù zhī, shì zhī yě",
+          "translation_en": "To know what you know and what you do not know, that is true knowledge"
+        },
+        {
+          "verse_id": "ana_4_15",
+          "book": 4,
+          "chapter": 15,
+          "text_zh": "曾子曰，夫子之道，忠恕而已矣",
+          "pinyin": "Zēng zǐ yuē, fū zǐ zhī dào, zhōng shù ér yǐ yǐ",
+          "translation_en": "The Master's way is nothing but loyalty and reciprocity"
+        },
+        {
+          "verse_id": "ana_12_2",
+          "book": 12,
+          "chapter": 2,
+          "text_zh": "己所不欲，勿施於人",
+          "pinyin": "Jǐ suǒ bù yù, wù shī yú rén",
+          "translation_en": "Do not impose on others what you yourself do not desire"
+        },
+        {
+          "verse_id": "ana_15_24",
+          "book": 15,
+          "chapter": 24,
+          "text_zh": "其恕乎，己所不欲，勿施於人",
+          "pinyin": "Qí shù hū, jǐ suǒ bù yù, wù shī yú rén",
+          "translation_en": "Is not reciprocity the word? What you do not want done to yourself, do not do to others"
+        }
+      ]
+    },
+    {
+      "text_id": "great_learning",
+      "text_name_zh": "大學",
+      "text_name_en": "The Great Learning",
+      "date": "~500-400 BCE",
+      "verses": [
+        {
+          "verse_id": "gl_1",
+          "text_zh": "大學之道，在明明德，在親民，在止於至善",
+          "pinyin": "Dà xué zhī dào, zài míng míng dé, zài qīn mín, zài zhǐ yú zhì shàn",
+          "translation_en": "The way of great learning consists in manifesting one's clear virtue, loving the people, and abiding in the highest good"
+        }
+      ]
+    },
+    {
+      "text_id": "doctrine_mean",
+      "text_name_zh": "中庸",
+      "text_name_en": "The Doctrine of the Mean",
+      "date": "~500-400 BCE",
+      "verses": [
+        {
+          "verse_id": "dm_1",
+          "text_zh": "天命之謂性，率性之謂道，修道之謂教",
+          "pinyin": "Tiān mìng zhī wèi xìng, lǜ xìng zhī wèi dào, xiū dào zhī wèi jiào",
+          "translation_en": "What heaven imparts to man is called nature. To follow nature is called the Way. To cultivate the Way is called education"
+        }
+      ]
+    }
+  ],
+  "hash": "f1a9b8c7d6e5f4a3b2c1d9e8f7a6b5c4d3e2f1a9b8c7d6e5f4a3b2c1d9e8f7a6"
+}

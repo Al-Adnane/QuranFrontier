@@ -1,0 +1,109 @@
+# CITATION.cff - Citation File Format
+
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as follows:"
+
+title: "Pre-Quranic Sacred Texts Corpus"
+abstract: "A collection of sacred texts from 36+ pre-Quranic religious traditions, 
+  including original scripts, transliterations, and English translations. 
+  Includes mathematical model extractions for 6 major traditions."
+
+authors:
+  - family-names: "QuranFrontier Project"
+    website: "https://github.com/quranfrontier"
+
+repository-code: "https://github.com/quranfrontier/QuranFrontier"
+
+version: 1.0.0
+doi: "PLACEHOLDER - Obtain from Zenodo"
+date-released: 2026-03-15
+
+keywords:
+  - "pre-quranic"
+  - "sacred texts"
+  - "religious studies"
+  - "comparative religion"
+  - "ancient languages"
+  - "mathematical models"
+  - "digital humanities"
+
+license: "CC-BY-NC-SA-4.0"
+
+# IMPORTANT DISCLAIMER
+preferred-citation:
+  type: dataset
+  title: "Pre-Quranic Sacred Texts Corpus"
+  note: "STATUS: UNVERIFIED. This dataset requires scholarly verification 
+    before academic use. Users should verify all content against critical 
+    editions and consult subject experts. Living tradition content requires 
+    community permission."
+
+# Usage warning
+rights: "This dataset contains content from living religious traditions. 
+  Users must obtain appropriate permissions before commercial or public use. 
+  Some content may be restricted by community protocols."
+
+# Repository information
+repository: "https://github.com/quranfrontier/QuranFrontier"
+
+# File information
+files:
+  - "corpus/pre-quranic/"
+
+# Size information
+size: "~400 KB"
+
+# Format information
+format:
+  - "JSON"
+  - "Markdown"
+
+# Language information
+languages:
+  - "Hebrew"
+  - "Greek"
+  - "Sanskrit"
+  - "Avestan"
+  - "Pali"
+  - "Classical Chinese"
+  - "Ancient Egyptian"
+  - "Akkadian"
+  - "Sumerian"
+  - "Ugaritic"
+  - "Old Norse"
+  - "Old Irish"
+  - "Nahuatl"
+  - "Quechua"
+  - "K'iche'"
+  - "Yoruba"
+  - "And 25+ more"
+
+# Script information
+scripts:
+  - "Hebrew"
+  - "Greek"
+  - "Devanagari"
+  - "Avestan"
+  - "Egyptian Hieroglyphs"
+  - "Cuneiform"
+  - "Han Ideographs"
+  - "Tibetan"
+  - "And 12+ more"
+
+# Verification status
+verification-status: "UNVERIFIED"
+verification-note: "All content requires scholarly verification before 
+  academic citation. See VERIFICATION_STATUS.md for known issues."
+
+# Contact information
+contact:
+  email: "contact@quranfrontier.org"  # Placeholder
+  note: "For corrections and verification reports"
+
+# Funding information
+# Add if applicable
+
+# Acknowledgments
+acknowledgements: "This dataset acknowledges the living traditions and 
+  communities who maintain these sacred texts. We encourage users to 
+  support preservation efforts and respect cultural protocols."

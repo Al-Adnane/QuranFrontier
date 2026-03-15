@@ -1,0 +1,248 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
+  namespace: quran-system
+  labels:
+    app: worker
+    version: v1
+    optimization: phase-3
+spec:
+  replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: worker
+  template:
+    metadata:
+      labels:
+        app: worker
+        version: v1
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: "/metrics"
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - worker
+              topologyKey: kubernetes.io/hostname
+
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 1000
+
+      initContainers:
+      - name: wait-for-redis
+        image: busybox:latest
+        command:
+        - sh
+        - -c
+        - |
+          until nc -z redis-0.redis-service.quran-system.svc.cluster.local 6379; do
+            echo "Waiting for Redis..."
+            sleep 2
+          done
+          echo "Redis is ready"
+      - name: wait-for-postgres
+        image: busybox:latest
+        command:
+        - sh
+        - -c
+        - |
+          until nc -z postgres-0.postgres-service.quran-system.svc.cluster.local 5432; do
+            echo "Waiting for PostgreSQL..."
+            sleep 2
+          done
+          echo "PostgreSQL is ready"
+      - name: wait-for-neo4j
+        image: busybox:latest
+        command:
+        - sh
+        - -c
+        - |
+          until nc -z neo4j-0.neo4j-service.quran-system.svc.cluster.local 7687; do
+            echo "Waiting for Neo4j..."
+            sleep 2
+          done
+          echo "Neo4j is ready"
+
+      containers:
+      - name: worker
+        image: quran-frontier-worker:latest
+        imagePullPolicy: Always
+
+        env:
+        - name: DATABASE_URL
+          value: "postgresql://$(DB_USER):$(DB_PASSWORD)@postgres-0.postgres-service.quran-system.svc.cluster.local:5432/$(DB_NAME)"
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: quran-secrets
+              key: DB_USER
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: quran-secrets
+              key: DB_PASSWORD
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: quran-config
+              key: DB_NAME
+        - name: NEO4J_URI
+          value: "bolt://neo4j-0.neo4j-service.quran-system.svc.cluster.local:7687"
+        - name: NEO4J_USER
+          valueFrom:
+            secretKeyRef:
+              name: quran-secrets
+              key: NEO4J_USER
+        - name: NEO4J_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: quran-secrets
+              key: NEO4J_PASSWORD
+        - name: NEO4J_BATCH_SIZE
+          value: "100"
+        - name: NEO4J_CONNECTION_POOL_TIMEOUT
+          value: "45"
+        - name: NEO4J_QUERY_CACHE_ENABLED
+          value: "true"
+        - name: CELERY_BROKER_URL
+          value: "redis://redis-0.redis-service.quran-system.svc.cluster.local:6379/0"
+        - name: CELERY_RESULT_BACKEND
+          value: "redis://redis-0.redis-service.quran-system.svc.cluster.local:6379/1"
+        - name: PYTHONUNBUFFERED
+          valueFrom:
+            configMapKeyRef:
+              name: quran-config
+              key: PYTHONUNBUFFERED
+
+        # Memory optimization environment variables
+        - name: EMBEDDING_STREAMING_MODE
+          value: "true"
+        - name: EMBEDDING_GC_INTERVAL
+          value: "1000"
+        - name: EMBEDDING_MEMORY_MAPPED_STORAGE
+          value: "true"
+        - name: EMBEDDING_MMAP_PATH
+          value: "/tmp/embedding_vectors.mmap"
+
+        # Python GC tuning
+        - name: PYTHONGC
+          value: "1"
+        - name: PYTHONGC_THRESHOLD0
+          value: "500"
+        - name: PYTHONGC_THRESHOLD1
+          value: "10"
+        - name: PYTHONGC_THRESHOLD2
+          value: "10"
+
+        ports:
+        - containerPort: 5555
+          name: flower
+          protocol: TCP
+        - containerPort: 8000
+          name: metrics
+          protocol: TCP
+
+        resources:
+          requests:
+            cpu: 500m
+            memory: 512Mi
+          limits:
+            cpu: 1000m
+            memory: 1Gi
+
+        livenessProbe:
+          exec:
+            command:
+            - /bin/sh
+            - -c
+            - celery -A nomos.engine inspect ping
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+
+        readinessProbe:
+          exec:
+            command:
+            - /bin/sh
+            - -c
+            - celery -A nomos.engine inspect active
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          timeoutSeconds: 10
+          failureThreshold: 2
+
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - "sleep 15 && celery -A nomos.engine control shutdown || true"
+
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+          capabilities:
+            drop:
+            - ALL
+
+        volumeMounts:
+        - name: tmp-storage
+          mountPath: /tmp
+
+      volumes:
+      - name: tmp-storage
+        emptyDir:
+          sizeLimit: 2Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: worker-service
+  namespace: quran-system
+  labels:
+    app: worker
+spec:
+  type: ClusterIP
+  selector:
+    app: worker
+  ports:
+  - port: 5555
+    targetPort: 5555
+    protocol: TCP
+    name: flower
+  - port: 8000
+    targetPort: 8000
+    protocol: TCP
+    name: metrics
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: worker-pdb
+  namespace: quran-system
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: worker

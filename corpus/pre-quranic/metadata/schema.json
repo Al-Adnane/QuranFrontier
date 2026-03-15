@@ -1,0 +1,202 @@
+{
+  "schema_info": {
+    "schema_id": "pre-quranic-corpus-v1.0",
+    "created_at": "2026-03-14",
+    "version": "1.0.0",
+    "description": "Unified schema for pre-Quranic sacred texts corpus"
+  },
+  "metadata_schema": {
+    "collection": {
+      "type": "string",
+      "required": true,
+      "enum": ["pre-quranic"],
+      "description": "Collection identifier"
+    },
+    "tradition": {
+      "type": "string",
+      "required": true,
+      "description": "Religious/spiritual tradition"
+    },
+    "language": {
+      "type": "string",
+      "required": true,
+      "description": "Original language of the text"
+    },
+    "script": {
+      "type": "string",
+      "required": true,
+      "description": "Writing script used"
+    },
+    "date_range": {
+      "type": "string",
+      "required": true,
+      "pattern": "^~?\\d+\\s*(BCE|CE)-~?\\d+\\s*(BCE|CE)$",
+      "description": "Date range of composition"
+    },
+    "text_type": {
+      "type": "string",
+      "required": true,
+      "description": "Type of text (e.g., Torah, Gospels, Vedas)"
+    },
+    "source": {
+      "type": "string",
+      "required": true,
+      "description": "Source edition or manuscript"
+    },
+    "encoding": {
+      "type": "string",
+      "required": true,
+      "enum": ["UTF-8"],
+      "description": "Character encoding"
+    },
+    "normalized_form": {
+      "type": "string",
+      "required": true,
+      "enum": ["NFC", "NFD", "NFKC", "NFKD"],
+      "description": "Unicode normalization form"
+    }
+  },
+  "text_structure_schema": {
+    "books": {
+      "type": "array",
+      "description": "Array of books (for Bible, etc.)",
+      "properties": {
+        "book_id": {"type": "string", "required": true},
+        "book_name_original": {"type": "string", "required": true},
+        "book_name_en": {"type": "string", "required": true},
+        "chapters": {"type": "integer"},
+        "verses": {
+          "type": "array",
+          "properties": {
+            "verse_id": {"type": "string", "required": true, "pattern": "^[a-z]+_\\d+_\\d+$"},
+            "chapter": {"type": "integer", "required": true},
+            "verse": {"type": "integer", "required": true},
+            "text_original": {"type": "string", "required": true},
+            "transliteration": {"type": "string"},
+            "translation_en": {"type": "string", "required": true}
+          }
+        }
+      }
+    },
+    "texts": {
+      "type": "array",
+      "description": "Array of texts (for Vedas, Upanishads, etc.)",
+      "properties": {
+        "text_id": {"type": "string", "required": true},
+        "text_name_original": {"type": "string", "required": true},
+        "text_name_en": {"type": "string", "required": true},
+        "date": {"type": "string", "required": true},
+        "author": {"type": "string"},
+        "chapters": {"type": "integer"},
+        "hymns": {"type": "array"},
+        "verses": {"type": "array"}
+      }
+    },
+    "tablets": {
+      "type": "array",
+      "description": "Array of tablets (for Mesopotamian texts)",
+      "properties": {
+        "tablet_id": {"type": "string", "required": true},
+        "tablet_number": {"type": "integer", "required": true},
+        "title": {"type": "string"},
+        "verses": {"type": "array"}
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "description": "Array of chapters (for Book of the Dead, etc.)",
+      "properties": {
+        "chapter_id": {"type": "string", "required": true},
+        "chapter_number": {"type": "integer"},
+        "title": {"type": "string"},
+        "text_original": {"type": "string"},
+        "translation_en": {"type": "string", "required": true}
+      }
+    }
+  },
+  "verse_schema": {
+    "verse_id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique identifier for the verse",
+      "pattern": "^[a-z]+_\\d+_\\d+$"
+    },
+    "text_original": {
+      "type": "string",
+      "required": true,
+      "description": "Text in original language/script",
+      "min_length": 1
+    },
+    "transliteration": {
+      "type": "string",
+      "description": "Romanized transliteration of original text"
+    },
+    "pinyin": {
+      "type": "string",
+      "description": "Pinyin romanization (for Chinese texts)"
+    },
+    "translation_en": {
+      "type": "string",
+      "required": true,
+      "description": "English translation",
+      "min_length": 1
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "source_id": {"type": "string"},
+        "manuscript": {"type": "string"},
+        "variant_readings": {"type": "array"},
+        "notes": {"type": "string"}
+      }
+    }
+  },
+  "validation_rules": {
+    "required_fields": ["verse_id", "text_original", "translation_en"],
+    "unique_constraints": ["verse_id"],
+    "encoding_validation": "UTF-8",
+    "normalization_validation": "NFC",
+    "hash_algorithm": "SHA-256"
+  },
+  "supported_traditions": [
+    "Judaism",
+    "Christianity",
+    "Hinduism",
+    "Zoroastrianism",
+    "Buddhism",
+    "Taoism",
+    "Confucianism",
+    "Ancient Egyptian Religion",
+    "Mesopotamian Religion"
+  ],
+  "supported_languages": [
+    "Hebrew",
+    "Koine Greek",
+    "Sanskrit",
+    "Avestan",
+    "Pali",
+    "Classical Chinese",
+    "Ancient Egyptian",
+    "Akkadian",
+    "Sumerian"
+  ],
+  "file_organization": {
+    "root": "corpus/pre-quranic/",
+    "subdirectories": {
+      "hebrew": "Jewish texts (Torah, Psalms, Prophets)",
+      "greek": "Christian texts (New Testament, Gospels)",
+      "sanskrit": "Hindu texts (Vedas, Upanishads, Gita)",
+      "avestan": "Zoroastrian texts (Avesta, Gathas)",
+      "pali": "Buddhist texts (Tripitaka, Suttas)",
+      "chinese": "Chinese classics (Tao Te Ching, I Ching, Analects)",
+      "egyptian": "Egyptian texts (Book of the Dead, Pyramid Texts)",
+      "akkadian": "Mesopotamian texts (Gilgamesh, Enuma Elish)"
+    }
+  },
+  "integration_notes": {
+    "quran_comparison": "This corpus enables comparative analysis with Quranic texts",
+    "linguistic_analysis": "Original language texts support morphological and syntactic analysis",
+    "thematic_mapping": "Cross-tradition thematic mapping enabled through translation alignment",
+    "chronological_study": "Date ranges enable historical development tracking"
+  }
+}

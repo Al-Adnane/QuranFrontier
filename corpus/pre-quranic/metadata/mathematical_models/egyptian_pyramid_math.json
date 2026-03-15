@@ -1,0 +1,192 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Ancient Egyptian",
+    "model_type": "Geometry / Astronomy / Graph Theory",
+    "source": "Pyramid Texts, Book of Dead, Archaeological Evidence",
+    "accuracy": "REQUIRES VERIFICATION with Egyptologists",
+    "extraction_date": "2026-03-15"
+  },
+  "pyramid_geometry": {
+    "description": "Great Pyramid of Giza mathematical relationships",
+    "mathematical_structure": {
+      "type": "Euclidean Geometry",
+      "shape": "Square-based pyramid",
+      "date": "~2560 BCE"
+    },
+    "dimensions": {
+      "original_height": 146.6,
+      "base_length": 230.4,
+      "unit": "meters"
+    },
+    "mathematical_constants": {
+      "pi_approximation": {
+        "formula": "2 × height / base × 4",
+        "value": 3.14159,
+        "accuracy": "Within 0.05%"
+      },
+      "golden_ratio": {
+        "formula": "apothem / (base/2)",
+        "value": 1.618,
+        "accuracy": "Debated among scholars"
+      },
+      "slope_angle": {
+        "value": 51.84,
+        "unit": "degrees",
+        "formula": "arctan(height / (base/2))"
+      }
+    },
+    "proportions": {
+      "height_to_base": "146.6 / 230.4 ≈ 0.636",
+      "perimeter_to_height": "4 × 230.4 / 146.6 ≈ 6.28 ≈ 2π"
+    }
+  },
+  "duat_graph": {
+    "description": "12-hour journey through underworld",
+    "mathematical_structure": {
+      "type": "Directed Path Graph",
+      "nodes": 12,
+      "edges": 11
+    },
+    "hours": [
+      {"hour": 1, "name": "First Hour", "gates": 1},
+      {"hour": 2, "name": "Second Hour", "gates": 1},
+      {"hour": 3, "name": "Third Hour", "gates": 1},
+      {"hour": 4, "name": "Fourth Hour", "gates": 1},
+      {"hour": 5, "name": "Fifth Hour", "gates": 1},
+      {"hour": 6, "name": "Sixth Hour", "gates": 1},
+      {"hour": 7, "name": "Seventh Hour", "gates": 1},
+      {"hour": 8, "name": "Eighth Hour", "gates": 1},
+      {"hour": 9, "name": "Ninth Hour", "gates": 1},
+      {"hour": 10, "name": "Tenth Hour", "gates": 1},
+      {"hour": 11, "name": "Eleventh Hour", "gates": 1},
+      {"hour": 12, "name": "Twelfth Hour", "gates": 1}
+    ],
+    "graph_properties": {
+      "linear": true,
+      "cyclic": true,
+      "cycle_period": "12 hours (one night)",
+      "connected": true
+    },
+    "sun_god_journey": {
+      "type": "Markov Chain",
+      "states": 12,
+      "transition_matrix": "Deterministic (always moves forward)",
+      "absorbing_state": "Hour 12 (rebirth at dawn)"
+    }
+  },
+  "cosmology_model": {
+    "description": "Egyptian universe structure",
+    "mathematical_structure": {
+      "type": "Layered Topology",
+      "layers": 5
+    },
+    "structure": [
+      {"layer": 1, "name": "Nut (Sky)", "type": "Celestial dome"},
+      {"layer": 2, "name": "Air (Shu)", "type": "Atmospheric space"},
+      {"layer": 3, "name": "Geb (Earth)", "type": "Terrestrial plane"},
+      {"layer": 4, "name": "Duat (Underworld)", "type": "Subterranean"},
+      {"layer": 5, "name": "Nun (Primordial Waters)", "type": "Infinite void"}
+    ],
+    "topology": {
+      "sky_shape": "Arc (goddess Nut arched over earth)",
+      "earth_shape": "Flat disk",
+      "underworld": "Mirror of sky (inverted)",
+      "total_structure": "Sandwich topology"
+    }
+  },
+  "calendar_systems": {
+    "description": "Egyptian calendar mathematics",
+    "civil_calendar": {
+      "type": "Solar Calendar",
+      "months": 12,
+      "days_per_month": 30,
+      "epagomenal_days": 5,
+      "total_days": 365,
+      "formula": "12 × 30 + 5 = 365"
+    },
+    "lunar_calendar": {
+      "type": "Lunar Calendar",
+      "months": 12,
+      "days_per_month": 29.5,
+      "total_days": 354,
+      "intercalation": "Added when needed"
+    },
+    "sothic_cycle": {
+      "description": "Sirius heliacal rising cycle",
+      "period": 1461,
+      "unit": "years",
+      "formula": "365.25 / (365.25 - 365) = 1461",
+      "significance": "Calendar returns to sync with Sirius"
+    }
+  },
+  "pantheon_graph": {
+    "description": "Egyptian god relationships",
+    "mathematical_structure": {
+      "type": "Directed Graph",
+      "nodes": "9 (Ennead) + additional gods",
+      "edges": "Genealogical and mythological relationships"
+    },
+    "ennead": [
+      {"god": "Atum-Ra", "role": "Creator", "edges_to": ["Shu", "Tefnut"]},
+      {"god": "Shu", "role": "Air", "edges_to": ["Geb", "Nut"]},
+      {"god": "Tefnut", "role": "Moisture", "edges_to": ["Geb", "Nut"]},
+      {"god": "Geb", "role": "Earth", "edges_to": ["Osiris", "Isis", "Seth", "Nephthys"]},
+      {"god": "Nut", "role": "Sky", "edges_to": ["Osiris", "Isis", "Seth", "Nephthys"]},
+      {"god": "Osiris", "role": "Underworld", "edges_to": ["Horus"]},
+      {"god": "Isis", "role": "Magic", "edges_to": ["Horus"]},
+      {"god": "Seth", "role": "Chaos", "edges_to": []},
+      {"god": "Nephthys", "role": "Protection", "edges_to": ["Anubis"]}
+    ],
+    "graph_metrics": {
+      "total_nodes": 9,
+      "total_edges": 12,
+      "root": "Atum-Ra",
+      "depth": 3,
+      "strongly_connected": false
+    }
+  },
+  "weighing_of_heart": {
+    "description": "Judgment ritual decision tree",
+    "mathematical_structure": {
+      "type": "Binary Decision Tree",
+      "depth": 2,
+      "outcomes": 2
+    },
+    "decision_process": [
+      {"step": 1, "action": "Weigh heart against Ma'at feather"},
+      {"step": 2, "condition": "Heart weight <= Feather weight"},
+      {"step": 3, "outcome_true": "Enter Field of Reeds (paradise)"},
+      {"step": 4, "outcome_false": "Devoured by Ammit (second death)"}
+    ],
+    "mathematical_formulation": {
+      "inequality": "w_heart ≤ w_feather",
+      "variables": {
+        "w_heart": "Weight of deceased's heart (sins)",
+        "w_feather": "Weight of Ma'at's feather (truth)"
+      },
+      "outcome_space": ["Paradise", "Destruction"]
+    }
+  },
+  "numerology": {
+    "sacred_numbers": {
+      "3": "Triads of gods",
+      "4": "Sons of Horus, canopic jars",
+      "7": "Hathoric festivals",
+      "9": "Ennead (9 gods)",
+      "12": "Hours of day/night",
+      "365": "Days in year"
+    },
+    "mathematical_significance": {
+      "9": "3 × 3 (squared sacred number)",
+      "12": "Lunar cycles per year",
+      "365": "Solar year approximation"
+    }
+  },
+  "verification_required": {
+    "pyramid_proportions": "Verify against archaeological measurements",
+    "duat_structure": "Verify against Book of Dead manuscripts",
+    "calendar_calculations": "Verify against Egyptian astronomical texts"
+  },
+  "hash": "egyptian_math_model_v1_2026"
+}

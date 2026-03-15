@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "count": 3,
+    "algorithm": "SHA-256 v1.0",
+    "generated": "2026-03-14T17:24:23.112696+00:00",
+    "format_version": "1.0"
+  },
+  "hashes": [
+    {
+      "hadith_id": "hadith_bukhari_1_1",
+      "hadith_text": "الأعمال بالنيات",
+      "narrator_chain": "عمر بن الخطاب عن النبي صلى الله عليه وسلم",
+      "grading": "Sahih",
+      "source_collection": "Sahih Bukhari",
+      "hash_sha256": "61ca1ecaf4589de1eee69224f52f5056d586005c613fb45ffcac536718baef71",
+      "algorithm": "SHA-256 v1.0"
+    },
+    {
+      "hadith_id": "hadith_muslim_1_1",
+      "hadith_text": "إنما الأعمال بالنيات",
+      "narrator_chain": "عائشة عن أم القاسم",
+      "grading": "Sahih",
+      "source_collection": "Sahih Muslim",
+      "hash_sha256": "e27416a921b42fe6b7f4b8f1350d6ed4f5302dd51f0d032c02ed71f5eb67708b",
+      "algorithm": "SHA-256 v1.0"
+    },
+    {
+      "hadith_id": "hadith_tirmidhi_1_1",
+      "hadith_text": "من أراد الآخرة",
+      "narrator_chain": "عمر رضي الله عنه",
+      "grading": "Hasan",
+      "source_collection": "Jami' at-Tirmidhi",
+      "hash_sha256": "b0e47032b6ee57aeed214901ebd70403c94fef6ce5f7b6ee729cddc653bd6f77",
+      "algorithm": "SHA-256 v1.0"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Maya Religion",
+    "language": "K'iche' Maya",
+    "script": "Latin (with Mayan glyphs)",
+    "date_range": "2000 BCE-1500 CE",
+    "text_type": "Popol Vuh, Chilam Balam",
+    "source": "Popol Vuh (K'iche' manuscript)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "popol_vuh",
+      "text_name_maya": "Popol Vuh",
+      "text_name_en": "Popol Vuh (Book of Counsel)",
+      "date": "~1550 CE (oral tradition ~2000 BCE)",
+      "sections": [
+        {
+          "section_id": "pv_1",
+          "name": "Creation of the World",
+          "kiche": "Are' uxe' ri wuj, are' ri uchi' ri wuj",
+          "transliteration": "Are' uxe' ri wuj, are' ri uchi' ri wuj",
+          "translation_en": "This is the beginning of the book, this is the root of the book"
+        },
+        {
+          "section_id": "pv_2",
+          "name": "The Gods Speak",
+          "kiche": "Xaq xwi' kaqik'ij ri qak'aslemal",
+          "transliteration": "Xaq xwi' kaqik'ij ri qak'aslemal",
+          "translation_en": "Let us glorify our life"
+        },
+        {
+          "section_id": "pv_3",
+          "name": "First Attempt - Animals",
+          "kiche": "Xkib'an ri juyub', xkib'an ri cho'oy",
+          "transliteration": "Xkib'an ri juyub', xkib'an ri cho'oy",
+          "translation_en": "They made the mountains, they made the valleys"
+        },
+        {
+          "section_id": "pv_4",
+          "name": "Second Attempt - Mud",
+          "kiche": "Xkib'an ri winaq ri xab'aq",
+          "transliteration": "Xkib'an ri winaq ri xab'aq",
+          "translation_en": "They made the people of mud"
+        },
+        {
+          "section_id": "pv_5",
+          "name": "Third Attempt - Wood",
+          "kiche": "Xkib'an ri winaq ri che'",
+          "transliteration": "Xkib'an ri winaq ri che'",
+          "translation_en": "They made the people of wood"
+        },
+        {
+          "section_id": "pv_6",
+          "name": "Fourth Attempt - Maize",
+          "kiche": "Xkib'an ri winaq ri imox",
+          "transliteration": "Xkib'an ri winaq ri imox",
+          "translation_en": "They made the people of maize"
+        },
+        {
+          "section_id": "pv_7",
+          "name": "The Hero Twins",
+          "kiche": "Junajpu, Xbalanqe, are' ri k'ak'a winaq",
+          "transliteration": "Junajpu, Xbalanqe, are' ri k'ak'a winaq",
+          "translation_en": "Hunahpu, Xbalanque, these are the new people"
+        },
+        {
+          "section_id": "pv_8",
+          "name": "The Ball Game",
+          "kiche": "Xkib'an ri pitz, xkib'an ri k'ak'",
+          "transliteration": "Xkib'an ri pitz, xkib'an ri k'ak'",
+          "translation_en": "They made the ball game, they made the fire"
+        }
+      ]
+    },
+    {
+      "text_id": "maya_prayers",
+      "text_name_maya": "K'ak' Tzij",
+      "text_name_en": "Maya Prayers",
+      "date": "~500 BCE-1500 CE",
+      "prayers": [
+        {
+          "prayer_id": "maya_p1",
+          "name": "Prayer to Itzamna",
+          "kiche": "Itzamna, ajaw k'uh, kaqik'ij",
+          "transliteration": "Itzamna, ajaw k'uh, kaqik'ij",
+          "translation_en": "Itzamna, lord god, we glorify"
+        },
+        {
+          "prayer_id": "maya_p2",
+          "name": "Prayer to Kukulkan",
+          "kiche": "Kukulkan, kan k'uh, kaqik'ij",
+          "transliteration": "Kukulkan, kan k'uh, kaqik'ij",
+          "translation_en": "Kukulkan, feathered serpent god, we glorify"
+        },
+        {
+          "prayer_id": "maya_p3",
+          "name": "Prayer for Rain",
+          "kiche": "Ha', ha', ha', kaqik'ij",
+          "transliteration": "Ha', ha', ha', kaqik'ij",
+          "translation_en": "Water, water, water, we glorify"
+        },
+        {
+          "prayer_id": "maya_p4",
+          "name": "Prayer for Maize",
+          "kiche": "Imox, imox, imox, kaqik'ij",
+          "transliteration": "Imox, imox, imox, kaqik'ij",
+          "translation_en": "Maize, maize, maize, we glorify"
+        }
+      ]
+    },
+    {
+      "text_id": "maya_calendar",
+      "text_name_maya": "K'ij",
+      "text_name_en": "Maya Calendar Sacred Days",
+      "date": "~500 BCE-1500 CE",
+      "days": [
+        {
+          "day_id": "cal_1",
+          "name": "Imix",
+          "kiche": "Imix",
+          "meaning": "Water/Maize",
+          "symbol": "🌊"
+        },
+        {
+          "day_id": "cal_2",
+          "name": "Ik",
+          "kiche": "Ik",
+          "meaning": "Wind/Spirit",
+          "symbol": "💨"
+        },
+        {
+          "day_id": "cal_3",
+          "name": "Akbal",
+          "kiche": "Akbal",
+          "meaning": "Night/Darkness",
+          "symbol": "🌙"
+        },
+        {
+          "day_id": "cal_4",
+          "name": "Kan",
+          "kiche": "Kan",
+          "meaning": "Seed/Net",
+          "symbol": "🌱"
+        },
+        {
+          "day_id": "cal_5",
+          "name": "Chicchan",
+          "kiche": "Chicchan",
+          "meaning": "Serpent",
+          "symbol": "🐍"
+        },
+        {
+          "day_id": "cal_6",
+          "name": "Cimi",
+          "kiche": "Cimi",
+          "meaning": "Death",
+          "symbol": "💀"
+        },
+        {
+          "day_id": "cal_7",
+          "name": "Manik",
+          "kiche": "Manik",
+          "meaning": "Deer/Hand",
+          "symbol": "🦌"
+        },
+        {
+          "day_id": "cal_8",
+          "name": "Lamat",
+          "kiche": "Lamat",
+          "meaning": "Rabbit/Star",
+          "symbol": "🐰"
+        },
+        {
+          "day_id": "cal_9",
+          "name": "Muluc",
+          "kiche": "Muluc",
+          "meaning": "Water/Offering",
+          "symbol": "💧"
+        },
+        {
+          "day_id": "cal_10",
+          "name": "Oc",
+          "kiche": "Oc",
+          "meaning": "Dog",
+          "symbol": "🐕"
+        },
+        {
+          "day_id": "cal_11",
+          "name": "Chuen",
+          "kiche": "Chuen",
+          "meaning": "Monkey/Art",
+          "symbol": "🐒"
+        },
+        {
+          "day_id": "cal_12",
+          "name": "Eb",
+          "kiche": "Eb",
+          "meaning": "Road/Grass",
+          "symbol": "🛤️"
+        },
+        {
+          "day_id": "cal_13",
+          "name": "Ben",
+          "kiche": "Ben",
+          "meaning": "Reed/Person",
+          "symbol": "🎋"
+        },
+        {
+          "day_id": "cal_14",
+          "name": "Ix",
+          "kiche": "Ix",
+          "meaning": "Jaguar",
+          "symbol": "🐆"
+        },
+        {
+          "day_id": "cal_15",
+          "name": "Men",
+          "kiche": "Men",
+          "meaning": "Eagle/Wisdom",
+          "symbol": "🦅"
+        },
+        {
+          "day_id": "cal_16",
+          "name": "Cib",
+          "kiche": "Cib",
+          "meaning": "Owl/Wisdom",
+          "symbol": "🦉"
+        },
+        {
+          "day_id": "cal_17",
+          "name": "Caban",
+          "kiche": "Caban",
+          "meaning": "Earth/Movement",
+          "symbol": "🌍"
+        },
+        {
+          "day_id": "cal_18",
+          "name": "Etznab",
+          "kiche": "Etznab",
+          "meaning": "Knife/Warrior",
+          "symbol": "🗡️"
+        },
+        {
+          "day_id": "cal_19",
+          "name": "Cauac",
+          "kiche": "Cauac",
+          "meaning": "Storm/Thunder",
+          "symbol": "⛈️"
+        },
+        {
+          "day_id": "cal_20",
+          "name": "Ahau",
+          "kiche": "Ahau",
+          "meaning": "Lord/Sun",
+          "symbol": "☀️"
+        }
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "Itzamna", "role": "Creator God", "domain": "Sky/Wisdom"},
+    {"name": "Kukulkan", "role": "Feathered Serpent", "domain": "Wind/Learning"},
+    {"name": "Chaac", "role": "Rain God", "domain": "Rain/Agriculture"},
+    {"name": "Ixchel", "role": "Moon Goddess", "domain": "Medicine/Weaving"},
+    {"name": "Ah Puch", "role": "Death God", "domain": "Underworld"},
+    {"name": "Hunahpu", "role": "Hero Twin", "domain": "Sun/Ball Game"},
+    {"name": "Xbalanque", "role": "Hero Twin", "domain": "Moon/Ball Game"}
+  ],
+  "hash": "c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8"
+}

@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Canaanite/Ugaritic Religion",
+    "language": "Ugaritic/Phoenician",
+    "script": "Ugaritic Cuneiform",
+    "date_range": "1500-1200 BCE",
+    "text_type": "Baal Cycle, Keret, Aqhat",
+    "source": "Ras Shamra Tablets",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+10380-U+1039F"
+  },
+  "texts": [
+    {
+      "text_id": "baal_cycle",
+      "text_name_ug": "𐎓𐎍𐎊𐎚 𐎁𐎓𐎍",
+      "text_name_en": "Baal Cycle",
+      "date": "~1500-1300 BCE",
+      "tablets": [
+        {
+          "tablet_id": "baal_1",
+          "name": "Baal vs. Yam",
+          "ugaritic": "𐎊𐎎 𐎙𐎍𐎃𐎚 𐎁𐎓𐎍",
+          "transliteration": "Yam ṯlḥt Baʿl",
+          "translation_en": "Yam attacks Baal"
+        },
+        {
+          "tablet_id": "baal_2",
+          "name": "Baal's Victory",
+          "ugaritic": "𐎁𐎓𐎍 𐎊𐎕𐎁𐎚 𐎊𐎎",
+          "transliteration": "Baʿl yṯbt Yam",
+          "translation_en": "Baal defeats Yam"
+        },
+        {
+          "tablet_id": "baal_3",
+          "name": "Baal's Palace",
+          "ugaritic": "𐎁𐎓𐎍 𐎈𐎍 𐎂𐎛",
+          "transliteration": "Baʿl ḥl gʾi",
+          "translation_en": "Baal builds his palace"
+        },
+        {
+          "tablet_id": "baal_4",
+          "name": "Baal vs. Mot",
+          "ugaritic": "𐎎𐎚 𐎙𐎍𐎃𐎚 𐎁𐎓𐎍",
+          "transliteration": "Mōt ṯlḥt Baʿl",
+          "translation_en": "Mot attacks Baal"
+        },
+        {
+          "tablet_id": "baal_5",
+          "name": "Baal's Death",
+          "ugaritic": "𐎁𐎓𐎍 𐎎𐎚",
+          "transliteration": "Baʿl mōt",
+          "translation_en": "Baal dies"
+        },
+        {
+          "tablet_id": "baal_6",
+          "name": "Anat's Vengeance",
+          "ugaritic": "𐎓𐎐𐎚 𐎚𐎕𐎁𐎚 𐎎𐎚",
+          "transliteration": "ʿAnat tṯbt Mōt",
+          "translation_en": "Anat defeats Mot"
+        },
+        {
+          "tablet_id": "baal_7",
+          "name": "Baal's Resurrection",
+          "ugaritic": "𐎁𐎓𐎍 𐎈𐎊",
+          "transliteration": "Baʿl ḥy",
+          "translation_en": "Baal lives again"
+        }
+      ]
+    },
+    {
+      "text_id": "ugaritic_prayers",
+      "text_name_ug": "𐎚𐎔𐎍𐎚",
+      "text_name_en": "Ugaritic Prayers",
+      "date": "~1400-1200 BCE",
+      "prayers": [
+        {
+          "prayer_id": "ug_p1",
+          "name": "To El",
+          "ugaritic": "𐎉𐎁 𐎉𐎍 𐎛𐎍",
+          "transliteration": "Ṭb ṭl ʾĒl",
+          "translation_en": "Good, good is El"
+        },
+        {
+          "prayer_id": "ug_p2",
+          "name": "To Baal",
+          "ugaritic": "𐎁𐎓𐎍 𐎓𐎍𐎊",
+          "transliteration": "Baʿl ʿly",
+          "translation_en": "Baal the Most High"
+        },
+        {
+          "prayer_id": "ug_p3",
+          "name": "To Anat",
+          "ugaritic": "𐎓𐎐𐎚 𐎂𐎛𐎚",
+          "transliteration": "ʿAnat gʾit",
+          "translation_en": "Anat the mighty"
+        },
+        {
+          "prayer_id": "ug_p4",
+          "name": "To Asherah",
+          "ugaritic": "𐎀𐎘𐎗𐎚 𐎊𐎎",
+          "transliteration": "ʾAṯirat Yam",
+          "translation_en": "Asherah of the Sea"
+        }
+      ]
+    },
+    {
+      "text_id": "keret_epic",
+      "text_name_ug": "𐎋𐎗𐎚",
+      "text_name_en": "Epic of Keret",
+      "date": "~1400-1200 BCE",
+      "passages": [
+        {
+          "passage_id": "ker_1",
+          "name": "Keret's Loss",
+          "ugaritic": "𐎋𐎗𐎚 𐎎𐎍𐎋 𐎀𐎁𐎍",
+          "transliteration": "Keret malk ʾabl",
+          "translation_en": "Keret the king mourns"
+        },
+        {
+          "passage_id": "ker_2",
+          "name": "Keret's Vow",
+          "ugaritic": "𐎋𐎗𐎚 𐎐𐎛 𐎐𐎍",
+          "transliteration": "Keret nʾi nʾl",
+          "translation_en": "Keret makes a vow"
+        }
+      ]
+    },
+    {
+      "text_id": "ugaritic_commandments",
+      "text_name_ug": "𐎔𐎂𐎗",
+      "text_name_en": "Ugaritic Precepts",
+      "date": "~1400-1200 BCE",
+      "precepts": [
+        {
+          "precept_id": "ug_c1",
+          "ugaritic": "𐎋𐎁𐎉 𐎀𐎁𐎋",
+          "transliteration": "Kbḏ ʾabk",
+          "translation_en": "Honor your father"
+        },
+        {
+          "precept_id": "ug_c2",
+          "ugaritic": "𐎋𐎁𐎉 𐎀𐎎𐎊",
+          "transliteration": "Kbḏ ʾmk",
+          "translation_en": "Honor your mother"
+        },
+        {
+          "precept_id": "ug_c3",
+          "ugaritic": "𐎌𐎎𐎗 𐎉𐎓𐎗𐎚",
+          "transliteration": "Šmr ṭʿrt",
+          "translation_en": "Keep the path"
+        },
+        {
+          "precept_id": "ug_c4",
+          "ugaritic": "𐎓𐎌 𐎎𐎉𐎚",
+          "transliteration": "ʿš mṯt",
+          "translation_en": "Do justice"
+        }
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "El", "role": "Supreme God, Father", "symbol": "𐎛𐎍"},
+    {"name": "Baal", "role": "Storm God, King", "symbol": "𐎁𐎓𐎍"},
+    {"name": "Anat", "role": "War Goddess", "symbol": "𐎓𐎐𐎚"},
+    {"name": "Asherah", "role": "Mother Goddess", "symbol": "𐎀𐎘𐎗𐎚"},
+    {"name": "Yam", "role": "Sea God", "symbol": "𐎊𐎎"},
+    {"name": "Mot", "role": "Death God", "symbol": "𐎎𐎚"},
+    {"name": "Astarte", "role": "Love/War Goddess", "symbol": "𐎓𐎘𐎚𐎗𐎚"}
+  ],
+  "hash": "e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0"
+}

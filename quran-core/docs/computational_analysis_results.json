@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-03-15",
+  "total_principles": 2,
+  "analysis_methods": 5,
+  "network_graph": {
+    "nodes": {
+      "Tayyib (Good Food)": {
+        "reference": "Q2:168",
+        "domain": "Healthcare",
+        "verses": 2,
+        "centrality": 1.7999999999999998
+      },
+      "Knowledge Acquisition": {
+        "reference": "Q96:1-5",
+        "domain": "Cognition",
+        "verses": 2,
+        "centrality": 1.7999999999999998
+      }
+    },
+    "edges": [
+      {
+        "source": "Tayyib (Good Food)",
+        "target": "Knowledge Acquisition",
+        "weight": 0.8,
+        "type": "complements"
+      },
+      {
+        "source": "Knowledge Acquisition",
+        "target": "Tayyib (Good Food)",
+        "weight": 0.8,
+        "type": "complements"
+      },
+      {
+        "source": "Tayyib (Good Food)",
+        "target": "Knowledge Acquisition",
+        "weight": 0.8,
+        "type": "complements"
+      },
+      {
+        "source": "Knowledge Acquisition",
+        "target": "Tayyib (Good Food)",
+        "weight": 0.8,
+        "type": "complements"
+      }
+    ],
+    "metrics": {
+      "total_nodes": 2,
+      "total_edges": 4,
+      "density": 4.0,
+      "clusters": 1
+    }
+  },
+  "information_theory": {
+    "principles_analyzed": 2,
+    "average_information_density": 1.9845854779767556,
+    "principle_details": [
+      {
+        "principle": "Tayyib (Good Food)",
+        "entropy": 4.014613386287236,
+        "compression_ratio": 0.5018266732859045,
+        "information_density": 2.007306693143618,
+        "verse_count": 2,
+        "total_characters": 92,
+        "average_verse_length": 46.0
+      },
+      {
+        "principle": "Knowledge Acquisition",
+        "entropy": 3.9237285256197865,
+        "compression_ratio": 0.4904660657024733,
+        "information_density": 1.9618642628098932,
+        "verse_count": 2,
+        "total_characters": 69,
+        "average_verse_length": 34.5
+      }
+    ]
+  },
+  "semantic_clustering": {
+    "semantic_clusters": [
+      [
+        "Tayyib (Good Food)"
+      ],
+      [
+        "Knowledge Acquisition"
+      ]
+    ],
+    "cluster_count": 2,
+    "root_word_statistics": {
+      "total_unique_roots": 7,
+      "total_principles": 2,
+      "most_common_roots": [
+        [
+          "eat",
+          1
+        ],
+        [
+          "lawful",
+          1
+        ],
+        [
+          "good",
+          1
+        ],
+        [
+          "created",
+          1
+        ],
+        [
+          "Lord",
+          1
+        ],
+        [
+          "read",
+          1
+        ],
+        [
+          "mankind",
+          1
+        ]
+      ],
+      "average_roots_per_principle": 3.5
+    }
+  },
+  "category_theory": {
+    "functorial_mappings": {},
+    "recursive_patterns": {
+      "Tayyib (Good Food)": {
+        "recurring_themes": [
+          "from",
+          "is",
+          "lawful"
+        ],
+        "theme_frequency": {
+          "from": 2,
+          "is": 2,
+          "lawful": 2
+        }
+      },
+      "Knowledge Acquisition": {
+        "recurring_themes": [
+          "Read",
+          "in",
+          "the"
+        ],
+        "theme_frequency": {
+          "Read": 1,
+          "in": 1,
+          "the": 1
+        }
+      }
+    }
+  },
+  "ring_composition": {
+    "surahs_analyzed": 2,
+    "surah_analyses": [
+      {
+        "surah": 2,
+        "is_ring_composition": false
+      },
+      {
+        "surah": 96,
+        "is_ring_composition": false
+      }
+    ]
+  }
+}

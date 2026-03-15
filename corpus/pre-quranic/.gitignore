@@ -1,0 +1,47 @@
+# Git ignore file for Pre-Quranic Corpus
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Coverage
+.coverage
+htmlcov/
+
+# Documentation build
+docs/_build/
+
+# Large data files (if any)
+*.h5
+*.pkl
+
+# Keep all text and data files
+# Only exclude build artifacts and cache
