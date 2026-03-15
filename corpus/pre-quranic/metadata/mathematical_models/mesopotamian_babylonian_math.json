@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Mesopotamian/Babylonian",
+    "model_type": "Base-60 Arithmetic / Astronomy / Graph Theory",
+    "source": "Cuneiform Tablets, Enuma Elish, Astronomical Diaries",
+    "accuracy": "REQUIRES VERIFICATION with Assyriologists",
+    "extraction_date": "2026-03-15"
+  },
+  "sexagesimal_system": {
+    "description": "Base-60 number system",
+    "mathematical_structure": {
+      "type": "Positional Number System",
+      "base": 60,
+      "digits": "0-59"
+    },
+    "digit_symbols": {
+      "unit_symbols": "1-9 (wedge impressions)",
+      "ten_symbols": "10-50 (corner wedge)",
+      "zero": "Later development (Seleucid period)"
+    },
+    "place_value_system": {
+      "positions": [60^0, 60^1, 60^2, 60^3, ...],
+      "value": "d_n × 60^n + ... + d_1 × 60^1 + d_0 × 60^0"
+    },
+    "advantages": {
+      "divisibility": "60 is divisible by 1,2,3,4,5,6,10,12,15,20,30,60",
+      "astronomy": "360 degrees = 6 × 60",
+      "time": "60 seconds/minute, 60 minutes/hour"
+    },
+    "modern_legacy": {
+      "time": "60 seconds, 60 minutes",
+      "angles": "360 degrees",
+      "coordinates": "Degrees, minutes, seconds"
+    }
+  },
+  "babylonian_astronomy": {
+    "description": "Mathematical astronomy calculations",
+    "mathematical_structure": {
+      "type": "Arithmetic Progressions",
+      "periods": "Synodic periods of planets"
+    },
+    "planetary_periods": {
+      "mercury": {"synodic": 116, "sidereal": 88, "unit": "days"},
+      "venus": {"synodic": 584, "sidereal": 225, "unit": "days"},
+      "mars": {"synodic": 780, "sidereal": 687, "unit": "days"},
+      "jupiter": {"synodic": 399, "sidereal": 4333, "unit": "days"},
+      "saturn": {"synodic": 378, "sidereal": 10759, "unit": "days"}
+    },
+    "lunar_calculations": {
+      "synodic_month": 29.53059,
+      "babylonian_approximation": 29.53059,
+      "accuracy": "Within seconds",
+      "saros_cycle": 223,
+      "saros_unit": "lunar months (18 years, 11 days)"
+    },
+    "zodiac_development": {
+      "signs": 12,
+      "degrees_per_sign": 30,
+      "total_degrees": 360,
+      "formula": "12 × 30 = 360"
+    }
+  },
+  "enuma_elish_structure": {
+    "description": "Creation epic mathematical structure",
+    "mathematical_structure": {
+      "type": "Sequential Process",
+      "stages": 7,
+      "tablets": 7
+    },
+    "creation_stages": [
+      {"stage": 1, "tablet": 1, "event": "Primeval gods (Apsu, Tiamat)"},
+      {"stage": 2, "tablet": 2, "event": "Generation of younger gods"},
+      {"stage": 3, "tablet": 3, "event": "Conflict begins"},
+      {"stage": 4, "tablet": 4, "event": "Marduk vs. Tiamat battle"},
+      {"stage": 5, "tablet": 5, "event": "Creation of cosmos from Tiamat"},
+      {"stage": 6, "tablet": 6, "event": "Creation of humanity"},
+      {"stage": 7, "tablet": 7, "event": "Marduk's 50 names"}
+    ],
+    "numerical_pattern": {
+      "tablets": 7,
+      "lines_per_tablet": "~150-200",
+      "marduk_names": 50,
+      "significance": "7 = sacred number, 50 = Marduk's number"
+    }
+  },
+  "cosmology_model": {
+    "description": "Mesopotamian universe structure",
+    "mathematical_structure": {
+      "type": "Concentric Layers",
+      "layers": 3
+    },
+    "structure": [
+      {"layer": 1, "name": "Heaven (Anu)", "shape": "Dome"},
+      {"layer": 2, "name": "Earth (Enlil)", "shape": "Flat disk"},
+      {"layer": 3, "name": "Underworld (Ea)", "shape": "Subterranean"}
+    ],
+    "dimensions": {
+      "earth_diameter": "Unknown (flat disk)",
+      "heaven_levels": 3,
+      "ocean": "Surrounds earth disk"
+    },
+    "graph_representation": {
+      "type": "Layered graph",
+      "nodes": 3,
+      "edges": "Vertical connections"
+    }
+  },
+  "king_lists": {
+    "description": "Sumerian King List mathematics",
+    "mathematical_structure": {
+      "type": "Chronological Sequence",
+      "entries": "~140 kings"
+    },
+    "reign_lengths": {
+      "pre_flood": "Extremely long (18,600-43,200 years)",
+      "post_flood": "More realistic (decades to centuries)",
+      "pattern": "Geometric decrease over time"
+    },
+    "total_duration": {
+      "pre_flood_kings": 8,
+      "pre_flood_years": 241,200,
+      "post_flood": "Variable by version"
+    },
+    "mathematical_analysis": {
+      "type": "Time series analysis",
+      "trend": "Exponential decay",
+      "formula": "Reign_length(n) ≈ a × e^(-bn)"
+    }
+  },
+  "divination_mathematics": {
+    "description": "Extispicy (liver divination) patterns",
+    "mathematical_structure": {
+      "type": "Pattern Classification",
+      "features": "Liver markings, shapes, positions"
+    },
+    "omen_structure": {
+      "protasis": "If [omen observed]",
+      "apodosis": "Then [outcome predicted]",
+      "total_omens": "~5000 in series"
+    },
+    "combinatorics": {
+      "liver_sections": "Multiple zones",
+      "marking_types": "Colors, shapes, positions",
+      "total_combinations": "Thousands"
+    },
+    "logic_type": "Conditional implication",
+    "formula": "Omen → Outcome (deterministic)"
+  },
+  "numerology": {
+    "sacred_numbers": {
+      "1": "Unity, supreme god",
+      "3": "Divine triads",
+      "4": "Cardinal directions",
+      "7": "Planets, apkallu sages",
+      "10": "Decad (Pythagorean influence)",
+      "12": "Zodiac signs",
+      "60": "Base of number system"
+    },
+    "mathematical_significance": {
+      "7": "Prime number, 7 planets visible to naked eye",
+      "12": "Highly composite, lunar cycles per year",
+      "60": "Highly composite (12 divisors)"
+    }
+  },
+  "verification_required": {
+    "sexagesimal_calculations": "Verify against cuneiform tablets",
+    "astronomical_periods": "Verify against astronomical diaries",
+    "creation_stages": "Verify against Enuma Elish text"
+  },
+  "hash": "mesopotamian_math_model_v1_2026"
+}

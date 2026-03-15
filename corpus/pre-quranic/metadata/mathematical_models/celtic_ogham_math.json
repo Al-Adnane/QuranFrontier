@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Celtic",
+    "model_type": "Graph Theory / Ogham Algebra / Calendar Cycles",
+    "source": "Irish Mythology, Welsh Mabinogion, Ogham Inscriptions",
+    "accuracy": "REQUIRES VERIFICATION with Celtic scholars",
+    "extraction_date": "2026-03-15"
+  },
+  "ogham_algebra": {
+    "description": "Ogham alphabet mathematical structure",
+    "mathematical_structure": {
+      "type": "Free Monoid",
+      "alphabet_size": 20,
+      "operation": "Concatenation"
+    },
+    "feda_letters": {
+      "aicme_b": ["ᚁ", "ᚂ", "ᚃ", "ᚄ", "ᚅ"],
+      "aicme_h": ["ᚆ", "ᚇ", "ᚈ", "ᚉ", "ᚊ"],
+      "aicme_m": ["ᚋ", "ᚌ", "ᚍ", "ᚎ", "ᚏ"],
+      "aicme_a": ["ᚐ", "ᚑ", "ᚒ", "ᚓ", "ᚔ"],
+      "forfeda": ["ᚕ", "ᚖ", "ᚗ", "ᚘ", "ᚙ", "ᚚ"]
+    },
+    "letter_values": [
+      {"letter": "ᚁ", "name": "Beith", "value": 1, "tree": "Birch"},
+      {"letter": "ᚂ", "name": "Luis", "value": 2, "tree": "Rowan"},
+      {"letter": "ᚃ", "name": "Fearn", "value": 3, "tree": "Alder"},
+      {"letter": "ᚄ", "name": "Saille", "value": 4, "tree": "Willow"},
+      {"letter": "ᚅ", "name": "Nion", "value": 5, "tree": "Ash"},
+      {"letter": "ᚆ", "name": "Uath", "value": 6, "tree": "Hawthorn"},
+      {"letter": "ᚇ", "name": "Dair", "value": 7, "tree": "Oak"},
+      {"letter": "ᚈ", "name": "Tinne", "value": 8, "tree": "Holly"},
+      {"letter": "ᚉ", "name": "Coll", "value": 9, "tree": "Hazel"},
+      {"letter": "ᚊ", "name": "Ceirt", "value": 10, "tree": "Apple"},
+      {"letter": "ᚋ", "name": "Muin", "value": 11, "tree": "Vine"},
+      {"letter": "ᚌ", "name": "Gort", "value": 12, "tree": "Ivy"},
+      {"letter": "ᚍ", "name": "nGéal", "value": 13, "tree": "Reed"},
+      {"letter": "ᚎ", "name": "Straif", "value": 14, "tree": "Blackthorn"},
+      {"letter": "ᚏ", "name": "Ruis", "value": 15, "tree": "Elder"},
+      {"letter": "ᚐ", "name": "Ailm", "value": 16, "tree": "Silver Fir"},
+      {"letter": "ᚑ", "name": "Onn", "value": 17, "tree": "Furze"},
+      {"letter": "ᚒ", "name": "Ur", "value": 18, "tree": "Heather"},
+      {"letter": "ᚓ", "name": "Eadha", "value": 19, "tree": "Aspen"},
+      {"letter": "ᚔ", "name": "Ioho", "value": 20, "tree": "Yew"}
+    ],
+    "combinatorics": {
+      "single_letter": 20,
+      "two_letter_combinations": "20^2 = 400",
+      "three_letter_combinations": "20^3 = 8,000",
+      "n_letter_combinations": "20^n"
+    }
+  },
+  "otherworld_graph": {
+    "description": "Celtic Otherworld cosmology",
+    "mathematical_structure": {
+      "type": "Multi-layer Graph",
+      "nodes": "Multiple realms",
+      "edges": "Portal connections"
+    },
+    "realms": [
+      {"name": "Tír na nÓg", "type": "Land of Youth", "access": "Portal"},
+      {"name": "Mag Mell", "type": "Plain of Delights", "access": "Portal"},
+      {"name": "Tír Tairngire", "type": "Land of Promise", "access": "Portal"},
+      {"name": "Emain Ablach", "type": "Isle of Apple Trees", "access": "Sea voyage"},
+      {"name": "Tech Duinn", "type": "House of Donn", "access": "Death"},
+      {"name": "Middle World", "type": "Human realm", "access": "Normal"}
+    ],
+    "graph_properties": {
+      "connected": true,
+      "cyclic": false,
+      "bipartite": true,
+      "portals": "Variable by myth"
+    },
+    "connection_matrix": {
+      "type": "Adjacency matrix",
+      "dimensions": "6×6",
+      "entries": "Portal existence (0 or 1)"
+    }
+  },
+  "calendar_systems": {
+    "description": "Celtic calendar mathematics",
+    "mathematical_structure": {
+      "type": "Lunisolar Calendar",
+      "cycle": "5-year cycle (Coligny)"
+    },
+    "coligny_calendar": {
+      "months": 62,
+      "years": 5,
+      "days_per_month": [29, 30],
+      "intercalation": "2 additional months in 5-year cycle",
+      "total_days": 1831,
+      "formula": "5 × 365.25 ≈ 1826 + intercalation"
+    },
+    "festivals": {
+      "samhain": {"date": "November 1", "significance": "New year, thin veil"},
+      "imbolc": {"date": "February 1", "significance": "Spring beginning"},
+      "beltane": {"date": "May 1", "significance": "Summer beginning"},
+      "lugnasad": {"date": "August 1", "significance": "Harvest"}
+    },
+    "quarterly_structure": {
+      "quarters": 4,
+      "days_between": "~91 days",
+      "formula": "365 / 4 ≈ 91.25"
+    }
+  },
+  "tuatha_de_danann": {
+    "description": "Divine family relationships",
+    "mathematical_structure": {
+      "type": "Genealogical Graph",
+      "nodes": "~30 major deities",
+      "edges": "Parent-child relationships"
+    },
+    "major_deities": [
+      {"name": "The Dagda", "role": "Father God", "domain": "Earth/Magic"},
+      {"name": "Brigid", "role": "Triple Goddess", "domain": "Poetry/Healing/Smithcraft"},
+      {"name": "Lugh", "role": "Sun God", "domain": "Skills/War"},
+      {"name": "The Morrigan", "role": "War Goddess", "domain": "Battle/Fate"},
+      {"name": "Manannán", "role": "Sea God", "domain": "Ocean/Otherworld"},
+      {"name": "Dian Cecht", "role": "Healing God", "domain": "Medicine"},
+      {"name": "Goibniu", "role": "Smith God", "domain": "Metalwork"}
+    ],
+    "graph_metrics": {
+      "total_nodes": "~30",
+      "total_edges": "~40",
+      "root": "The Dagda",
+      "depth": 4,
+      "strongly_connected": false
+    }
+  },
+  "tree_alphabet": {
+    "description": "Beth Luis Nion tree alphabet",
+    "mathematical_structure": {
+      "type": "Ordered Sequence",
+      "elements": 19,
+      "correspondence": "Trees/Letters"
+    },
+    "tree_sequence": [
+      {"position": 1, "tree": "Birch", "letter": "ᚁ", "month": "Dec 24 - Jan 20"},
+      {"position": 2, "tree": "Rowan", "letter": "ᚂ", "month": "Jan 21 - Feb 17"},
+      {"position": 3, "tree": "Ash", "letter": "ᚅ", "month": "Feb 18 - Mar 17"},
+      {"position": 4, "tree": "Alder", "letter": "ᚃ", "month": "Mar 18 - Apr 14"},
+      {"position": 5, "tree": "Willow", "letter": "ᚄ", "month": "Apr 15 - May 12"},
+      {"position": 6, "tree": "Hawthorn", "letter": "ᚆ", "month": "May 13 - Jun 9"},
+      {"position": 7, "tree": "Oak", "letter": "ᚇ", "month": "Jun 10 - Jul 7"},
+      {"position": 8, "tree": "Holly", "letter": "ᚈ", "month": "Jul 8 - Aug 4"},
+      {"position": 9, "tree": "Hazel", "letter": "ᚉ", "month": "Aug 5 - Sep 1"},
+      {"position": 10, "tree": "Vine", "letter": "ᚋ", "month": "Sep 2 - Sep 29"},
+      {"position": 11, "tree": "Ivy", "letter": "ᚌ", "month": "Sep 30 - Oct 27"},
+      {"position": 12, "tree": "Reed", "letter": "ᚍ", "month": "Oct 28 - Nov 24"},
+      {"position": 13, "tree": "Elder", "letter": "ᚏ", "month": "Nov 25 - Dec 23"}
+    ],
+    "calendar_correspondence": {
+      "months": 13,
+      "days_per_month": 28,
+      "total_days": 364,
+      "formula": "13 × 28 = 364"
+    }
+  },
+  "numerology": {
+    "sacred_numbers": {
+      "3": "Triple goddess, threefold death",
+      "4": "Four festivals, four directions",
+      "5": "Five provinces of Ireland",
+      "7": "Seven sages",
+      "9": "Nine waves, sacred number",
+      "13": "Ogham letters (original)",
+      "20": "Ogham letters (complete)"
+    },
+    "mathematical_significance": {
+      "3": "Prime number, triadic structure",
+      "4": "Cardinal directions, seasons",
+      "9": "3² (squared sacred number)",
+      "13": "Prime number, lunar cycles per year"
+    }
+  },
+  "verification_required": {
+    "ogham_order": "Verify against inscriptions",
+    "calendar_calculations": "Verify against Coligny calendar",
+    "genealogy": "Verify against Irish texts"
+  },
+  "hash": "celtic_math_model_v1_2026"
+}

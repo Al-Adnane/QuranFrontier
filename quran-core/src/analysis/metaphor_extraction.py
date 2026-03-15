@@ -1041,6 +1041,14 @@ class NoahStory(QuranicStory):
             "increasing_isolation",
             "outcome_independence"
         ]
+        self.phases = [
+            "initial_preaching_some_interest",
+            "sustained_preaching_increasing_rejection",
+            "long_term_persistence_mockery",
+            "final_warning_hostility",
+            "ark_construction_believers_embark",
+            "flood_destruction_unbelievers"
+        ]
 
     def extract_narrative_algorithm(self) -> Dict:
         """Extract Noah's narrative as algorithm"""

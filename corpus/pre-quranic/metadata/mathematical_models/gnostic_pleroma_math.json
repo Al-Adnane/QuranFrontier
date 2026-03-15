@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Gnosticism",
+    "model_type": "Graph Theory / Hierarchy / Dualistic Logic",
+    "source": "Nag Hammadi Library, Gnostic Gospels",
+    "accuracy": "REQUIRES VERIFICATION with Gnostic scholars",
+    "extraction_date": "2026-03-15"
+  },
+  "pleroma_model": {
+    "description": "Divine fullness with 30 Aeons",
+    "mathematical_structure": {
+      "type": "Hierarchical Graph",
+      "nodes": 30,
+      "edges": "Syzygy (pairing) relationships",
+      "levels": 4
+    },
+    "aeons": [
+      {"level": 1, "name": "Bythos", "translation": "Depth", "pair": "Ennoia"},
+      {"level": 1, "name": "Ennoia", "translation": "Thought", "pair": "Bythos"},
+      {"level": 2, "name": "Nous", "translation": "Mind", "pair": "Aletheia"},
+      {"level": 2, "name": "Aletheia", "translation": "Truth", "pair": "Nous"},
+      {"level": 2, "name": "Logos", "translation": "Word", "pair": "Zoe"},
+      {"level": 2, "name": "Zoe", "translation": "Life", "pair": "Logos"},
+      {"level": 3, "name": "Anthropos", "translation": "Man", "pair": "Ecclesia"},
+      {"level": 3, "name": "Ecclesia", "translation": "Church", "pair": "Anthropos"},
+      {"level": 3, "name": "Sophia", "translation": "Wisdom", "pair": "Christ"}
+    ],
+    "syzygy_structure": {
+      "description": "Male-Female paired emanations",
+      "total_pairs": 15,
+      "formula": "30 Aeons / 2 = 15 syzygies"
+    },
+    "graph_properties": {
+      "connected": true,
+      "bipartite": true,
+      "directed": true,
+      "acyclic": true,
+      "root": "Bythos"
+    }
+  },
+  "fall_of_sophia": {
+    "description": "Sophia's descent from Pleroma",
+    "mathematical_structure": {
+      "type": "State Transition Model",
+      "states": 4,
+      "transitions": "Deterministic"
+    },
+    "state_space": [
+      {"state": 1, "name": "Pleroma", "description": "Divine fullness"},
+      {"state": 2, "name": "Kenoma", "description": "Emptiness"},
+      {"state": 3, "name": "Demiurge Creation", "description": "Material world"},
+      {"state": 4, "name": "Redemption", "description": "Return to Pleroma"}
+    ],
+    "transition_matrix": {
+      "type": "Directed graph",
+      "edges": [
+        {"from": 1, "to": 2, "cause": "Sophia's error"},
+        {"from": 2, "to": 3, "cause": "Demiurge creation"},
+        {"from": 3, "to": 4, "cause": "Gnosis"}
+      ]
+    }
+  },
+  "demiurge_model": {
+    "description": "Yaldabaoth and archons",
+    "mathematical_structure": {
+      "type": "Hierarchy Graph",
+      "levels": 3,
+      "total_nodes": 13
+    },
+    "structure": [
+      {"level": 1, "entity": "Yaldabaoth", "role": "Demiurge", "subordinates": 12},
+      {"level": 2, "entity": "12 Archons", "role": "Rulers", "subordinates": 0}
+    ],
+    "graph_properties": {
+      "root": "Yaldabaoth",
+      "depth": 2,
+      "branching_factor": 12
+    }
+  },
+  "dualistic_logic": {
+    "description": "Gnostic dualistic worldview",
+    "mathematical_structure": {
+      "type": "Binary Opposition",
+      "domains": 2
+    },
+    "oppositions": [
+      {"domain_1": "Pleroma", "domain_2": "Kenoma"},
+      {"domain_1": "Spirit", "domain_2": "Matter"},
+      {"domain_1": "Light", "domain_2": "Darkness"},
+      {"domain_1": "Knowledge (Gnosis)", "domain_2": "Ignorance"},
+      {"domain_1": "Divine", "domain_2": "Material"},
+      {"domain_1": "Salvation", "domain_2": "Bondage"}
+    ],
+    "logic_type": "Boolean algebra with negation",
+    "operations": {
+      "negation": "Material = ¬Divine",
+      "implication": "Gnosis → Salvation"
+    }
+  },
+  "salvation_path": {
+    "description": "Path to gnosis and redemption",
+    "mathematical_structure": {
+      "type": "Decision Tree",
+      "depth": 3,
+      "outcomes": 2
+    },
+    "decision_process": [
+      {"step": 1, "decision": "Receive divine call"},
+      {"step": 2, "decision": "Seek gnosis"},
+      {"step": 3, "decision": "Achieve gnosis"},
+      {"step": 4, "outcome_true": "Return to Pleroma"},
+      {"step": 5, "outcome_false": "Remain in Kenoma"}
+    ],
+    "probability_model": {
+      "type": "Conditional probability",
+      "P(salvation)": "P(call) × P(seek|call) × P(achieve|seek)"
+    }
+  },
+  "numerology": {
+    "sacred_numbers": {
+      "1": "Monad, Bythos (the One)",
+      "2": "Dyad, duality",
+      "3": "Triad, divine completeness",
+      "4": "Tetrad, material world",
+      "10": "Decad, perfection (Pythagorean influence)",
+      "12": "Archons, zodiac",
+      "30": "Aeons in Pleroma"
+    },
+    "mathematical_significance": {
+      "30": "2 × 3 × 5 (highly composite)",
+      "12": "12 zodiac signs, 12 archons",
+      "10": "Pythagorean tetractys"
+    }
+  },
+  "verification_required": {
+    "pleroma_structure": "Verify against Nag Hammadi texts",
+    "aeon_pairings": "Verify with Gnostic scholarship",
+    "dualistic_model": "Verify against primary sources"
+  },
+  "hash": "gnostic_pleroma_math_model_v1_2026"
+}
