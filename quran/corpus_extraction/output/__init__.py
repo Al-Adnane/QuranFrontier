@@ -1,0 +1,1 @@
+"""Corpus extraction output module"""
