@@ -1,0 +1,412 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Quranic Verse Extraction Schema",
+  "description": "Comprehensive schema for extracting and organizing Quranic verse data across scientific domains, classical tafsirs, and verification layers",
+  "required": ["verse_info", "scientific_domains", "tafsirs", "verification"],
+  "additionalProperties": false,
+  "properties": {
+    "verse_info": {
+      "type": "object",
+      "title": "Verse Identification Information",
+      "description": "Core identification and text information for the verse",
+      "required": ["surah_number", "verse_number"],
+      "additionalProperties": false,
+      "properties": {
+        "surah_number": {
+          "type": "integer",
+          "title": "Surah Number",
+          "description": "Chapter number in the Quran (1-114)",
+          "minimum": 1,
+          "maximum": 114
+        },
+        "verse_number": {
+          "type": "integer",
+          "title": "Verse Number",
+          "description": "Verse number within the surah",
+          "minimum": 1
+        },
+        "verse_key": {
+          "type": "string",
+          "title": "Verse Key",
+          "description": "Unique identifier in format 'surah:verse'",
+          "pattern": "^[0-9]+:[0-9]+$"
+        },
+        "arabic_text": {
+          "type": "string",
+          "title": "Arabic Text",
+          "description": "Original Arabic text of the verse"
+        },
+        "translation": {
+          "type": "string",
+          "title": "English Translation",
+          "description": "English translation of the verse"
+        },
+        "transliteration": {
+          "type": "string",
+          "title": "Transliteration",
+          "description": "Latin transliteration of the Arabic text"
+        }
+      }
+    },
+    "scientific_domains": {
+      "type": "object",
+      "title": "Scientific Domain Extractions",
+      "description": "Content extracted from the verse for each scientific domain",
+      "additionalProperties": false,
+      "properties": {
+        "physics": {
+          "type": ["object", "null"],
+          "title": "Physics Domain",
+          "description": "Physics-related concepts and principles",
+          "additionalProperties": true,
+          "properties": {
+            "concepts": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Physics concepts identified"
+            },
+            "principles": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Physics principles referenced"
+            },
+            "applications": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Practical applications in physics"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Confidence score for extraction"
+            }
+          }
+        },
+        "biology": {
+          "type": ["object", "null"],
+          "title": "Biology Domain",
+          "description": "Biology-related concepts and principles",
+          "additionalProperties": true,
+          "properties": {
+            "concepts": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Biology concepts identified"
+            },
+            "principles": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Biology principles referenced"
+            },
+            "applications": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Practical applications in biology"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Confidence score for extraction"
+            }
+          }
+        },
+        "medicine": {
+          "type": ["object", "null"],
+          "title": "Medicine Domain",
+          "description": "Medicine and healthcare-related concepts",
+          "additionalProperties": true,
+          "properties": {
+            "concepts": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Medical concepts identified"
+            },
+            "principles": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Medical principles referenced"
+            },
+            "applications": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Practical medical applications"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Confidence score for extraction"
+            }
+          }
+        },
+        "engineering": {
+          "type": ["object", "null"],
+          "title": "Engineering Domain",
+          "description": "Engineering and technology-related concepts",
+          "additionalProperties": true,
+          "properties": {
+            "concepts": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Engineering concepts identified"
+            },
+            "principles": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Engineering principles referenced"
+            },
+            "applications": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Practical engineering applications"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Confidence score for extraction"
+            }
+          }
+        },
+        "agriculture": {
+          "type": ["object", "null"],
+          "title": "Agriculture Domain",
+          "description": "Agriculture and environmental science concepts",
+          "additionalProperties": true,
+          "properties": {
+            "concepts": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Agriculture concepts identified"
+            },
+            "principles": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Agriculture principles referenced"
+            },
+            "applications": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Practical agricultural applications"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Confidence score for extraction"
+            }
+          }
+        }
+      }
+    },
+    "tafsirs": {
+      "type": "array",
+      "title": "Classical Tafsir Interpretations",
+      "description": "References to classical Islamic tafsir sources (up to 8 major tafsirs)",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "title": "Tafsir Entry",
+        "required": ["name", "text"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Tafsir Name",
+            "description": "Name of the tafsir source (e.g., 'Ibn Kathir', 'Al-Tabari')"
+          },
+          "text": {
+            "type": "string",
+            "title": "Tafsir Text",
+            "description": "The actual tafsir interpretation"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source Reference",
+            "description": "Source reference, citation, or URL"
+          },
+          "category": {
+            "type": "string",
+            "title": "Tafsir Category",
+            "description": "Category of tafsir (classical, contemporary, etc.)",
+            "enum": ["classical", "contemporary", "linguistic", "scientific", "juridical"]
+          }
+        }
+      }
+    },
+    "contextual_information": {
+      "type": "object",
+      "title": "Contextual Information",
+      "description": "Context and background information for the verse",
+      "additionalProperties": false,
+      "properties": {
+        "asbab_nuzul": {
+          "type": ["object", "null"],
+          "title": "Reasons for Revelation",
+          "description": "Historical and contextual reasons for the verse's revelation",
+          "additionalProperties": true,
+          "properties": {
+            "historical_context": {
+              "type": "string",
+              "description": "Historical context of revelation"
+            },
+            "event": {
+              "type": "string",
+              "description": "Specific event prompting revelation"
+            },
+            "related_verses": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Related verses in the Quran"
+            }
+          }
+        },
+        "semantic_analysis": {
+          "type": ["object", "null"],
+          "title": "Semantic and Linguistic Analysis",
+          "description": "Linguistic and semantic analysis of the verse",
+          "additionalProperties": true,
+          "properties": {
+            "key_terms": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Key linguistic terms and their meanings"
+            },
+            "grammatical_structure": {
+              "type": "string",
+              "description": "Notable grammatical structures"
+            },
+            "linguistic_patterns": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Linguistic patterns and devices used"
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "title": "Verification and Quality Assurance",
+      "description": "Multi-layer verification results and confidence metrics",
+      "required": ["confidence_score"],
+      "additionalProperties": false,
+      "properties": {
+        "layer_1_primary": {
+          "type": "boolean",
+          "title": "Layer 1: Primary Source Verification",
+          "description": "Verification against primary Quranic sources"
+        },
+        "layer_2_secondary": {
+          "type": "boolean",
+          "title": "Layer 2: Secondary Source Verification",
+          "description": "Verification against authenticated secondary sources"
+        },
+        "layer_3_peer_review": {
+          "type": "boolean",
+          "title": "Layer 3: Peer Review Verification",
+          "description": "Peer review and expert validation"
+        },
+        "layer_4_semantic": {
+          "type": "boolean",
+          "title": "Layer 4: Semantic Consistency Verification",
+          "description": "Semantic consistency and logical coherence checks"
+        },
+        "layer_5_zero_fab": {
+          "type": "boolean",
+          "title": "Layer 5: Zero-Fab Algorithm Verification",
+          "description": "Verification using Zero-Fab algorithm for error elimination"
+        },
+        "confidence_score": {
+          "type": "number",
+          "title": "Overall Confidence Score",
+          "description": "Overall confidence in the extraction (0.0-1.0)",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "tafsir_agreement": {
+          "type": "number",
+          "title": "Tafsir Agreement Score",
+          "description": "Level of agreement among classical tafsirs (0.0-1.0)",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "verification_timestamp": {
+          "type": "string",
+          "title": "Verification Timestamp",
+          "description": "ISO 8601 timestamp of verification",
+          "format": "date-time"
+        }
+      }
+    },
+    "source_citations": {
+      "type": "array",
+      "title": "Source Citations",
+      "description": "References and citations for all extracted information",
+      "items": {
+        "type": "object",
+        "title": "Citation",
+        "required": ["source_type", "reference"],
+        "additionalProperties": false,
+        "properties": {
+          "source_type": {
+            "type": "string",
+            "title": "Source Type",
+            "description": "Type of source (book, article, website, etc.)",
+            "enum": ["quran", "hadith", "tafsir", "academic", "scientific", "website", "other"]
+          },
+          "reference": {
+            "type": "string",
+            "title": "Reference",
+            "description": "Citation reference or URL"
+          },
+          "author": {
+            "type": "string",
+            "title": "Author",
+            "description": "Author of the source"
+          },
+          "year": {
+            "type": "integer",
+            "title": "Publication Year",
+            "description": "Year of publication"
+          },
+          "accessed_date": {
+            "type": "string",
+            "title": "Accessed Date",
+            "description": "Date accessed (for online sources)",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "title": "Extraction Metadata",
+      "description": "Metadata about the extraction process",
+      "additionalProperties": true,
+      "properties": {
+        "extraction_method": {
+          "type": "string",
+          "description": "Method used for extraction"
+        },
+        "extraction_timestamp": {
+          "type": "string",
+          "description": "Timestamp of extraction",
+          "format": "date-time"
+        },
+        "extractor_version": {
+          "type": "string",
+          "description": "Version of extraction system used"
+        },
+        "language": {
+          "type": "string",
+          "description": "Language of extraction",
+          "default": "en"
+        }
+      }
+    }
+  }
+}
