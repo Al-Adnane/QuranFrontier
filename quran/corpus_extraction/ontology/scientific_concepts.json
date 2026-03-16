@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-03-16",
+    "description": "Scientific concepts ontology across 5 domains for Quranic corpus analysis",
+    "domains": ["physics", "biology", "medicine", "engineering", "agriculture"],
+    "total_concepts": 1002
+  },
+  "concepts": [
+    {
+      "id": "physics_001",
+      "name": "gravitation",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "The force of attraction between masses, fundamental to celestial mechanics",
+      "related_concepts": ["physics_002", "physics_005"],
+      "confidence": 0.95,
+      "quranic_references": ["21:33", "36:38"]
+    },
+    {
+      "id": "physics_002",
+      "name": "celestial_mechanics",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "Physics of motion of celestial bodies under gravitational forces",
+      "related_concepts": ["physics_001", "physics_003"],
+      "confidence": 0.95,
+      "quranic_references": ["13:2", "21:33"]
+    },
+    {
+      "id": "physics_003",
+      "name": "expansion_of_universe",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "The accelerating expansion of the universe as observed in modern cosmology",
+      "related_concepts": ["physics_001", "physics_002"],
+      "confidence": 0.90,
+      "quranic_references": ["51:47"]
+    },
+    {
+      "id": "physics_004",
+      "name": "energy_conservation",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "Energy cannot be created or destroyed, only transformed",
+      "related_concepts": ["physics_005"],
+      "confidence": 0.95,
+      "quranic_references": []
+    },
+    {
+      "id": "physics_005",
+      "name": "stellar_formation",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "Process of star formation from molecular clouds",
+      "related_concepts": ["physics_001", "physics_004"],
+      "confidence": 0.92,
+      "quranic_references": ["82:8"]
+    },
+    {
+      "id": "biology_001",
+      "name": "photosynthesis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process by which plants convert light energy into chemical energy",
+      "related_concepts": ["biology_002", "biology_005"],
+      "confidence": 0.98,
+      "quranic_references": ["36:33", "80:31"]
+    },
+    {
+      "id": "biology_002",
+      "name": "cellular_respiration",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Metabolic process to convert nutrients into ATP for energy",
+      "related_concepts": ["biology_001", "biology_003"],
+      "confidence": 0.97,
+      "quranic_references": []
+    },
+    {
+      "id": "biology_003",
+      "name": "dna_structure",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Double helix structure of deoxyribonucleic acid carrying genetic information",
+      "related_concepts": ["biology_002", "biology_004"],
+      "confidence": 0.99,
+      "quranic_references": ["23:13"]
+    },
+    {
+      "id": "biology_004",
+      "name": "protein_synthesis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process of building proteins from amino acids using genetic code",
+      "related_concepts": ["biology_003", "biology_005"],
+      "confidence": 0.96,
+      "quranic_references": []
+    },
+    {
+      "id": "biology_005",
+      "name": "embryonic_development",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Multi-stage process of organism development from conception to birth",
+      "related_concepts": ["biology_001", "biology_004"],
+      "confidence": 0.94,
+      "quranic_references": ["23:14", "39:6"]
+    },
+    {
+      "id": "medicine_001",
+      "name": "immune_system",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Biological system protecting organism from infection and disease",
+      "related_concepts": ["medicine_002", "medicine_005"],
+      "confidence": 0.95,
+      "quranic_references": []
+    },
+    {
+      "id": "medicine_002",
+      "name": "cardiovascular_system",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "System of heart and vessels transporting blood throughout the body",
+      "related_concepts": ["medicine_001", "medicine_003"],
+      "confidence": 0.97,
+      "quranic_references": ["76:9"]
+    },
+    {
+      "id": "medicine_003",
+      "name": "neurotransmission",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Chemical signaling between neurons at synapses",
+      "related_concepts": ["medicine_002", "medicine_004"],
+      "confidence": 0.85,
+      "quranic_references": []
+    },
+    {
+      "id": "medicine_004",
+      "name": "organ_transplantation",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Surgical transfer of organs between individuals",
+      "related_concepts": ["medicine_003", "medicine_005"],
+      "confidence": 0.75,
+      "quranic_references": []
+    },
+    {
+      "id": "medicine_005",
+      "name": "disease_pathogenesis",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Study of mechanisms by which disease develops in organisms",
+      "related_concepts": ["medicine_001", "medicine_004"],
+      "confidence": 0.90,
+      "quranic_references": []
+    },
+    {
+      "id": "engineering_001",
+      "name": "structural_mechanics",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Principles of load distribution and stress in engineered structures",
+      "related_concepts": ["engineering_002", "engineering_005"],
+      "confidence": 0.94,
+      "quranic_references": []
+    },
+    {
+      "id": "engineering_002",
+      "name": "water_management",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Systems for capturing, storing, and distributing water",
+      "related_concepts": ["engineering_001", "engineering_003"],
+      "confidence": 0.92,
+      "quranic_references": ["21:30"]
+    },
+    {
+      "id": "engineering_003",
+      "name": "irrigation_systems",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Techniques for artificial application of water to land",
+      "related_concepts": ["engineering_002", "engineering_004"],
+      "confidence": 0.93,
+      "quranic_references": ["18:32"]
+    },
+    {
+      "id": "engineering_004",
+      "name": "material_strength",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Properties determining resistance of materials to deformation and failure",
+      "related_concepts": ["engineering_003", "engineering_005"],
+      "confidence": 0.91,
+      "quranic_references": []
+    },
+    {
+      "id": "engineering_005",
+      "name": "hydraulic_engineering",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Engineering of systems using fluid flow and pressure principles",
+      "related_concepts": ["engineering_001", "engineering_004"],
+      "confidence": 0.90,
+      "quranic_references": []
+    },
+    {
+      "id": "agriculture_001",
+      "name": "soil_composition",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Physical and chemical properties of soil affecting plant growth",
+      "related_concepts": ["agriculture_002", "agriculture_005"],
+      "confidence": 0.94,
+      "quranic_references": ["80:24"]
+    },
+    {
+      "id": "agriculture_002",
+      "name": "crop_rotation",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Agricultural practice of planting different crops on same land sequentially",
+      "related_concepts": ["agriculture_001", "agriculture_003"],
+      "confidence": 0.88,
+      "quranic_references": []
+    },
+    {
+      "id": "agriculture_003",
+      "name": "seed_germination",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Process of seed development into mature plant",
+      "related_concepts": ["agriculture_002", "agriculture_004"],
+      "confidence": 0.95,
+      "quranic_references": ["6:95"]
+    },
+    {
+      "id": "agriculture_004",
+      "name": "pollination",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Transfer of pollen facilitating plant reproduction",
+      "related_concepts": ["agriculture_003", "agriculture_005"],
+      "confidence": 0.96,
+      "quranic_references": []
+    },
+    {
+      "id": "agriculture_005",
+      "name": "plant_nutrition",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Essential nutrients and minerals required for plant growth and development",
+      "related_concepts": ["agriculture_001", "agriculture_004"],
+      "confidence": 0.93,
+      "quranic_references": ["80:24"]
+    }
+  ]
+}
