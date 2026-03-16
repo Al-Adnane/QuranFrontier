@@ -10,7 +10,7 @@
       "engineering",
       "agriculture"
     ],
-    "total_concepts": 100
+    "total_concepts": 200
   },
   "concepts": [
     {
@@ -101,7 +101,8 @@
       "quranic_references": [
         "36:33",
         "80:31"
-      ]
+      ],
+      "subcategory": "Botany & Plant Biology"
     },
     {
       "id": "biology_002",
@@ -114,7 +115,8 @@
         "biology_003"
       ],
       "confidence": 0.97,
-      "quranic_references": []
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
     },
     {
       "id": "biology_003",
@@ -126,10 +128,11 @@
         "biology_002",
         "biology_004"
       ],
-      "confidence": 0.99,
+      "confidence": 0.98,
       "quranic_references": [
         "23:13"
-      ]
+      ],
+      "subcategory": "Genetics & Molecular Biology"
     },
     {
       "id": "biology_004",
@@ -142,7 +145,8 @@
         "biology_005"
       ],
       "confidence": 0.96,
-      "quranic_references": []
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
     },
     {
       "id": "biology_005",
@@ -158,7 +162,8 @@
       "quranic_references": [
         "23:14",
         "39:6"
-      ]
+      ],
+      "subcategory": "Embryology & Development"
     },
     {
       "id": "medicine_001",
@@ -1504,6 +1509,1441 @@
         "physics_004",
         "physics_072"
       ]
+    },
+    {
+      "id": "biology_006",
+      "name": "nucleus",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Membrane-bound organelle containing genetic material and controlling cell activities",
+      "related_concepts": [
+        "biology_002"
+      ],
+      "confidence": 0.97,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_007",
+      "name": "mitochondria",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Powerhouse of the cell producing ATP through oxidative phosphorylation",
+      "related_concepts": [
+        "biology_002",
+        "biology_006",
+        "biology_004"
+      ],
+      "confidence": 0.98,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_008",
+      "name": "endoplasmic_reticulum",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Network of membranes involved in protein and lipid synthesis",
+      "related_concepts": [
+        "biology_007",
+        "biology_006"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_009",
+      "name": "golgi_apparatus",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organelle modifying and packaging proteins for transport",
+      "related_concepts": [
+        "biology_007",
+        "biology_006",
+        "biology_005"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_010",
+      "name": "ribosome",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Cellular machinery assembling proteins from amino acids",
+      "related_concepts": [
+        "biology_006",
+        "biology_009"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_011",
+      "name": "lysosome",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organelle containing digestive enzymes for cellular breakdown",
+      "related_concepts": [
+        "biology_007",
+        "biology_006"
+      ],
+      "confidence": 0.89,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_012",
+      "name": "chloroplast",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Photosynthetic organelle in plant cells converting light to chemical energy",
+      "related_concepts": [
+        "biology_007",
+        "biology_008"
+      ],
+      "confidence": 0.97,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_013",
+      "name": "cell_membrane",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Phospholipid bilayer controlling substance transport and cell communication",
+      "related_concepts": [
+        "biology_007",
+        "biology_010"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_014",
+      "name": "cytoplasm",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Gel-like substance filling cell containing organelles and molecules",
+      "related_concepts": [
+        "biology_011",
+        "biology_012"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_015",
+      "name": "vacuole",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Storage organelle maintaining turgor pressure in plant cells",
+      "related_concepts": [
+        "biology_009",
+        "biology_011",
+        "biology_001",
+        "biology_005"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_016",
+      "name": "cell_division",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process by which cells reproduce through mitosis or meiosis",
+      "related_concepts": [
+        "biology_015",
+        "biology_014"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_017",
+      "name": "mitosis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Division producing two identical daughter cells for growth and repair",
+      "related_concepts": [
+        "biology_013",
+        "biology_014"
+      ],
+      "confidence": 0.97,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_018",
+      "name": "meiosis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Reduction division producing four genetically unique sex cells",
+      "related_concepts": [
+        "biology_002",
+        "biology_001",
+        "biology_007",
+        "biology_012"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_019",
+      "name": "chromosome",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Structure of DNA and proteins carrying genetic information",
+      "related_concepts": [
+        "biology_007",
+        "biology_017",
+        "biology_005"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_020",
+      "name": "telomere",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Repetitive DNA protecting chromosome ends from degradation",
+      "related_concepts": [
+        "biology_006",
+        "biology_013",
+        "biology_004"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_021",
+      "name": "centromere",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Constricted region of chromosome where sister chromatids attach",
+      "related_concepts": [
+        "biology_016",
+        "biology_019"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_022",
+      "name": "centriole",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Cylindrical organelle organizing microtubules in cell division",
+      "related_concepts": [
+        "biology_015",
+        "biology_006"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_023",
+      "name": "gene_expression",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process converting genetic information into functional proteins",
+      "related_concepts": [
+        "physics_073",
+        "biology_001"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_024",
+      "name": "transcription",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process synthesizing RNA from DNA template",
+      "related_concepts": [
+        "biology_002",
+        "biology_023",
+        "biology_004"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_025",
+      "name": "translation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process synthesizing proteins from mRNA codons",
+      "related_concepts": [
+        "biology_024",
+        "biology_023"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_026",
+      "name": "ribosomal_rna",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Structural and catalytic RNA component of ribosomes",
+      "related_concepts": [
+        "physics_003",
+        "biology_023",
+        "biology_025"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_027",
+      "name": "messenger_rna",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "RNA molecule carrying genetic code from DNA to ribosomes",
+      "related_concepts": [
+        "biology_023",
+        "biology_024",
+        "biology_004"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_028",
+      "name": "transfer_rna",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "RNA molecule delivering amino acids to ribosome during translation",
+      "related_concepts": [
+        "biology_002",
+        "biology_026",
+        "biology_024"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_029",
+      "name": "mrna_splicing",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process removing introns from pre-mRNA to create mature mRNA",
+      "related_concepts": [
+        "biology_026",
+        "biology_028",
+        "biology_003"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_030",
+      "name": "codon",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Three-nucleotide sequence in mRNA specifying amino acid",
+      "related_concepts": [
+        "biology_029",
+        "biology_023",
+        "biology_001",
+        "biology_004"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_031",
+      "name": "mutation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Permanent change in DNA sequence causing genetic variation",
+      "related_concepts": [
+        "biology_026",
+        "biology_024"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_032",
+      "name": "point_mutation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Single nucleotide change in DNA sequence",
+      "related_concepts": [
+        "biology_002",
+        "biology_026",
+        "biology_024",
+        "biology_005"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_033",
+      "name": "frameshift_mutation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Insertion or deletion altering reading frame of codons",
+      "related_concepts": [
+        "biology_027",
+        "biology_029",
+        "biology_004"
+      ],
+      "confidence": 0.89,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_034",
+      "name": "chromosomal_aberration",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Large-scale change in chromosome structure or number",
+      "related_concepts": [
+        "biology_030",
+        "biology_033"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_035",
+      "name": "genetic_recombination",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Shuffling of DNA creating genetic diversity in offspring",
+      "related_concepts": [
+        "biology_023",
+        "biology_034"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_036",
+      "name": "crossing_over",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Exchange of genetic material between homologous chromosomes",
+      "related_concepts": [
+        "biology_024",
+        "biology_025",
+        "biology_005"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_037",
+      "name": "allele",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Alternative form of gene at same chromosomal location",
+      "related_concepts": [
+        "biology_032",
+        "biology_023",
+        "biology_003"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_038",
+      "name": "dominant_trait",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Trait expressed when at least one dominant allele present",
+      "related_concepts": [
+        "biology_034",
+        "biology_028"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_039",
+      "name": "recessive_trait",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Trait expressed only with two recessive alleles",
+      "related_concepts": [
+        "biology_023",
+        "biology_025"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_040",
+      "name": "organ_system",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Group of organs working together for specific body function",
+      "related_concepts": [
+        "biology_003"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_041",
+      "name": "circulatory_system",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "System transporting blood, oxygen, and nutrients throughout body",
+      "related_concepts": [
+        "biology_040"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_042",
+      "name": "heart",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Muscular organ pumping blood throughout circulatory system",
+      "related_concepts": [
+        "biology_041",
+        "biology_040",
+        "biology_003"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [
+        "22:46",
+        "46:26"
+      ],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_043",
+      "name": "blood_vessel",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Vessel carrying blood: arteries, veins, or capillaries",
+      "related_concepts": [
+        "biology_041",
+        "biology_040"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_044",
+      "name": "blood_pressure",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Force exerted by blood on vessel walls",
+      "related_concepts": [
+        "biology_041",
+        "biology_043",
+        "physics_043",
+        "biology_005"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_045",
+      "name": "respiratory_system",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "System enabling gas exchange between body and atmosphere",
+      "related_concepts": [
+        "biology_043",
+        "biology_040"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_046",
+      "name": "lung",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organ where gas exchange occurs between air and blood",
+      "related_concepts": [
+        "biology_044",
+        "biology_041",
+        "biology_004",
+        "biology_003"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_047",
+      "name": "digestion",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process breaking down food into absorbable nutrients",
+      "related_concepts": [
+        "biology_041",
+        "biology_001",
+        "biology_042",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_048",
+      "name": "stomach",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Muscular organ churning food and producing digestive enzymes",
+      "related_concepts": [
+        "biology_041",
+        "biology_042"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_049",
+      "name": "small_intestine",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Primary site of nutrient absorption in digestive system",
+      "related_concepts": [
+        "biology_045",
+        "biology_004",
+        "biology_046"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_050",
+      "name": "liver",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organ detoxifying blood and producing bile for digestion",
+      "related_concepts": [
+        "biology_047",
+        "biology_040",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_051",
+      "name": "pancreas",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Gland producing digestive enzymes and insulin",
+      "related_concepts": [
+        "biology_043",
+        "biology_040"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_052",
+      "name": "nervous_system",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Network controlling body functions through neurons and signals",
+      "related_concepts": [
+        "biology_002",
+        "biology_050",
+        "biology_048"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_053",
+      "name": "brain",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Central processing center of nervous system",
+      "related_concepts": [
+        "biology_041",
+        "biology_001",
+        "biology_040"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [
+        "22:46",
+        "46:26"
+      ],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_054",
+      "name": "spinal_cord",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Extension of brain transmitting signals between brain and body",
+      "related_concepts": [
+        "biology_049",
+        "biology_043",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_055",
+      "name": "neuron",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Basic functional unit of nervous system transmitting signals",
+      "related_concepts": [
+        "biology_002",
+        "biology_051",
+        "biology_054"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_056",
+      "name": "synapse",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Junction between neurons where signals are transmitted",
+      "related_concepts": [
+        "biology_002",
+        "biology_051",
+        "biology_043"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_057",
+      "name": "neurotransmitter",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Chemical messenger transmitting signals across synapses",
+      "related_concepts": [
+        "biology_053",
+        "biology_046"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_058",
+      "name": "hormone",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Chemical messenger regulating body processes",
+      "related_concepts": [
+        "biology_049",
+        "biology_040"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_059",
+      "name": "bone",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Rigid structure providing support and protection",
+      "related_concepts": [
+        "biology_056",
+        "biology_046"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_060",
+      "name": "evolution",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process of gradual change in organisms over time",
+      "related_concepts": [
+        "biology_004"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_061",
+      "name": "natural_selection",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Mechanism driving evolution through differential reproduction",
+      "related_concepts": [
+        "biology_060"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_062",
+      "name": "adaptation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Trait enhancing organism's fitness in specific environment",
+      "related_concepts": [
+        "biology_061",
+        "biology_001",
+        "biology_060"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_063",
+      "name": "biodiversity",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Variety of species in ecosystem or on Earth",
+      "related_concepts": [
+        "biology_061",
+        "biology_060",
+        "biology_003"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_064",
+      "name": "ecosystem",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Community of organisms and physical environment interacting",
+      "related_concepts": [
+        "biology_061",
+        "biology_060"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_065",
+      "name": "food_chain",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Sequence of energy transfer from producer to consumer",
+      "related_concepts": [
+        "biology_064",
+        "biology_063"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_066",
+      "name": "food_web",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Interconnected food chains in ecosystem",
+      "related_concepts": [
+        "biology_062",
+        "biology_061"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_067",
+      "name": "predator_prey",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Relationship where predator hunts prey for food",
+      "related_concepts": [
+        "biology_062",
+        "biology_066",
+        "biology_004"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_068",
+      "name": "competition",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organisms competing for limited resources",
+      "related_concepts": [
+        "biology_002",
+        "biology_061",
+        "biology_063"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_069",
+      "name": "symbiosis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Close relationship between different species",
+      "related_concepts": [
+        "biology_066",
+        "biology_060"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_070",
+      "name": "parasitism",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Relationship where parasite benefits at host's expense",
+      "related_concepts": [
+        "biology_068",
+        "biology_069"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_071",
+      "name": "mutualism",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Relationship benefiting both organisms",
+      "related_concepts": [
+        "biology_066",
+        "biology_070"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_072",
+      "name": "commensalism",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Relationship benefiting one organism without affecting other",
+      "related_concepts": [
+        "biology_071",
+        "biology_069"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_073",
+      "name": "speciation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process of new species formation through divergence",
+      "related_concepts": [
+        "biology_001",
+        "biology_065",
+        "biology_063"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_074",
+      "name": "extinction",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Permanent loss of species from Earth",
+      "related_concepts": [
+        "biology_073",
+        "biology_061"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_075",
+      "name": "fertilization",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Union of sperm and egg forming zygote",
+      "related_concepts": [
+        "biology_002",
+        "biology_005"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [
+        "23:14",
+        "22:5"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_076",
+      "name": "zygote",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Single cell resulting from fertilization containing combined DNA",
+      "related_concepts": [
+        "biology_002",
+        "biology_001",
+        "biology_075"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_077",
+      "name": "blastula",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Early embryonic stage of hollow ball of cells",
+      "related_concepts": [
+        "biology_076",
+        "biology_075"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_078",
+      "name": "gastrula",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Embryonic stage with three germ layers forming",
+      "related_concepts": [
+        "biology_076",
+        "biology_077"
+      ],
+      "confidence": 0.89,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_079",
+      "name": "ectoderm",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Outer germ layer forming nervous system and skin",
+      "related_concepts": [
+        "biology_077",
+        "biology_078"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_080",
+      "name": "mesoderm",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Middle germ layer forming muscles and skeleton",
+      "related_concepts": [
+        "biology_077",
+        "biology_001",
+        "biology_075"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_081",
+      "name": "endoderm",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Inner germ layer forming digestive and respiratory organs",
+      "related_concepts": [
+        "biology_080",
+        "biology_078",
+        "biology_004"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_082",
+      "name": "organogenesis",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Process of organ formation from germ layers",
+      "related_concepts": [
+        "biology_078",
+        "biology_079"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_083",
+      "name": "morphogenesis",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Developmental process shaping organism structure",
+      "related_concepts": [
+        "biology_078",
+        "biology_079"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_084",
+      "name": "cell_differentiation",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Process by which cells become specialized",
+      "related_concepts": [
+        "biology_077",
+        "biology_004",
+        "biology_082"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_085",
+      "name": "placenta",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Organ exchanging nutrients and waste between mother and fetus",
+      "related_concepts": [
+        "biology_083",
+        "biology_075"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "23:14",
+        "22:5"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_086",
+      "name": "umbilical_cord",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Structure connecting fetus to placenta",
+      "related_concepts": [
+        "biology_001",
+        "biology_082",
+        "biology_085"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [
+        "23:14",
+        "22:5"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_087",
+      "name": "amniotic_fluid",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Fluid surrounding and protecting fetus",
+      "related_concepts": [
+        "biology_080",
+        "biology_001",
+        "biology_082"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [
+        "23:14",
+        "22:5"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_088",
+      "name": "plant_cell",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Eukaryotic cell with cell wall, chloroplasts, and large vacuole",
+      "related_concepts": [],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_089",
+      "name": "root_system",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Underground structure absorbing water and nutrients",
+      "related_concepts": [
+        "biology_088"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_090",
+      "name": "root_hair",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Extension of root epidermal cell increasing absorption surface",
+      "related_concepts": [
+        "biology_088",
+        "biology_089"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_091",
+      "name": "stem",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Support structure transporting water and nutrients in plants",
+      "related_concepts": [
+        "biology_089",
+        "biology_004",
+        "biology_088",
+        "biology_005"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_092",
+      "name": "leaf",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Photosynthetic organ with veins transporting fluids",
+      "related_concepts": [
+        "biology_001",
+        "biology_089",
+        "biology_091"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_093",
+      "name": "stomata",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Pores in leaf surface for gas exchange",
+      "related_concepts": [
+        "biology_002",
+        "physics_007",
+        "biology_092",
+        "biology_091"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_094",
+      "name": "xylem",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Tissue transporting water and minerals from roots to leaves",
+      "related_concepts": [
+        "biology_092",
+        "biology_004",
+        "biology_091"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_095",
+      "name": "phloem",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Tissue transporting sugars from leaves to other parts",
+      "related_concepts": [
+        "biology_094",
+        "biology_092"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_096",
+      "name": "plant_reproduction",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Asexual or sexual reproduction in plants",
+      "related_concepts": [
+        "biology_093",
+        "biology_091"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_097",
+      "name": "flower",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Reproductive structure containing male and female organs",
+      "related_concepts": [
+        "biology_096",
+        "biology_095",
+        "biology_004",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_098",
+      "name": "pollen",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Male gamete of flowering plant",
+      "related_concepts": [
+        "biology_092",
+        "biology_091"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_099",
+      "name": "seed",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Mature ovule containing embryo and stored nutrients",
+      "related_concepts": [
+        "biology_090",
+        "biology_092",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_100",
+      "name": "germination",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Process of seed beginning growth",
+      "related_concepts": [
+        "biology_094",
+        "biology_092"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
     }
   ]
 }

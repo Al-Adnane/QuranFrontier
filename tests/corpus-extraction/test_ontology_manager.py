@@ -495,3 +495,375 @@ class TestPhysicsDomainExpansion:
 
         assert found_terms >= 5, \
             f"Physics concepts should cover major areas. Found {found_terms}/7"
+
+
+class TestBiologyDomainExpansion:
+    """Test suite for biology domain expansion to 100 concepts."""
+
+    def test_biology_domain_has_100_concepts(self, ontology_manager):
+        """Test that biology domain contains exactly 100 concepts."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        assert len(biology_concepts) == 100, \
+            f"Expected 100 biology concepts, got {len(biology_concepts)}"
+
+    def test_biology_concepts_have_correct_tier_distribution(self, ontology_manager):
+        """Test tier distribution: 80 Tier 1 (Empirical), 20 Tier 2 (Frontier)."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        tier1_count = sum(1 for c in biology_concepts if c.get("tier") == 1)
+        tier2_count = sum(1 for c in biology_concepts if c.get("tier") == 2)
+
+        assert tier1_count == 80, \
+            f"Expected 80 Tier 1 biology concepts, got {tier1_count}"
+        assert tier2_count == 20, \
+            f"Expected 20 Tier 2 biology concepts, got {tier2_count}"
+        assert tier1_count + tier2_count == 100
+
+    def test_biology_concepts_organized_by_subcategory(self, ontology_manager):
+        """Test that biology concepts are organized into 6 defined subcategories."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        expected_subcategories = {
+            "Cell Biology",
+            "Genetics & Molecular Biology",
+            "Anatomy & Physiology",
+            "Ecology & Evolution",
+            "Embryology & Development",
+            "Botany & Plant Biology"
+        }
+
+        found_subcategories = set()
+        for concept in biology_concepts:
+            if "subcategory" in concept:
+                found_subcategories.add(concept["subcategory"])
+
+        assert found_subcategories == expected_subcategories, \
+            f"Expected subcategories {expected_subcategories}, " \
+            f"got {found_subcategories}"
+
+    def test_biology_subcategory_concept_distribution(self, ontology_manager):
+        """Test biology subcategory concept counts match expected distribution."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        subcategory_counts = {}
+        for concept in biology_concepts:
+            subcat = concept.get("subcategory", "Unknown")
+            if subcat != "Unknown":
+                subcategory_counts[subcat] = subcategory_counts.get(subcat, 0) + 1
+
+        # Expected distribution for 100 concepts (5 seeds + 95 new)
+        expected = {
+            "Cell Biology": 18,
+            "Genetics & Molecular Biology": 18,
+            "Anatomy & Physiology": 20,
+            "Ecology & Evolution": 15,
+            "Embryology & Development": 14,
+            "Botany & Plant Biology": 15
+        }
+
+        for subcat, expected_count in expected.items():
+            actual_count = subcategory_counts.get(subcat, 0)
+            assert actual_count == expected_count, \
+                f"Subcategory '{subcat}': expected {expected_count}, " \
+                f"got {actual_count}"
+
+    def test_biology_concepts_have_valid_ids(self, ontology_manager):
+        """Test that all biology concepts have valid IDs following biology_NNN format."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        for concept in biology_concepts:
+            concept_id = concept.get("id", "")
+            assert concept_id.startswith("biology_"), \
+                f"Biology concept ID must start with 'biology_': {concept_id}"
+
+            # Extract number part
+            number_part = concept_id.replace("biology_", "")
+            assert number_part.isdigit(), \
+                f"Biology concept ID must have numeric suffix: {concept_id}"
+
+            number = int(number_part)
+            assert 1 <= number <= 1000, \
+                f"Biology concept number out of valid range: {number}"
+
+    def test_biology_concepts_have_all_required_fields(self, ontology_manager):
+        """Test that all biology concepts have all required fields."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        base_required = {"id", "name", "domain", "tier", "definition",
+                        "confidence", "related_concepts", "subcategory"}
+
+        for concept in biology_concepts:
+            concept_id = concept.get("id", "")
+            missing = base_required - set(concept.keys())
+            assert not missing, \
+                f"Biology concept {concept_id} missing required fields: {missing}"
+
+    def test_biology_concepts_have_valid_confidence(self, ontology_manager):
+        """Test that all biology concepts have confidence in range [0.88, 0.98]."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        for concept in biology_concepts:
+            confidence = concept.get("confidence", 0)
+            assert isinstance(confidence, (int, float)), \
+                f"Confidence must be numeric for {concept.get('id')}"
+            assert 0.88 <= confidence <= 0.98, \
+                f"Biology concept confidence out of range: " \
+                f"{concept.get('id')} = {confidence}"
+
+    def test_biology_concepts_have_quranic_references_field(self, ontology_manager):
+        """Test that biology concepts have quranic_references field (can be empty list)."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        for concept in biology_concepts:
+            assert "quranic_references" in concept, \
+                f"Biology concept {concept.get('id')} missing quranic_references field"
+            assert isinstance(concept["quranic_references"], list), \
+                f"quranic_references must be a list for {concept.get('id')}"
+
+    def test_biology_concepts_have_related_concepts(self, ontology_manager):
+        """Test that biology concepts have related_concepts field with valid references."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+        all_concept_ids = {c["id"] for c in biology_concepts}
+
+        for concept in biology_concepts:
+            assert isinstance(concept.get("related_concepts", []), list), \
+                f"related_concepts must be a list for {concept.get('id')}"
+
+            # All related concepts should exist (could be cross-domain)
+            for related_id in concept.get("related_concepts", []):
+                assert related_id in all_concept_ids or related_id.startswith("physics_"), \
+                    f"Biology concept {concept.get('id')} references " \
+                    f"non-existent concept {related_id}"
+
+    def test_biology_concepts_no_duplicates(self, ontology_manager):
+        """Test that there are no duplicate biology concepts by ID or name."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        # Check for duplicate IDs
+        ids = [c["id"] for c in biology_concepts]
+        assert len(ids) == len(set(ids)), \
+            "Duplicate biology concept IDs found"
+
+        # Check for duplicate names
+        names = [c["name"] for c in biology_concepts]
+        assert len(names) == len(set(names)), \
+            "Duplicate biology concept names found"
+
+    def test_biology_concepts_have_meaningful_definitions(self, ontology_manager):
+        """Test that all biology concepts have non-empty, meaningful definitions."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        for concept in biology_concepts:
+            definition = concept.get("definition", "").strip()
+            assert len(definition) > 10, \
+                f"Biology concept {concept.get('id')} has insufficient definition"
+
+    def test_biology_concepts_names_valid_format(self, ontology_manager):
+        """Test that biology concept names follow valid naming convention."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        for concept in biology_concepts:
+            name = concept.get("name", "")
+            # Allow names with underscores, hyphens, numbers, spaces
+            assert name, f"Biology concept has empty name"
+            # Must not have invalid characters
+            assert all(c.isalnum() or c in "_- " for c in name), \
+                f"Biology concept name has invalid characters: {name}"
+
+    def test_biology_hierarchy_validity(self, ontology_manager):
+        """Test that complete biology hierarchy is valid."""
+        ontology_manager.load_ontology()
+
+        # The overall hierarchy should still be valid
+        assert ontology_manager.validate_hierarchy(), \
+            "Biology expansion broke overall hierarchy validity"
+
+    def test_biology_concepts_searchable(self, ontology_manager):
+        """Test that biology concepts are findable via search."""
+        ontology_manager.load_ontology()
+
+        # Test search for biology concepts
+        search_terms = ["cell", "dna", "gene", "protein", "embryo", "photosynthesis"]
+        found_any = False
+
+        for term in search_terms:
+            results = ontology_manager.search_concepts(term, domain="biology")
+            if len(results) > 0:
+                found_any = True
+                break
+
+        assert found_any, \
+            "Should find biology concepts when searching with common biological terms"
+
+    def test_biology_seed_concepts_preserved(self, ontology_manager):
+        """Test that original 5 seed biology concepts are preserved."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+        concept_ids = {c["id"] for c in biology_concepts}
+
+        # Original 5 seed concept IDs
+        seed_ids = {"biology_001", "biology_002", "biology_003", "biology_004", "biology_005"}
+
+        assert seed_ids.issubset(concept_ids), \
+            f"Original seed concepts not found. Missing: " \
+            f"{seed_ids - concept_ids}"
+
+    def test_new_biology_concepts_start_from_006(self, ontology_manager):
+        """Test that new biology concepts start from biology_006."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+        concept_ids = {c["id"] for c in biology_concepts}
+
+        # Should have concepts from biology_006 onwards
+        assert any(cid.startswith("biology_") and int(cid.split("_")[1]) >= 6
+                  for cid in concept_ids), \
+            "New biology concepts should start from biology_006"
+
+    def test_biology_cell_biology_concepts(self, ontology_manager):
+        """Test that Cell Biology subcategory has specific expected concepts."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        cell_biology = [c for c in biology_concepts if c.get("subcategory") == "Cell Biology"]
+        assert len(cell_biology) == 18, \
+            f"Expected 18 Cell Biology concepts, got {len(cell_biology)}"
+
+        # Check for key cell biology concepts
+        cell_names = {c.get("name", "").lower() for c in cell_biology}
+        key_terms = ["nucleus", "mitochondria", "cell_division", "organelle"]
+        found_count = sum(1 for term in key_terms if any(term in name for name in cell_names))
+        assert found_count >= 2, \
+            f"Cell Biology should include key concepts, found {found_count}/4"
+
+    def test_biology_genetics_concepts(self, ontology_manager):
+        """Test that Genetics & Molecular Biology subcategory has correct count."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        genetics = [c for c in biology_concepts
+                   if c.get("subcategory") == "Genetics & Molecular Biology"]
+        assert len(genetics) == 18, \
+            f"Expected 18 Genetics & Molecular Biology concepts, got {len(genetics)}"
+
+        # Check for key genetics concepts
+        genetics_names = {c.get("name", "").lower() for c in genetics}
+        key_terms = ["dna", "rna", "gene", "mutation"]
+        found_count = sum(1 for term in key_terms if any(term in name for name in genetics_names))
+        assert found_count >= 3, \
+            f"Genetics should include key concepts, found {found_count}/4"
+
+    def test_biology_anatomy_physiology_concepts(self, ontology_manager):
+        """Test that Anatomy & Physiology subcategory has correct count."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        anatomy = [c for c in biology_concepts
+                  if c.get("subcategory") == "Anatomy & Physiology"]
+        assert len(anatomy) == 20, \
+            f"Expected 20 Anatomy & Physiology concepts, got {len(anatomy)}"
+
+    def test_biology_ecology_evolution_concepts(self, ontology_manager):
+        """Test that Ecology & Evolution subcategory has correct count."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        ecology = [c for c in biology_concepts
+                  if c.get("subcategory") == "Ecology & Evolution"]
+        assert len(ecology) == 15, \
+            f"Expected 15 Ecology & Evolution concepts, got {len(ecology)}"
+
+    def test_biology_embryology_concepts(self, ontology_manager):
+        """Test that Embryology & Development subcategory has correct count and key concepts."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        embryology = [c for c in biology_concepts
+                     if c.get("subcategory") == "Embryology & Development"]
+        assert len(embryology) == 14, \
+            f"Expected 14 Embryology & Development concepts, got {len(embryology)}"
+
+        # Embryology concepts should have Quranic references (Surah 23:14, 39:6, etc.)
+        concepts_with_refs = sum(1 for c in embryology if c.get("quranic_references", []))
+        assert concepts_with_refs >= 3, \
+            f"Embryology concepts should have Quranic references, found {concepts_with_refs}"
+
+    def test_biology_botany_concepts(self, ontology_manager):
+        """Test that Botany & Plant Biology subcategory has correct count."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        botany = [c for c in biology_concepts
+                 if c.get("subcategory") == "Botany & Plant Biology"]
+        assert len(botany) == 15, \
+            f"Expected 15 Botany & Plant Biology concepts, got {len(botany)}"
+
+    def test_biology_key_concepts_have_quranic_references(self, ontology_manager):
+        """Test that key biology concepts have Quranic references."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        # Key concepts like embryonic development, human creation, etc. should have refs
+        key_concept_names = ["embryonic_development", "dna_structure", "cell_division",
+                            "photosynthesis", "cellular_respiration"]
+
+        found_with_refs = 0
+        for concept in biology_concepts:
+            if concept.get("name") in key_concept_names:
+                if concept.get("quranic_references", []):
+                    found_with_refs += 1
+
+        assert found_with_refs >= 3, \
+            f"Key biology concepts should have Quranic references, found {found_with_refs}/5"
+
+    def test_biology_cross_domain_relationships_to_physics(self, ontology_manager):
+        """Test that biology concepts have some cross-domain relationships to physics."""
+        ontology_manager.load_ontology()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+        physics_ids = {c["id"] for c in physics_concepts}
+
+        # Check if any biology concept references physics concepts
+        cross_domain_count = 0
+        for concept in biology_concepts:
+            related_ids = concept.get("related_concepts", [])
+            for related_id in related_ids:
+                if related_id in physics_ids:
+                    cross_domain_count += 1
+
+        # At least some cross-domain relationships should exist (e.g., thermodynamics in metabolism)
+        assert cross_domain_count >= 2, \
+            f"Expected cross-domain relationships to physics, found {cross_domain_count}"
+
+    def test_biology_ontology_size_includes_biology(self, ontology_manager):
+        """Test that overall ontology size includes biology concepts."""
+        ontology_manager.load_ontology()
+        total_size = ontology_manager.get_ontology_size()
+        biology_concepts = ontology_manager.get_domain_concepts("biology")
+
+        assert len(biology_concepts) == 100, \
+            f"Biology should have 100 concepts, got {len(biology_concepts)}"
+        assert total_size >= 100, \
+            f"Ontology should have at least 100 concepts total, got {total_size}"
+
+    def test_biology_domain_distribution(self, ontology_manager):
+        """Test that domain distribution includes biology with 100 concepts."""
+        ontology_manager.load_ontology()
+        distribution = ontology_manager.get_domain_distribution()
+
+        assert "biology" in distribution, \
+            "Biology domain should be in distribution"
+        assert distribution["biology"] == 100, \
+            f"Biology should have 100 concepts in distribution, got {distribution['biology']}"
