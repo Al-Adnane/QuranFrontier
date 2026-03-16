@@ -3,8 +3,14 @@
     "version": "1.0",
     "created": "2026-03-16",
     "description": "Scientific concepts ontology across 5 domains for Quranic corpus analysis",
-    "domains": ["physics", "biology", "medicine", "engineering", "agriculture"],
-    "total_concepts": 1002
+    "domains": [
+      "physics",
+      "biology",
+      "medicine",
+      "engineering",
+      "agriculture"
+    ],
+    "total_concepts": 100
   },
   "concepts": [
     {
@@ -13,9 +19,15 @@
       "domain": "physics",
       "tier": 1,
       "definition": "The force of attraction between masses, fundamental to celestial mechanics",
-      "related_concepts": ["physics_002", "physics_005"],
+      "related_concepts": [
+        "physics_002",
+        "physics_005"
+      ],
       "confidence": 0.95,
-      "quranic_references": ["21:33", "36:38"]
+      "quranic_references": [
+        "21:33",
+        "36:38"
+      ]
     },
     {
       "id": "physics_002",
@@ -23,9 +35,15 @@
       "domain": "physics",
       "tier": 1,
       "definition": "Physics of motion of celestial bodies under gravitational forces",
-      "related_concepts": ["physics_001", "physics_003"],
+      "related_concepts": [
+        "physics_001",
+        "physics_003"
+      ],
       "confidence": 0.95,
-      "quranic_references": ["13:2", "21:33"]
+      "quranic_references": [
+        "13:2",
+        "21:33"
+      ]
     },
     {
       "id": "physics_003",
@@ -33,9 +51,14 @@
       "domain": "physics",
       "tier": 1,
       "definition": "The accelerating expansion of the universe as observed in modern cosmology",
-      "related_concepts": ["physics_001", "physics_002"],
-      "confidence": 0.90,
-      "quranic_references": ["51:47"]
+      "related_concepts": [
+        "physics_001",
+        "physics_002"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [
+        "51:47"
+      ]
     },
     {
       "id": "physics_004",
@@ -43,7 +66,9 @@
       "domain": "physics",
       "tier": 1,
       "definition": "Energy cannot be created or destroyed, only transformed",
-      "related_concepts": ["physics_005"],
+      "related_concepts": [
+        "physics_005"
+      ],
       "confidence": 0.95,
       "quranic_references": []
     },
@@ -53,9 +78,14 @@
       "domain": "physics",
       "tier": 1,
       "definition": "Process of star formation from molecular clouds",
-      "related_concepts": ["physics_001", "physics_004"],
+      "related_concepts": [
+        "physics_001",
+        "physics_004"
+      ],
       "confidence": 0.92,
-      "quranic_references": ["82:8"]
+      "quranic_references": [
+        "82:8"
+      ]
     },
     {
       "id": "biology_001",
@@ -63,9 +93,15 @@
       "domain": "biology",
       "tier": 1,
       "definition": "Process by which plants convert light energy into chemical energy",
-      "related_concepts": ["biology_002", "biology_005"],
+      "related_concepts": [
+        "biology_002",
+        "biology_005"
+      ],
       "confidence": 0.98,
-      "quranic_references": ["36:33", "80:31"]
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ]
     },
     {
       "id": "biology_002",
@@ -73,7 +109,10 @@
       "domain": "biology",
       "tier": 1,
       "definition": "Metabolic process to convert nutrients into ATP for energy",
-      "related_concepts": ["biology_001", "biology_003"],
+      "related_concepts": [
+        "biology_001",
+        "biology_003"
+      ],
       "confidence": 0.97,
       "quranic_references": []
     },
@@ -83,9 +122,14 @@
       "domain": "biology",
       "tier": 1,
       "definition": "Double helix structure of deoxyribonucleic acid carrying genetic information",
-      "related_concepts": ["biology_002", "biology_004"],
+      "related_concepts": [
+        "biology_002",
+        "biology_004"
+      ],
       "confidence": 0.99,
-      "quranic_references": ["23:13"]
+      "quranic_references": [
+        "23:13"
+      ]
     },
     {
       "id": "biology_004",
@@ -93,7 +137,10 @@
       "domain": "biology",
       "tier": 1,
       "definition": "Process of building proteins from amino acids using genetic code",
-      "related_concepts": ["biology_003", "biology_005"],
+      "related_concepts": [
+        "biology_003",
+        "biology_005"
+      ],
       "confidence": 0.96,
       "quranic_references": []
     },
@@ -103,9 +150,15 @@
       "domain": "biology",
       "tier": 1,
       "definition": "Multi-stage process of organism development from conception to birth",
-      "related_concepts": ["biology_001", "biology_004"],
+      "related_concepts": [
+        "biology_001",
+        "biology_004"
+      ],
       "confidence": 0.94,
-      "quranic_references": ["23:14", "39:6"]
+      "quranic_references": [
+        "23:14",
+        "39:6"
+      ]
     },
     {
       "id": "medicine_001",
@@ -113,7 +166,10 @@
       "domain": "medicine",
       "tier": 1,
       "definition": "Biological system protecting organism from infection and disease",
-      "related_concepts": ["medicine_002", "medicine_005"],
+      "related_concepts": [
+        "medicine_002",
+        "medicine_005"
+      ],
       "confidence": 0.95,
       "quranic_references": []
     },
@@ -123,9 +179,14 @@
       "domain": "medicine",
       "tier": 1,
       "definition": "System of heart and vessels transporting blood throughout the body",
-      "related_concepts": ["medicine_001", "medicine_003"],
+      "related_concepts": [
+        "medicine_001",
+        "medicine_003"
+      ],
       "confidence": 0.97,
-      "quranic_references": ["76:9"]
+      "quranic_references": [
+        "76:9"
+      ]
     },
     {
       "id": "medicine_003",
@@ -133,7 +194,10 @@
       "domain": "medicine",
       "tier": 2,
       "definition": "Chemical signaling between neurons at synapses",
-      "related_concepts": ["medicine_002", "medicine_004"],
+      "related_concepts": [
+        "medicine_002",
+        "medicine_004"
+      ],
       "confidence": 0.85,
       "quranic_references": []
     },
@@ -143,7 +207,10 @@
       "domain": "medicine",
       "tier": 2,
       "definition": "Surgical transfer of organs between individuals",
-      "related_concepts": ["medicine_003", "medicine_005"],
+      "related_concepts": [
+        "medicine_003",
+        "medicine_005"
+      ],
       "confidence": 0.75,
       "quranic_references": []
     },
@@ -153,8 +220,11 @@
       "domain": "medicine",
       "tier": 1,
       "definition": "Study of mechanisms by which disease develops in organisms",
-      "related_concepts": ["medicine_001", "medicine_004"],
-      "confidence": 0.90,
+      "related_concepts": [
+        "medicine_001",
+        "medicine_004"
+      ],
+      "confidence": 0.9,
       "quranic_references": []
     },
     {
@@ -163,7 +233,10 @@
       "domain": "engineering",
       "tier": 1,
       "definition": "Principles of load distribution and stress in engineered structures",
-      "related_concepts": ["engineering_002", "engineering_005"],
+      "related_concepts": [
+        "engineering_002",
+        "engineering_005"
+      ],
       "confidence": 0.94,
       "quranic_references": []
     },
@@ -173,9 +246,14 @@
       "domain": "engineering",
       "tier": 1,
       "definition": "Systems for capturing, storing, and distributing water",
-      "related_concepts": ["engineering_001", "engineering_003"],
+      "related_concepts": [
+        "engineering_001",
+        "engineering_003"
+      ],
       "confidence": 0.92,
-      "quranic_references": ["21:30"]
+      "quranic_references": [
+        "21:30"
+      ]
     },
     {
       "id": "engineering_003",
@@ -183,9 +261,14 @@
       "domain": "engineering",
       "tier": 1,
       "definition": "Techniques for artificial application of water to land",
-      "related_concepts": ["engineering_002", "engineering_004"],
+      "related_concepts": [
+        "engineering_002",
+        "engineering_004"
+      ],
       "confidence": 0.93,
-      "quranic_references": ["18:32"]
+      "quranic_references": [
+        "18:32"
+      ]
     },
     {
       "id": "engineering_004",
@@ -193,7 +276,10 @@
       "domain": "engineering",
       "tier": 1,
       "definition": "Properties determining resistance of materials to deformation and failure",
-      "related_concepts": ["engineering_003", "engineering_005"],
+      "related_concepts": [
+        "engineering_003",
+        "engineering_005"
+      ],
       "confidence": 0.91,
       "quranic_references": []
     },
@@ -203,8 +289,11 @@
       "domain": "engineering",
       "tier": 1,
       "definition": "Engineering of systems using fluid flow and pressure principles",
-      "related_concepts": ["engineering_001", "engineering_004"],
-      "confidence": 0.90,
+      "related_concepts": [
+        "engineering_001",
+        "engineering_004"
+      ],
+      "confidence": 0.9,
       "quranic_references": []
     },
     {
@@ -213,9 +302,14 @@
       "domain": "agriculture",
       "tier": 1,
       "definition": "Physical and chemical properties of soil affecting plant growth",
-      "related_concepts": ["agriculture_002", "agriculture_005"],
+      "related_concepts": [
+        "agriculture_002",
+        "agriculture_005"
+      ],
       "confidence": 0.94,
-      "quranic_references": ["80:24"]
+      "quranic_references": [
+        "80:24"
+      ]
     },
     {
       "id": "agriculture_002",
@@ -223,7 +317,10 @@
       "domain": "agriculture",
       "tier": 1,
       "definition": "Agricultural practice of planting different crops on same land sequentially",
-      "related_concepts": ["agriculture_001", "agriculture_003"],
+      "related_concepts": [
+        "agriculture_001",
+        "agriculture_003"
+      ],
       "confidence": 0.88,
       "quranic_references": []
     },
@@ -233,9 +330,14 @@
       "domain": "agriculture",
       "tier": 1,
       "definition": "Process of seed development into mature plant",
-      "related_concepts": ["agriculture_002", "agriculture_004"],
+      "related_concepts": [
+        "agriculture_002",
+        "agriculture_004"
+      ],
       "confidence": 0.95,
-      "quranic_references": ["6:95"]
+      "quranic_references": [
+        "6:95"
+      ]
     },
     {
       "id": "agriculture_004",
@@ -243,7 +345,10 @@
       "domain": "agriculture",
       "tier": 1,
       "definition": "Transfer of pollen facilitating plant reproduction",
-      "related_concepts": ["agriculture_003", "agriculture_005"],
+      "related_concepts": [
+        "agriculture_003",
+        "agriculture_005"
+      ],
       "confidence": 0.96,
       "quranic_references": []
     },
@@ -253,9 +358,1152 @@
       "domain": "agriculture",
       "tier": 1,
       "definition": "Essential nutrients and minerals required for plant growth and development",
-      "related_concepts": ["agriculture_001", "agriculture_004"],
+      "related_concepts": [
+        "agriculture_001",
+        "agriculture_004"
+      ],
       "confidence": 0.93,
-      "quranic_references": ["80:24"]
+      "quranic_references": [
+        "80:24"
+      ]
+    },
+    {
+      "id": "physics_006",
+      "name": "motion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Change in position of an object with respect to time and reference frame",
+      "quranic_references": [
+        "36:40"
+      ],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_007",
+        "physics_008",
+        "physics_025"
+      ]
+    },
+    {
+      "id": "physics_007",
+      "name": "force",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Physical quantity that causes acceleration and changes momentum of objects",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_006",
+        "physics_008",
+        "physics_026"
+      ]
+    },
+    {
+      "id": "physics_008",
+      "name": "acceleration",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Rate of change of velocity with respect to time",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_006",
+        "physics_007",
+        "physics_025"
+      ]
+    },
+    {
+      "id": "physics_009",
+      "name": "momentum",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Product of mass and velocity, fundamental quantity in mechanics",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_006",
+        "physics_007",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_010",
+      "name": "work",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Energy transfer that occurs when force is applied over a distance",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_007",
+        "physics_011",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_011",
+      "name": "kinetic_energy",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Energy of motion, proportional to mass and velocity squared",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_010",
+        "physics_012",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_012",
+      "name": "potential_energy",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Energy stored in objects due to position or configuration",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_011",
+        "physics_001",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_013",
+      "name": "friction",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Force opposing relative motion between surfaces in contact",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_007",
+        "physics_010",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_014",
+      "name": "torque",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Rotational force that produces angular acceleration",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_007",
+        "physics_015",
+        "physics_026"
+      ]
+    },
+    {
+      "id": "physics_015",
+      "name": "angular_momentum",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Product of moment of inertia and angular velocity in rotational motion",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_009",
+        "physics_014",
+        "physics_026"
+      ]
+    },
+    {
+      "id": "physics_016",
+      "name": "simple_harmonic_motion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Oscillatory motion where restoring force is proportional to displacement",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_006",
+        "physics_007",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_017",
+      "name": "wave_motion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Propagation of disturbances through a medium transferring energy",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_006",
+        "physics_049",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_018",
+      "name": "pressure",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Classical Mechanics",
+      "definition": "Force per unit area exerted by fluids or solids on surfaces",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_007",
+        "physics_037",
+        "physics_040"
+      ]
+    },
+    {
+      "id": "physics_019",
+      "name": "density",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Classical Mechanics",
+      "definition": "Mass per unit volume of a substance",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_018",
+        "physics_037",
+        "physics_001"
+      ]
+    },
+    {
+      "id": "physics_020",
+      "name": "buoyancy",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Classical Mechanics",
+      "definition": "Upward force exerted by fluids on submerged objects",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_007",
+        "physics_018",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_021",
+      "name": "heat",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Energy transfer between systems due to temperature difference",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_022",
+        "physics_033",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_022",
+      "name": "temperature",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Measure of average kinetic energy of particles in a substance",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_021",
+        "physics_024",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_023",
+      "name": "entropy",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Thermodynamics",
+      "definition": "Measure of disorder and thermodynamic irreversibility in systems",
+      "quranic_references": [],
+      "confidence": 0.88,
+      "related_concepts": [
+        "physics_021",
+        "physics_024",
+        "physics_033"
+      ]
+    },
+    {
+      "id": "physics_024",
+      "name": "thermodynamic_equilibrium",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "State where no net exchange of heat or matter occurs between system and surroundings",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_021",
+        "physics_022",
+        "physics_023"
+      ]
+    },
+    {
+      "id": "physics_025",
+      "name": "phase_transition",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Change between states of matter involving reorganization of molecular structure",
+      "quranic_references": [
+        "21:30"
+      ],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_021",
+        "physics_022",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_026",
+      "name": "latent_heat",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Energy absorbed or released during phase transitions at constant temperature",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_021",
+        "physics_025",
+        "physics_022"
+      ]
+    },
+    {
+      "id": "physics_027",
+      "name": "specific_heat",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Amount of heat needed to raise temperature of unit mass by one degree",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_021",
+        "physics_022",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_028",
+      "name": "thermal_expansion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Increase in dimensions of materials due to temperature increase",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_022",
+        "physics_037",
+        "physics_025"
+      ]
+    },
+    {
+      "id": "physics_029",
+      "name": "thermal_conductivity",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Property of materials determining rate of heat transfer through conduction",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_021",
+        "physics_037",
+        "physics_028"
+      ]
+    },
+    {
+      "id": "physics_030",
+      "name": "convection",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Heat transfer through fluid movement due to density differences",
+      "quranic_references": [],
+      "confidence": 0.91,
+      "related_concepts": [
+        "physics_021",
+        "physics_037",
+        "physics_006"
+      ]
+    },
+    {
+      "id": "physics_031",
+      "name": "radiation",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Heat transfer through electromagnetic waves without medium",
+      "quranic_references": [
+        "13:2"
+      ],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_021",
+        "physics_041",
+        "physics_042"
+      ]
+    },
+    {
+      "id": "physics_032",
+      "name": "black_body_radiation",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Thermodynamics",
+      "definition": "Electromagnetic radiation emitted by idealized absorbing objects at thermal equilibrium",
+      "quranic_references": [],
+      "confidence": 0.87,
+      "related_concepts": [
+        "physics_031",
+        "physics_022",
+        "physics_042"
+      ]
+    },
+    {
+      "id": "physics_033",
+      "name": "electric_field",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Region of space where electric forces are exerted on charged particles",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_034",
+        "physics_035",
+        "physics_042"
+      ]
+    },
+    {
+      "id": "physics_034",
+      "name": "electric_charge",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Fundamental property of matter determining electromagnetic interactions",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_033",
+        "physics_035",
+        "physics_036"
+      ]
+    },
+    {
+      "id": "physics_035",
+      "name": "electric_potential",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Work per unit charge to move charged particle in electric field",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_033",
+        "physics_034",
+        "physics_036"
+      ]
+    },
+    {
+      "id": "physics_036",
+      "name": "electric_current",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Flow of electric charge through conductor measured in amperes",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_034",
+        "physics_035",
+        "physics_038"
+      ]
+    },
+    {
+      "id": "physics_037",
+      "name": "magnetic_field",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Region of space where magnetic forces are exerted on moving charges",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_036",
+        "physics_038",
+        "physics_041"
+      ]
+    },
+    {
+      "id": "physics_038",
+      "name": "electromagnetic_force",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Fundamental force causing electromagnetic interactions between charged particles",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_033",
+        "physics_036",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_039",
+      "name": "resistance",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Opposition to electric current flow in conductors",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_036",
+        "physics_038",
+        "physics_013"
+      ]
+    },
+    {
+      "id": "physics_040",
+      "name": "capacitance",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Ability of system to store electric charge at given potential difference",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_034",
+        "physics_035",
+        "physics_039"
+      ]
+    },
+    {
+      "id": "physics_041",
+      "name": "light",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Electromagnetic radiation visible to human eye with wavelengths 400-700 nm",
+      "quranic_references": [
+        "24:35",
+        "36:40"
+      ],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_037",
+        "physics_042",
+        "physics_049"
+      ]
+    },
+    {
+      "id": "physics_042",
+      "name": "electromagnetic_radiation",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Waves of electric and magnetic fields propagating through space",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_033",
+        "physics_037",
+        "physics_041"
+      ]
+    },
+    {
+      "id": "physics_043",
+      "name": "photon",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Electromagnetism",
+      "definition": "Discrete packet of electromagnetic energy or light",
+      "quranic_references": [],
+      "confidence": 0.9,
+      "related_concepts": [
+        "physics_041",
+        "physics_042",
+        "physics_060"
+      ]
+    },
+    {
+      "id": "physics_044",
+      "name": "refraction",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Bending of light path when passing between different transparent media",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_041",
+        "physics_049",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_045",
+      "name": "reflection",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Bouncing back of light from surfaces following law of reflection",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_041",
+        "physics_049",
+        "physics_044"
+      ]
+    },
+    {
+      "id": "physics_046",
+      "name": "lens",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Electromagnetism",
+      "definition": "Optical device focusing or diverging light through refraction",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_041",
+        "physics_044",
+        "physics_045"
+      ]
+    },
+    {
+      "id": "physics_047",
+      "name": "polarization",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Electromagnetism",
+      "definition": "Restriction of electromagnetic wave oscillations to specific directions",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_041",
+        "physics_042",
+        "physics_049"
+      ]
+    },
+    {
+      "id": "physics_048",
+      "name": "frequency",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Number of complete oscillations or cycles per unit time",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_049",
+        "physics_050",
+        "physics_051"
+      ]
+    },
+    {
+      "id": "physics_049",
+      "name": "wavelength",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Distance between consecutive crests or troughs in periodic waves",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_048",
+        "physics_050",
+        "physics_041"
+      ]
+    },
+    {
+      "id": "physics_050",
+      "name": "resonance",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Phenomenon where systems oscillate at maximum amplitude at natural frequency",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_016"
+      ]
+    },
+    {
+      "id": "physics_051",
+      "name": "sound",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Mechanical waves of pressure variations propagating through elastic media",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_017"
+      ]
+    },
+    {
+      "id": "physics_052",
+      "name": "acoustic_impedance",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Product of medium density and sound velocity determining wave reflection",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_051",
+        "physics_019",
+        "physics_045"
+      ]
+    },
+    {
+      "id": "physics_053",
+      "name": "doppler_effect",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Change in wave frequency observed when source or observer is moving",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_048",
+        "physics_051",
+        "physics_041"
+      ]
+    },
+    {
+      "id": "physics_054",
+      "name": "interference",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Superposition of waves resulting in constructive or destructive combination",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_055",
+      "name": "diffraction",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Bending of waves around obstacles or through openings",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_054"
+      ]
+    },
+    {
+      "id": "physics_056",
+      "name": "standing_wave",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Wave pattern where nodes and antinodes remain stationary in space",
+      "quranic_references": [],
+      "confidence": 0.91,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_057",
+      "name": "harmonic_oscillation",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Periodic motion where displacement varies sinusoidally with time",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_016",
+        "physics_048",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_058",
+      "name": "quantum_mechanics",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Fundamental theory describing behavior of matter and energy at atomic scales",
+      "quranic_references": [],
+      "confidence": 0.89,
+      "related_concepts": [
+        "physics_060",
+        "physics_061",
+        "physics_064"
+      ]
+    },
+    {
+      "id": "physics_059",
+      "name": "atom",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Smallest unit of matter consisting of nucleus surrounded by electrons",
+      "quranic_references": [
+        "13:2"
+      ],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_060",
+        "physics_062",
+        "physics_034"
+      ]
+    },
+    {
+      "id": "physics_060",
+      "name": "electron",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Negatively charged elementary particle with mass 9.1\u00d710^-31 kg",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_059",
+        "physics_061",
+        "physics_034"
+      ]
+    },
+    {
+      "id": "physics_061",
+      "name": "nucleus",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Dense core of atom containing protons and neutrons",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_059",
+        "physics_060",
+        "physics_062"
+      ]
+    },
+    {
+      "id": "physics_062",
+      "name": "proton",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Positively charged nucleon with mass 1.67\u00d710^-27 kg",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_061",
+        "physics_063",
+        "physics_034"
+      ]
+    },
+    {
+      "id": "physics_063",
+      "name": "neutron",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Neutral nucleon with mass slightly greater than proton mass",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_061",
+        "physics_062",
+        "physics_065"
+      ]
+    },
+    {
+      "id": "physics_064",
+      "name": "energy_level",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Discrete allowed energy states for electrons in atoms",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_058",
+        "physics_060",
+        "physics_011"
+      ]
+    },
+    {
+      "id": "physics_065",
+      "name": "radioactivity",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Spontaneous decay of unstable nuclei emitting particles and radiation",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_061",
+        "physics_063",
+        "physics_066"
+      ]
+    },
+    {
+      "id": "physics_066",
+      "name": "alpha_decay",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Radioactive decay process emitting alpha particles (helium nuclei)",
+      "quranic_references": [],
+      "confidence": 0.87,
+      "related_concepts": [
+        "physics_065",
+        "physics_067",
+        "physics_068"
+      ]
+    },
+    {
+      "id": "physics_067",
+      "name": "beta_decay",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Radioactive decay where neutron converts to proton emitting electron",
+      "quranic_references": [],
+      "confidence": 0.87,
+      "related_concepts": [
+        "physics_065",
+        "physics_066",
+        "physics_069"
+      ]
+    },
+    {
+      "id": "physics_068",
+      "name": "gamma_decay",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Radioactive decay emitting high-energy photons from excited nuclei",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_065",
+        "physics_066",
+        "physics_042"
+      ]
+    },
+    {
+      "id": "physics_069",
+      "name": "fission",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Splitting of heavy nucleus into lighter nuclei releasing enormous energy",
+      "quranic_references": [],
+      "confidence": 0.88,
+      "related_concepts": [
+        "physics_065",
+        "physics_067",
+        "physics_070"
+      ]
+    },
+    {
+      "id": "physics_070",
+      "name": "fusion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Combination of light nuclei forming heavier nucleus releasing energy",
+      "quranic_references": [],
+      "confidence": 0.88,
+      "related_concepts": [
+        "physics_069",
+        "physics_061",
+        "physics_005"
+      ]
+    },
+    {
+      "id": "physics_071",
+      "name": "relativity",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Theory describing gravity and motion at extreme speeds and masses",
+      "quranic_references": [],
+      "confidence": 0.89,
+      "related_concepts": [
+        "physics_072",
+        "physics_001",
+        "physics_073"
+      ]
+    },
+    {
+      "id": "physics_072",
+      "name": "mass_energy_equivalence",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Relationship between mass and energy expressed as E=mc\u00b2",
+      "quranic_references": [],
+      "confidence": 0.88,
+      "related_concepts": [
+        "physics_071",
+        "physics_011",
+        "physics_069"
+      ]
+    },
+    {
+      "id": "physics_073",
+      "name": "spacetime",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Four-dimensional continuum combining space and time coordinates",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_071",
+        "physics_006",
+        "physics_022"
+      ]
+    },
+    {
+      "id": "physics_074",
+      "name": "quantum_entanglement",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Quantum phenomenon where particles remain correlated instantaneously",
+      "quranic_references": [],
+      "confidence": 0.85,
+      "related_concepts": [
+        "physics_058",
+        "physics_060",
+        "physics_073"
+      ]
+    },
+    {
+      "id": "physics_075",
+      "name": "wave_particle_duality",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Concept that matter and energy exhibit both wave and particle properties",
+      "quranic_references": [],
+      "confidence": 0.87,
+      "related_concepts": [
+        "physics_058",
+        "physics_043",
+        "physics_049"
+      ]
+    },
+    {
+      "id": "physics_076",
+      "name": "uncertainty_principle",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Principle stating complementary properties cannot be simultaneously measured with arbitrary precision",
+      "quranic_references": [],
+      "confidence": 0.85,
+      "related_concepts": [
+        "physics_058",
+        "physics_060",
+        "physics_074"
+      ]
+    },
+    {
+      "id": "physics_077",
+      "name": "superposition",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Quantum principle where systems exist in multiple states simultaneously until measured",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_058",
+        "physics_074",
+        "physics_075"
+      ]
+    },
+    {
+      "id": "physics_078",
+      "name": "string_theory",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Theoretical framework proposing fundamental particles are one-dimensional vibrating strings",
+      "quranic_references": [],
+      "confidence": 0.82,
+      "related_concepts": [
+        "physics_071",
+        "physics_058",
+        "physics_073"
+      ]
+    },
+    {
+      "id": "physics_079",
+      "name": "dark_matter",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Hypothetical form of matter invisible but gravitationally affecting observable universe",
+      "quranic_references": [],
+      "confidence": 0.83,
+      "related_concepts": [
+        "physics_001",
+        "physics_003",
+        "physics_071"
+      ]
+    },
+    {
+      "id": "physics_080",
+      "name": "dark_energy",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Mysterious form of energy causing accelerated expansion of the universe",
+      "quranic_references": [
+        "51:47"
+      ],
+      "confidence": 0.82,
+      "related_concepts": [
+        "physics_003",
+        "physics_004",
+        "physics_072"
+      ]
     }
   ]
 }

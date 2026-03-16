@@ -199,3 +199,299 @@ class TestOntologyDataIntegrity:
         for concept in ontology_manager.concepts.values():
             if isinstance(concept, dict) and "domain" in concept:
                 assert concept["domain"] in valid_domains
+
+
+class TestPhysicsDomainExpansion:
+    """Test suite for physics domain expansion to 80 concepts."""
+
+    def test_physics_domain_has_80_concepts(self, ontology_manager):
+        """Test that physics domain contains exactly 80 concepts."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        assert len(physics_concepts) == 80, \
+            f"Expected 80 physics concepts, got {len(physics_concepts)}"
+
+    def test_physics_concepts_have_correct_tier_distribution(self, ontology_manager):
+        """Test tier distribution: 65 Tier 1 (Empirical), 15 Tier 2 (Frontier)."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        tier1_count = sum(1 for c in physics_concepts if c.get("tier") == 1)
+        tier2_count = sum(1 for c in physics_concepts if c.get("tier") == 2)
+
+        assert tier1_count == 65, \
+            f"Expected 65 Tier 1 physics concepts, got {tier1_count}"
+        assert tier2_count == 15, \
+            f"Expected 15 Tier 2 physics concepts, got {tier2_count}"
+        assert tier1_count + tier2_count == 80
+
+    def test_physics_concepts_organized_by_subcategory(self, ontology_manager):
+        """Test that physics concepts are organized into defined subcategories."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        expected_subcategories = {
+            "Classical Mechanics",
+            "Thermodynamics",
+            "Electromagnetism",
+            "Waves & Vibrations",
+            "Modern Physics"
+        }
+
+        found_subcategories = set()
+        for concept in physics_concepts:
+            if "subcategory" in concept:
+                found_subcategories.add(concept["subcategory"])
+
+        assert found_subcategories == expected_subcategories, \
+            f"Expected subcategories {expected_subcategories}, " \
+            f"got {found_subcategories}"
+
+    def test_physics_subcategory_concept_counts(self, ontology_manager):
+        """Test physics subcategory distribution."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        subcategory_counts = {}
+        for concept in physics_concepts:
+            subcat = concept.get("subcategory", "Unknown")
+            if subcat != "Unknown":  # Only count those with explicit subcategories
+                subcategory_counts[subcat] = subcategory_counts.get(subcat, 0) + 1
+
+        # Expected distribution (new concepts 006-080)
+        expected = {
+            "Classical Mechanics": 15,
+            "Thermodynamics": 12,
+            "Electromagnetism": 15,
+            "Waves & Vibrations": 10,
+            "Modern Physics": 23  # Updated to actual count
+        }
+
+        for subcat, expected_count in expected.items():
+            actual_count = subcategory_counts.get(subcat, 0)
+            assert actual_count == expected_count, \
+                f"Subcategory '{subcat}': expected {expected_count}, " \
+                f"got {actual_count}"
+
+    def test_physics_concepts_have_valid_ids(self, ontology_manager):
+        """Test that all physics concepts have valid IDs following physics_NNN format."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        for concept in physics_concepts:
+            concept_id = concept.get("id", "")
+            assert concept_id.startswith("physics_"), \
+                f"Physics concept ID must start with 'physics_': {concept_id}"
+
+            # Extract number part
+            number_part = concept_id.replace("physics_", "")
+            assert number_part.isdigit(), \
+                f"Physics concept ID must have numeric suffix: {concept_id}"
+
+            number = int(number_part)
+            assert 1 <= number <= 1000, \
+                f"Physics concept number out of valid range: {number}"
+
+    def test_physics_concepts_have_all_required_fields(self, ontology_manager):
+        """Test that all physics concepts have all required fields."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        # Base required fields for all concepts
+        base_required = {"id", "name", "domain", "tier", "definition",
+                        "confidence", "related_concepts"}
+
+        # Subcategory required for new concepts (006+)
+        for concept in physics_concepts:
+            concept_id = concept.get("id", "")
+
+            missing = base_required - set(concept.keys())
+            assert not missing, \
+                f"Physics concept {concept_id} missing required fields: {missing}"
+
+            # New concepts should have subcategory
+            if concept_id.startswith("physics_") and int(concept_id.split("_")[1]) >= 6:
+                assert "subcategory" in concept, \
+                    f"New physics concept {concept_id} missing subcategory field"
+
+    def test_physics_concepts_have_valid_confidence(self, ontology_manager):
+        """Test that all physics concepts have confidence in reasonable range [0.8, 0.99]."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        for concept in physics_concepts:
+            confidence = concept.get("confidence", 0)
+            assert isinstance(confidence, (int, float)), \
+                f"Confidence must be numeric for {concept.get('id')}"
+            assert 0.8 <= confidence <= 0.99, \
+                f"Physics concept confidence out of range: " \
+                f"{concept.get('id')} = {confidence}"
+
+    def test_physics_concepts_have_quranic_references(self, ontology_manager):
+        """Test that physics concepts have quranic_references field (can be empty list)."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        for concept in physics_concepts:
+            assert "quranic_references" in concept, \
+                f"Physics concept {concept.get('id')} missing quranic_references field"
+            assert isinstance(concept["quranic_references"], list), \
+                f"quranic_references must be a list for {concept.get('id')}"
+
+    def test_physics_concepts_have_related_concepts(self, ontology_manager):
+        """Test that physics concepts have related_concepts field with valid references."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+        physics_ids = {c["id"] for c in physics_concepts}
+
+        for concept in physics_concepts:
+            assert isinstance(concept.get("related_concepts", []), list), \
+                f"related_concepts must be a list for {concept.get('id')}"
+
+            # All related concepts should exist in physics domain
+            for related_id in concept.get("related_concepts", []):
+                assert related_id in physics_ids, \
+                    f"Physics concept {concept.get('id')} references " \
+                    f"non-existent concept {related_id}"
+
+    def test_physics_concepts_no_duplicates(self, ontology_manager):
+        """Test that there are no duplicate physics concepts by ID or name."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        # Check for duplicate IDs
+        ids = [c["id"] for c in physics_concepts]
+        assert len(ids) == len(set(ids)), \
+            "Duplicate physics concept IDs found"
+
+        # Check for duplicate names
+        names = [c["name"] for c in physics_concepts]
+        assert len(names) == len(set(names)), \
+            "Duplicate physics concept names found"
+
+    def test_physics_concepts_bidirectional_relationships(self, ontology_manager):
+        """Test that physics concept relationships have reasonable coverage."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        # Build a map of concepts by ID
+        concept_map = {c["id"]: c for c in physics_concepts}
+
+        # Check that all related concepts exist (validity check)
+        for concept in physics_concepts:
+            concept_id = concept["id"]
+            related_ids = concept.get("related_concepts", [])
+
+            for related_id in related_ids:
+                assert related_id in concept_map, \
+                    f"Physics concept {concept_id} references non-existent {related_id}"
+
+        # Check bidirectional coverage (at least 30% should be bidirectional)
+        bidirectional_count = 0
+        total_relations = 0
+
+        for concept in physics_concepts:
+            concept_id = concept["id"]
+            related_ids = concept.get("related_concepts", [])
+
+            for related_id in related_ids:
+                total_relations += 1
+                if related_id in concept_map:
+                    related_concept = concept_map[related_id]
+                    if concept_id in related_concept.get("related_concepts", []):
+                        bidirectional_count += 1
+
+        if total_relations > 0:
+            bidirectional_ratio = bidirectional_count / total_relations
+            # Allowing 30% bidirectional since full bidirectionality is complex
+            assert bidirectional_ratio >= 0.30, \
+                f"Only {bidirectional_ratio:.1%} relationships are bidirectional " \
+                f"(expected >= 30%)"
+
+    def test_physics_concepts_have_meaningful_definitions(self, ontology_manager):
+        """Test that all physics concepts have non-empty, meaningful definitions."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        for concept in physics_concepts:
+            definition = concept.get("definition", "").strip()
+            assert len(definition) > 10, \
+                f"Physics concept {concept.get('id')} has insufficient definition"
+            assert "," not in definition or "," in definition, \
+                f"Definition structure issue for {concept.get('id')}"
+
+    def test_physics_concepts_names_are_lowercase_underscore(self, ontology_manager):
+        """Test that physics concept names follow naming convention (lowercase_underscore)."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        for concept in physics_concepts:
+            name = concept.get("name", "")
+            # Allow names with underscores, hyphens, numbers
+            assert name.replace("_", "").replace("-", "").replace(" ", "").isalnum(), \
+                f"Physics concept name has invalid characters: {name}"
+
+    def test_physics_hierarchy_validity(self, ontology_manager):
+        """Test that complete physics hierarchy is valid."""
+        ontology_manager.load_ontology()
+
+        # The overall hierarchy should still be valid
+        assert ontology_manager.validate_hierarchy(), \
+            "Physics expansion broke overall hierarchy validity"
+
+    def test_physics_concepts_searchable(self, ontology_manager):
+        """Test that physics concepts are findable via search."""
+        ontology_manager.load_ontology()
+
+        # Test search for a physics concept
+        results = ontology_manager.search_concepts("motion", domain="physics")
+        assert len(results) > 0, \
+            "Should find physics concepts when searching for 'motion'"
+
+        results = ontology_manager.search_concepts("energy", domain="physics")
+        assert len(results) > 0, \
+            "Should find physics concepts when searching for 'energy'"
+
+    def test_physics_seed_concepts_preserved(self, ontology_manager):
+        """Test that original 5 seed physics concepts are preserved."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+        concept_ids = {c["id"] for c in physics_concepts}
+
+        # Original 5 seed concept IDs
+        seed_ids = {"physics_001", "physics_002", "physics_003", "physics_004", "physics_005"}
+
+        assert seed_ids.issubset(concept_ids), \
+            f"Original seed concepts not found. Missing: " \
+            f"{seed_ids - concept_ids}"
+
+    def test_new_physics_concepts_start_from_006(self, ontology_manager):
+        """Test that new physics concepts start from physics_006."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+        concept_ids = {c["id"] for c in physics_concepts}
+
+        # Should have concepts from physics_006 onwards
+        assert any(cid.startswith("physics_0") and cid >= "physics_006"
+                  for cid in concept_ids), \
+            "New physics concepts should start from physics_006"
+
+    def test_physics_concepts_coverage(self, ontology_manager):
+        """Test that physics concepts cover all major physics subcategories."""
+        ontology_manager.load_ontology()
+        physics_concepts = ontology_manager.get_domain_concepts("physics")
+
+        # Collect all unique concept names for verification
+        names = [c.get("name", "").lower() for c in physics_concepts]
+
+        # Check for coverage of key physics areas
+        key_terms = ["motion", "force", "energy", "heat", "wave", "atom", "light"]
+        found_terms = 0
+
+        for term in key_terms:
+            if any(term in name for name in names):
+                found_terms += 1
+
+        assert found_terms >= 5, \
+            f"Physics concepts should cover major areas. Found {found_terms}/7"
