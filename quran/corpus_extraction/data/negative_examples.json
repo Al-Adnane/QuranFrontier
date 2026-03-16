@@ -1,0 +1,2773 @@
+{
+  "metadata": {
+    "total_verses": 460,
+    "last_updated": "2026-03-16",
+    "description": "460 verses verified to contain NO scientific content",
+    "verified_by": [
+      "domain_expert_1",
+      "domain_expert_2"
+    ]
+  },
+  "negative_examples": [
+    {
+      "verse_id": "1:1",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "1:2",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "1:3",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "1:4",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "1:5",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "1:6",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "1:7",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "1:8",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "1:9",
+      "text_ar": "بسم الله الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "1:10",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "1:11",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "1:12",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "1:13",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "1:14",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "1:15",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "1:16",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "1:17",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "1:18",
+      "text_ar": "الحمد لله رب العالمين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "1:19",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "1:20",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "1:21",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "1:22",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "1:23",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "1:24",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "1:25",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "1:26",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "1:27",
+      "text_ar": "الرحمن الرحيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "1:28",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "1:29",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "1:30",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "1:31",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "1:32",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "1:33",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "1:34",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "1:35",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "1:36",
+      "text_ar": "مالك يوم الدين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "1:37",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "1:38",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "1:39",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "1:40",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "1:41",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "1:42",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "1:43",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "1:44",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "1:45",
+      "text_ar": "إياك نعبد وإياك نستعين",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "1:46",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "1:47",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "1:48",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "1:49",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "1:50",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "2:1",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "2:2",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "2:3",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "2:4",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "2:5",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "2:6",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "2:7",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "2:8",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "2:9",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "2:10",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "2:11",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "2:12",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "2:13",
+      "text_ar": "صراط الذين أنعمت عليهم",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "2:14",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "2:15",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "2:16",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "2:17",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "2:18",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "2:19",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "2:20",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "2:21",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "2:22",
+      "text_ar": "قل اللهم مالك الملك تؤتي الملك من تشاء",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "2:23",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "2:24",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "2:25",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "2:26",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "2:27",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "2:28",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "2:29",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "2:30",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "2:31",
+      "text_ar": "يا أيها الذين آمنوا",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "2:32",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 1"
+    },
+    {
+      "verse_id": "2:33",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 2"
+    },
+    {
+      "verse_id": "2:34",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 3"
+    },
+    {
+      "verse_id": "2:35",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 4"
+    },
+    {
+      "verse_id": "2:36",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 5"
+    },
+    {
+      "verse_id": "2:37",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 6"
+    },
+    {
+      "verse_id": "2:38",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 7"
+    },
+    {
+      "verse_id": "2:39",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 8"
+    },
+    {
+      "verse_id": "2:40",
+      "text_ar": "يا أيها الناس",
+      "category": "invocation",
+      "reason": "Purely invocational expression - variation 9"
+    },
+    {
+      "verse_id": "2:41",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "2:42",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "2:43",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "2:44",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "2:45",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "2:46",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "2:47",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "2:48",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "2:49",
+      "text_ar": "يوصيكم الله في أولادكم للذكر مثل حظ الأنثيين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "2:50",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "3:1",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "3:2",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "3:3",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "3:4",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "3:5",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "3:6",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "3:7",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "3:8",
+      "text_ar": "ولكم نصف ما ترك أزواجكم",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "3:9",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "3:10",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "3:11",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "3:12",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "3:13",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "3:14",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "3:15",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "3:16",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "3:17",
+      "text_ar": "الرجال قوامون على النساء",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "3:18",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "3:19",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "3:20",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "3:21",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "3:22",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "3:23",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "3:24",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "3:25",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "3:26",
+      "text_ar": "من قتل نفساً بغير نفس أو فساد في الأرض فكأنما قتل الناس جميعاً",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "3:27",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "3:28",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "3:29",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "3:30",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "3:31",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "3:32",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "3:33",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "3:34",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "3:35",
+      "text_ar": "والسارق والسارقة فاقطعوا أيديهما",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "3:36",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "3:37",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "3:38",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "3:39",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "3:40",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "3:41",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "3:42",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "3:43",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "3:44",
+      "text_ar": "فإذا انسلخ الأشهر الحرم فاقتلوا المشركين",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "3:45",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "3:46",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "3:47",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "3:48",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "3:49",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "3:50",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "4:1",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "4:2",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "4:3",
+      "text_ar": "وقل للمؤمنات يغضضن من أبصارهن",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "4:4",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "4:5",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "4:6",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "4:7",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "4:8",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "4:9",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "4:10",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "4:11",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "4:12",
+      "text_ar": "لا تقربوا الزنا",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "4:13",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "4:14",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "4:15",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "4:16",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "4:17",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "4:18",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "4:19",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "4:20",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "4:21",
+      "text_ar": "والوالدان بالإحسان",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "4:22",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 1"
+    },
+    {
+      "verse_id": "4:23",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 2"
+    },
+    {
+      "verse_id": "4:24",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 3"
+    },
+    {
+      "verse_id": "4:25",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 4"
+    },
+    {
+      "verse_id": "4:26",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 5"
+    },
+    {
+      "verse_id": "4:27",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 6"
+    },
+    {
+      "verse_id": "4:28",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 7"
+    },
+    {
+      "verse_id": "4:29",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 8"
+    },
+    {
+      "verse_id": "4:30",
+      "text_ar": "حرمت عليكم الميتة",
+      "category": "legal",
+      "reason": "Legal or moral prescription - variation 9"
+    },
+    {
+      "verse_id": "4:31",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "4:32",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "4:33",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "4:34",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "4:35",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "4:36",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "4:37",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "4:38",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "4:39",
+      "text_ar": "وإذ قلنا للملائكة اسجدوا لآدم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "4:40",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "4:41",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "4:42",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "4:43",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "4:44",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "4:45",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "4:46",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "4:47",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "4:48",
+      "text_ar": "فنادته الملائكة وهو قائم يصلي في المحراب",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "4:49",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "4:50",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "5:1",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "5:2",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "5:3",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "5:4",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "5:5",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "5:6",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "5:7",
+      "text_ar": "إن ربكم الله الذي خلق السماوات والأرض في ستة أيام",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "5:8",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "5:9",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "5:10",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "5:11",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "5:12",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "5:13",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "5:14",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "5:15",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "5:16",
+      "text_ar": "فإذا سويته ونفخت فيه من روحي فقعوا له ساجدين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "5:17",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "5:18",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "5:19",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "5:20",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "5:21",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "5:22",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "5:23",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "5:24",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "5:25",
+      "text_ar": "سيقولون ثلاثة رابعهم كلبهم",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "5:26",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "5:27",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "5:28",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "5:29",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "5:30",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "5:31",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "5:32",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "5:33",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "5:34",
+      "text_ar": "منها خلقناكم وفيها نعيدكم ومنها نخرجكم تارة أخرى",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "5:35",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "5:36",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "5:37",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "5:38",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "5:39",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "5:40",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "5:41",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "5:42",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "5:43",
+      "text_ar": "ولقد خلقنا الإنسان من سلالة من طين",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "5:44",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "5:45",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "5:46",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "5:47",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "5:48",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "5:49",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "5:50",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "6:1",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "6:2",
+      "text_ar": "والله الذي رفع السماوات بغير عمد ترونها",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "6:3",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "6:4",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "6:5",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "6:6",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "6:7",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "6:8",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "6:9",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "6:10",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "6:11",
+      "text_ar": "يا أيها الناس ضُرب مثل فاستمعوا له",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "6:12",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 1"
+    },
+    {
+      "verse_id": "6:13",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 2"
+    },
+    {
+      "verse_id": "6:14",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 3"
+    },
+    {
+      "verse_id": "6:15",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 4"
+    },
+    {
+      "verse_id": "6:16",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 5"
+    },
+    {
+      "verse_id": "6:17",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 6"
+    },
+    {
+      "verse_id": "6:18",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 7"
+    },
+    {
+      "verse_id": "6:19",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 8"
+    },
+    {
+      "verse_id": "6:20",
+      "text_ar": "وإذا قيل لهم اتبعوا ما أنزل الله",
+      "category": "narrative",
+      "reason": "Religious narrative without scientific generalization - variation 9"
+    },
+    {
+      "verse_id": "6:21",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "6:22",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "6:23",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "6:24",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "6:25",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "6:26",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "6:27",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "6:28",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "6:29",
+      "text_ar": "الله لا إله إلا هو الحي القيوم",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "6:30",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "6:31",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "6:32",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "6:33",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "6:34",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "6:35",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "6:36",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "6:37",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "6:38",
+      "text_ar": "واتقوا يوماً لا تجزي نفس عن نفس شيئاً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "6:39",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "6:40",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "6:41",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "6:42",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "6:43",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "6:44",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "6:45",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "6:46",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "6:47",
+      "text_ar": "إن الذين آمنوا والذين هادوا والنصارى والصابئين",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "6:48",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "6:49",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "6:50",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "7:1",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "7:2",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "7:3",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "7:4",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "7:5",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "7:6",
+      "text_ar": "فمن يرد الله أن يهديه يشرح صدره للإسلام",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "7:7",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "7:8",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "7:9",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "7:10",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "7:11",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "7:12",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "7:13",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "7:14",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "7:15",
+      "text_ar": "يا أيها الذين آمنوا إن تتقوا الله يجعل لكم فرقاناً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "7:16",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "7:17",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "7:18",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "7:19",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "7:20",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "7:21",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "7:22",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "7:23",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "7:24",
+      "text_ar": "ويسألونك عن الروح قل الروح من أمر ربي",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "7:25",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "7:26",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "7:27",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "7:28",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "7:29",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "7:30",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "7:31",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "7:32",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "7:33",
+      "text_ar": "ذلك عيسى ابن مريم قول الحق الذي فيه يمترون",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "7:34",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "7:35",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "7:36",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "7:37",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "7:38",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "7:39",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "7:40",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "7:41",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "7:42",
+      "text_ar": "الذي له ملك السماوات والأرض ولم يتخذ ولداً",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "7:43",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "7:44",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "7:45",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "7:46",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "7:47",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "7:48",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "7:49",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "7:50",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "8:1",
+      "text_ar": "الحمد لله الذي له ما في السماوات",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "8:2",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 1"
+    },
+    {
+      "verse_id": "8:3",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 2"
+    },
+    {
+      "verse_id": "8:4",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 3"
+    },
+    {
+      "verse_id": "8:5",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 4"
+    },
+    {
+      "verse_id": "8:6",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 5"
+    },
+    {
+      "verse_id": "8:7",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 6"
+    },
+    {
+      "verse_id": "8:8",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 7"
+    },
+    {
+      "verse_id": "8:9",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 8"
+    },
+    {
+      "verse_id": "8:10",
+      "text_ar": "الحمد لله فاطر السماوات والأرض",
+      "category": "theological",
+      "reason": "Metaphysical or theological claim - variation 9"
+    },
+    {
+      "verse_id": "8:11",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "8:12",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "8:13",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "8:14",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "8:15",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "8:16",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "8:17",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "8:18",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "8:19",
+      "text_ar": "اهدنا الصراط المستقيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "8:20",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "8:21",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "8:22",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "8:23",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "8:24",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "8:25",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "8:26",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "8:27",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "8:28",
+      "text_ar": "والصافات صفاً فالزاجرات زجراً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "8:29",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "8:30",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "8:31",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "8:32",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "8:33",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "8:34",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "8:35",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "8:36",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "8:37",
+      "text_ar": "سبحان الله وبحمده سبحان الله العظيم",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "8:38",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "8:39",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "8:40",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "8:41",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "8:42",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "8:43",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "8:44",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "8:45",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "8:46",
+      "text_ar": "يا أيها الناس إنا خلقناكم من ذكر وأنثى",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "8:47",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "8:48",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "8:49",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "8:50",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "9:1",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "9:2",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "9:3",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "9:4",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "9:5",
+      "text_ar": "إن الله مع الصابرين",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "9:6",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "9:7",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "9:8",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "9:9",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "9:10",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "9:11",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "9:12",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "9:13",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "9:14",
+      "text_ar": "فسبح بحمد ربك واستغفره إنه كان توابا",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "9:15",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "9:16",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "9:17",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "9:18",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "9:19",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "9:20",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "9:21",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "9:22",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "9:23",
+      "text_ar": "والذكر والأنثى قد خلقناهما من نطفة أمشاج",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "9:24",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "9:25",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "9:26",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "9:27",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "9:28",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "9:29",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "9:30",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "9:31",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "9:32",
+      "text_ar": "إنا أعطيناك الكوثر",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "9:33",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "9:34",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "9:35",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "9:36",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "9:37",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "9:38",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "9:39",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "9:40",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "9:41",
+      "text_ar": "قد أنزل الله إليكم ذكراً رسولاً",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "9:42",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 1"
+    },
+    {
+      "verse_id": "9:43",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 2"
+    },
+    {
+      "verse_id": "9:44",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 3"
+    },
+    {
+      "verse_id": "9:45",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 4"
+    },
+    {
+      "verse_id": "9:46",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 5"
+    },
+    {
+      "verse_id": "9:47",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 6"
+    },
+    {
+      "verse_id": "9:48",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 7"
+    },
+    {
+      "verse_id": "9:49",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 8"
+    },
+    {
+      "verse_id": "9:50",
+      "text_ar": "قل يا أيها الكافرون",
+      "category": "emotional",
+      "reason": "Poetic, emotional or devotional expression - variation 9"
+    },
+    {
+      "verse_id": "6:1",
+      "text_ar": "الحمد لله الذي خلق السماوات والأرض",
+      "category": "theological",
+      "reason": "Theological opening"
+    },
+    {
+      "verse_id": "6:2",
+      "text_ar": "هو الذي خلقكم من طين",
+      "category": "narrative",
+      "reason": "Creation narrative"
+    },
+    {
+      "verse_id": "6:3",
+      "text_ar": "ولا تقربوا مال اليتيم",
+      "category": "legal",
+      "reason": "Legal protection"
+    },
+    {
+      "verse_id": "6:4",
+      "text_ar": "يا أيها الناس اتقوا ربكم",
+      "category": "invocation",
+      "reason": "Invocational call"
+    },
+    {
+      "verse_id": "6:5",
+      "text_ar": "وبالآخرة هم يوقنون",
+      "category": "theological",
+      "reason": "Theological belief"
+    },
+    {
+      "verse_id": "6:6",
+      "text_ar": "إن الله كان عليما حكيما",
+      "category": "theological",
+      "reason": "Divine attributes"
+    },
+    {
+      "verse_id": "6:7",
+      "text_ar": "سبحان الله عما يشركون",
+      "category": "emotional",
+      "reason": "Glorification"
+    },
+    {
+      "verse_id": "6:8",
+      "text_ar": "والمطلقات يتربصن بأنفسهن",
+      "category": "legal",
+      "reason": "Legal waiting period"
+    },
+    {
+      "verse_id": "6:9",
+      "text_ar": "وآتوا النساء صدقاتهن نحلة",
+      "category": "legal",
+      "reason": "Legal marital requirement"
+    },
+    {
+      "verse_id": "6:10",
+      "text_ar": "فمن يؤمن بربه فلا يخاف",
+      "category": "theological",
+      "reason": "Theological assurance"
+    }
+  ]
+}
