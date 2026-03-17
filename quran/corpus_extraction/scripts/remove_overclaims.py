@@ -18,6 +18,7 @@ from pathlib import Path
 
 WORKTREE = Path(__file__).parent.parent.parent.parent
 VTC_PATH = WORKTREE / "quran/corpus_extraction/ontology/verse_to_concepts.json"
+VTC_REAL_PATH = WORKTREE / "quran/corpus_extraction/ontology/verse_to_concepts_real.json"
 NEG_PATH = WORKTREE / "quran/corpus_extraction/data/negative_examples.json"
 
 REMOVE_VERSES = ['105:1', '105:2', '105:3', '105:4', '105:5', '9:14', '2:10']
@@ -87,6 +88,31 @@ def remove_overclaims():
         json.dump(out, f, ensure_ascii=False, indent=2)
 
     print("Added Q105 (5 verses) to negative_examples.json")
+
+    # Also remove overclaims from verse_to_concepts_real.json
+    remove_overclaims_from_real()
+
+
+def remove_overclaims_from_real():
+    """Remove overclaimed verse entries from verse_to_concepts_real.json."""
+    with open(VTC_REAL_PATH, encoding='utf-8') as f:
+        data = json.load(f)
+
+    # verse_to_concepts_real.json uses a dict under 'mappings' key
+    mappings = data.get('mappings', data) if isinstance(data, dict) else data
+
+    removed = []
+    for verse_key in REMOVE_VERSES:
+        if verse_key in mappings:
+            del mappings[verse_key]
+            removed.append(verse_key)
+
+    print(f"Removed from verse_to_concepts_real.json: {removed}")
+
+    with open(VTC_REAL_PATH, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print(f"Saved updated verse_to_concepts_real.json")
 
 
 if __name__ == '__main__':
