@@ -127,7 +127,7 @@ def fetch_chapter(chapter: int) -> Tuple[Dict[int, str], Dict[int, str]]:
 
     arabic_map: Dict[int, str] = {}
     for ayah in ar_edition["ayahs"]:
-        arabic_map[ayah["numberInSurah"]] = ayah["text"].strip()
+        arabic_map[ayah["numberInSurah"]] = ayah["text"].replace('\ufeff', '').strip()
 
     translation_map: Dict[int, str] = {}
     for ayah in en_edition["ayahs"]:

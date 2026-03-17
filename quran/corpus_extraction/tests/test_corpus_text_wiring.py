@@ -107,6 +107,7 @@ def test_sample_verse_1_1(corpus_data):
     assert "بس" in arabic_text or "بِسْ" in arabic_text or "بِسۡ" in arabic_text or "بِسْمِ" in arabic_text, (
         f"Verse 1:1 arabic_text does not appear to be bismillah: '{arabic_text}'"
     )
+    assert '\ufeff' not in arabic_text, "Verse 1:1 arabic_text contains UTF-8 BOM character"
 
 
 def test_sha256_field_present(corpus_data):
