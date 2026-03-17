@@ -1,16 +1,21 @@
 {
   "metadata": {
-    "version": "1.0",
+    "version": "1.1",
     "created": "2026-03-16",
-    "description": "Scientific concepts ontology across 5 domains for Quranic corpus analysis",
+    "updated": "2026-03-17",
+    "description": "Scientific concepts ontology across 9 domains for Quranic corpus analysis (P2: added mathematics, hydrology, oceanography, geology)",
     "domains": [
       "physics",
       "biology",
       "medicine",
       "engineering",
-      "agriculture"
+      "agriculture",
+      "mathematics",
+      "hydrology",
+      "oceanography",
+      "geology"
     ],
-    "total_concepts": 400
+    "total_concepts": 421
   },
   "concepts": [
     {
@@ -5275,6 +5280,274 @@
       "confidence": 0.85,
       "quranic_references": [],
       "related_concepts": []
+    },
+    {
+      "id": "mathematics_001",
+      "name": "inheritance_fractions",
+      "domain": "mathematics",
+      "tier": 1,
+      "subcategory": "Applied Arithmetic",
+      "definition": "Precise fractional shares for inheritance distribution as prescribed in Q4:11-12 (faridah — mandated portions); exact algebra with no room for interpretation",
+      "quranic_references": [
+        "4:11",
+        "4:12",
+        "4:176"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "mathematics_002",
+        "mathematics_003"
+      ]
+    },
+    {
+      "id": "mathematics_002",
+      "name": "calendar_mathematics",
+      "domain": "mathematics",
+      "tier": 1,
+      "subcategory": "Chronometry",
+      "definition": "Correspondence between 300 solar years and 309 lunar years in Q18:25, reflecting the precise 11-day annual drift between solar and lunar calendars",
+      "quranic_references": [
+        "18:25"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "mathematics_001",
+        "mathematics_003"
+      ]
+    },
+    {
+      "id": "mathematics_003",
+      "name": "contract_formalization",
+      "domain": "mathematics",
+      "tier": 1,
+      "subcategory": "Applied Mathematics",
+      "definition": "Quantitative specifications in financial contracts, debts, and legal transactions — Q2:282 enjoins written recording of amounts and terms",
+      "quranic_references": [
+        "2:282"
+      ],
+      "confidence": 0.80,
+      "related_concepts": [
+        "mathematics_001"
+      ]
+    },
+    {
+      "id": "hydrology_001",
+      "name": "precipitation_cycle",
+      "domain": "hydrology",
+      "tier": 1,
+      "subcategory": "Hydrological Cycle",
+      "definition": "Atmospheric water descent and storage in the earth as described in Q23:18; corresponds to the complete precipitation–infiltration cycle in modern hydrology",
+      "quranic_references": [
+        "23:18",
+        "39:21"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "hydrology_002",
+        "hydrology_003"
+      ]
+    },
+    {
+      "id": "hydrology_002",
+      "name": "groundwater_recharge",
+      "domain": "hydrology",
+      "tier": 1,
+      "subcategory": "Hydrogeology",
+      "definition": "Infiltration of rainwater into aquifers and its resurgence as springs (yanabi — Q39:21); corresponds to the aquifer recharge and discharge cycle",
+      "quranic_references": [
+        "39:21",
+        "67:30"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "hydrology_001",
+        "hydrology_003"
+      ]
+    },
+    {
+      "id": "hydrology_003",
+      "name": "river_systems",
+      "domain": "hydrology",
+      "tier": 1,
+      "subcategory": "Fluvial Hydrology",
+      "definition": "River formation, flow, and drainage networks referenced throughout the Quran as observable natural phenomena",
+      "quranic_references": [
+        "13:3",
+        "14:32",
+        "18:86"
+      ],
+      "confidence": 0.82,
+      "related_concepts": [
+        "hydrology_001",
+        "hydrology_002"
+      ]
+    },
+    {
+      "id": "hydrology_004",
+      "name": "water_measurement",
+      "domain": "hydrology",
+      "tier": 1,
+      "subcategory": "Quantitative Hydrology",
+      "definition": "The Quranic phrase 'in a measured amount' (Q23:18) aligns with the quantitative, measurable nature of the hydrological cycle",
+      "quranic_references": [
+        "23:18"
+      ],
+      "confidence": 0.80,
+      "related_concepts": [
+        "hydrology_001"
+      ]
+    },
+    {
+      "id": "oceanography_001",
+      "name": "halocline_barrier",
+      "domain": "oceanography",
+      "tier": 1,
+      "subcategory": "Physical Oceanography",
+      "definition": "The density/salinity barrier between two meeting water bodies (Q55:19-20 — marj al-bahrayn) that prevents complete mixing; corresponds to the halocline observed at estuaries",
+      "quranic_references": [
+        "55:19",
+        "55:20",
+        "25:53"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "oceanography_002",
+        "oceanography_003"
+      ]
+    },
+    {
+      "id": "oceanography_002",
+      "name": "aphotic_zone",
+      "domain": "oceanography",
+      "tier": 1,
+      "subcategory": "Deep-Sea Oceanography",
+      "definition": "Layers of darkness in the deep ocean (Q24:40 — zulumat) corresponding to the aphotic zone where sunlight cannot penetrate below ~200 m",
+      "quranic_references": [
+        "24:40"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "oceanography_001",
+        "oceanography_003"
+      ]
+    },
+    {
+      "id": "oceanography_003",
+      "name": "estuarine_mixing",
+      "domain": "oceanography",
+      "tier": 1,
+      "subcategory": "Estuarine Oceanography",
+      "definition": "The gradual mixing zone at the interface of fresh and salt water bodies, referenced in Q55:19-20 and Q25:53 as a barzakh (barrier/partition)",
+      "quranic_references": [
+        "55:19",
+        "25:53",
+        "27:61"
+      ],
+      "confidence": 0.83,
+      "related_concepts": [
+        "oceanography_001"
+      ]
+    },
+    {
+      "id": "oceanography_004",
+      "name": "wave_stratification",
+      "domain": "oceanography",
+      "tier": 1,
+      "subcategory": "Physical Oceanography",
+      "definition": "Internal and surface waves producing layered darkness in deep water (Q24:40); modern oceanography identifies internal waves as a distinct stratification mechanism",
+      "quranic_references": [
+        "24:40"
+      ],
+      "confidence": 0.80,
+      "related_concepts": [
+        "oceanography_002"
+      ]
+    },
+    {
+      "id": "geology_001",
+      "name": "isostasy_mountain_roots",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Structural Geology",
+      "definition": "Mountains described as 'pegs' (awtad — Q31:10, Q78:7) with deep roots into the crust; parallels the isostatic model where mountain roots extend downward into the mantle",
+      "quranic_references": [
+        "31:10",
+        "78:7",
+        "16:15"
+      ],
+      "confidence": 0.75,
+      "related_concepts": [
+        "geology_002",
+        "geology_003"
+      ]
+    },
+    {
+      "id": "geology_002",
+      "name": "tectonic_stability",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Geodynamics",
+      "definition": "Mountains acting to stabilize the earth and prevent shaking (rawasi — Q16:15, Q21:31); a valid parallel to the role of lithospheric thickening in tectonic stability",
+      "quranic_references": [
+        "16:15",
+        "21:31",
+        "31:10"
+      ],
+      "confidence": 0.73,
+      "related_concepts": [
+        "geology_001",
+        "geology_004"
+      ]
+    },
+    {
+      "id": "geology_003",
+      "name": "crustal_root_structure",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Structural Geology",
+      "definition": "The deep sub-surface extension of mountain ranges into the lithosphere, analogous to the 'peg' metaphor in Q78:7 — Tier 2 as this requires geological inference",
+      "quranic_references": [
+        "78:7",
+        "31:10"
+      ],
+      "confidence": 0.72,
+      "related_concepts": [
+        "geology_001",
+        "geology_002"
+      ]
+    },
+    {
+      "id": "geology_004",
+      "name": "mineral_formation",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Mineralogy",
+      "definition": "Formation of minerals and rock strata mentioned in Quranic descriptions of earth's layers; Tier 2 — inference required to connect specific verses to mineralogy",
+      "quranic_references": [
+        "57:25",
+        "34:10"
+      ],
+      "confidence": 0.70,
+      "related_concepts": [
+        "geology_002",
+        "geology_003"
+      ]
+    },
+    {
+      "id": "geology_005",
+      "name": "rock_stratification",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Stratigraphy",
+      "definition": "Layered rock formations referenced in discussions of earth's structure; parallels the stratigraphic column of modern geology",
+      "quranic_references": [
+        "18:96",
+        "57:25"
+      ],
+      "confidence": 0.68,
+      "related_concepts": [
+        "geology_004"
+      ]
     }
   ]
 }

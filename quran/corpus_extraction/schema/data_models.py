@@ -31,6 +31,11 @@ class VerseExtraction:
         engineering_content: Extracted engineering-related content
         agriculture_content: Extracted agriculture-related content
 
+        mathematics_content: Extracted mathematics-related content (Tier 1, ceiling 0.85)
+        hydrology_content: Extracted hydrology-related content (Tier 1, ceiling 0.85)
+        oceanography_content: Extracted oceanography-related content (Tier 1, ceiling 0.85)
+        geology_content: Extracted geology-related content (Tier 2, ceiling 0.75)
+
         tafsirs: Dictionary mapping tafsir names to their interpretations
         tafsir_agreement: Confidence score for tafsir consensus (0.0-1.0)
 
@@ -49,12 +54,18 @@ class VerseExtraction:
     arabic_text: str
     translation: str
 
-    # 5 scientific domains
+    # 9 scientific domains (5 original + 4 new from P2)
     physics_content: Optional[Dict] = None
     biology_content: Optional[Dict] = None
     medicine_content: Optional[Dict] = None
     engineering_content: Optional[Dict] = None
     agriculture_content: Optional[Dict] = None
+
+    # 4 new scientific domains (P2)
+    mathematics_content: Optional[Dict] = None     # Q4:11-12 fractions, Q18:25 calendar math
+    hydrology_content: Optional[Dict] = None        # Q23:18 water cycle, Q39:21 groundwater
+    oceanography_content: Optional[Dict] = None     # Q55:19-20 halocline, Q24:40 aphotic zone
+    geology_content: Optional[Dict] = None          # Q31:10 isostasy, Q16:15 mountain roots
 
     # 8 classical tafsirs
     tafsirs: Dict[str, str] = field(default_factory=dict)
@@ -86,6 +97,10 @@ class VerseExtraction:
             "medicine": self.medicine_content,
             "engineering": self.engineering_content,
             "agriculture": self.agriculture_content,
+            "mathematics": self.mathematics_content,
+            "hydrology": self.hydrology_content,
+            "oceanography": self.oceanography_content,
+            "geology": self.geology_content,
         }
 
     def get_all_verification_results(self) -> Dict[str, bool]:
