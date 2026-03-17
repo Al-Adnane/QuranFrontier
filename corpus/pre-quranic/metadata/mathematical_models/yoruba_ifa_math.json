@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Yoruba/Ifá",
+    "model_type": "Binary Combinatorics / Decision Tree",
+    "source": "Ifá Corpus (Odu)",
+    "accuracy": "REQUIRES VERIFICATION with Babalawo",
+    "extraction_date": "2026-03-15"
+  },
+  "odu_ifa_system": {
+    "description": "Ifá divination uses binary combinatorics to generate 256 Odu",
+    "base_number": 16,
+    "total_combinations": 256,
+    "mathematical_structure": {
+      "type": "Binary System",
+      "operation": "Cartesian Product",
+      "formula": "16 × 16 = 256",
+      "representation": "Ordered pairs (i,j) where i,j ∈ {1,...,16}"
+    }
+  },
+  "principal_odu": {
+    "count": 16,
+    "binary_generation": {
+      "method": "Ikin palm nuts or Opele chain",
+      "bits_per_cast": 1,
+      "casts_per_odu": 8,
+      "total_operations": 8
+    },
+    "odu_list": [
+      {"index": 1, "name": "Ogbe Meji", "binary": "11111111", "decimal": 255},
+      {"index": 2, "name": "Oyeku Meji", "binary": "00000000", "decimal": 0},
+      {"index": 3, "name": "Iwori Meji", "binary": "01100110", "decimal": 102},
+      {"index": 4, "name": "Odi Meji", "binary": "01000010", "decimal": 66},
+      {"index": 5, "name": "Irosun Meji", "binary": "10010010", "decimal": 146},
+      {"index": 6, "name": "Owonrin Meji", "binary": "10101010", "decimal": 170},
+      {"index": 7, "name": "Obar Meji", "binary": "10000001", "decimal": 129},
+      {"index": 8, "name": "Okanran Meji", "binary": "01000100", "decimal": 68},
+      {"index": 9, "name": "Ogunda Meji", "binary": "10001000", "decimal": 136},
+      {"index": 10, "name": "Osa Meji", "binary": "01000001", "decimal": 65},
+      {"index": 11, "name": "Ika Meji", "binary": "00100010", "decimal": 34},
+      {"index": 12, "name": "Otura Meji", "binary": "00100100", "decimal": 36},
+      {"index": 13, "name": "Irete Meji", "binary": "00010010", "decimal": 18},
+      {"index": 14, "name": "Ose Meji", "binary": "00010001", "decimal": 17},
+      {"index": 15, "name": "Ofun Meji", "binary": "00001000", "decimal": 8},
+      {"index": 16, "name": "Alafia", "binary": "11110000", "decimal": 240}
+    ]
+  },
+  "graph_model": {
+    "type": "Directed Graph",
+    "nodes": 256,
+    "edges": "Parent-child Odu relationships",
+    "adjacency_matrix": "16×16 block structure",
+    "properties": {
+      "connected": true,
+      "cyclic": false,
+      "weighted": true
+    }
+  },
+  "decision_tree": {
+    "description": "Divination process as decision tree",
+    "depth": 8,
+    "branching_factor": 2,
+    "leaf_nodes": 256,
+    "algorithm": "Binary search through Odu space"
+  },
+  "orisha_network": {
+    "type": "Social Network Graph",
+    "nodes": "Orishas + Odu",
+    "edges": "Patronage relationships",
+    "centrality_metrics": {
+      "highest_degree": "Eshu (crossroads deity)",
+      "betweenness": "Orunmila (divination deity)"
+    }
+  },
+  "verification_required": {
+    "binary_accuracy": "REQUIRES Babalawo verification",
+    "odu_names": "Verify with Abimbola 1976",
+    "mathematical_model": "Verify with Ifá practitioners"
+  },
+  "hash": "ifa_math_model_v1_2026"
+}

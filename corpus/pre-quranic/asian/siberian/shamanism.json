@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Siberian Shamanism",
+    "language": "Various (Evenki, Yakut, etc.)",
+    "script": "Latin (transliteration)",
+    "date_range": "10000 BCE-present",
+    "text_type": "Shamanic Songs, Invocations",
+    "source": "Oral Tradition",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "siberian_invocations",
+      "text_name_evk": "Buga",
+      "text_name_en": "Siberian Shamanic Invocations",
+      "date": "~1000 BCE-present",
+      "invocations": [
+        {
+          "invocation_id": "sib_i1",
+          "name": "To Buga",
+          "evenki": "Buga, buga, buga",
+          "translation_en": "Sky, sky, sky"
+        },
+        {
+          "invocation_id": "sib_i2",
+          "name": "To Etugen",
+          "evenki": "Etugen eke, gazar eke",
+          "translation_en": "Earth mother, land mother"
+        },
+        {
+          "invocation_id": "sib_i3",
+          "name": "To the World Tree",
+          "evenki": "Modo, ura modulo",
+          "translation_en": "Tree, tall tree"
+        }
+      ]
+    },
+    {
+      "text_id": "siberian_precepts",
+      "text_name_en": "Siberian Precepts",
+      "date": "~1000 BCE-present",
+      "precepts": [
+        {
+          "precept_id": "sib_c1",
+          "text": "Respect the Spirits",
+          "translation_en": "The spirits are everywhere, honor them"
+        },
+        {
+          "precept_id": "sib_c2",
+          "text": "Honor the Ancestors",
+          "translation_en": "The ancestors guide us"
+        },
+        {
+          "precept_id": "sib_c3",
+          "text": "Protect Nature",
+          "translation_en": "The land is sacred"
+        },
+        {
+          "precept_id": "sib_c4",
+          "text": "Keep Balance",
+          "translation_en": "Live in harmony with all"
+        }
+      ]
+    },
+    {
+      "text_id": "world_tree",
+      "text_name_en": "World Tree",
+      "date": "~1000 BCE-present",
+      "levels": [
+        {"level": "Upper World", "meaning": "Sky Spirits, Gods"},
+        {"level": "Middle World", "meaning": "Humans, Animals, Nature"},
+        {"level": "Lower World", "meaning": "Ancestors, Underworld Spirits"}
+      ]
+    }
+  ],
+  "spirits": [
+    {"name": "Buga", "role": "Sky God", "domain": "Sky"},
+    {"name": "Etugen", "role": "Earth Mother", "domain": "Earth"},
+    {"name": "Ulgen", "role": "Creator God", "domain": "Creation"},
+    {"name": "Erlik", "role": "Underworld God", "domain": "Death"}
+  ],
+  "hash": "e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2"
+}

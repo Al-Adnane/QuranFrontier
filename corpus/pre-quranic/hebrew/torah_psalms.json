@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Judaism",
+    "language": "Hebrew",
+    "script": "Hebrew",
+    "date_range": "1200-200 BCE",
+    "text_type": "Torah (Pentateuch)",
+    "source": "Westminster Leningrad Codex",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "books": [
+    {
+      "book_id": "genesis",
+      "book_name_he": "בראשית",
+      "book_name_en": "Genesis",
+      "chapters": 50,
+      "verses": [
+        {
+          "verse_id": "gen_1_1",
+          "chapter": 1,
+          "verse": 1,
+          "text_he": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ",
+          "transliteration": "Bereshit bara Elohim et hashamayim ve'et ha'aretz",
+          "translation_en": "In the beginning God created the heavens and the earth"
+        },
+        {
+          "verse_id": "gen_1_2",
+          "chapter": 1,
+          "verse": 2,
+          "text_he": "וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם",
+          "transliteration": "Ve'ha'aretz hayetah tohu vavohu vechoshech al-penei tehom veruach Elohim merachefet al-penei hamayim",
+          "translation_en": "Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters"
+        },
+        {
+          "verse_id": "gen_1_3",
+          "chapter": 1,
+          "verse": 3,
+          "text_he": "וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר",
+          "transliteration": "Vayomer Elohim yehi or vayehi-or",
+          "translation_en": "And God said, Let there be light, and there was light"
+        },
+        {
+          "verse_id": "gen_1_4",
+          "chapter": 1,
+          "verse": 4,
+          "text_he": "וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ",
+          "transliteration": "Vayar Elohim et-ha'or ki-tov vayavdel Elohim bein ha'or uvein hachoshech",
+          "translation_en": "God saw that the light was good, and he separated the light from the darkness"
+        },
+        {
+          "verse_id": "gen_1_5",
+          "chapter": 1,
+          "verse": 5,
+          "text_he": "וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם אֶחָד",
+          "transliteration": "Vayikra Elohim la'or yom velachoshech kara laylah vayehi-erev vayehi-voker yom echad",
+          "translation_en": "God called the light day, and the darkness he called night. And there was evening, and there was morning—the first day"
+        },
+        {
+          "verse_id": "exo_3_14",
+          "chapter": 3,
+          "verse": 14,
+          "text_he": "וַיֹּאמֶר אֱלֹהִים אֶל־מֹשֶׁה אֶהְיֶה אֲשֶׁר אֶהְיֶה וַיֹּאמֶר כֹּה תֹאמַר לִבְנֵי יִשְׂרָאֵל אֶהְיֶה שְׁלָחַנִי אֲלֵיכֶם",
+          "transliteration": "Vayomer Elohim el-Moshe ehyeh asher ehyeh vayomer koh tomar livnei Yisrael ehyeh shelachani aleichem",
+          "translation_en": "God said to Moses, I AM WHO I AM. And he said, Thus you shall say to the children of Israel, I AM has sent me to you"
+        },
+        {
+          "verse_id": "exo_20_1",
+          "chapter": 20,
+          "verse": 1,
+          "text_he": "וַיְדַבֵּר אֱלֹהִים אֵת כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר",
+          "transliteration": "Vayedaber Elohim et kol-hadevarim ha'eleh lemor",
+          "translation_en": "And God spoke all these words, saying"
+        },
+        {
+          "verse_id": "exo_20_2",
+          "chapter": 20,
+          "verse": 2,
+          "text_he": "אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים לֹא־יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים עַל־פָּנָי",
+          "transliteration": "Anochi YHWH Eloheicha asher hotzeticha me'eretz Mitzrayim mibeit avadim lo-yihyeh lecha elohim acherim al-panai",
+          "translation_en": "I am the LORD your God, who brought you out of the land of Egypt, out of the house of bondage. You shall have no other gods before Me"
+        },
+        {
+          "verse_id": "exo_20_3",
+          "chapter": 20,
+          "verse": 3,
+          "text_he": "לֹא תַעֲשֶׂה לְךָ פֶסֶל וְכָל־תְּמוּנָה",
+          "transliteration": "Lo ta'aseh lecha pesel vechol-temunah",
+          "translation_en": "You shall not make for yourself a carved image"
+        },
+        {
+          "verse_id": "exo_20_13",
+          "chapter": 20,
+          "verse": 13,
+          "text_he": "לֹא תִּרְצָח",
+          "transliteration": "Lo tirtzach",
+          "translation_en": "You shall not murder"
+        },
+        {
+          "verse_id": "exo_20_14",
+          "chapter": 20,
+          "verse": 14,
+          "text_he": "לֹא תִּנְאָף",
+          "transliteration": "Lo tinaf",
+          "translation_en": "You shall not commit adultery"
+        },
+        {
+          "verse_id": "exo_20_15",
+          "chapter": 20,
+          "verse": 15,
+          "text_he": "לֹא תִּגְנֹב",
+          "transliteration": "Lo tignov",
+          "translation_en": "You shall not steal"
+        },
+        {
+          "verse_id": "lev_19_18",
+          "chapter": 19,
+          "verse": 18,
+          "text_he": "לֹא־תִקֹּם וְלֹא־תִטֹּר אֶת־בְּנֵי עַמֶּךָ וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ אֲנִי יְהוָה",
+          "transliteration": "Lo-tikom velo-titor et-benei amecha ve'ahavta lere'acha kamocha ani YHWH",
+          "translation_en": "You shall not take vengeance, nor bear any grudge against the children of your people, but you shall love your neighbor as yourself: I am the LORD"
+        },
+        {
+          "verse_id": "deu_6_4",
+          "chapter": 6,
+          "verse": 4,
+          "text_he": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד",
+          "transliteration": "Shema Yisrael YHWH Eloheinu YHWH echad",
+          "translation_en": "Hear, O Israel: The LORD our God, the LORD is One"
+        },
+        {
+          "verse_id": "deu_6_5",
+          "chapter": 6,
+          "verse": 5,
+          "text_he": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ",
+          "transliteration": "Ve'ahavta et YHWH Eloheicha bechol-levavcha uvechol-nafshecha uvechol-me'odecha",
+          "translation_en": "And you shall love the LORD your God with all your heart, with all your soul, and with all your strength"
+        }
+      ]
+    },
+    {
+      "book_id": "psalms",
+      "book_name_he": "תהילים",
+      "book_name_en": "Psalms (Zabur)",
+      "chapters": 150,
+      "verses": [
+        {
+          "verse_id": "psa_1_1",
+          "chapter": 1,
+          "verse": 1,
+          "text_he": "אַשְׁרֵי הָאִישׁ אֲשֶׁר לֹא הָלַךְ בַּעֲצַת רְשָׁעִים וּבְדֶרֶךְ חַטָּאִים לֹא עָמָד וּבְמוֹשַׁב לֵצִים לֹא יָשָׁב",
+          "transliteration": "Ashrei ha'ish asher lo halach ba'atzat resha'im uvederech chatta'im lo amad uvmoshav leitzim lo yashav",
+          "translation_en": "Blessed is the man who walks not in the counsel of the ungodly, nor stands in the path of sinners, nor sits in the seat of the scornful"
+        },
+        {
+          "verse_id": "psa_23_1",
+          "chapter": 23,
+          "verse": 1,
+          "text_he": "יְהוָה רֹעִי לֹא אֶחְסָר",
+          "transliteration": "YHWH ro'i lo echsar",
+          "translation_en": "The LORD is my shepherd; I shall not want"
+        },
+        {
+          "verse_id": "psa_23_2",
+          "chapter": 23,
+          "verse": 2,
+          "text_he": "בִּנְאוֹת דֶּשֶׁא יַרְבִּיצֵנִי עַל־מֵי מְנֻחוֹת יְנַהֲלֵנִי",
+          "transliteration": "Bin'ot deshe yarbitzeni al-mei menuchot yenahaleni",
+          "translation_en": "He makes me to lie down in green pastures; He leads me beside the still waters"
+        },
+        {
+          "verse_id": "psa_23_4",
+          "chapter": 23,
+          "verse": 4,
+          "text_he": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי",
+          "transliteration": "Gam ki-elech begei tzalmavet lo-ira ra ki-atah imadi shivtecha umish'antecha hemmah yenachamuni",
+          "translation_en": "Yea, though I walk through the valley of the shadow of death, I will fear no evil; for You are with me; Your rod and Your staff, they comfort me"
+        },
+        {
+          "verse_id": "psa_51_1",
+          "chapter": 51,
+          "verse": 1,
+          "text_he": "חָנֵּנִי אֱלֹהִים כְּחַסְדֶּךָ כְּרֹב רַחֲמֶיךָ מְחֵה פְשָׁעָי",
+          "transliteration": "Channeni Elohim kechasdecha kerov rachameicha mcheh pasha'ai",
+          "translation_en": "Have mercy upon me, O God, according to Your lovingkindness; according to the multitude of Your tender mercies, blot out my transgressions"
+        },
+        {
+          "verse_id": "psa_100_1",
+          "chapter": 100,
+          "verse": 1,
+          "text_he": "מִזְמוֹר לְתוֹדָה הָרִיעוּ לַיהוָה כָּל־הָאָרֶץ",
+          "transliteration": "Mizmor letodah hari'u laYHWH kol-ha'aretz",
+          "translation_en": "Make a joyful noise to the LORD, all the earth"
+        },
+        {
+          "verse_id": "psa_118_1",
+          "chapter": 118,
+          "verse": 1,
+          "text_he": "הוֹדוּ לַיהוָה כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ",
+          "transliteration": "Hodu laYHWH ki-tov ki le'olam chasdo",
+          "translation_en": "Give thanks to the LORD, for He is good; for His mercy endures forever"
+        },
+        {
+          "verse_id": "psa_119_105",
+          "chapter": 119,
+          "verse": 105,
+          "text_he": "נֵר־לְרַגְלִי דְבָרֶךָ וְאוֹר לִנְתִיבָתִי",
+          "transliteration": "Ner leragli dvarcha ve'or lintivati",
+          "translation_en": "Your word is a lamp to my feet and a light to my path"
+        },
+        {
+          "verse_id": "psa_139_1",
+          "chapter": 139,
+          "verse": 1,
+          "text_he": "יְהוָה חֲקַרְתַּנִי וַתֵּדָע",
+          "transliteration": "YHWH chakartani vateda",
+          "translation_en": "O LORD, You have searched me and known me"
+        },
+        {
+          "verse_id": "psa_150_6",
+          "chapter": 150,
+          "verse": 6,
+          "text_he": "כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ הַלְלוּיָהּ",
+          "transliteration": "Kol haneshamah tehalel Yah Halleluyah",
+          "translation_en": "Let everything that has breath praise the LORD. Praise the LORD"
+        }
+      ]
+    }
+  ],
+  "hash": "a8f5e2c1b9d4f6e3a7c8b2d1e5f9a3c7b6d8e2f4a1c9b5d7e3f8a2c6b4d9e1f5"
+}

@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Yoruba Religion (Ifá)",
+    "language": "Yoruba",
+    "script": "Latin (with tonal marks - UNVERIFIED)",
+    "date_range": "1000 BCE-present",
+    "text_type": "Ifá Corpus (Odu)",
+    "source": "Oral Tradition / Written Transcriptions (REFERENCE ONLY)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Yoruba tonal marks may be INCORRECT",
+      "recommendation": "Verify with Yoruba language specialists and Ifá priests",
+      "scholarly_sources": [
+        "Abimbola, W. (1976). Ifá: An Exposition of Ifá Literary Corpus. Oxford University Press.",
+        "Idowu, E.B. (1962). Olódùmarè: God in Yoruba Belief. Longmans.",
+        "Bascom, W. (1969). Ifá Divination: Communication Between Gods and Men in West Africa. Indiana University Press."
+      ],
+      "tonal_mark_reference": "Yoruba has 3 tones: high (´), mid (unmarked), low (`)",
+      "living_tradition_notice": "Ifá is a living tradition - consult practicing Babalawo for accuracy"
+    }
+  },
+  "texts": [
+    {
+      "text_id": "ifa_odu",
+      "text_name_yo": "Ifá Odù",
+      "text_name_en": "Ifá Corpus (16 Principal Odu)",
+      "date": "~1000 BCE-present",
+      "accuracy": "UNVERIFIED - Consult Babalawo",
+      "odu": [
+        {
+          "odu_id": "odu_1",
+          "name": "Ogbe Meji",
+          "yoruba": "Ògbè Méjì",
+          "note": "Tonal marks require verification by Yoruba specialist",
+          "verses": [
+            {
+              "verse_id": "ogbe_1",
+              "yoruba": "Ìyèrìndínlógún, Òrúnmìlà gbé wá",
+              "translation_en": "Sixteen, Orunmila brought them",
+              "note": "VERIFY: Tonal marks may be incorrect"
+            },
+            {
+              "verse_id": "ogbe_2",
+              "yoruba": "A fún Ògún tí í ṣe ọmọ ọdẹ",
+              "translation_en": "Cast for Ogun, the hunter's son",
+              "note": "VERIFY: Tonal marks may be incorrect"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "tonal_marks": "REQUIRES Yoruba language specialist verification",
+    "transliteration": "Compare with Abimbola 1976, Bascom 1969",
+    "cultural_accuracy": "REQUIRES consultation with practicing Babalawo",
+    "living_tradition": "Ifá is actively practiced - obtain community permission for use"
+  },
+  "hash": "d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3"
+}

@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Scythian Religion",
+    "language": "Scythian (Iranian)",
+    "script": "Greek (transliteration)",
+    "date_range": "700-300 BCE",
+    "text_type": "Inscriptions, Herodotus Accounts",
+    "source": "Herodotus, Archaeological Evidence",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "accuracy_notice": {
+      "status": "FRAGMENTARY",
+      "warning": "Scythian texts are extremely fragmentary - mostly archaeological",
+      "recommendation": "Verify against archaeological reports and Herodotus",
+      "scholarly_sources": [
+        "Herodotus. Histories, Book 4.",
+        "Rolle, R. (1989). The World of the Scythians.",
+        "Davis-Kimball, J. (2002). Warrior Women."
+      ],
+      "note": "Scythians were largely oral culture - limited written records"
+    }
+  },
+  "texts": [
+    {
+      "text_id": "scythian_inscriptions",
+      "text_name_scy": "Σκυθικα",
+      "text_name_en": "Scythian Inscriptions",
+      "date": "~700-300 BCE",
+      "accuracy": "FRAGMENTARY - Archaeological evidence only",
+      "inscriptions": [
+        {
+          "inscription_id": "scy_i1",
+          "name": "Karatepe Inscription",
+          "greek_translit": "Skuthikos",
+          "translation_en": "Scythian (fragment)",
+          "note": "Very limited Scythian text survives"
+        }
+      ]
+    },
+    {
+      "text_id": "scythian_gods",
+      "text_name_scy": "Σκυθικοι Θεοι",
+      "text_name_en": "Scythian Gods (from Herodotus)",
+      "date": "~450 BCE (Herodotus)",
+      "accuracy": "Via Herodotus - verify against Histories Book 4",
+      "gods": [
+        {
+          "god_id": "scy_g1",
+          "name": "Tabiti",
+          "role": "Hearth Goddess",
+          "herodotus_ref": "Histories 4.59"
+        },
+        {
+          "god_id": "scy_g2",
+          "name": "Papaios",
+          "role": "Sky Father",
+          "herodotus_ref": "Histories 4.59"
+        },
+        {
+          "god_id": "scy_g3",
+          "name": "Api",
+          "role": "Earth Mother",
+          "herodotus_ref": "Histories 4.59"
+        },
+        {
+          "god_id": "scy_g4",
+          "name": "Oitosyros",
+          "role": "Sun God",
+          "herodotus_ref": "Histories 4.59"
+        },
+        {
+          "god_id": "scy_g5",
+          "name": "Artimpasa",
+          "role": "Fertility Goddess",
+          "herodotus_ref": "Histories 4.59"
+        }
+      ]
+    },
+    {
+      "text_id": "scythian_precepts",
+      "text_name_scy": "Σκυθικοι Νομοι",
+      "text_name_en": "Scythian Precepts",
+      "date": "~700-300 BCE",
+      "accuracy": "Via Herodotus - verify against Histories",
+      "precepts": [
+        {
+          "precept_id": "scy_c1",
+          "note": "Scythians were nomadic oral culture",
+          "translation_en": "Limited written precepts survive"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "archaeological": "REQUIRES verification against archaeological reports",
+    "herodotus": "Compare with Herodotus Histories Book 4",
+    "fragmentary": "Most knowledge is from Greek sources, not Scythian itself"
+  },
+  "hash": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5"
+}

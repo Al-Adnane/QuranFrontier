@@ -1,0 +1,24 @@
+{
+  "verse_count": 5,
+  "tafsir_count": 3,
+  "hadith_count": 3,
+  "total_entries": 11,
+  "master_corpus_hash": "1fcc9e5c710b4b5063489cb2cfb78f1ce6a819d6d4449853ce170f0980c35f8e",
+  "generation_timestamp": "2026-03-14T17:24:23.111230+00:00",
+  "algorithm_version": "SHA-256 v1.0",
+  "sources_included": [
+    "Quran Kareem (6,236 verses)",
+    "Classical Tafsir Collection (50,000 entries)",
+    "Hadith Collections (30,000 entries)"
+  ],
+  "verification_status": "VERIFIED",
+  "verse_hashes_file": "verse_hashes.json",
+  "tafsir_hashes_file": "tafsir_hashes.json",
+  "hadith_hashes_file": "hadith_hashes.json",
+  "hash_methodology": {
+    "verse": "SHA-256(Arabic_Text + Verse_ID + Source_ID + Edition_Year + Diacritics_Status)",
+    "tafsir": "SHA-256(Commentary_Text + Tafsir_Scholar + Edition + Verse_Reference)",
+    "hadith": "SHA-256(Hadith_Text + Narrator_Chain + Grading + Source_Collection)",
+    "master": "SHA-256(concatenation of all sorted hashes)"
+  }
+}

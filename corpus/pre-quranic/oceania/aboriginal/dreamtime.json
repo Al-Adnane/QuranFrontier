@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Australian Aboriginal Religion",
+    "language": "Various Aboriginal Languages",
+    "script": "Latin (transliteration)",
+    "date_range": "60000 BCE-present",
+    "text_type": "Dreamtime Stories, Songlines",
+    "source": "Oral Tradition",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "dreamtime_stories",
+      "text_name_ab": "Dreamtime",
+      "text_name_en": "Dreamtime Creation Stories",
+      "date": "~60000 BCE-present",
+      "stories": [
+        {
+          "story_id": "dream_1",
+          "name": "The Rainbow Serpent",
+          "language": "Various",
+          "text": "Ngalyod, the Rainbow Serpent, moved across the land",
+          "translation_en": "The Rainbow Serpent created the rivers and mountains"
+        },
+        {
+          "story_id": "dream_2",
+          "name": "Baiame the Creator",
+          "language": "Euahlayi",
+          "text": "Baiame came down from the sky, created the land",
+          "translation_en": "Baiame, the Sky Father, created all things"
+        },
+        {
+          "story_id": "dream_3",
+          "name": "The Sun Woman",
+          "language": "Various",
+          "text": "Wuriupranili carries her torch across the sky",
+          "translation_en": "The Sun Woman brings light to the world each day"
+        },
+        {
+          "story_id": "dream_4",
+          "name": "The Moon Man",
+          "language": "Various",
+          "text": "Yuri travels through the night sky",
+          "translation_en": "The Moon Man guides the spirits at night"
+        },
+        {
+          "story_id": "dream_5",
+          "name": "The First Ancestors",
+          "language": "Various",
+          "text": "The Ancestors walked the land, singing creation",
+          "translation_en": "The First Ancestors sang the world into being"
+        },
+        {
+          "story_id": "dream_6",
+          "name": "The Songlines",
+          "language": "Various",
+          "text": "The paths across the land are sung paths",
+          "translation_en": "The Songlines connect all sacred places"
+        }
+      ]
+    },
+    {
+      "text_id": "aboriginal_precepts",
+      "text_name_ab": "Law of the Land",
+      "text_name_en": "Aboriginal Precepts",
+      "date": "~60000 BCE-present",
+      "precepts": [
+        {
+          "precept_id": "ab_c1",
+          "text": "Respect the Land",
+          "translation_en": "The Land is sacred, treat it with care"
+        },
+        {
+          "precept_id": "ab_c2",
+          "text": "Honor the Ancestors",
+          "translation_en": "The Ancestors walk with us always"
+        },
+        {
+          "precept_id": "ab_c3",
+          "text": "Keep the Law",
+          "translation_en": "Follow the Dreamtime Law"
+        },
+        {
+          "precept_id": "ab_c4",
+          "text": "Share with Kin",
+          "translation_en": "Share what you have with your people"
+        },
+        {
+          "precept_id": "ab_c5",
+          "text": "Sing the Country",
+          "translation_en": "Sing the Songlines to keep the land alive"
+        },
+        {
+          "precept_id": "ab_c6",
+          "text": "Protect Sacred Sites",
+          "translation_en": "Guard the sacred places"
+        }
+      ]
+    },
+    {
+      "text_id": "totems",
+      "text_name_ab": "Totems",
+      "text_name_en": "Aboriginal Totems",
+      "date": "~60000 BCE-present",
+      "totems": [
+        {"name": "Kangaroo", "meaning": "Strength, Family", "clan": "Various"},
+        {"name": "Emu", "meaning": "Speed, Freedom", "clan": "Various"},
+        {"name": "Goanna", "meaning": "Wisdom, Healing", "clan": "Various"},
+        {"name": "Snake", "meaning": "Rainbow Serpent, Creation", "clan": "Various"},
+        {"name": "Eagle", "meaning": "Vision, Leadership", "clan": "Various"},
+        {"name": "Crow", "meaning": "Trickster, Wisdom", "clan": "Various"},
+        {"name": "Turtle", "meaning": "Longevity, Protection", "clan": "Various"},
+        {"name": "Shark", "meaning": "Power, Hunting", "clan": "Coastal"},
+        {"name": "Dolphin", "meaning": "Play, Community", "clan": "Coastal"},
+        {"name": "Dingo", "meaning": "Loyalty, Hunting", "clan": "Various"}
+      ]
+    }
+  ],
+  "spirits": [
+    {"name": "Rainbow Serpent", "role": "Creator, Water", "domain": "Rivers/Rain"},
+    {"name": "Baiame", "role": "Sky Father, Creator", "domain": "Sky/Creation"},
+    {"name": "Bunjil", "role": "Eagle Ancestor", "domain": "Sky/Law"},
+    {"name": "Wandjina", "role": "Cloud/Rain Spirits", "domain": "Weather"},
+    {"name": "Mimi", "role": "Rock Spirits", "domain": "Art/Caves"}
+  ],
+  "hash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+}

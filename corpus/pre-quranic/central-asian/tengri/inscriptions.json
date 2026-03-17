@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Tengrism",
+    "language": "Old Turkic/Mongolian",
+    "script": "Old Turkic Runes + Latin",
+    "date_range": "500 BCE-1400 CE",
+    "text_type": "Inscriptions, Oral Prayers",
+    "source": "Orkhon Inscriptions, Oral Tradition",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+10C00-U+10C4F"
+  },
+  "texts": [
+    {
+      "text_id": "orkhon_inscriptions",
+      "text_name_trk": "𐰇𐰼𐰴𐰣 𐰉𐰃𐱅𐰃𐰏𐰃",
+      "text_name_en": "Orkhon Inscriptions",
+      "date": "~732-735 CE",
+      "inscriptions": [
+        {
+          "inscription_id": "ork_1",
+          "name": "Kul Tigin Inscription",
+          "old_turkic": "𐱅𐰭𐰼𐰃 𐱅𐰭𐰼𐰃 𐱅𐰭𐰼𐰃",
+          "transliteration": "Tängri Tängri Tängri",
+          "translation_en": "Heaven, Heaven, Heaven"
+        },
+        {
+          "inscription_id": "ork_2",
+          "name": "Sky and Earth",
+          "old_turkic": "𐱅𐰭𐰼𐰃 𐰖𐰍",
+          "transliteration": "Tängri yaγ",
+          "translation_en": "Heaven and Earth"
+        },
+        {
+          "inscription_id": "ork_3",
+          "name": "Blue Sky",
+          "old_turkic": "𐰚𐰇𐰚 𐱅𐰭𐰼𐰃",
+          "transliteration": "Kök Tängri",
+          "translation_en": "Blue Sky (Eternal Heaven)"
+        }
+      ]
+    },
+    {
+      "text_id": "tengri_prayers",
+      "text_name_trk": "𐱅𐰭𐰼𐰃 𐰓𐰀𐰞𐰍",
+      "text_name_en": "Tengri Prayers",
+      "date": "~500 BCE-1400 CE",
+      "prayers": [
+        {
+          "prayer_id": "teng_p1",
+          "name": "Morning Prayer",
+          "old_turkic": "𐱅𐰭𐰼𐰃 𐰉𐰴",
+          "transliteration": "Tängri baq",
+          "translation_en": "Heaven, look upon us"
+        },
+        {
+          "prayer_id": "teng_p2",
+          "name": "Prayer for Strength",
+          "old_turkic": "𐰚𐰇𐰲 𐰉𐰃𐰼",
+          "transliteration": "Küč bir",
+          "translation_en": "Give strength"
+        },
+        {
+          "prayer_id": "teng_p3",
+          "name": "Prayer for Protection",
+          "old_turkic": "𐰴𐰍𐰀 𐰴𐰍",
+          "transliteration": "Qaγa qaγ",
+          "translation_en": "Protect, protect"
+        },
+        {
+          "prayer_id": "teng_p4",
+          "name": "Prayer for Blessing",
+          "old_turkic": "𐰉𐰃𐰼𐰴 𐰉𐰃𐰼",
+          "transliteration": "Birk bir",
+          "translation_en": "Give blessing"
+        }
+      ]
+    },
+    {
+      "text_id": "tengri_commandments",
+      "text_name_trk": "𐱅𐰭𐰼𐰃 𐰖𐰆𐰞",
+      "text_name_en": "Tengri Precepts",
+      "date": "~500 BCE-1400 CE",
+      "precepts": [
+        {
+          "precept_id": "teng_c1",
+          "old_turkic": "𐱅𐰭𐰼𐰃𐰏𐰃 𐰉𐰃𐰠",
+          "transliteration": "Tängrigig bil",
+          "translation_en": "Know Heaven"
+        },
+        {
+          "precept_id": "teng_c2",
+          "old_turkic": "𐰖𐰍𐰍𐰀 𐰉𐰆𐰞",
+          "transliteration": "Yaγγa bol",
+          "translation_en": "Be with Earth"
+        },
+        {
+          "precept_id": "teng_c3",
+          "old_turkic": "𐰀𐰲 𐰉𐰆𐰞",
+          "transliteration": "Ač bol",
+          "translation_en": "Be honest"
+        },
+        {
+          "precept_id": "teng_c4",
+          "old_turkic": "𐰚𐰇𐰲 𐰉𐰆𐰞",
+          "transliteration": "Küč bol",
+          "translation_en": "Be strong"
+        },
+        {
+          "precept_id": "teng_c5",
+          "old_turkic": "𐰉𐰆𐰑𐰣 𐰉𐰆𐰞",
+          "transliteration": "Bodun bol",
+          "translation_en": "Be with the people"
+        },
+        {
+          "precept_id": "teng_c6",
+          "old_turkic": "𐰖𐰆𐰞 𐰉𐰆𐰞",
+          "transliteration": "Yol bol",
+          "translation_en": "Follow the Way"
+        }
+      ]
+    }
+  ],
+  "deities": [
+    {"name": "Tengri", "role": "Sky Father, Supreme God", "symbol": "𐱅𐰭𐰼𐰃"},
+    {"name": "Umay", "role": "Earth Mother", "symbol": "𐰇𐰢𐰖"},
+    {"name": "Erlik", "role": "Underworld God", "symbol": "𐰀𐰼𐰞𐰴"},
+    {"name": "Kayra", "role": "Creator Spirit", "symbol": "𐰴𐰖𐰺𐰀"}
+  ],
+  "hash": "f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1"
+}

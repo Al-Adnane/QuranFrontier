@@ -1,0 +1,64 @@
+[
+  {
+    "id": "h_1",
+    "hadith_text": "قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: الدِّينُ النَّصِيحَةُ",
+    "hadith_text_no_diacritics": "قال رسول الله صلى الله عليه وسلم: الدين النصيحة",
+    "has_diacritics": true,
+    "narrator_chain": [
+      {
+        "name": "محمد بن عبد الله",
+        "name_no_diacritics": "محمد بن عبد الله",
+        "has_diacritics": false
+      },
+      {
+        "name": "أبو هريرة",
+        "name_no_diacritics": "أبو هريرة",
+        "has_diacritics": false
+      }
+    ],
+    "narrator_chain_length": 2,
+    "source": "sahih_muslim",
+    "related_verse_reference": "QURAN_2_183",
+    "all_related_verses": [
+      "QURAN_2_183"
+    ],
+    "diacritics_info": {
+      "FATHA": 15,
+      "DAMMA": 5,
+      "SHADDA": 6,
+      "KASRA": 4,
+      "SUKUN": 1
+    }
+  },
+  {
+    "id": "h_2",
+    "hadith_text": "عَنْ عَائِشَةَ قَالَتْ: كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَصُومُ",
+    "hadith_text_no_diacritics": "عن عائشة قالت: كان رسول الله صلى الله عليه وسلم يصوم",
+    "has_diacritics": true,
+    "narrator_chain": [
+      {
+        "name": "عائشة",
+        "name_no_diacritics": "عائشة",
+        "has_diacritics": false
+      },
+      {
+        "name": "أم المؤمنين",
+        "name_no_diacritics": "أم المؤمنين",
+        "has_diacritics": false
+      }
+    ],
+    "narrator_chain_length": 2,
+    "source": "sahih_bukhari",
+    "related_verse_reference": "QURAN_2_183",
+    "all_related_verses": [
+      "QURAN_2_183"
+    ],
+    "diacritics_info": {
+      "FATHA": 20,
+      "SUKUN": 3,
+      "KASRA": 3,
+      "DAMMA": 5,
+      "SHADDA": 4
+    }
+  }
+]

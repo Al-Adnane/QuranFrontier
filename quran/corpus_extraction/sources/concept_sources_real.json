@@ -1,0 +1,1373 @@
+{
+  "metadata": {
+    "generated": "2026-03-17T01:23:10.908414Z",
+    "discovery_date": "2026-03-17T01:23:10.908427Z",
+    "version": "1.0",
+    "description": "Real peer-reviewed sources for priority Quranic scientific concepts",
+    "apis_used": [
+      "semantic_scholar",
+      "crossref"
+    ],
+    "total_concepts": 20,
+    "total_sources": 74,
+    "validated_dois": 68,
+    "blocker": "BLOCKER_1"
+  },
+  "concepts": [
+    {
+      "concept_id": "embryology",
+      "concept_name": "Embryonic Development",
+      "sources": [
+        {
+          "doi": "10.1002/1873-3468.13930",
+          "title": "Dynamic transcriptome profiling toward understanding the development of the human embryonic heart during different Carnegie stages",
+          "authors": [
+            "Zhuo Meng",
+            "Jian Wang",
+            "Jiayu Peng",
+            "Yue Zhou",
+            "Shuang Zhou"
+          ],
+          "journal": "FEBS Letters",
+          "year": 2020,
+          "citation_count": 8,
+          "quality_score": 0.5,
+          "relevance_to_quran": "Q23:12-14 embryonic stages",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1111/joa.12753",
+          "title": "Development of the human shoulder joint during the embryonic and early fetal stages: anatomical considerations for clinical practice",
+          "authors": [
+            "Fidel Hita‐Contreras",
+            "Indalecio Sánchez‐Montesinos",
+            "Antonio Martínez‐Amat",
+            "David Cruz‐Díaz",
+            "Rafael J. Barranco"
+          ],
+          "journal": "Journal of Anatomy",
+          "year": 2017,
+          "citation_count": 11,
+          "quality_score": 0.6,
+          "relevance_to_quran": "Q23:12-14 embryonic stages",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1089/zeb.2020.1872",
+          "title": "Short Exposure to Moderate Concentration of Alcohol During Embryonic Development Does Not Alter Gross Morphology in Zebrafish",
+          "authors": [
+            "Ishti Paul",
+            "Benjamin Tsang",
+            "Robert Gerlai"
+          ],
+          "journal": "Zebrafish",
+          "year": 2020,
+          "citation_count": 7,
+          "quality_score": 0.5,
+          "relevance_to_quran": "Q23:12-14 embryonic stages",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1002/ar.25421",
+          "title": "Regional differences in the umbilical vein and ductus venosus at different stages of normal human development",
+          "authors": [
+            "Naoko Isotani",
+            "Toru Kanahashi",
+            "Hirohiko Imai",
+            "Akio Yoneyama",
+            "Shigehito Yamada"
+          ],
+          "journal": "The Anatomical Record",
+          "year": 2024,
+          "citation_count": 1,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q23:12-14 embryonic stages",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.3760/CMA.J.ISSN.2095-0160.2018.07.004",
+          "title": "Expression dynamics of lens development-associated transcription factors in human embryonic stem cell-induced lentoid body",
+          "authors": [
+            "Chenlu Han",
+            "Chunxiao Wang",
+            "Jinyan Li"
+          ],
+          "journal": "Chinese Journal of Experimental Ophthalmology",
+          "year": 2018,
+          "citation_count": 1,
+          "quality_score": 0.5,
+          "relevance_to_quran": "Q23:12-14 embryonic stages",
+          "source_api": "semantic_scholar",
+          "validated": false
+        }
+      ]
+    },
+    {
+      "concept_id": "bee_communication",
+      "concept_name": "Bee Dance Communication",
+      "sources": [
+        {
+          "doi": "10.3389/fnbeh.2023.1140657",
+          "title": "In search of behavioral and brain processes involved in honey bee dance communication",
+          "authors": [
+            "Hiroyuki Ai",
+            "Walter M. Farina"
+          ],
+          "journal": "Frontiers in Behavioral Neuroscience",
+          "year": 2023,
+          "citation_count": 5,
+          "quality_score": 0.75,
+          "relevance_to_quran": "Q16:68-69 bee revelation",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/s00040-012-0224-z",
+          "title": "The dance legacy of Karl von Frisch",
+          "authors": [
+            "M. J. Couvillon"
+          ],
+          "journal": "Insectes Sociaux",
+          "year": 2012,
+          "citation_count": 80,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q16:68-69 bee revelation",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.3389/fevo.2015.00147",
+          "title": "Editorial: Ballroom Biology: Recent Insights into Honey Bee Waggle Dance Communications",
+          "authors": [
+            "Roger Schürch",
+            "Margaret J. Couvillon",
+            "Madeleine Beekman"
+          ],
+          "journal": "Frontiers in Ecology and Evolution",
+          "year": 2016,
+          "citation_count": 3,
+          "quality_score": 0.5,
+          "relevance_to_quran": "Q16:68-69 bee revelation",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": null,
+          "title": "An efficient method for decoding the honey bee waggle dance and its use in determining the effects of hive relocation on foraging efficiency",
+          "authors": [
+            "F. Pearce"
+          ],
+          "journal": "Unknown",
+          "year": 2013,
+          "citation_count": 0,
+          "quality_score": 0.38,
+          "relevance_to_quran": "Q16:68-69 bee revelation",
+          "source_api": "semantic_scholar",
+          "validated": false
+        }
+      ]
+    },
+    {
+      "concept_id": "groundwater",
+      "concept_name": "Groundwater Aquifer",
+      "sources": [
+        {
+          "doi": "10.1007/s10040-020-02231-w",
+          "title": "Recharge, delayed groundwater-level rise and specific yield in the Triassic karst aquifer of the Kopa Mountain, in the Western Carpathians, Slovakia",
+          "authors": [
+            "Peter Malík",
+            "Marián Coplák",
+            "Jaromír Švasta",
+            "Radovan Černák",
+            "Peter Bajtoš"
+          ],
+          "journal": "Hydrogeology Journal",
+          "year": 2020,
+          "citation_count": 8,
+          "quality_score": 0.5,
+          "relevance_to_quran": "Q15:22 water stored earth",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/s10040-022-02561-x",
+          "title": "The role of mineralogical studies in delineating the recharge area and groundwater circulation of Susuz springs, Central Taurus Belt, Turkey",
+          "authors": [
+            "Mehmet Çelik",
+            "Süleyman Selim Çallı",
+            "Zehra Semra Karakaş"
+          ],
+          "journal": "Hydrogeology Journal",
+          "year": 2022,
+          "citation_count": 6,
+          "quality_score": 0.53,
+          "relevance_to_quran": "Q15:22 water stored earth",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/s10040-020-02183-1",
+          "title": "Determination of recharge, storage and flow characteristics of a karst aquifer using multi-method approaches (Kocaeli, Turkey)",
+          "authors": [
+            "Ahmet Şener",
+            "İrfan Yolcubal",
+            "Ercan Sanğu"
+          ],
+          "journal": "Hydrogeology Journal",
+          "year": 2020,
+          "citation_count": 11,
+          "quality_score": 0.6,
+          "relevance_to_quran": "Q15:22 water stored earth",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/s10040-017-1703-0",
+          "title": "Initial assessment of recharge areas for large karst springs: a case study from the central Zagros Mountains, Iran",
+          "authors": [
+            "Hossein Karimi Vardanjani",
+            "Manouchehr Chitsazan",
+            "Derek Ford",
+            "Haji Karimi",
+            "Abbas Charchi"
+          ],
+          "journal": "Hydrogeology Journal",
+          "year": 2017,
+          "citation_count": 13,
+          "quality_score": 0.6,
+          "relevance_to_quran": "Q15:22 water stored earth",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/s10040-021-02398-w",
+          "title": "Characterization of karst conduits by tracer tests for an artificial recharge scheme",
+          "authors": [
+            "Xinyu Cen",
+            "Mo Xu",
+            "Jihong Qi",
+            "Qiang Zhang",
+            "Haoxin Shi"
+          ],
+          "journal": "Hydrogeology Journal",
+          "year": 2021,
+          "citation_count": 9,
+          "quality_score": 0.53,
+          "relevance_to_quran": "Q15:22 water stored earth",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "deep_ocean_darkness",
+      "concept_name": "Deep Ocean Aphotic Zone",
+      "sources": [
+        {
+          "doi": "10.1111/jfb.70201",
+          "title": "Fish eye growth rate and vertical habitat: A maximum for eye growth rate investment in the mesopelagic zone",
+          "authors": [
+            "Jérôme Pinti",
+            "Alexia Elizardo",
+            "Samuel Hankinson",
+            "Madelynne Reifsteck",
+            "Renea Briner"
+          ],
+          "journal": "Journal of Fish Biology",
+          "year": 2025,
+          "citation_count": 1,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q24:40 deep sea darkness",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1093/icesjms/fsaf028",
+          "title": "Evaluating the importance of mesopelagic prey to three top teleost predators in the northwest Atlantic Ocean",
+          "authors": [
+            "Ciara Willis",
+            "Kayla G Gardner",
+            "Martin C Arostegui",
+            "Camrin D Braun",
+            "Walt Golet"
+          ],
+          "journal": "ICES Journal of Marine Science",
+          "year": 2025,
+          "citation_count": 3,
+          "quality_score": 0.8,
+          "relevance_to_quran": "Q24:40 deep sea darkness",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1109/OCEANS58557.2025.11104671",
+          "title": "Biosealight: A Low-Cost, Compact, Autonomous, Low-Energy, High-Sensitivity Sensor for Detecting Marine Bioluminescence",
+          "authors": [
+            "Jeanne Maingot-Lépée",
+            "Laurent de Knyff",
+            "Amandine Caillat",
+            "Jacques Benoit",
+            "Fabien Soulier"
+          ],
+          "journal": "OCEANS 2025 Brest",
+          "year": 2025,
+          "citation_count": 1,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q24:40 deep sea darkness",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1121/10.0018167",
+          "title": "Vertical migration of the ocean’s deep scattering layer affects the health of the planet",
+          "authors": [
+            "Kelly Benoit-Bird"
+          ],
+          "journal": "The Journal of the Acoustical Society of America",
+          "year": 2023,
+          "citation_count": 0,
+          "quality_score": 0.43,
+          "relevance_to_quran": "Q24:40 deep sea darkness",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1038/s41561-025-01888-w",
+          "title": "Distinct contributions of suspended and sinking prokaryotes to mesopelagic carbon budget",
+          "authors": [
+            "Pauline Le Coq",
+            "Urania Christaki",
+            "France Van Wambeke",
+            "Elisabeth Chevillon",
+            "Bruno Zakardjian"
+          ],
+          "journal": "Nature Geoscience",
+          "year": 2026,
+          "citation_count": 0,
+          "quality_score": 0.7,
+          "relevance_to_quran": "Q24:40 deep sea darkness",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "mountain_isostasy",
+      "concept_name": "Mountain Roots / Isostasy",
+      "sources": [
+        {
+          "doi": "10.1130/G31998.1",
+          "title": "Why is the North America Cordillera high? Hot backarcs, thermal isostasy, and mountain belts",
+          "authors": [
+            "R.D. Hyndman",
+            "C.A. Currie"
+          ],
+          "journal": "Geology",
+          "year": 2011,
+          "citation_count": 91,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q78:7 mountains as pegs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": null,
+          "title": "mountain belts Why is the North America Cordillera high ? Hot backarcs , thermal isostasy , and",
+          "authors": [
+            "R. Hyndman",
+            "C. A. Currie"
+          ],
+          "journal": "Unknown",
+          "year": 2011,
+          "citation_count": 0,
+          "quality_score": 0.38,
+          "relevance_to_quran": "Q78:7 mountains as pegs",
+          "source_api": "semantic_scholar",
+          "validated": false
+        },
+        {
+          "doi": "10.1038/s41467-025-63468-1",
+          "title": "Mode of intracontinental mountain building controlled by lower crustal composition and mantle lithosphere depletion",
+          "authors": [
+            "Xi Xu",
+            "Andrew V. Zuza",
+            "Taras Gerya",
+            "Lin Chen",
+            "Xingtao Kuang"
+          ],
+          "journal": "Nature Communications",
+          "year": 2025,
+          "citation_count": 1,
+          "quality_score": 0.8,
+          "relevance_to_quran": "Q78:7 mountains as pegs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1785/0220250299",
+          "title": "The 2023 Mw 6.8 Al Haouz Lower Crustal Earthquake Buried in a Thick Crust Within a Thin Lithosphere Beneath the High Atlas Mountain Range (Morocco)",
+          "authors": [
+            "Hafid Ouammou",
+            "Abdelkrim Aoudia",
+            "Farhan Javed",
+            "Hari Ram Thapa",
+            "Abdelilah Tahayt"
+          ],
+          "journal": "Seismological Research Letters",
+          "year": 2026,
+          "citation_count": 1,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q78:7 mountains as pegs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1016/J.EARSCIREV.2018.11.004",
+          "title": "Lithosphere structure in Europe from thermal isostasy",
+          "authors": [
+            "Irina M. Artemieva"
+          ],
+          "journal": "Earth-Science Reviews",
+          "year": 2019,
+          "citation_count": 54,
+          "quality_score": 0.87,
+          "relevance_to_quran": "Q78:7 mountains as pegs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "water_cycle",
+      "concept_name": "Hydrological Cycle",
+      "sources": [
+        {
+          "doi": "10.1029/2024GL110904",
+          "title": "The Role of Leaf Area Changes Within Plant CO<sub>2</sub> Physiological Impacts on the Global Hydrological Cycle",
+          "authors": [
+            "Alana S. Cordak",
+            "Gabriel J. Kooperman",
+            "Claire M. Zarakas",
+            "Abigail L. S. Swann",
+            "Charles D. Koven"
+          ],
+          "journal": "Geophysical Research Letters",
+          "year": 2025,
+          "citation_count": 5,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q39:21 water cycle",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.3390/w14182895",
+          "title": "Water Budget, Biological Water Use, and the Soil Hydrological Cycle across Typical Ecosystems of the Heihe River Basin",
+          "authors": [
+            "Qi Chen",
+            "Yuhua Xing",
+            "Dapeng Zhang",
+            "Haitao Sun",
+            "Pei Wang"
+          ],
+          "journal": "Water",
+          "year": 2022,
+          "citation_count": 1,
+          "quality_score": 0.53,
+          "relevance_to_quran": "Q39:21 water cycle",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.5194/ESD-5-471-2014",
+          "title": "Contrasting roles of interception and transpiration in the hydrological cycle – Part 2: Moisture recycling",
+          "authors": [
+            "R. J. van der Ent",
+            "L. Wang-Erlandsson",
+            "P. W. Keys",
+            "H. H. G. Savenije"
+          ],
+          "journal": "Earth System Dynamics",
+          "year": 2014,
+          "citation_count": 226,
+          "quality_score": 0.68,
+          "relevance_to_quran": "Q39:21 water cycle",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.5194/ESD-5-441-2014",
+          "title": "Contrasting roles of interception and transpiration in the hydrological cycle –  Part 1: Temporal characteristics over land",
+          "authors": [
+            "L. Wang-Erlandsson",
+            "R. J. van der Ent",
+            "L. J. Gordon",
+            "H. H. G. Savenije"
+          ],
+          "journal": "Earth System Dynamics",
+          "year": 2014,
+          "citation_count": 135,
+          "quality_score": 0.68,
+          "relevance_to_quran": "Q39:21 water cycle",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1029/2025GL118244",
+          "title": "Origins of Precipitation in the World's Water Towers",
+          "authors": [
+            "Bomei Zhang",
+            "Hongkai Gao",
+            "Lan Wang‐Erlandsson",
+            "Yan Li"
+          ],
+          "journal": "Geophysical Research Letters",
+          "year": 2026,
+          "citation_count": 0,
+          "quality_score": 0.48,
+          "relevance_to_quran": "Q39:21 water cycle",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "oceanography_halocline",
+      "concept_name": "Ocean Halocline / Barrier",
+      "sources": [
+        {
+          "doi": "10.1038/s41467-025-64806-z",
+          "title": "Turbulent isopycnal mixing dominates thermohaline transformations of intermediate ocean waters",
+          "authors": [
+            "Florian Sévellec",
+            "Nicolas Kolodziejczyk",
+            "Esther Portela"
+          ],
+          "journal": "Nature Communications",
+          "year": 2025,
+          "citation_count": 0,
+          "quality_score": 0.7,
+          "relevance_to_quran": "Q55:19-20 two seas barrier",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1175/jpo-d-25-0265.1",
+          "title": "Global Observational Estimates of Thermohaline Transformations by Interior Ocean Mixing",
+          "authors": [
+            "Bieito Fernández Castro",
+            "Sjoerd Groeskamp",
+            "Espe Broullón",
+            "Louis Clément",
+            "D. Gwyn Evans"
+          ],
+          "journal": "Journal of Physical Oceanography",
+          "year": 2026,
+          "citation_count": 0,
+          "quality_score": 0.48,
+          "relevance_to_quran": "Q55:19-20 two seas barrier",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1175/jtech-d-24-0072.1",
+          "title": "A Refractometer for Measuring Thermohaline Density Microstructure in the Ocean",
+          "authors": [
+            "Jason A. Kapit",
+            "Norman E. Farr",
+            "Raymond W. Schmitt"
+          ],
+          "journal": "Journal of Atmospheric and Oceanic Technology",
+          "year": 2025,
+          "citation_count": 0,
+          "quality_score": 0.48,
+          "relevance_to_quran": "Q55:19-20 two seas barrier",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.59887/2073-6673.2025.18(3)-8",
+          "title": "Assessment of the Accuracy of Global Oceanic Reanalysis in Reproducing the Temperature and Salinity of the Waters of the Avacha Bay (the Pacific Ocean)",
+          "authors": [
+            "A. V. Zimin",
+            "O. A. Atadzhanova",
+            "A. A. Konik",
+            "O. B. Tepnin"
+          ],
+          "journal": "Fundamental and Applied Hydrophysics",
+          "year": 2025,
+          "citation_count": 0,
+          "quality_score": 0.48,
+          "relevance_to_quran": "Q55:19-20 two seas barrier",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1029/2021GL097690",
+          "title": "Turbulent Mixing in the Barrier Layer of the Equatorial Pacific Ocean",
+          "authors": [
+            "Chuanyu Liu",
+            "Dan Huo",
+            "Zhiyu Liu",
+            "Xiaowei Wang",
+            "Cong Guan"
+          ],
+          "journal": "Geophysical Research Letters",
+          "year": 2022,
+          "citation_count": 7,
+          "quality_score": 0.53,
+          "relevance_to_quran": "Q55:19-20 two seas barrier",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "honey_antimicrobial",
+      "concept_name": "Honey Antimicrobial",
+      "sources": [
+        {
+          "doi": "10.1101/2025.09.24.677996",
+          "title": "Antibacterial Activity of Honey on Wound Isolates from Patients Attending Benue State University Teaching Hospital, Makurdi",
+          "authors": [
+            "David Tyover Kajo",
+            "Martina E Okoh"
+          ],
+          "journal": "bioRxiv",
+          "year": 2025,
+          "citation_count": 0,
+          "quality_score": 0.2,
+          "relevance_to_quran": "Q16:69 honey healing",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.30574/gscbps.2025.33.1.0383",
+          "title": "Honey: A natural potent antimicrobial remedy against wound pathogens in orthopaedic patients",
+          "authors": [
+            "Chisom Cynthia Owoh",
+            "Chineye N. Nwaekpe",
+            "Victor Chisom Makata",
+            "Jude Chizoba Nwachukwu",
+            "Precious Tochukwu Nwodo"
+          ],
+          "journal": "GSC Biological and Pharmaceutical Sciences",
+          "year": 2025,
+          "citation_count": 0,
+          "quality_score": 0.7,
+          "relevance_to_quran": "Q16:69 honey healing",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.24925/turjaf.v12i10.1826-1834.6869",
+          "title": "Property-Wound Healing Relationship of Manuka-, Anzer- and Chestnut-Honey: Characterization, Antibacterial Properties and Cell Culture Applications",
+          "authors": [
+            "Ayşe Ezgi Ünlü",
+            "Fatma Altunkılıç",
+            "Yelda Asgari",
+            "Sena Demirtaş",
+            "Şeyda Gökyer"
+          ],
+          "journal": "Turkish Journal of Agriculture - Food Science and Technology",
+          "year": 2024,
+          "citation_count": 2,
+          "quality_score": 0.8,
+          "relevance_to_quran": "Q16:69 honey healing",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.51470/ma.2023.5.1.1",
+          "title": "Honeybee-Derived Honey As A Natural Arsenal Against Antibacterial And Antimicrobial Challenges",
+          "authors": [
+            "Surekha S",
+            "Afsanabanu Manik",
+            "Dhanoji Dhanoji"
+          ],
+          "journal": "Microbiology Archives, an International Journal",
+          "year": 2023,
+          "citation_count": 0,
+          "quality_score": 0.43,
+          "relevance_to_quran": "Q16:69 honey healing",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.3390/antibiotics11030422",
+          "title": "Antimicrobial Evaluation of Various Honey Types against Carbapenemase-Producing Gram-Negative Clinical Isolates",
+          "authors": [
+            "Elisavet Stavropoulou",
+            "Chrysoula (Chrysa) Voidarou",
+            "Georgios Rozos",
+            "Natalia Vaou",
+            "Michael Bardanis"
+          ],
+          "journal": "Antibiotics",
+          "year": 2022,
+          "citation_count": 12,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q16:69 honey healing",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "genetics_reproduction",
+      "concept_name": "Genetic Recombination",
+      "sources": [
+        {
+          "doi": "10.1186/s12864-018-4705-y",
+          "title": "Characterization of recombination features and the genetic basis in multiple cattle breeds",
+          "authors": [
+            "Botong Shen",
+            "Jicai Jiang",
+            "Eyal Seroussi",
+            "George E. Liu",
+            "Li Ma"
+          ],
+          "journal": "BMC Genomics",
+          "year": 2018,
+          "citation_count": 23,
+          "quality_score": 0.6,
+          "relevance_to_quran": "Q53:45-46 male female pairs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1101/2022.01.14.476329",
+          "title": "Meiosis in the human pathogen\n                  <i>Aspergillus fumigatus</i>\n                  has the highest known number of crossovers",
+          "authors": [
+            "Ben Auxier",
+            "Frank Becker",
+            "Reindert Nijland",
+            "Alfons J. M. Debets",
+            "Joost van den Heuvel"
+          ],
+          "journal": "bioRxiv",
+          "year": 2022,
+          "citation_count": 9,
+          "quality_score": 0.25,
+          "relevance_to_quran": "Q53:45-46 male female pairs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1093/biolre/ioac040",
+          "title": "Meiotic chromosome organization and crossover patterns",
+          "authors": [
+            "Yongliang Shang",
+            "Taicong Tan",
+            "Cunxian Fan",
+            "Hui Nie",
+            "Ying Wang"
+          ],
+          "journal": "Biology of Reproduction",
+          "year": 2022,
+          "citation_count": 9,
+          "quality_score": 0.53,
+          "relevance_to_quran": "Q53:45-46 male female pairs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1371/journal.pgen.1007384",
+          "title": "Elevated temperature increases meiotic crossover frequency via the interfering (Type I) pathway in Arabidopsis thaliana",
+          "authors": [
+            "Jennifer L. Modliszewski",
+            "Hongkuan Wang",
+            "Ashley R. Albright",
+            "Scott M. Lewis",
+            "Alexander R. Bennett"
+          ],
+          "journal": "PLOS Genetics",
+          "year": 2018,
+          "citation_count": 68,
+          "quality_score": 0.65,
+          "relevance_to_quran": "Q53:45-46 male female pairs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/s00412-016-0624-3",
+          "title": "Recombination correlates with synaptonemal complex length and chromatin loop size in bovids—insights into mammalian meiotic chromosomal organization",
+          "authors": [
+            "Aurora Ruiz-Herrera",
+            "Miluse Vozdova",
+            "Jonathan Fernández",
+            "Hana Sebestova",
+            "Laia Capilla"
+          ],
+          "journal": "Chromosoma",
+          "year": 2017,
+          "citation_count": 55,
+          "quality_score": 0.65,
+          "relevance_to_quran": "Q53:45-46 male female pairs",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "skin_pain_receptors",
+      "concept_name": "Skin Pain Nociceptors",
+      "sources": [
+        {
+          "doi": null,
+          "title": "Uninjured C-fiber Nociceptors Develop Spontaneous Activity and A- Adrenergic Sensitivity following L 6 Spinal Nerve Ligation in Monkeyand Sensory Nervous Systems Have Been Suggested, Including",
+          "authors": [
+            "Z. Ali",
+            "M. Ringkamp",
+            "T. Hartke",
+            "H. F. Chien",
+            "N. Flavahan"
+          ],
+          "journal": "Unknown",
+          "year": null,
+          "citation_count": 230,
+          "quality_score": 0.68,
+          "relevance_to_quran": "Q4:56 skin regrown pain",
+          "source_api": "semantic_scholar",
+          "validated": false
+        },
+        {
+          "doi": "10.1097/j.pain.0000000000002363",
+          "title": "Lysophosphatidic acid activates nociceptors and causes pain or itch depending on the application mode in human skin",
+          "authors": [
+            "Miriam M. Düll",
+            "Martina Stengel",
+            "Vivien Ries",
+            "Marion Strupf",
+            "Peter W. Reeh"
+          ],
+          "journal": "Pain",
+          "year": 2021,
+          "citation_count": 14,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q4:56 skin regrown pain",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1097/00001756-199201000-00005",
+          "title": "Eicosanoids, but not tachykinins, excite C-fiber endings in rat sciatic nerve-end neuromas",
+          "authors": [
+            "M. Devor",
+            "D. M. White",
+            "E. J. Goetzl",
+            "J. D. Levine"
+          ],
+          "journal": "NeuroReport",
+          "year": 1992,
+          "citation_count": 52,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q4:56 skin regrown pain",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1163/092996397750131856",
+          "title": "β-Endorphin, dynorphin A and Met-enkephalin activate one-third of cutaneous C-fiber polymodal receptors in the rat hairy skin",
+          "authors": [
+            "Hervé A. Martin"
+          ],
+          "journal": "Primary Sensory Neuron",
+          "year": 1997,
+          "citation_count": 0,
+          "quality_score": 0.38,
+          "relevance_to_quran": "Q4:56 skin regrown pain",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/978-1-4939-1708-2_17",
+          "title": "Skin–Nerve Preparation to Assay the Function of Opioid Receptors in Peripheral Endings of Sensory Neurons",
+          "authors": [
+            "Rabih Moshourab",
+            "Yvonne Schmidt",
+            "Halina Machelska"
+          ],
+          "journal": "Methods in Molecular Biology",
+          "year": 2014,
+          "citation_count": 2,
+          "quality_score": 0.48,
+          "relevance_to_quran": "Q4:56 skin regrown pain",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "sleep_neuroscience",
+      "concept_name": "Sleep Neuroscience",
+      "sources": [
+        {
+          "doi": "10.11477/MF.1416200575",
+          "title": "[The Function of REM Sleep: Implications from Transgenic Mouse Models].",
+          "authors": [
+            "Mitsuaki Kashiwagi",
+            "Yu Hayashi"
+          ],
+          "journal": "Brain and nerve = Shinkei kenkyu no shinpo",
+          "year": 2016,
+          "citation_count": 3,
+          "quality_score": 0.5,
+          "relevance_to_quran": "Q39:42 soul taken sleep",
+          "source_api": "semantic_scholar",
+          "validated": false
+        },
+        {
+          "doi": "10.1038/s42003-025-07868-5",
+          "title": "Both slow wave and rapid eye movement sleep contribute to emotional memory consolidation",
+          "authors": [
+            "Cagri Yuksel",
+            "Dan Denis",
+            "James Coleman",
+            "Boyu Ren",
+            "Angela Oh"
+          ],
+          "journal": "Communications Biology",
+          "year": 2025,
+          "citation_count": 9,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q39:42 soul taken sleep",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1186/s13229-024-00594-5",
+          "title": "Neuroligin-2 shapes individual slow waves during slow-wave sleep and the response to sleep deprivation in mice",
+          "authors": [
+            "Tanya Leduc",
+            "Hiba El Alami",
+            "Khadija Bougadir",
+            "Erika Bélanger-Nelson",
+            "Valérie Mongrain"
+          ],
+          "journal": "Molecular Autism",
+          "year": 2024,
+          "citation_count": 5,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q39:42 soul taken sleep",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1111/jsr.14372",
+          "title": "Music cue during <scp>slow wave</scp> sleep improves visuospatial memory consolidation",
+          "authors": [
+            "Marco Fabbri",
+            "Miranda Occhionero",
+            "Lorenzo Tonetti",
+            "Marco Costa",
+            "Federica Giudetti"
+          ],
+          "journal": "Journal of Sleep Research",
+          "year": 2024,
+          "citation_count": 1,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q39:42 soul taken sleep",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1101/2024.08.19.607534",
+          "title": "Neither fifty percent slow-wave sleep suppression nor fifty percent rapid eye movement sleep suppression does impair memory consolidation",
+          "authors": [
+            "Yulia V. Ukraintseva",
+            "Konstantin A. Saltykov",
+            "Olga N. Tkachenko"
+          ],
+          "journal": "bioRxiv",
+          "year": 2024,
+          "citation_count": 0,
+          "quality_score": 0.2,
+          "relevance_to_quran": "Q39:42 soul taken sleep",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "frontal_lobe",
+      "concept_name": "Prefrontal Cortex Function",
+      "sources": [
+        {
+          "doi": "10.1016/j.neurobiolaging.2021.09.014",
+          "title": "Influence of tDCS over right inferior frontal gyrus and pre-supplementary motor area on perceptual decision-making and response inhibition: A healthy ageing perspective",
+          "authors": [
+            "Hakuei Fujiyama",
+            "Jane Tan",
+            "Rohan Puri",
+            "Mark R. Hinder"
+          ],
+          "journal": "Neurobiology of Aging",
+          "year": 2022,
+          "citation_count": 18,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q96:15-16 forelock lying",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1016/j.neuropharm.2021.108501",
+          "title": "Alcohol reduces the activity of somatostatin interneurons in the mouse prefrontal cortex: A neural basis for its disinhibitory effect?",
+          "authors": [
+            "Miao Li",
+            "David Cabrera-Garcia",
+            "Michael C. Salling",
+            "Edmund Au",
+            "Guang Yang"
+          ],
+          "journal": "Neuropharmacology",
+          "year": 2021,
+          "citation_count": 20,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q96:15-16 forelock lying",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1016/j.pnpbp.2015.03.001",
+          "title": "Neural systems mediating decision-making and response inhibition for social and nonsocial stimuli in autism",
+          "authors": [
+            "Keith M. Shafritz",
+            "Joel D. Bregman",
+            "Toshikazu Ikuta",
+            "Philip R. Szeszko"
+          ],
+          "journal": "Progress in Neuro-Psychopharmacology and Biological Psychiatry",
+          "year": 2015,
+          "citation_count": 53,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q96:15-16 forelock lying",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1016/j.neuropharm.2012.03.024",
+          "title": "Modulation of pyramidal cell output in the medial prefrontal cortex by mGluR5 interacting with CB1",
+          "authors": [
+            "Takaki Kiritoshi",
+            "Hao Sun",
+            "Wenjie Ren",
+            "Shaun R. Stauffer",
+            "Craig W. Lindsley"
+          ],
+          "journal": "Neuropharmacology",
+          "year": 2013,
+          "citation_count": 49,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q96:15-16 forelock lying",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1515/ijamh.2012.042",
+          "title": "Early executive function deficit in preterm children and its association with neurodevelopmental disorders in childhood: a literature review",
+          "authors": [
+            "Jing Sun",
+            "Nicholas Buys"
+          ],
+          "journal": "ijamh",
+          "year": 2012,
+          "citation_count": 43,
+          "quality_score": 0.58,
+          "relevance_to_quran": "Q96:15-16 forelock lying",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "expanding_universe",
+      "concept_name": "Expansion of Universe",
+      "sources": [
+        {
+          "doi": "10.3329/jsr.v18i1.78835",
+          "title": "A Many-Component Cosmic Fluid with a Dynamic Dark Energy Term for the Accelerating Universe",
+          "authors": [
+            "C. Sivakumar"
+          ],
+          "journal": "Journal of Scientific Research",
+          "year": 2026,
+          "citation_count": 0,
+          "quality_score": 0.48,
+          "relevance_to_quran": "Q51:47 expanding universe",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1016/J.DARK.2021.100785",
+          "title": "Hypersurface-homogeneous space–time with interacting holographic model of dark energy with Hubble’s and Granda–Oliveros IR cut-off",
+          "authors": [
+            "S.H. Shekh",
+            "K. Ghaderi"
+          ],
+          "journal": "Physics of the Dark Universe",
+          "year": 2021,
+          "citation_count": 9,
+          "quality_score": 0.53,
+          "relevance_to_quran": "Q51:47 expanding universe",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1093/mnras/sty019",
+          "title": "Latest astronomical constraints on some non-linear parametric dark energy models",
+          "authors": [
+            "Weiqiang Yang",
+            "Supriya Pan",
+            "Andronikos Paliathanasis"
+          ],
+          "journal": "Monthly Notices of the Royal Astronomical Society",
+          "year": 2018,
+          "citation_count": 44,
+          "quality_score": 0.6,
+          "relevance_to_quran": "Q51:47 expanding universe",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.3847/1538-4357/aab49a",
+          "title": "Reconstruction of the Dark Energy Equation of State from the Latest Observations",
+          "authors": [
+            "Ji-Ping Dai",
+            "Yang Yang",
+            "Jun-Qing Xia"
+          ],
+          "journal": "The Astrophysical Journal",
+          "year": 2018,
+          "citation_count": 18,
+          "quality_score": 0.6,
+          "relevance_to_quran": "Q51:47 expanding universe",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": null,
+          "title": "ournal of C osmology and A stroparticle hysics J Constraining the detailed balance condition in Hoˇrava gravity with cosmic accelerating expansion",
+          "authors": [],
+          "journal": "Unknown",
+          "year": null,
+          "citation_count": 0,
+          "quality_score": 0.38,
+          "relevance_to_quran": "Q51:47 expanding universe",
+          "source_api": "semantic_scholar",
+          "validated": false
+        }
+      ]
+    },
+    {
+      "concept_id": "iron_meteorite",
+      "concept_name": "Iron Meteorite Origin",
+      "sources": [
+        {
+          "doi": "10.1007/978-94-009-1353-0_44",
+          "title": "PGE and other Trace Element Geochemistry at some Distinct Phanerozoic Stratigraphic Horizons",
+          "authors": [
+            "M. Tredoux",
+            "M. J. de Wit",
+            "R. J. Hart",
+            "N. M. Lindsay",
+            "J. P. F. Sellschop"
+          ],
+          "journal": "Geo-Platinum 87",
+          "year": 1988,
+          "citation_count": 2,
+          "quality_score": 0.48,
+          "relevance_to_quran": "Q57:25 iron sent down",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1111/maps.14341",
+          "title": "An experimental study of trace element partitioning into troilite during iron meteorite crystallization",
+          "authors": [
+            "Nancy L. Chabot",
+            "Colin D. Hamill",
+            "Evangela E. Shread",
+            "Richard D. Ash",
+            "Catherine M. Corrigan"
+          ],
+          "journal": "Meteoritics &amp; Planetary Science",
+          "year": 2025,
+          "citation_count": 0,
+          "quality_score": 0.7,
+          "relevance_to_quran": "Q57:25 iron sent down",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1111/maps.14350",
+          "title": "Highly siderophile element nano‐nuggets in Wabar impact glass",
+          "authors": [
+            "Axel Wittmann",
+            "Marc Biren"
+          ],
+          "journal": "Meteoritics &amp; Planetary Science",
+          "year": 2025,
+          "citation_count": 1,
+          "quality_score": 0.8,
+          "relevance_to_quran": "Q57:25 iron sent down",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.46427/gold2022.9733",
+          "title": "Origin of the CC-NC isotopic dichotomy in early planetesimals (iron meteorite parent bodies)",
+          "authors": [
+            "Alessandro Morbidelli",
+            "Kevin Baillié",
+            "Konstantin Batygin",
+            "Sebastien Charnoz",
+            "Tristan Guillot"
+          ],
+          "journal": "Goldschmidt2022 abstracts",
+          "year": 2022,
+          "citation_count": 0,
+          "quality_score": 0.43,
+          "relevance_to_quran": "Q57:25 iron sent down",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1016/j.jas.2020.105227",
+          "title": "Origin of iron production in the Eastern Mediterranean: Osmium isotope and highly siderophile element evidence from Iron Age Jordan",
+          "authors": [
+            "Brady Liss",
+            "Thomas E. Levy",
+            "James M.D. Day"
+          ],
+          "journal": "Journal of Archaeological Science",
+          "year": 2020,
+          "citation_count": 12,
+          "quality_score": 0.82,
+          "relevance_to_quran": "Q57:25 iron sent down",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "atmospheric_layers",
+      "concept_name": "Atmospheric Pressure Layers",
+      "sources": []
+    },
+    {
+      "concept_id": "solar_motion",
+      "concept_name": "Solar Motion in Galaxy",
+      "sources": []
+    },
+    {
+      "concept_id": "plant_photosynthesis",
+      "concept_name": "Plant Photosynthesis",
+      "sources": []
+    },
+    {
+      "concept_id": "tectonic_plates",
+      "concept_name": "Tectonic Plate Movement",
+      "sources": []
+    },
+    {
+      "concept_id": "nitrogen_cycle",
+      "concept_name": "Nitrogen Cycle Fixation",
+      "sources": [
+        {
+          "doi": "10.3390/plants12244074",
+          "title": "Plant Growth-Promoting Soil Bacteria: Nitrogen Fixation, Phosphate Solubilization, Siderophore Production, and Other Biological Activities",
+          "authors": [
+            "Anna M. Timofeeva",
+            "Maria R. Galyamova",
+            "Sergey E. Sedykh"
+          ],
+          "journal": "Plants",
+          "year": 2023,
+          "citation_count": 174,
+          "quality_score": 0.73,
+          "relevance_to_quran": "Q50:9 blessed water plant",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.9734/ijpss/2025/v37i95740",
+          "title": "Role of Rhizobium and Non-Symbiotic Plant Growth Promoting Rhizobacteria in Nitrogen Fixation and Growth of Arachis hypogea: A Review",
+          "authors": [
+            "Munmun Mitra",
+            "Beema Jainab S.I",
+            "K Michael David",
+            "S. Sunitha",
+            "Ambika Bhandari"
+          ],
+          "journal": "International Journal of Plant &amp; Soil Science",
+          "year": 2025,
+          "citation_count": 1,
+          "quality_score": 0.8,
+          "relevance_to_quran": "Q50:9 blessed water plant",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/s00203-023-03640-7",
+          "title": "What determines symbiotic nitrogen fixation efficiency in rhizobium: recent insights into Rhizobium leguminosarum",
+          "authors": [
+            "Xiaofang Li",
+            "Zhangqun Li"
+          ],
+          "journal": "Archives of Microbiology",
+          "year": 2023,
+          "citation_count": 19,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q50:9 blessed water plant",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1007/s11104-023-06348-1",
+          "title": "Effect of drought stress on symbiotic nitrogen fixation, soil nitrogen availability and soil microbial diversity in forage legumes",
+          "authors": [
+            "Danielito Dollete",
+            "Rhea Amor Lumactud",
+            "Cameron N. Carlyle",
+            "Krzysztof Szczyglowski",
+            "Brett Hill"
+          ],
+          "journal": "Plant and Soil",
+          "year": 2023,
+          "citation_count": 29,
+          "quality_score": 0.63,
+          "relevance_to_quran": "Q50:9 blessed water plant",
+          "source_api": "semantic_scholar",
+          "validated": true
+        },
+        {
+          "doi": "10.1038/s41467-024-47159-x",
+          "title": "Legume rhizodeposition promotes nitrogen fixation by soil microbiota under crop diversification",
+          "authors": [
+            "Mengjie Qiao",
+            "Ruibo Sun",
+            "Zixuan Wang",
+            "Kenneth Dumack",
+            "Xingguang Xie"
+          ],
+          "journal": "Nature Communications",
+          "year": 2024,
+          "citation_count": 126,
+          "quality_score": 1.0,
+          "relevance_to_quran": "Q50:9 blessed water plant",
+          "source_api": "semantic_scholar",
+          "validated": true
+        }
+      ]
+    },
+    {
+      "concept_id": "mathematics_fractions",
+      "concept_name": "Islamic Inheritance Math",
+      "sources": []
+    }
+  ]
+}

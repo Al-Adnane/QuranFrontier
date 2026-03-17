@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Native American Religion",
+    "language": "Various (Lakota, Navajo, Cherokee, etc.)",
+    "script": "Latin",
+    "date_range": "10000 BCE-present",
+    "text_type": "Prayers, Songs, Stories",
+    "source": "Oral Tradition",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "lakota_prayers",
+      "text_name_lkt": "Wakan Tanka",
+      "text_name_en": "Lakota Prayers",
+      "date": "~1000 BCE-present",
+      "prayers": [
+        {
+          "prayer_id": "lak_p1",
+          "name": "To Wakan Tanka",
+          "lakota": "Wakan Tanka, mitawa ye",
+          "translation_en": "Great Spirit, it is yours"
+        },
+        {
+          "prayer_id": "lak_p2",
+          "name": "Pipe Prayer",
+          "lakota": "Chanunpa wakan",
+          "translation_en": "Sacred pipe"
+        },
+        {
+          "prayer_id": "lak_p3",
+          "name": "Sun Dance Prayer",
+          "lakota": "Wi wanyang wacipi",
+          "translation_en": "Sun Dance"
+        }
+      ]
+    },
+    {
+      "text_id": "navajo_prayers",
+      "text_name_nv": "Diné Bahaneʼ",
+      "text_name_en": "Navajo Prayers",
+      "date": "~1000 BCE-present",
+      "prayers": [
+        {
+          "prayer_id": "nav_p1",
+          "name": "Beauty Way",
+          "navajo": "Hózhó náhásdlį́į́ʼ",
+          "translation_en": "Walk in beauty"
+        },
+        {
+          "prayer_id": "nav_p2",
+          "name": "Morning Prayer",
+          "navajo": "Iʼííʼáhgo",
+          "translation_en": "At dawn"
+        },
+        {
+          "prayer_id": "nav_p3",
+          "name": "Evening Prayer",
+          "navajo": "Tʼááʼáhchʼíní",
+          "translation_en": "At evening"
+        }
+      ]
+    },
+    {
+      "text_id": "native_precepts",
+      "text_name_en": "Native American Precepts",
+      "date": "~10000 BCE-present",
+      "precepts": [
+        {
+          "precept_id": "nat_c1",
+          "text": "Respect the Earth",
+          "translation_en": "The Earth is our mother, treat her well"
+        },
+        {
+          "precept_id": "nat_c2",
+          "text": "Honor the Ancestors",
+          "translation_en": "Those who came before guide us"
+        },
+        {
+          "precept_id": "nat_c3",
+          "text": "Live in Balance",
+          "translation_en": "Walk the middle path"
+        },
+        {
+          "precept_id": "nat_c4",
+          "text": "Share with All",
+          "translation_en": "What you have, share with your people"
+        },
+        {
+          "precept_id": "nat_c5",
+          "text": "Listen to Nature",
+          "translation_en": "The land speaks, listen well"
+        },
+        {
+          "precept_id": "nat_c6",
+          "text": "Honor the Seven Directions",
+          "translation_en": "North, South, East, West, Above, Below, Within"
+        }
+      ]
+    },
+    {
+      "text_id": "medicine_wheel",
+      "text_name_en": "Medicine Wheel",
+      "date": "~1000 BCE-present",
+      "directions": [
+        {"direction": "East", "color": "Yellow", "meaning": "New Beginnings, Spring"},
+        {"direction": "South", "color": "Red", "meaning": "Growth, Summer"},
+        {"direction": "West", "color": "Black", "meaning": "Introspection, Autumn"},
+        {"direction": "North", "color": "White", "meaning": "Wisdom, Winter"},
+        {"direction": "Above", "color": "Blue", "meaning": "Sky, Father"},
+        {"direction": "Below", "color": "Brown", "meaning": "Earth, Mother"},
+        {"direction": "Within", "color": "Green", "meaning": "Spirit, Self"}
+      ]
+    }
+  ],
+  "spirits": [
+    {"name": "Wakan Tanka", "role": "Great Spirit", "domain": "All"},
+    {"name": "White Buffalo Calf Woman", "role": "Sacred Messenger", "domain": "Teaching"},
+    {"name": "Thunderbird", "role": "Storm Spirit", "domain": "Thunder/Lightning"},
+    {"name": "Coyote", "role": "Trickster", "domain": "Wisdom/Chaos"},
+    {"name": "Grandmother Spider", "role": "Creator", "domain": "Weaving/Creation"}
+  ],
+  "hash": "c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0"
+}

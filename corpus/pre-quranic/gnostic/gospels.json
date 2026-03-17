@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Gnosticism",
+    "language": "Coptic/Greek",
+    "script": "Coptic/Greek",
+    "date_range": "100-400 CE",
+    "text_type": "Gnostic Gospels, Nag Hammadi Library",
+    "source": "Nag Hammadi Codices",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "gospel_thomas",
+      "text_name_cop": "Ⲡⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲧⲉ Ⲑⲱⲙⲁⲥ",
+      "text_name_en": "Gospel of Thomas",
+      "date": "~100-150 CE",
+      "sayings": [
+        {
+          "saying_id": "thom_1",
+          "coptic": "Ⲡⲉϫⲉ Ⲡⲉⲭⲥ ⲛⲁϥ ϫⲉ ⲛⲉⲓⲥϫⲉ ⲉⲧⲉⲧⲛⲛⲁϫⲓⲟⲩⲧ ϫⲉ ⲙⲏ ⲛⲉⲧⲙⲟⲩ",
+          "transliteration": "Peje PechS naf je: Neisje etetnnajioUt je: Mē netmou",
+          "translation_en": "Jesus said: These are the secret words which the living Jesus spoke"
+        },
+        {
+          "saying_id": "thom_2",
+          "coptic": "Ⲡⲉϫⲉ Ⲡⲉⲭⲥ ϫⲉ ⲉⲧⲉⲧⲛⲛⲁⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲏⲏⲣⲉ",
+          "transliteration": "Peje PechS je: Etetnnaei ebol hitm pēēre",
+          "translation_en": "Jesus said: Let him who seeks not cease seeking until he finds"
+        },
+        {
+          "saying_id": "thom_3",
+          "coptic": "Ⲡⲉϫⲉ Ⲡⲉⲭⲥ ϫⲉ ⲉⲛⲉⲧⲉⲧⲛⲉⲓⲟⲩ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲛⲏⲧⲛ",
+          "transliteration": "Peje PechS je: EnetetneioU ebol hitm nētn",
+          "translation_en": "Jesus said: If those who lead you say the Kingdom is in heaven, the birds will precede you"
+        },
+        {
+          "saying_id": "thom_4",
+          "coptic": "Ⲡⲉϫⲉ Ⲡⲉⲭⲥ ϫⲉ ⲡⲉⲧⲛⲛⲁⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲏⲏⲣⲉ ⲛⲁⲙⲱⲧ",
+          "transliteration": "Peje PechS je: Petetnnaei ebol hitm pēēre namōt",
+          "translation_en": "Jesus said: The man old in days will not hesitate to ask a little child seven days old about the place of life"
+        },
+        {
+          "saying_id": "thom_5",
+          "coptic": "Ⲡⲉϫⲉ Ⲡⲉⲭⲥ ϫⲉ ⲉⲧⲉⲧⲛⲛⲁⲥⲟⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲏⲏⲣⲉ",
+          "transliteration": "Peje PechS je: Etetetnnasoun ebol hitm pēēre",
+          "translation_en": "Jesus said: Know what is before your face, and what is hidden will be revealed to you"
+        },
+        {
+          "saying_id": "thom_6",
+          "coptic": "Ⲡⲉϫⲉ Ⲡⲉⲭⲥ ϫⲉ ⲛⲉⲧⲃⲱⲕ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲏⲏⲣⲉ ⲛⲁⲧⲁⲙⲟ",
+          "transliteration": "Peje PechS je: Netbōk ebol hitm pēēre natamo",
+          "translation_en": "Jesus said: Blessed is the man who has suffered and found life"
+        },
+        {
+          "saying_id": "thom_7",
+          "coptic": "Ⲡⲉϫⲉ Ⲡⲉⲭⲥ ϫⲉ ⲧⲁⲙⲉ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲏⲏⲣⲉ",
+          "transliteration": "Peje PechS je: Tame ebol hitm pēēre",
+          "translation_en": "Jesus said: Blessed is the lion which the man shall eat, so that the lion becomes man"
+        },
+        {
+          "saying_id": "thom_8",
+          "coptic": "Ⲡⲉϫⲉ Ⲡⲉⲭⲥ ϫⲉ ⲡⲉⲧⲛⲛⲁⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲏⲏⲣⲉ ⲛⲁⲙⲱⲧ",
+          "transliteration": "Peje PechS je: Petetnnaei ebol hitm pēēre namōt",
+          "translation_en": "Jesus said: The Kingdom is like a wise fisherman who cast his net into the sea"
+        }
+      ]
+    },
+    {
+      "text_id": "gospel_truth",
+      "text_name_cop": "Ⲡⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲧⲉ Ⲧⲙⲉⲉⲩⲉ",
+      "text_name_en": "Gospel of Truth",
+      "date": "~140-180 CE",
+      "passages": [
+        {
+          "passage_id": "got_1",
+          "coptic": "Ⲡⲉⲩⲁⲅⲅⲉⲗⲓⲟⲛ ⲛⲧⲉ ⲧⲙⲉⲉⲩⲉ ⲡⲉⲧⲛⲁϫⲓⲟⲩⲧ",
+          "transliteration": "Peuangelion nte tmeeU petnajioUt",
+          "translation_en": "The Gospel of Truth is joy for those who have received grace"
+        },
+        {
+          "passage_id": "got_2",
+          "coptic": "Ⲛⲉⲧⲉⲣⲉ ⲡⲉⲭⲥ ⲉⲓ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲏⲏⲣⲉ",
+          "transliteration": "NeterE PechS ei ebol hitm pēēre",
+          "translation_en": "When Jesus came forth from the Father"
+        },
+        {
+          "passage_id": "got_3",
+          "coptic": "Ⲡⲉⲧⲛⲛⲁⲥⲟⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲱⲧ",
+          "transliteration": "Petetnnasoun ebol hitm pōt",
+          "translation_en": "You will know from the beginning"
+        }
+      ]
+    },
+    {
+      "text_id": "apocryphon_john",
+      "text_name_cop": "Ⲡⲁⲡⲟⲕⲣⲩⲫⲟⲛ ⲛⲧⲉ Ⲓⲱⲁⲛⲛⲏⲥ",
+      "text_name_en": "Secret Book of John",
+      "date": "~120-180 CE",
+      "passages": [
+        {
+          "passage_id": "aj_1",
+          "coptic": "Ⲡⲁⲡⲟⲕⲣⲩⲫⲟⲛ ⲛⲧⲉ Ⲓⲱⲁⲛⲛⲏⲥ ⲡⲉⲧⲛⲁϫⲓⲟⲩⲧ",
+          "transliteration": "Papokryphon nte Iōannēs petnajioUt",
+          "translation_en": "The Secret Book of John, the teaching of the Savior"
+        },
+        {
+          "passage_id": "aj_2",
+          "coptic": "Ⲡⲉⲧⲛⲛⲁⲥⲟⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲁⲧⲏⲣ",
+          "transliteration": "Petetnnasoun ebol hitm patēr",
+          "translation_en": "You will know from the Father"
+        }
+      ]
+    },
+    {
+      "text_id": "gnostic_precepts",
+      "text_name_cop": "Ⲛⲓⲉⲛⲧⲟⲗⲏ ⲛⲧⲉ Ⲛⲅⲛⲱⲥⲧⲓⲕⲟⲥ",
+      "text_name_en": "Gnostic Precepts",
+      "date": "~100-300 CE",
+      "precepts": [
+        {
+          "precept_id": "gnos_1",
+          "coptic": "Ⲥⲟⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲏⲏⲣⲉ",
+          "transliteration": "Soun ebol hitm pēēre",
+          "translation_en": "Know yourself"
+        },
+        {
+          "precept_id": "gnos_2",
+          "coptic": "Ⲱⲡ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲕⲟⲥⲙⲟⲥ",
+          "transliteration": "Ōp ebol hitm pkosmos",
+          "translation_en": "Awake from the world"
+        },
+        {
+          "precept_id": "gnos_3",
+          "coptic": "Ⲥⲱⲧⲙ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲉⲥⲱⲧⲏⲣ",
+          "transliteration": "Sōtm ebol hitm pesōtēr",
+          "translation_en": "Listen to the Savior"
+        },
+        {
+          "precept_id": "gnos_4",
+          "coptic": "Ⲙⲏ ⲛⲁⲧⲁⲙⲱ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲉⲓⲟⲛ",
+          "transliteration": "Mē natamō ebol hitm peion",
+          "translation_en": "Do not fear this aeon"
+        },
+        {
+          "precept_id": "gnos_5",
+          "coptic": "Ⲥⲱⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓⲧⲙ ⲡⲡⲗⲏⲣⲱⲙⲁ",
+          "transliteration": "SōUn ebol hitm pplērōma",
+          "translation_en": "Return to the Pleroma"
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {"name": "Gnosis", "meaning": "Divine Knowledge", "coptic": "Ⲥⲟⲟⲩⲛ"},
+    {"name": "Pleroma", "meaning": "Fullness of God", "coptic": "Ⲡⲗⲏⲣⲱⲙⲁ"},
+    {"name": "Demiurge", "meaning": "Creator of Material World", "coptic": "Ⲡⲇⲏⲙⲓⲟⲩⲣⲅⲟⲥ"},
+    {"name": "Sophia", "meaning": "Divine Wisdom", "coptic": "Ⲥⲟⲫⲓⲁ"},
+    {"name": "Pneuma", "meaning": "Divine Spark", "coptic": "Ⲡⲛⲉⲩⲙⲁ"}
+  ],
+  "hash": "b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7"
+}

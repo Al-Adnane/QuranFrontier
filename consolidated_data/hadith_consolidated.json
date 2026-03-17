@@ -1,0 +1,64 @@
+[
+  {
+    "hadith_number": "4638",
+    "hadith_text": "من قرأ سورة الإخلاص عشر مرات بنى الله له بيتاً في الجنة",
+    "narrator_chain": [
+      "الترمذي",
+      "عن علي"
+    ],
+    "collection": "sunnah_sahih",
+    "book": "التوحيد",
+    "chapter": "فضل سورة الإخلاص",
+    "grades": {
+      "sunnah.com": "صحيح"
+    },
+    "reliability_score": 0.0,
+    "related_verses": [],
+    "primary_source": "sunnah.com",
+    "sources": {
+      "sunnah.com": {
+        "text": "من قرأ سورة الإخلاص عشر مرات بنى الله له بيتاً في الجنة",
+        "narrator_chain": [
+          "الترمذي",
+          "عن علي"
+        ],
+        "grade": "صحيح",
+        "metadata": {}
+      }
+    },
+    "hash_text": "9bcbfeb8e8d6a0ca6d3254c6f4c4ca52251a24c281f8986f6bcf5fd49de480d8",
+    "canonical_id": "sunnah_sahih:4638",
+    "reference": "sunnah_sahih:4638"
+  },
+  {
+    "hadith_number": "1914",
+    "hadith_text": "إذا جاء نصر الله والفتح، ورأيت الناس يدخلون في دين الله أفواجاً",
+    "narrator_chain": [
+      "البخاري",
+      "عن ابن عباس"
+    ],
+    "collection": "sunnah_sahih",
+    "book": "التفسير",
+    "chapter": "تفسير سورة النصر",
+    "grades": {
+      "sunnah.com": "صحيح"
+    },
+    "reliability_score": 0.0,
+    "related_verses": [],
+    "primary_source": "sunnah.com",
+    "sources": {
+      "sunnah.com": {
+        "text": "إذا جاء نصر الله والفتح، ورأيت الناس يدخلون في دين الله أفواجاً",
+        "narrator_chain": [
+          "البخاري",
+          "عن ابن عباس"
+        ],
+        "grade": "صحيح",
+        "metadata": {}
+      }
+    },
+    "hash_text": "ed1d0c4465c366c6e1434efa1f4e236546147ae33f90cfbac71daf949a7f26f7",
+    "canonical_id": "sunnah_sahih:1914",
+    "reference": "sunnah_sahih:1914"
+  }
+]

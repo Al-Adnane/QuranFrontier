@@ -1,0 +1,43 @@
+2026-03-14 17:25:12,725 - __main__ - INFO - ================================================================================
+2026-03-14 17:25:12,725 - __main__ - INFO - AraBERT Semantic Embedding Pipeline (Fast Demo)
+2026-03-14 17:25:12,725 - __main__ - INFO - ================================================================================
+2026-03-14 17:25:12,725 - __main__ - INFO - 
+Phase 1: Loading corpus texts...
+2026-03-14 17:25:12,730 - __main__ - INFO - Loaded 6236 Quran verses
+2026-03-14 17:25:12,782 - __main__ - INFO - Generated 50000 tafsir entries
+2026-03-14 17:25:12,810 - __main__ - INFO - Generated 30000 hadith entries
+2026-03-14 17:25:12,813 - __main__ - INFO - 
+Total texts to embed: 86236
+2026-03-14 17:25:12,813 - __main__ - INFO -   - Quran verses: 6236
+2026-03-14 17:25:12,813 - __main__ - INFO -   - Tafsir entries: 50000
+2026-03-14 17:25:12,813 - __main__ - INFO -   - Hadith entries: 30000
+2026-03-14 17:25:12,813 - __main__ - INFO - 
+Phase 2: Generating quran embeddings...
+2026-03-14 17:25:12,813 - __main__ - INFO - Processing 6236 texts in 7 batches
+2026-03-14 17:25:16,740 - __main__ - INFO - Quran completed in 3.93s
+2026-03-14 17:25:16,740 - __main__ - INFO -   - Valid embeddings: 6236
+2026-03-14 17:25:16,740 - __main__ - INFO -   - Avg batch time: 0.560s
+2026-03-14 17:25:16,740 - __main__ - INFO - 
+Phase 2: Generating tafsir embeddings...
+2026-03-14 17:25:16,741 - __main__ - INFO - Processing 50000 texts in 50 batches
+2026-03-14 17:25:22,526 - __main__ - INFO -   Processed batch 10/50 (10000/50000 texts)
+2026-03-14 17:25:29,794 - __main__ - INFO -   Processed batch 20/50 (20000/50000 texts)
+2026-03-14 17:25:39,480 - __main__ - INFO -   Processed batch 30/50 (30000/50000 texts)
+2026-03-14 17:25:44,593 - __main__ - INFO -   Processed batch 40/50 (40000/50000 texts)
+2026-03-14 17:25:49,433 - __main__ - INFO -   Processed batch 50/50 (50000/50000 texts)
+2026-03-14 17:25:50,246 - __main__ - INFO - Tafsir completed in 33.50s
+2026-03-14 17:25:50,246 - __main__ - INFO -   - Valid embeddings: 50000
+2026-03-14 17:25:50,246 - __main__ - INFO -   - Avg batch time: 0.654s
+2026-03-14 17:25:50,246 - __main__ - INFO - 
+Phase 2: Generating hadith embeddings...
+2026-03-14 17:25:50,246 - __main__ - INFO - Processing 30000 texts in 30 batches
+2026-03-14 17:25:57,934 - __main__ - INFO -   Processed batch 10/30 (10000/30000 texts)
+2026-03-14 17:26:04,878 - __main__ - INFO -   Processed batch 20/30 (20000/30000 texts)
+2026-03-14 17:26:55,137 - __main__ - INFO -   Processed batch 30/30 (30000/30000 texts)
+2026-03-14 17:26:55,765 - __main__ - INFO - Hadith completed in 65.52s
+2026-03-14 17:26:55,765 - __main__ - INFO -   - Valid embeddings: 30000
+2026-03-14 17:26:55,767 - __main__ - INFO -   - Avg batch time: 2.161s
+2026-03-14 17:26:55,767 - __main__ - INFO - 
+Phase 3: Validating embeddings...
+2026-03-14 17:27:09,281 - __main__ - INFO - Quran validation:
+2026-03-14 17:27:09,282 - __main__ - INFO -   - Valid: 6236/6236

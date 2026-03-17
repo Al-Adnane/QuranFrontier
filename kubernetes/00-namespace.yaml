@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: quran-system
+  labels:
+    name: quran-system
+    app: quran-frontier
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: quran-quota
+  namespace: quran-system
+spec:
+  hard:
+    requests.cpu: "50"
+    requests.memory: "100Gi"
+    limits.cpu: "100"
+    limits.memory: "200Gi"
+    pods: "100"
+    services: "20"
+    persistentvolumeclaims: "20"
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: quran-limits
+  namespace: quran-system
+spec:
+  limits:
+  - max:
+      cpu: "4"
+      memory: "8Gi"
+    min:
+      cpu: "100m"
+      memory: "128Mi"
+    type: Container
+  - max:
+      cpu: "8"
+      memory: "16Gi"
+    min:
+      cpu: "200m"
+      memory: "256Mi"
+    type: Pod

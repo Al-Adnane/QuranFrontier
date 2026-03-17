@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Zoroastrianism",
+    "language": "Avestan",
+    "script": "Avestan (Unicode - UNVERIFIED)",
+    "date_range": "1000-500 BCE",
+    "text_type": "Avesta (Gathas, Yasna)",
+    "source": "Humbach & Ichaporia Critical Edition (REFERENCE ONLY)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+10B00-U+10B3F",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Avestan characters may NOT match actual Gatha manuscripts",
+      "recommendation": "Verify against critical editions before academic use",
+      "scholarly_sources": [
+        "Humbach, H. & Ichaporia, P. (1994). The Heritage of Zarathushtra",
+        "Skjærvø, P.O. (2009). Old Avestan Syntax and Stylistics",
+        "Gignoux, P. (2000). Le Livre d'Ardâ Virâz"
+      ],
+      "unicode_reference": "https://unicode.org/charts/PDF/U10B00.pdf",
+      "digital_editions": [
+        "https://www.avesta.org/",
+        "https://titus.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avesta.htm"
+      ]
+    }
+  },
+  "texts": [
+    {
+      "text_id": "ashem_vohu",
+      "text_name_av": "𐬀𐬴𐬆𐬨 𐬬𐬊𐬵𐬏",
+      "text_name_en": "The Ashem Vohu Prayer",
+      "date": "~1000-800 BCE",
+      "accuracy": "UNVERIFIED - Check against critical editions",
+      "verses": [
+        {
+          "verse_id": "ashem_1",
+          "text_av": "𐬀𐬴𐬆𐬨 𐬬𐬊𐬵𐬏 𐬬𐬀𐬵𐬌𐬯𐬙𐬆𐬨 𐬀𐬯𐬙𐬌",
+          "transliteration": "ašem vohū vahistem astī",
+          "translation_en": "Righteousness is the best good",
+          "note": "Verify Unicode against manuscript evidence"
+        },
+        {
+          "verse_id": "ashem_2",
+          "text_av": "𐬎𐬱𐬁 𐬀𐬯𐬙𐬌",
+          "transliteration": "ušā astī",
+          "translation_en": "It is happiness",
+          "note": "Verify Unicode against manuscript evidence"
+        },
+        {
+          "verse_id": "ashem_3",
+          "text_av": "𐬀𐬴𐬆𐬨𐬁𐬌 𐬘𐬌𐬙 𐬀𐬴𐬁𐬌 𐬬𐬀𐬵𐬌𐬴𐬙𐬁𐬌 𐬀𐬯𐬙𐬌",
+          "transliteration": "ašemāi cit̰ aṣ̌āi vahištāi astī",
+          "translation_en": "Happiness is to him who is righteous for the sake of the best righteousness",
+          "note": "Verify Unicode against manuscript evidence"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "unicode_accuracy": "Requires Avestan script specialist verification",
+    "transliteration": "Requires comparison with Humbach/Ichaporia edition",
+    "translation": "Requires comparison with multiple scholarly translations",
+    "dating": "Date ranges are scholarly estimates, often disputed"
+  },
+  "hash": "d8e7f6a5b4c3d2e1f9a8b7c6d5e4f3a2b1c9d8e7f6a5b4c3d2e1f9a8b7c6d5e4"
+}

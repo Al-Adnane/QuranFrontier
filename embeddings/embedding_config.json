@@ -1,0 +1,80 @@
+{
+  "model_configuration": {
+    "model_name": "aubmindlab/bert-base-arabertv2",
+    "model_type": "AraBERT",
+    "embedding_dimension": 768,
+    "tokenizer": "aubmindlab/bert-base-arabertv2",
+    "max_sequence_length": 512,
+    "normalization": "L2"
+  },
+  "processing_configuration": {
+    "batch_size": 32,
+    "device": "auto",
+    "device_fallback": "cpu",
+    "num_workers": 4,
+    "mixed_precision": false
+  },
+  "corpus_configuration": {
+    "quran": {
+      "source": "quran_core",
+      "num_verses": 6236,
+      "include_metadata": true,
+      "text_field": "text_ar",
+      "enable_real_text_only": false
+    },
+    "tafsir": {
+      "source": "generated",
+      "num_entries": 50000,
+      "templates": "islamic_commentary",
+      "include_interpretation": true
+    },
+    "hadith": {
+      "source": "generated",
+      "num_entries": 30000,
+      "include_isnad": true,
+      "narrator_tracking": true
+    }
+  },
+  "vector_database": {
+    "type": "milvus",
+    "schema": {
+      "vector_id": "int64",
+      "text_type": "varchar",
+      "source_id": "varchar",
+      "embedding_vector": "float_vector",
+      "metadata": "json"
+    },
+    "index_type": "IVF_FLAT",
+    "metric_type": "COSINE",
+    "quantization": "FLOAT32",
+    "collection_name": "islamic_embeddings"
+  },
+  "output_configuration": {
+    "output_directory": "/Users/mac/Desktop/QuranFrontier/embeddings",
+    "files": {
+      "vectors_quran": "vectors_quran.json",
+      "vectors_tafsir": "vectors_tafsir.json",
+      "vectors_hadith": "vectors_hadith.json",
+      "metadata": "embedding_metadata.json",
+      "performance_report": "embedding_performance_report.json",
+      "search_validation": "search_validation_results.json"
+    },
+    "format": "json",
+    "compress": false
+  },
+  "validation_configuration": {
+    "check_nan_inf": true,
+    "check_dimension": true,
+    "check_normalization": true,
+    "compute_similarity_stats": true,
+    "similarity_percentiles": [25, 50, 75, 95],
+    "similarity_threshold": 0.7
+  },
+  "semantic_search": {
+    "index_metric": "cosine",
+    "query_timeout_ms": 500,
+    "num_search_results": 10,
+    "similarity_threshold": 0.7,
+    "enable_reranking": false
+  }
+}

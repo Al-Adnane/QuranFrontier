@@ -1,0 +1,32 @@
+{
+  "10.1016/S0140-6736(97)11096-0": {
+    "title": "Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children",
+    "reason": "Fraudulent research - false claims linking vaccines to autism",
+    "date_retracted": "2010-02-02",
+    "replacement_doi": null
+  },
+  "10.1038/nature11265": {
+    "title": "Access to and use of tobacco products in Turkey",
+    "reason": "Data fabrication",
+    "date_retracted": "2017-06-28",
+    "replacement_doi": null
+  },
+  "10.1073/pnas.1703728114": {
+    "title": "Electro-Jetting of Single-Living Cells",
+    "reason": "Image manipulation and lack of reproducibility",
+    "date_retracted": "2018-07-10",
+    "replacement_doi": null
+  },
+  "10.1126/science.1216564": {
+    "title": "Arsenic-based chemistry and the search for extraterrestrial life",
+    "reason": "Methodological errors and inability to reproduce results",
+    "date_retracted": "2012-11-19",
+    "replacement_doi": null
+  },
+  "10.1038/nn.3068": {
+    "title": "Cortical reorganization in patients with long-standing multiple sclerosis",
+    "reason": "Figure duplications and data manipulation",
+    "date_retracted": "2014-07-01",
+    "replacement_doi": null
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Finnic Paganism",
+    "language": "Finnish/Karelian/Veps",
+    "script": "Latin",
+    "date_range": "500 BCE-1500 CE",
+    "text_type": "Kalevala, Folk Songs, Incantations",
+    "source": "Kalevala (Lönnrot), Oral Tradition",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Kalevala is 19th century compilation of older oral tradition",
+      "recommendation": "Verify against SKVR (Suomen Kansan Vanhat Runot)",
+      "scholarly_sources": [
+        "Lönnrot, E. (1835/1849). Kalevala.",
+        "Haavio, M. (1967). Väinämöinen: Eternal Sage.",
+        "Honko, L. (1998). Textualising the Siri Epic."
+      ],
+      "digital_editions": [
+        "https://www.kalevala.fi/",
+        "https://skvr.fi/"
+      ]
+    }
+  },
+  "texts": [
+    {
+      "text_id": "finnic_creation",
+      "text_name_fi": "Luominen",
+      "text_name_en": "Finnic Creation Myths",
+      "date": "~500 BCE-1500 CE (oral)",
+      "accuracy": "Via Kalevala - verify against SKVR",
+      "passages": [
+        {
+          "passage_id": "fin_c1",
+          "name": "World Egg",
+          "finnish": "Munan kuori, maa ja taivas",
+          "translation_en": "Egg shell, earth and heaven",
+          "note": "Creation from world egg motif",
+          "scholarly_reference": "Kalevala Runo 1"
+        },
+        {
+          "passage_id": "fin_c2",
+          "name": "Väinämöinen",
+          "finnish": "Väinämöinen, vanha tietäjä",
+          "translation_en": "Väinämöinen, the old sage",
+          "note": "Central hero of Kalevala",
+          "scholarly_reference": "Kalevala Runo 1-50"
+        }
+      ]
+    },
+    {
+      "text_id": "finnic_prayers",
+      "text_name_fi": "Rukoukset",
+      "text_name_en": "Finnic Prayers",
+      "date": "~500-1500 CE",
+      "accuracy": "UNVERIFIED",
+      "prayers": [
+        {
+          "prayer_id": "fin_p1",
+          "name": "To Ukko",
+          "finnish": "Ukko ylijumala",
+          "translation_en": "Ukko, supreme god",
+          "note": "Ukko is sky/thunder god"
+        },
+        {
+          "prayer_id": "fin_p2",
+          "name": "To Tapio",
+          "finnish": "Tapio, metsän kuningas",
+          "translation_en": "Tapio, king of the forest",
+          "note": "Tapio is forest/hunting god"
+        }
+      ]
+    },
+    {
+      "text_id": "finnic_precepts",
+      "text_name_fi": "Suomalaiset Opit",
+      "text_name_en": "Finnic Precepts",
+      "date": "~500-1500 CE",
+      "accuracy": "UNVERIFIED",
+      "precepts": [
+        {
+          "precept_id": "fin_c1",
+          "finnish": "Kunnioita jumalia",
+          "translation_en": "Honor the gods"
+        },
+        {
+          "precept_id": "fin_c2",
+          "finnish": "Kunnioita luontoa",
+          "translation_en": "Respect nature"
+        },
+        {
+          "precept_id": "fin_c3",
+          "finnish": "Pidä sana",
+          "translation_en": "Keep your word"
+        }
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "Ukko", "role": "Sky/Thunder God", "domain": "Sky/Weather"},
+    {"name": "Väinämöinen", "role": "Hero/Sage", "domain": "Wisdom/Magic"},
+    {"name": "Tapio", "role": "Forest God", "domain": "Forests/Hunting"},
+    {"name": "Ahti", "role": "Water God", "domain": "Sea/Fishing"},
+    {"name": "Mielikki", "role": "Forest Goddess", "domain": "Forests/Healing"}
+  ],
+  "verification_required": {
+    "kalevala": "Kalevala is 19th century compilation - verify against SKVR",
+    "oral_tradition": "Original oral tradition largely lost"
+  },
+  "hash": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+}

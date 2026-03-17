@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Shinto",
+    "language": "Japanese (Old Japanese)",
+    "script": "Kanji/Kana",
+    "date_range": "600 BCE-712 CE",
+    "text_type": "Kojiki, Nihon Shoki excerpts",
+    "source": "Kojiki (712 CE), Nihon Shoki (720 CE)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "kojiki_creation",
+      "text_name_jp": "古事記 天地初発",
+      "text_name_en": "Kojiki - Creation of Heaven and Earth",
+      "date": "~712 CE (oral tradition older)",
+      "passages": [
+        {
+          "passage_id": "koj_1",
+          "japanese": "天地初発之時",
+          "romaji": "Ame tsuchi hajimete hokareshi toki",
+          "translation_en": "In the beginning, when heaven and earth first separated"
+        },
+        {
+          "passage_id": "koj_2",
+          "japanese": "高天原に神成坐す",
+          "romaji": "Takama ga hara ni kami narimashimasu",
+          "translation_en": "In the Plain of High Heaven, the gods came into being"
+        },
+        {
+          "passage_id": "koj_3",
+          "japanese": "天之御中主神",
+          "romaji": "Ame no Minakanushi no Kami",
+          "translation_en": "The Lord of the August Center of Heaven"
+        },
+        {
+          "passage_id": "koj_4",
+          "japanese": "高御産巣日神",
+          "romaji": "Taka-Mi-Musubi no Kami",
+          "translation_en": "The High August Generating Spirit"
+        },
+        {
+          "passage_id": "koj_5",
+          "japanese": "神産巣日神",
+          "romaji": "Kami-Mi-Musubi no Kami",
+          "translation_en": "The Divine Generating Spirit"
+        },
+        {
+          "passage_id": "koj_6",
+          "japanese": "伊邪那岐命 伊邪那美命",
+          "romaji": "Izanagi no Mikoto, Izanami no Mikoto",
+          "translation_en": "Izanagi and Izanami, the male and female deities"
+        },
+        {
+          "passage_id": "koj_7",
+          "japanese": "天沼矛を以て 海水を掻き回し",
+          "romaji": "Ame no nuboko o mote, umi o kakimawashi",
+          "translation_en": "With the Heavenly Jeweled Spear, they stirred the ocean"
+        },
+        {
+          "passage_id": "koj_8",
+          "japanese": "大八島国を成坐す",
+          "romaji": "Oyashima no kuni o narimashimasu",
+          "translation_en": "They formed the Great Eight Island Country"
+        }
+      ]
+    },
+    {
+      "text_id": "norito",
+      "text_name_jp": "祝詞",
+      "text_name_en": "Norito (Shinto Prayers)",
+      "date": "~600-900 CE",
+      "prayers": [
+        {
+          "prayer_id": "nor_1",
+          "name": "大祓詞",
+          "romaji": "Oharae Kotoba",
+          "japanese": "天神地祇の宣はく",
+          "translation_en": "The Heavenly and Earthly Gods declare"
+        },
+        {
+          "prayer_id": "nor_2",
+          "name": "祓い給え",
+          "romaji": "Harai tamae",
+          "japanese": "祓い給え 清め給え",
+          "translation_en": "Purify us, cleanse us"
+        },
+        {
+          "prayer_id": "nor_3",
+          "name": "守り給え",
+          "romaji": "Mamori tamae",
+          "japanese": "守り給え 幸い給え",
+          "translation_en": "Protect us, bless us"
+        }
+      ]
+    },
+    {
+      "text_id": "jingū_kyōkun",
+      "text_name_jp": "神宮教訓",
+      "text_name_en": "Shinto Teachings",
+      "date": "~600-900 CE",
+      "teachings": [
+        {
+          "teaching_id": "shin_1",
+          "japanese": "明き清き正しき直き",
+          "romaji": "Aki kiyoki masaki naoki",
+          "translation_en": "Bright, pure, correct, straight"
+        },
+        {
+          "teaching_id": "shin_2",
+          "japanese": "四つの御心",
+          "romaji": "Yottsu no mikokoro",
+          "translation_en": "The Four Sacred Hearts"
+        },
+        {
+          "teaching_id": "shin_3",
+          "japanese": "惟神の道",
+          "romaji": "Kannagara no michi",
+          "translation_en": "The Way of the Gods"
+        },
+        {
+          "teaching_id": "shin_4",
+          "japanese": "八百万の神",
+          "romaji": "Yaoyorozu no kami",
+          "translation_en": "Eight Million Gods"
+        },
+        {
+          "teaching_id": "shin_5",
+          "japanese": "天照大御神",
+          "romaji": "Amaterasu Ōmikami",
+          "translation_en": "Amaterasu, the Great Sun Goddess"
+        }
+      ]
+    },
+    {
+      "text_id": "five_precepts",
+      "text_name_jp": "五箇条の誓文",
+      "text_name_en": "Five Precepts of Shinto",
+      "date": "~600-900 CE",
+      "precepts": [
+        {
+          "precept_id": "shin_p1",
+          "japanese": "神の道を慎め",
+          "romaji": "Kami no michi o tsutsushime",
+          "translation_en": "Revere the Way of the Gods"
+        },
+        {
+          "precept_id": "shin_p2",
+          "japanese": "朝庭を敬め",
+          "romaji": "Mikado o uyashime",
+          "translation_en": "Respect the Imperial Court"
+        },
+        {
+          "precept_id": "shin_p3",
+          "japanese": "父母を孝め",
+          "romaji": "Chichi haha o kashikome",
+          "translation_en": "Honor your parents"
+        },
+        {
+          "precept_id": "shin_p4",
+          "japanese": "兄弟を和め",
+          "romaji": "Kyōdai o nagome",
+          "translation_en": "Live in harmony with siblings"
+        },
+        {
+          "precept_id": "shin_p5",
+          "japanese": "天下を平らげよ",
+          "romaji": "Tenka o tairageyo",
+          "translation_en": "Bring peace to the world"
+        }
+      ]
+    }
+  ],
+  "kami": [
+    {"name": "Amaterasu", "role": "Sun Goddess", "symbol": "天照大御神"},
+    {"name": "Susanoo", "role": "Storm God", "symbol": "須佐之男"},
+    {"name": "Tsukuyomi", "role": "Moon God", "symbol": "月読"},
+    {"name": "Inari", "role": "Rice/Fertility", "symbol": "稲荷"},
+    {"name": "Raijin", "role": "Thunder God", "symbol": "雷神"},
+    {"name": "Fujin", "role": "Wind God", "symbol": "風神"}
+  ],
+  "hash": "f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5"
+}

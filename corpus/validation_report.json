@@ -1,0 +1,18 @@
+{
+  "status": "valid",
+  "validation_timestamp": "2026-03-14T17:43:20.629893",
+  "corpus_id": "corpus_2026-03-14T17:43:19.966625",
+  "verses_count": 6236,
+  "surahs_count": 114,
+  "tafsirs_count": 50000,
+  "hadiths_count": 30000,
+  "corpus_hash": "788d308a49c589fbabea6dfc996949aa5b3976b598843698556e0045948dc6d4",
+  "checks": {
+    "verses_exactly_6236": true,
+    "surahs_exactly_114": true,
+    "tafsirs_above_40k": true,
+    "hadiths_above_25k": true,
+    "utf8_encoded": true,
+    "json_valid": true
+  }
+}

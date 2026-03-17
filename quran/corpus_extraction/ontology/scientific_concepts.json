@@ -1,0 +1,5553 @@
+{
+  "metadata": {
+    "version": "1.1",
+    "created": "2026-03-16",
+    "updated": "2026-03-17",
+    "description": "Scientific concepts ontology across 9 domains for Quranic corpus analysis (P2: added mathematics, hydrology, oceanography, geology)",
+    "domains": [
+      "physics",
+      "biology",
+      "medicine",
+      "engineering",
+      "agriculture",
+      "mathematics",
+      "hydrology",
+      "oceanography",
+      "geology"
+    ],
+    "total_concepts": 421
+  },
+  "concepts": [
+    {
+      "id": "physics_001",
+      "name": "gravitation",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "The force of attraction between masses, fundamental to celestial mechanics",
+      "related_concepts": [
+        "physics_002",
+        "physics_005"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [
+        "21:33",
+        "36:38"
+      ]
+    },
+    {
+      "id": "physics_002",
+      "name": "celestial_mechanics",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "Physics of motion of celestial bodies under gravitational forces",
+      "related_concepts": [
+        "physics_001",
+        "physics_003"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [
+        "13:2",
+        "21:33"
+      ]
+    },
+    {
+      "id": "physics_003",
+      "name": "expansion_of_universe",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "The accelerating expansion of the universe as observed in modern cosmology",
+      "related_concepts": [
+        "physics_001",
+        "physics_002"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [
+        "51:47"
+      ]
+    },
+    {
+      "id": "physics_004",
+      "name": "energy_conservation",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "Energy cannot be created or destroyed, only transformed",
+      "related_concepts": [
+        "physics_005"
+      ],
+      "confidence": 0.95,
+      "quranic_references": []
+    },
+    {
+      "id": "physics_005",
+      "name": "stellar_formation",
+      "domain": "physics",
+      "tier": 1,
+      "definition": "Process of star formation from molecular clouds",
+      "related_concepts": [
+        "physics_001",
+        "physics_004"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "82:8"
+      ]
+    },
+    {
+      "id": "biology_001",
+      "name": "photosynthesis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process by which plants convert light energy into chemical energy",
+      "related_concepts": [
+        "biology_002",
+        "biology_005"
+      ],
+      "confidence": 0.98,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_002",
+      "name": "cellular_respiration",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Metabolic process to convert nutrients into ATP for energy",
+      "related_concepts": [
+        "biology_001",
+        "biology_003"
+      ],
+      "confidence": 0.97,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_003",
+      "name": "dna_structure",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Double helix structure of deoxyribonucleic acid carrying genetic information",
+      "related_concepts": [
+        "biology_002",
+        "biology_004"
+      ],
+      "confidence": 0.98,
+      "quranic_references": [
+        "23:13"
+      ],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_004",
+      "name": "protein_synthesis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process of building proteins from amino acids using genetic code",
+      "related_concepts": [
+        "biology_003",
+        "biology_005"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_005",
+      "name": "embryonic_development",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Multi-stage process of organism development from conception to birth",
+      "related_concepts": [
+        "biology_001",
+        "biology_004"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [
+        "23:14",
+        "39:6"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "medicine_001",
+      "name": "immune_system",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Biological system protecting organism from infection and disease",
+      "related_concepts": [
+        "medicine_002",
+        "medicine_005"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Pathology & Disease"
+    },
+    {
+      "id": "medicine_002",
+      "name": "cardiovascular_system",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "System of heart and vessels transporting blood throughout the body",
+      "related_concepts": [
+        "medicine_001",
+        "medicine_003"
+      ],
+      "confidence": 0.97,
+      "quranic_references": [
+        "76:9"
+      ],
+      "subcategory": "Physiology of Health"
+    },
+    {
+      "id": "medicine_003",
+      "name": "neurotransmission",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Chemical signaling between neurons at synapses",
+      "related_concepts": [
+        "medicine_002",
+        "medicine_004"
+      ],
+      "confidence": 0.85,
+      "quranic_references": [],
+      "subcategory": "Neurology & Mental Health"
+    },
+    {
+      "id": "medicine_004",
+      "name": "organ_transplantation",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Surgical transfer of organs between individuals",
+      "related_concepts": [
+        "medicine_003",
+        "medicine_005"
+      ],
+      "confidence": 0.87,
+      "quranic_references": [],
+      "subcategory": "Surgery & Anatomy"
+    },
+    {
+      "id": "medicine_005",
+      "name": "disease_pathogenesis",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Study of mechanisms by which disease develops in organisms",
+      "related_concepts": [
+        "medicine_001",
+        "medicine_004"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Reproductive Medicine"
+    },
+    {
+      "id": "engineering_001",
+      "name": "structural_mechanics",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Principles of load distribution and stress in engineered structures",
+      "related_concepts": [
+        "engineering_002",
+        "engineering_005"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Civil Engineering"
+    },
+    {
+      "id": "engineering_002",
+      "name": "water_management",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Systems for capturing, storing, and distributing water",
+      "related_concepts": [
+        "engineering_001",
+        "engineering_003"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "21:30"
+      ],
+      "subcategory": "Water & Environmental"
+    },
+    {
+      "id": "engineering_003",
+      "name": "irrigation_systems",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Techniques for artificial application of water to land",
+      "related_concepts": [
+        "engineering_002",
+        "engineering_004"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "18:32"
+      ],
+      "subcategory": "Water & Environmental"
+    },
+    {
+      "id": "engineering_004",
+      "name": "material_strength",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Properties determining resistance of materials to deformation and failure",
+      "related_concepts": [
+        "engineering_003",
+        "engineering_005"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Materials & Manufacturing"
+    },
+    {
+      "id": "engineering_005",
+      "name": "hydraulic_engineering",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Engineering of systems using fluid flow and pressure principles",
+      "related_concepts": [
+        "engineering_001",
+        "engineering_004"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Water & Environmental"
+    },
+    {
+      "id": "agriculture_001",
+      "name": "soil_composition",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Physical and chemical properties of soil affecting plant growth",
+      "related_concepts": [
+        "agriculture_002",
+        "agriculture_005"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [
+        "80:24"
+      ],
+      "subcategory": "Soil Science"
+    },
+    {
+      "id": "agriculture_002",
+      "name": "crop_rotation",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Agricultural practice of planting different crops on same land sequentially",
+      "related_concepts": [
+        "agriculture_001",
+        "agriculture_003"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Sustainable Farming"
+    },
+    {
+      "id": "agriculture_003",
+      "name": "seed_germination",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Process of seed development into mature plant",
+      "related_concepts": [
+        "agriculture_002",
+        "agriculture_004"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [
+        "6:95"
+      ],
+      "subcategory": "Food Production"
+    },
+    {
+      "id": "agriculture_004",
+      "name": "pollination",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Transfer of pollen facilitating plant reproduction",
+      "related_concepts": [
+        "agriculture_003",
+        "agriculture_005"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Food Production"
+    },
+    {
+      "id": "agriculture_005",
+      "name": "plant_nutrition",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Essential nutrients and minerals required for plant growth and development",
+      "related_concepts": [
+        "agriculture_001",
+        "agriculture_004"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "80:24"
+      ],
+      "subcategory": "Crop Science"
+    },
+    {
+      "id": "physics_006",
+      "name": "motion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Change in position of an object with respect to time and reference frame",
+      "quranic_references": [
+        "36:40"
+      ],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_007",
+        "physics_008",
+        "physics_025"
+      ]
+    },
+    {
+      "id": "physics_007",
+      "name": "force",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Physical quantity that causes acceleration and changes momentum of objects",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_006",
+        "physics_008",
+        "physics_026"
+      ]
+    },
+    {
+      "id": "physics_008",
+      "name": "acceleration",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Rate of change of velocity with respect to time",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_006",
+        "physics_007",
+        "physics_025"
+      ]
+    },
+    {
+      "id": "physics_009",
+      "name": "momentum",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Product of mass and velocity, fundamental quantity in mechanics",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_006",
+        "physics_007",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_010",
+      "name": "work",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Energy transfer that occurs when force is applied over a distance",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_007",
+        "physics_011",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_011",
+      "name": "kinetic_energy",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Energy of motion, proportional to mass and velocity squared",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_010",
+        "physics_012",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_012",
+      "name": "potential_energy",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Energy stored in objects due to position or configuration",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_011",
+        "physics_001",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_013",
+      "name": "friction",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Force opposing relative motion between surfaces in contact",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_007",
+        "physics_010",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_014",
+      "name": "torque",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Rotational force that produces angular acceleration",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_007",
+        "physics_015",
+        "physics_026"
+      ]
+    },
+    {
+      "id": "physics_015",
+      "name": "angular_momentum",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Product of moment of inertia and angular velocity in rotational motion",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_009",
+        "physics_014",
+        "physics_026"
+      ]
+    },
+    {
+      "id": "physics_016",
+      "name": "simple_harmonic_motion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Oscillatory motion where restoring force is proportional to displacement",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_006",
+        "physics_007",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_017",
+      "name": "wave_motion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Classical Mechanics",
+      "definition": "Propagation of disturbances through a medium transferring energy",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_006",
+        "physics_049",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_018",
+      "name": "pressure",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Classical Mechanics",
+      "definition": "Force per unit area exerted by fluids or solids on surfaces",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_007",
+        "physics_037",
+        "physics_040"
+      ]
+    },
+    {
+      "id": "physics_019",
+      "name": "density",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Classical Mechanics",
+      "definition": "Mass per unit volume of a substance",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_018",
+        "physics_037",
+        "physics_001"
+      ]
+    },
+    {
+      "id": "physics_020",
+      "name": "buoyancy",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Classical Mechanics",
+      "definition": "Upward force exerted by fluids on submerged objects",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_007",
+        "physics_018",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_021",
+      "name": "heat",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Energy transfer between systems due to temperature difference",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_022",
+        "physics_033",
+        "physics_004"
+      ]
+    },
+    {
+      "id": "physics_022",
+      "name": "temperature",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Measure of average kinetic energy of particles in a substance",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_021",
+        "physics_024",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_023",
+      "name": "entropy",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Thermodynamics",
+      "definition": "Measure of disorder and thermodynamic irreversibility in systems",
+      "quranic_references": [],
+      "confidence": 0.88,
+      "related_concepts": [
+        "physics_021",
+        "physics_024",
+        "physics_033"
+      ]
+    },
+    {
+      "id": "physics_024",
+      "name": "thermodynamic_equilibrium",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "State where no net exchange of heat or matter occurs between system and surroundings",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_021",
+        "physics_022",
+        "physics_023"
+      ]
+    },
+    {
+      "id": "physics_025",
+      "name": "phase_transition",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Change between states of matter involving reorganization of molecular structure",
+      "quranic_references": [
+        "21:30"
+      ],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_021",
+        "physics_022",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_026",
+      "name": "latent_heat",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Energy absorbed or released during phase transitions at constant temperature",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_021",
+        "physics_025",
+        "physics_022"
+      ]
+    },
+    {
+      "id": "physics_027",
+      "name": "specific_heat",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Amount of heat needed to raise temperature of unit mass by one degree",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_021",
+        "physics_022",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_028",
+      "name": "thermal_expansion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Increase in dimensions of materials due to temperature increase",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_022",
+        "physics_037",
+        "physics_025"
+      ]
+    },
+    {
+      "id": "physics_029",
+      "name": "thermal_conductivity",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Property of materials determining rate of heat transfer through conduction",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_021",
+        "physics_037",
+        "physics_028"
+      ]
+    },
+    {
+      "id": "physics_030",
+      "name": "convection",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Heat transfer through fluid movement due to density differences",
+      "quranic_references": [],
+      "confidence": 0.91,
+      "related_concepts": [
+        "physics_021",
+        "physics_037",
+        "physics_006"
+      ]
+    },
+    {
+      "id": "physics_031",
+      "name": "radiation",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Thermodynamics",
+      "definition": "Heat transfer through electromagnetic waves without medium",
+      "quranic_references": [
+        "13:2"
+      ],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_021",
+        "physics_041",
+        "physics_042"
+      ]
+    },
+    {
+      "id": "physics_032",
+      "name": "black_body_radiation",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Thermodynamics",
+      "definition": "Electromagnetic radiation emitted by idealized absorbing objects at thermal equilibrium",
+      "quranic_references": [],
+      "confidence": 0.87,
+      "related_concepts": [
+        "physics_031",
+        "physics_022",
+        "physics_042"
+      ]
+    },
+    {
+      "id": "physics_033",
+      "name": "electric_field",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Region of space where electric forces are exerted on charged particles",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_034",
+        "physics_035",
+        "physics_042"
+      ]
+    },
+    {
+      "id": "physics_034",
+      "name": "electric_charge",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Fundamental property of matter determining electromagnetic interactions",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_033",
+        "physics_035",
+        "physics_036"
+      ]
+    },
+    {
+      "id": "physics_035",
+      "name": "electric_potential",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Work per unit charge to move charged particle in electric field",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_033",
+        "physics_034",
+        "physics_036"
+      ]
+    },
+    {
+      "id": "physics_036",
+      "name": "electric_current",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Flow of electric charge through conductor measured in amperes",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_034",
+        "physics_035",
+        "physics_038"
+      ]
+    },
+    {
+      "id": "physics_037",
+      "name": "magnetic_field",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Region of space where magnetic forces are exerted on moving charges",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_036",
+        "physics_038",
+        "physics_041"
+      ]
+    },
+    {
+      "id": "physics_038",
+      "name": "electromagnetic_force",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Fundamental force causing electromagnetic interactions between charged particles",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_033",
+        "physics_036",
+        "physics_037"
+      ]
+    },
+    {
+      "id": "physics_039",
+      "name": "resistance",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Opposition to electric current flow in conductors",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_036",
+        "physics_038",
+        "physics_013"
+      ]
+    },
+    {
+      "id": "physics_040",
+      "name": "capacitance",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Ability of system to store electric charge at given potential difference",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_034",
+        "physics_035",
+        "physics_039"
+      ]
+    },
+    {
+      "id": "physics_041",
+      "name": "light",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Electromagnetic radiation visible to human eye with wavelengths 400-700 nm",
+      "quranic_references": [
+        "24:35",
+        "36:40"
+      ],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_037",
+        "physics_042",
+        "physics_049"
+      ]
+    },
+    {
+      "id": "physics_042",
+      "name": "electromagnetic_radiation",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Waves of electric and magnetic fields propagating through space",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_033",
+        "physics_037",
+        "physics_041"
+      ]
+    },
+    {
+      "id": "physics_043",
+      "name": "photon",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Electromagnetism",
+      "definition": "Discrete packet of electromagnetic energy or light",
+      "quranic_references": [],
+      "confidence": 0.9,
+      "related_concepts": [
+        "physics_041",
+        "physics_042",
+        "physics_060"
+      ]
+    },
+    {
+      "id": "physics_044",
+      "name": "refraction",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Bending of light path when passing between different transparent media",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_041",
+        "physics_049",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_045",
+      "name": "reflection",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Electromagnetism",
+      "definition": "Bouncing back of light from surfaces following law of reflection",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_041",
+        "physics_049",
+        "physics_044"
+      ]
+    },
+    {
+      "id": "physics_046",
+      "name": "lens",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Electromagnetism",
+      "definition": "Optical device focusing or diverging light through refraction",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_041",
+        "physics_044",
+        "physics_045"
+      ]
+    },
+    {
+      "id": "physics_047",
+      "name": "polarization",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Electromagnetism",
+      "definition": "Restriction of electromagnetic wave oscillations to specific directions",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_041",
+        "physics_042",
+        "physics_049"
+      ]
+    },
+    {
+      "id": "physics_048",
+      "name": "frequency",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Number of complete oscillations or cycles per unit time",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_049",
+        "physics_050",
+        "physics_051"
+      ]
+    },
+    {
+      "id": "physics_049",
+      "name": "wavelength",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Distance between consecutive crests or troughs in periodic waves",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_048",
+        "physics_050",
+        "physics_041"
+      ]
+    },
+    {
+      "id": "physics_050",
+      "name": "resonance",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Phenomenon where systems oscillate at maximum amplitude at natural frequency",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_016"
+      ]
+    },
+    {
+      "id": "physics_051",
+      "name": "sound",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Mechanical waves of pressure variations propagating through elastic media",
+      "quranic_references": [],
+      "confidence": 0.96,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_017"
+      ]
+    },
+    {
+      "id": "physics_052",
+      "name": "acoustic_impedance",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Product of medium density and sound velocity determining wave reflection",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_051",
+        "physics_019",
+        "physics_045"
+      ]
+    },
+    {
+      "id": "physics_053",
+      "name": "doppler_effect",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Change in wave frequency observed when source or observer is moving",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_048",
+        "physics_051",
+        "physics_041"
+      ]
+    },
+    {
+      "id": "physics_054",
+      "name": "interference",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Superposition of waves resulting in constructive or destructive combination",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_055",
+      "name": "diffraction",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Bending of waves around obstacles or through openings",
+      "quranic_references": [],
+      "confidence": 0.92,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_054"
+      ]
+    },
+    {
+      "id": "physics_056",
+      "name": "standing_wave",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Wave pattern where nodes and antinodes remain stationary in space",
+      "quranic_references": [],
+      "confidence": 0.91,
+      "related_concepts": [
+        "physics_048",
+        "physics_049",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_057",
+      "name": "harmonic_oscillation",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Waves & Vibrations",
+      "definition": "Periodic motion where displacement varies sinusoidally with time",
+      "quranic_references": [],
+      "confidence": 0.93,
+      "related_concepts": [
+        "physics_016",
+        "physics_048",
+        "physics_050"
+      ]
+    },
+    {
+      "id": "physics_058",
+      "name": "quantum_mechanics",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Fundamental theory describing behavior of matter and energy at atomic scales",
+      "quranic_references": [],
+      "confidence": 0.89,
+      "related_concepts": [
+        "physics_060",
+        "physics_061",
+        "physics_064"
+      ]
+    },
+    {
+      "id": "physics_059",
+      "name": "atom",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Smallest unit of matter consisting of nucleus surrounded by electrons",
+      "quranic_references": [
+        "13:2"
+      ],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_060",
+        "physics_062",
+        "physics_034"
+      ]
+    },
+    {
+      "id": "physics_060",
+      "name": "electron",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Negatively charged elementary particle with mass 9.1\u00d710^-31 kg",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_059",
+        "physics_061",
+        "physics_034"
+      ]
+    },
+    {
+      "id": "physics_061",
+      "name": "nucleus",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Dense core of atom containing protons and neutrons",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_059",
+        "physics_060",
+        "physics_062"
+      ]
+    },
+    {
+      "id": "physics_062",
+      "name": "proton",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Positively charged nucleon with mass 1.67\u00d710^-27 kg",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_061",
+        "physics_063",
+        "physics_034"
+      ]
+    },
+    {
+      "id": "physics_063",
+      "name": "neutron",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Neutral nucleon with mass slightly greater than proton mass",
+      "quranic_references": [],
+      "confidence": 0.97,
+      "related_concepts": [
+        "physics_061",
+        "physics_062",
+        "physics_065"
+      ]
+    },
+    {
+      "id": "physics_064",
+      "name": "energy_level",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Discrete allowed energy states for electrons in atoms",
+      "quranic_references": [],
+      "confidence": 0.94,
+      "related_concepts": [
+        "physics_058",
+        "physics_060",
+        "physics_011"
+      ]
+    },
+    {
+      "id": "physics_065",
+      "name": "radioactivity",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Spontaneous decay of unstable nuclei emitting particles and radiation",
+      "quranic_references": [],
+      "confidence": 0.95,
+      "related_concepts": [
+        "physics_061",
+        "physics_063",
+        "physics_066"
+      ]
+    },
+    {
+      "id": "physics_066",
+      "name": "alpha_decay",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Radioactive decay process emitting alpha particles (helium nuclei)",
+      "quranic_references": [],
+      "confidence": 0.87,
+      "related_concepts": [
+        "physics_065",
+        "physics_067",
+        "physics_068"
+      ]
+    },
+    {
+      "id": "physics_067",
+      "name": "beta_decay",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Radioactive decay where neutron converts to proton emitting electron",
+      "quranic_references": [],
+      "confidence": 0.87,
+      "related_concepts": [
+        "physics_065",
+        "physics_066",
+        "physics_069"
+      ]
+    },
+    {
+      "id": "physics_068",
+      "name": "gamma_decay",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Radioactive decay emitting high-energy photons from excited nuclei",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_065",
+        "physics_066",
+        "physics_042"
+      ]
+    },
+    {
+      "id": "physics_069",
+      "name": "fission",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Splitting of heavy nucleus into lighter nuclei releasing enormous energy",
+      "quranic_references": [],
+      "confidence": 0.88,
+      "related_concepts": [
+        "physics_065",
+        "physics_067",
+        "physics_070"
+      ]
+    },
+    {
+      "id": "physics_070",
+      "name": "fusion",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Combination of light nuclei forming heavier nucleus releasing energy",
+      "quranic_references": [],
+      "confidence": 0.88,
+      "related_concepts": [
+        "physics_069",
+        "physics_061",
+        "physics_005"
+      ]
+    },
+    {
+      "id": "physics_071",
+      "name": "relativity",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Theory describing gravity and motion at extreme speeds and masses",
+      "quranic_references": [],
+      "confidence": 0.89,
+      "related_concepts": [
+        "physics_072",
+        "physics_001",
+        "physics_073"
+      ]
+    },
+    {
+      "id": "physics_072",
+      "name": "mass_energy_equivalence",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Relationship between mass and energy expressed as E=mc\u00b2",
+      "quranic_references": [],
+      "confidence": 0.88,
+      "related_concepts": [
+        "physics_071",
+        "physics_011",
+        "physics_069"
+      ]
+    },
+    {
+      "id": "physics_073",
+      "name": "spacetime",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Four-dimensional continuum combining space and time coordinates",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_071",
+        "physics_006",
+        "physics_022"
+      ]
+    },
+    {
+      "id": "physics_074",
+      "name": "quantum_entanglement",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Quantum phenomenon where particles remain correlated instantaneously",
+      "quranic_references": [],
+      "confidence": 0.85,
+      "related_concepts": [
+        "physics_058",
+        "physics_060",
+        "physics_073"
+      ]
+    },
+    {
+      "id": "physics_075",
+      "name": "wave_particle_duality",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Concept that matter and energy exhibit both wave and particle properties",
+      "quranic_references": [],
+      "confidence": 0.87,
+      "related_concepts": [
+        "physics_058",
+        "physics_043",
+        "physics_049"
+      ]
+    },
+    {
+      "id": "physics_076",
+      "name": "uncertainty_principle",
+      "domain": "physics",
+      "tier": 2,
+      "subcategory": "Modern Physics",
+      "definition": "Principle stating complementary properties cannot be simultaneously measured with arbitrary precision",
+      "quranic_references": [],
+      "confidence": 0.85,
+      "related_concepts": [
+        "physics_058",
+        "physics_060",
+        "physics_074"
+      ]
+    },
+    {
+      "id": "physics_077",
+      "name": "superposition",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Quantum principle where systems exist in multiple states simultaneously until measured",
+      "quranic_references": [],
+      "confidence": 0.86,
+      "related_concepts": [
+        "physics_058",
+        "physics_074",
+        "physics_075"
+      ]
+    },
+    {
+      "id": "physics_078",
+      "name": "string_theory",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Theoretical framework proposing fundamental particles are one-dimensional vibrating strings",
+      "quranic_references": [],
+      "confidence": 0.82,
+      "related_concepts": [
+        "physics_071",
+        "physics_058",
+        "physics_073"
+      ]
+    },
+    {
+      "id": "physics_079",
+      "name": "dark_matter",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Hypothetical form of matter invisible but gravitationally affecting observable universe",
+      "quranic_references": [],
+      "confidence": 0.83,
+      "related_concepts": [
+        "physics_001",
+        "physics_003",
+        "physics_071"
+      ]
+    },
+    {
+      "id": "physics_080",
+      "name": "dark_energy",
+      "domain": "physics",
+      "tier": 1,
+      "subcategory": "Modern Physics",
+      "definition": "Mysterious form of energy causing accelerated expansion of the universe",
+      "quranic_references": [
+        "51:47"
+      ],
+      "confidence": 0.82,
+      "related_concepts": [
+        "physics_003",
+        "physics_004",
+        "physics_072"
+      ]
+    },
+    {
+      "id": "biology_006",
+      "name": "nucleus",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Membrane-bound organelle containing genetic material and controlling cell activities",
+      "related_concepts": [
+        "biology_002"
+      ],
+      "confidence": 0.97,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_007",
+      "name": "mitochondria",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Powerhouse of the cell producing ATP through oxidative phosphorylation",
+      "related_concepts": [
+        "biology_002",
+        "biology_006",
+        "biology_004"
+      ],
+      "confidence": 0.98,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_008",
+      "name": "endoplasmic_reticulum",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Network of membranes involved in protein and lipid synthesis",
+      "related_concepts": [
+        "biology_007",
+        "biology_006"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_009",
+      "name": "golgi_apparatus",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organelle modifying and packaging proteins for transport",
+      "related_concepts": [
+        "biology_007",
+        "biology_006",
+        "biology_005"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_010",
+      "name": "ribosome",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Cellular machinery assembling proteins from amino acids",
+      "related_concepts": [
+        "biology_006",
+        "biology_009"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_011",
+      "name": "lysosome",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organelle containing digestive enzymes for cellular breakdown",
+      "related_concepts": [
+        "biology_007",
+        "biology_006"
+      ],
+      "confidence": 0.89,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_012",
+      "name": "chloroplast",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Photosynthetic organelle in plant cells converting light to chemical energy",
+      "related_concepts": [
+        "biology_007",
+        "biology_008"
+      ],
+      "confidence": 0.97,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_013",
+      "name": "cell_membrane",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Phospholipid bilayer controlling substance transport and cell communication",
+      "related_concepts": [
+        "biology_007",
+        "biology_010"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_014",
+      "name": "cytoplasm",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Gel-like substance filling cell containing organelles and molecules",
+      "related_concepts": [
+        "biology_011",
+        "biology_012"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_015",
+      "name": "vacuole",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Storage organelle maintaining turgor pressure in plant cells",
+      "related_concepts": [
+        "biology_009",
+        "biology_011",
+        "biology_001",
+        "biology_005"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_016",
+      "name": "cell_division",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process by which cells reproduce through mitosis or meiosis",
+      "related_concepts": [
+        "biology_015",
+        "biology_014"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_017",
+      "name": "mitosis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Division producing two identical daughter cells for growth and repair",
+      "related_concepts": [
+        "biology_013",
+        "biology_014"
+      ],
+      "confidence": 0.97,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_018",
+      "name": "meiosis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Reduction division producing four genetically unique sex cells",
+      "related_concepts": [
+        "biology_002",
+        "biology_001",
+        "biology_007",
+        "biology_012"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_019",
+      "name": "chromosome",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Structure of DNA and proteins carrying genetic information",
+      "related_concepts": [
+        "biology_007",
+        "biology_017",
+        "biology_005"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_020",
+      "name": "telomere",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Repetitive DNA protecting chromosome ends from degradation",
+      "related_concepts": [
+        "biology_006",
+        "biology_013",
+        "biology_004"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_021",
+      "name": "centromere",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Constricted region of chromosome where sister chromatids attach",
+      "related_concepts": [
+        "biology_016",
+        "biology_019"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_022",
+      "name": "centriole",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Cylindrical organelle organizing microtubules in cell division",
+      "related_concepts": [
+        "biology_015",
+        "biology_006"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Cell Biology"
+    },
+    {
+      "id": "biology_023",
+      "name": "gene_expression",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process converting genetic information into functional proteins",
+      "related_concepts": [
+        "physics_073",
+        "biology_001"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_024",
+      "name": "transcription",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process synthesizing RNA from DNA template",
+      "related_concepts": [
+        "biology_002",
+        "biology_023",
+        "biology_004"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_025",
+      "name": "translation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process synthesizing proteins from mRNA codons",
+      "related_concepts": [
+        "biology_024",
+        "biology_023"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_026",
+      "name": "ribosomal_rna",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Structural and catalytic RNA component of ribosomes",
+      "related_concepts": [
+        "physics_003",
+        "biology_023",
+        "biology_025"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_027",
+      "name": "messenger_rna",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "RNA molecule carrying genetic code from DNA to ribosomes",
+      "related_concepts": [
+        "biology_023",
+        "biology_024",
+        "biology_004"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_028",
+      "name": "transfer_rna",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "RNA molecule delivering amino acids to ribosome during translation",
+      "related_concepts": [
+        "biology_002",
+        "biology_026",
+        "biology_024"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_029",
+      "name": "mrna_splicing",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process removing introns from pre-mRNA to create mature mRNA",
+      "related_concepts": [
+        "biology_026",
+        "biology_028",
+        "biology_003"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_030",
+      "name": "codon",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Three-nucleotide sequence in mRNA specifying amino acid",
+      "related_concepts": [
+        "biology_029",
+        "biology_023",
+        "biology_001",
+        "biology_004"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_031",
+      "name": "mutation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Permanent change in DNA sequence causing genetic variation",
+      "related_concepts": [
+        "biology_026",
+        "biology_024"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_032",
+      "name": "point_mutation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Single nucleotide change in DNA sequence",
+      "related_concepts": [
+        "biology_002",
+        "biology_026",
+        "biology_024",
+        "biology_005"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_033",
+      "name": "frameshift_mutation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Insertion or deletion altering reading frame of codons",
+      "related_concepts": [
+        "biology_027",
+        "biology_029",
+        "biology_004"
+      ],
+      "confidence": 0.89,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_034",
+      "name": "chromosomal_aberration",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Large-scale change in chromosome structure or number",
+      "related_concepts": [
+        "biology_030",
+        "biology_033"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_035",
+      "name": "genetic_recombination",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Shuffling of DNA creating genetic diversity in offspring",
+      "related_concepts": [
+        "biology_023",
+        "biology_034"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_036",
+      "name": "crossing_over",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Exchange of genetic material between homologous chromosomes",
+      "related_concepts": [
+        "biology_024",
+        "biology_025",
+        "biology_005"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_037",
+      "name": "allele",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Alternative form of gene at same chromosomal location",
+      "related_concepts": [
+        "biology_032",
+        "biology_023",
+        "biology_003"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_038",
+      "name": "dominant_trait",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Trait expressed when at least one dominant allele present",
+      "related_concepts": [
+        "biology_034",
+        "biology_028"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Genetics & Molecular Biology"
+    },
+    {
+      "id": "biology_039",
+      "name": "recessive_trait",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Trait expressed only with two recessive alleles",
+      "related_concepts": [
+        "biology_023",
+        "biology_025"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_040",
+      "name": "organ_system",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Group of organs working together for specific body function",
+      "related_concepts": [
+        "biology_003"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_041",
+      "name": "circulatory_system",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "System transporting blood, oxygen, and nutrients throughout body",
+      "related_concepts": [
+        "biology_040"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_042",
+      "name": "heart",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Muscular organ pumping blood throughout circulatory system",
+      "related_concepts": [
+        "biology_041",
+        "biology_040",
+        "biology_003"
+      ],
+      "confidence": 0.96,
+      "quranic_references": [
+        "22:46",
+        "46:26"
+      ],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_043",
+      "name": "blood_vessel",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Vessel carrying blood: arteries, veins, or capillaries",
+      "related_concepts": [
+        "biology_041",
+        "biology_040"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_044",
+      "name": "blood_pressure",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Force exerted by blood on vessel walls",
+      "related_concepts": [
+        "biology_041",
+        "biology_043",
+        "physics_043",
+        "biology_005"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_045",
+      "name": "respiratory_system",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "System enabling gas exchange between body and atmosphere",
+      "related_concepts": [
+        "biology_043",
+        "biology_040"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_046",
+      "name": "lung",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organ where gas exchange occurs between air and blood",
+      "related_concepts": [
+        "biology_044",
+        "biology_041",
+        "biology_004",
+        "biology_003"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_047",
+      "name": "digestion",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process breaking down food into absorbable nutrients",
+      "related_concepts": [
+        "biology_041",
+        "biology_001",
+        "biology_042",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_048",
+      "name": "stomach",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Muscular organ churning food and producing digestive enzymes",
+      "related_concepts": [
+        "biology_041",
+        "biology_042"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_049",
+      "name": "small_intestine",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Primary site of nutrient absorption in digestive system",
+      "related_concepts": [
+        "biology_045",
+        "biology_004",
+        "biology_046"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_050",
+      "name": "liver",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organ detoxifying blood and producing bile for digestion",
+      "related_concepts": [
+        "biology_047",
+        "biology_040",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_051",
+      "name": "pancreas",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Gland producing digestive enzymes and insulin",
+      "related_concepts": [
+        "biology_043",
+        "biology_040"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_052",
+      "name": "nervous_system",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Network controlling body functions through neurons and signals",
+      "related_concepts": [
+        "biology_002",
+        "biology_050",
+        "biology_048"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_053",
+      "name": "brain",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Central processing center of nervous system",
+      "related_concepts": [
+        "biology_041",
+        "biology_001",
+        "biology_040"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [
+        "22:46",
+        "46:26"
+      ],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_054",
+      "name": "spinal_cord",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Extension of brain transmitting signals between brain and body",
+      "related_concepts": [
+        "biology_049",
+        "biology_043",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_055",
+      "name": "neuron",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Basic functional unit of nervous system transmitting signals",
+      "related_concepts": [
+        "biology_002",
+        "biology_051",
+        "biology_054"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_056",
+      "name": "synapse",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Junction between neurons where signals are transmitted",
+      "related_concepts": [
+        "biology_002",
+        "biology_051",
+        "biology_043"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_057",
+      "name": "neurotransmitter",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Chemical messenger transmitting signals across synapses",
+      "related_concepts": [
+        "biology_053",
+        "biology_046"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_058",
+      "name": "hormone",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Chemical messenger regulating body processes",
+      "related_concepts": [
+        "biology_049",
+        "biology_040"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_059",
+      "name": "bone",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Rigid structure providing support and protection",
+      "related_concepts": [
+        "biology_056",
+        "biology_046"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Anatomy & Physiology"
+    },
+    {
+      "id": "biology_060",
+      "name": "evolution",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process of gradual change in organisms over time",
+      "related_concepts": [
+        "biology_004"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_061",
+      "name": "natural_selection",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Mechanism driving evolution through differential reproduction",
+      "related_concepts": [
+        "biology_060"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_062",
+      "name": "adaptation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Trait enhancing organism's fitness in specific environment",
+      "related_concepts": [
+        "biology_061",
+        "biology_001",
+        "biology_060"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_063",
+      "name": "biodiversity",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Variety of species in ecosystem or on Earth",
+      "related_concepts": [
+        "biology_061",
+        "biology_060",
+        "biology_003"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_064",
+      "name": "ecosystem",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Community of organisms and physical environment interacting",
+      "related_concepts": [
+        "biology_061",
+        "biology_060"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_065",
+      "name": "food_chain",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Sequence of energy transfer from producer to consumer",
+      "related_concepts": [
+        "biology_064",
+        "biology_063"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_066",
+      "name": "food_web",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Interconnected food chains in ecosystem",
+      "related_concepts": [
+        "biology_062",
+        "biology_061"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_067",
+      "name": "predator_prey",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Relationship where predator hunts prey for food",
+      "related_concepts": [
+        "biology_062",
+        "biology_066",
+        "biology_004"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_068",
+      "name": "competition",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Organisms competing for limited resources",
+      "related_concepts": [
+        "biology_002",
+        "biology_061",
+        "biology_063"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_069",
+      "name": "symbiosis",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Close relationship between different species",
+      "related_concepts": [
+        "biology_066",
+        "biology_060"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_070",
+      "name": "parasitism",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Relationship where parasite benefits at host's expense",
+      "related_concepts": [
+        "biology_068",
+        "biology_069"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_071",
+      "name": "mutualism",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Relationship benefiting both organisms",
+      "related_concepts": [
+        "biology_066",
+        "biology_070"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_072",
+      "name": "commensalism",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Relationship benefiting one organism without affecting other",
+      "related_concepts": [
+        "biology_071",
+        "biology_069"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_073",
+      "name": "speciation",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Process of new species formation through divergence",
+      "related_concepts": [
+        "biology_001",
+        "biology_065",
+        "biology_063"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_074",
+      "name": "extinction",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Permanent loss of species from Earth",
+      "related_concepts": [
+        "biology_073",
+        "biology_061"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Ecology & Evolution"
+    },
+    {
+      "id": "biology_075",
+      "name": "fertilization",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Union of sperm and egg forming zygote",
+      "related_concepts": [
+        "biology_002",
+        "biology_005"
+      ],
+      "confidence": 0.95,
+      "quranic_references": [
+        "23:14",
+        "22:5"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_076",
+      "name": "zygote",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Single cell resulting from fertilization containing combined DNA",
+      "related_concepts": [
+        "biology_002",
+        "biology_001",
+        "biology_075"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_077",
+      "name": "blastula",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Early embryonic stage of hollow ball of cells",
+      "related_concepts": [
+        "biology_076",
+        "biology_075"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_078",
+      "name": "gastrula",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Embryonic stage with three germ layers forming",
+      "related_concepts": [
+        "biology_076",
+        "biology_077"
+      ],
+      "confidence": 0.89,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_079",
+      "name": "ectoderm",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Outer germ layer forming nervous system and skin",
+      "related_concepts": [
+        "biology_077",
+        "biology_078"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_080",
+      "name": "mesoderm",
+      "domain": "biology",
+      "tier": 1,
+      "definition": "Middle germ layer forming muscles and skeleton",
+      "related_concepts": [
+        "biology_077",
+        "biology_001",
+        "biology_075"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_081",
+      "name": "endoderm",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Inner germ layer forming digestive and respiratory organs",
+      "related_concepts": [
+        "biology_080",
+        "biology_078",
+        "biology_004"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "23:14",
+        "39:6",
+        "25:54"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_082",
+      "name": "organogenesis",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Process of organ formation from germ layers",
+      "related_concepts": [
+        "biology_078",
+        "biology_079"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_083",
+      "name": "morphogenesis",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Developmental process shaping organism structure",
+      "related_concepts": [
+        "biology_078",
+        "biology_079"
+      ],
+      "confidence": 0.88,
+      "quranic_references": [],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_084",
+      "name": "cell_differentiation",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Process by which cells become specialized",
+      "related_concepts": [
+        "biology_077",
+        "biology_004",
+        "biology_082"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_085",
+      "name": "placenta",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Organ exchanging nutrients and waste between mother and fetus",
+      "related_concepts": [
+        "biology_083",
+        "biology_075"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "23:14",
+        "22:5"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_086",
+      "name": "umbilical_cord",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Structure connecting fetus to placenta",
+      "related_concepts": [
+        "biology_001",
+        "biology_082",
+        "biology_085"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [
+        "23:14",
+        "22:5"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_087",
+      "name": "amniotic_fluid",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Fluid surrounding and protecting fetus",
+      "related_concepts": [
+        "biology_080",
+        "biology_001",
+        "biology_082"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [
+        "23:14",
+        "22:5"
+      ],
+      "subcategory": "Embryology & Development"
+    },
+    {
+      "id": "biology_088",
+      "name": "plant_cell",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Eukaryotic cell with cell wall, chloroplasts, and large vacuole",
+      "related_concepts": [],
+      "confidence": 0.94,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_089",
+      "name": "root_system",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Underground structure absorbing water and nutrients",
+      "related_concepts": [
+        "biology_088"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_090",
+      "name": "root_hair",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Extension of root epidermal cell increasing absorption surface",
+      "related_concepts": [
+        "biology_088",
+        "biology_089"
+      ],
+      "confidence": 0.9,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_091",
+      "name": "stem",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Support structure transporting water and nutrients in plants",
+      "related_concepts": [
+        "biology_089",
+        "biology_004",
+        "biology_088",
+        "biology_005"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_092",
+      "name": "leaf",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Photosynthetic organ with veins transporting fluids",
+      "related_concepts": [
+        "biology_001",
+        "biology_089",
+        "biology_091"
+      ],
+      "confidence": 0.94,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_093",
+      "name": "stomata",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Pores in leaf surface for gas exchange",
+      "related_concepts": [
+        "biology_002",
+        "physics_007",
+        "biology_092",
+        "biology_091"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_094",
+      "name": "xylem",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Tissue transporting water and minerals from roots to leaves",
+      "related_concepts": [
+        "biology_092",
+        "biology_004",
+        "biology_091"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_095",
+      "name": "phloem",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Tissue transporting sugars from leaves to other parts",
+      "related_concepts": [
+        "biology_094",
+        "biology_092"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_096",
+      "name": "plant_reproduction",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Asexual or sexual reproduction in plants",
+      "related_concepts": [
+        "biology_093",
+        "biology_091"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_097",
+      "name": "flower",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Reproductive structure containing male and female organs",
+      "related_concepts": [
+        "biology_096",
+        "biology_095",
+        "biology_004",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_098",
+      "name": "pollen",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Male gamete of flowering plant",
+      "related_concepts": [
+        "biology_092",
+        "biology_091"
+      ],
+      "confidence": 0.92,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_099",
+      "name": "seed",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Mature ovule containing embryo and stored nutrients",
+      "related_concepts": [
+        "biology_090",
+        "biology_092",
+        "biology_005"
+      ],
+      "confidence": 0.93,
+      "quranic_references": [
+        "36:33",
+        "80:31"
+      ],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "biology_100",
+      "name": "germination",
+      "domain": "biology",
+      "tier": 2,
+      "definition": "Process of seed beginning growth",
+      "related_concepts": [
+        "biology_094",
+        "biology_092"
+      ],
+      "confidence": 0.91,
+      "quranic_references": [],
+      "subcategory": "Botany & Plant Biology"
+    },
+    {
+      "id": "medicine_006",
+      "name": "infection",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Invasion and colonization of pathogenic microorganisms in body tissues",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": [
+        "biology_001",
+        "biology_010",
+        "biology_005",
+        "biology_010"
+      ]
+    },
+    {
+      "id": "medicine_007",
+      "name": "inflammation",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Immune response characterized by heat, redness, swelling, and pain",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_008",
+      "name": "cancer",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Uncontrolled proliferation of abnormal cells",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": [
+        "biology_002"
+      ]
+    },
+    {
+      "id": "medicine_009",
+      "name": "immune_response",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Biological system reaction to pathogenic agents and foreign substances",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.94,
+      "quranic_references": [],
+      "related_concepts": [
+        "biology_010"
+      ]
+    },
+    {
+      "id": "medicine_010",
+      "name": "antibody",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Protein produced by immune system to neutralize pathogens",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_011",
+      "name": "vaccine",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Biological preparation providing immunity against specific disease",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_012",
+      "name": "viral_disease",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Infectious disease caused by viral pathogens",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_013",
+      "name": "bacterial_infection",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Pathogenic bacterial colonization causing disease",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_014",
+      "name": "pathogenic_organism",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Microorganism capable of causing disease in host organisms",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_015",
+      "name": "fever",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Elevated body temperature in response to infection or injury",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_016",
+      "name": "chronic_disease",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Long-term medical condition requiring continuous management",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_017",
+      "name": "genetic_disorder",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Inherited disease caused by abnormal genetic material",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.87,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_018",
+      "name": "autoimmune_disease",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Condition where immune system attacks body's own tissues",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.86,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_019",
+      "name": "epidemic",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Rapid spread of disease within population or region",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_020",
+      "name": "allergy",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Abnormal immune response to normally harmless substances",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_021",
+      "name": "parasite",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Organism living in or on host, causing disease or harm",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_022",
+      "name": "tumour",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Abnormal growth of cells forming distinct mass",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_023",
+      "name": "syndrome",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Collection of symptoms and signs characterizing a disease state",
+      "subcategory": "Pathology & Disease",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_024",
+      "name": "drug",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Chemical substance used to treat, prevent, or diagnose disease",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_025",
+      "name": "medication",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Medicinal drug or preparation for treating disease",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_026",
+      "name": "therapy",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Treatment approach for managing medical conditions",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.92,
+      "quranic_references": [
+        "26:80"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_027",
+      "name": "healing",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Process of recovery from disease or injury",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.94,
+      "quranic_references": [
+        "16:69"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_028",
+      "name": "dosage",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Prescribed quantity of medication administered to patient",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_029",
+      "name": "side_effect",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Unintended effect of drug beyond therapeutic action",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_030",
+      "name": "antibiotic",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Drug that kills or inhibits bacterial growth",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_031",
+      "name": "analgesic",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Drug providing pain relief without loss of consciousness",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_032",
+      "name": "surgical_procedure",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Invasive medical intervention performed by surgeon",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_033",
+      "name": "chemotherapy",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Treatment using chemical agents to kill cancer cells",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_034",
+      "name": "radiation_therapy",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Treatment using ionizing radiation to destroy cancer cells",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.87,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_035",
+      "name": "pharmacokinetics",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Study of drug movement and metabolism within body",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_036",
+      "name": "hormone_therapy",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Treatment using hormones to regulate body functions",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_037",
+      "name": "anesthetic",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Agent causing temporary loss of sensation or consciousness",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_038",
+      "name": "vaccine_immunity",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Protective immune state induced by vaccination",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_039",
+      "name": "health",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "State of physical, mental, and social well-being",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.95,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_040",
+      "name": "nutrition",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Process of obtaining nutrients essential for life and growth",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": [
+        "biology_020",
+        "biology_030"
+      ]
+    },
+    {
+      "id": "medicine_041",
+      "name": "digestion",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Breakdown of food into absorbable nutrients",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_042",
+      "name": "metabolism",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Chemical processes maintaining life in organisms",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": [
+        "biology_035"
+      ]
+    },
+    {
+      "id": "medicine_043",
+      "name": "vitamin",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Organic compound essential for normal body function",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_044",
+      "name": "mineral",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Inorganic substance required for physiological functions",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_045",
+      "name": "caloric_intake",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Amount of energy consumed through food",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_046",
+      "name": "hydration",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Maintenance of adequate fluid balance in body",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_047",
+      "name": "sleep",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Natural rest state essential for physical and mental recovery",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_048",
+      "name": "exercise",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Physical activity promoting health and fitness",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_049",
+      "name": "body_mass_index",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Measure of body fat based on height and weight",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_050",
+      "name": "cardiovascular_health",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Well-being of heart and circulatory system",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_051",
+      "name": "immune_function",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Capability of immune system to defend against pathogens",
+      "subcategory": "Pharmacology & Treatment",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_052",
+      "name": "protein_synthesis",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Building of proteins from amino acids in cells",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.86,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_053",
+      "name": "energy_production",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Cellular generation of ATP for biological functions",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_054",
+      "name": "hormone_balance",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Equilibrium of hormones regulating body processes",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_055",
+      "name": "nutrient_absorption",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Uptake of nutrients across intestinal epithelium",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_056",
+      "name": "detoxification",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Removal of toxic substances from body",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_057",
+      "name": "surgery",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Medical procedure involving cutting and manipulation of body tissues",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_058",
+      "name": "organ",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Functional unit of body composed of tissues",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.95,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_059",
+      "name": "tissue",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Group of similar cells performing specialized function",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.94,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_060",
+      "name": "bone",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Hard connective tissue forming skeletal structure",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.94,
+      "quranic_references": [],
+      "related_concepts": [
+        "biology_015"
+      ]
+    },
+    {
+      "id": "medicine_061",
+      "name": "muscle",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Contractile tissue enabling movement and force",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.94,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_062",
+      "name": "ligament",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Connective tissue connecting bones at joints",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_063",
+      "name": "cartilage",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Flexible connective tissue supporting body structures",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_064",
+      "name": "vessel",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Blood vessel transporting blood through body",
+      "subcategory": "Physiology of Health",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_065",
+      "name": "joint",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Connection point between bones enabling movement",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_066",
+      "name": "heart",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Muscular organ pumping blood throughout body",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.95,
+      "quranic_references": [
+        "76:9"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_067",
+      "name": "lung",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Respiratory organ exchanging gases with environment",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.94,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_068",
+      "name": "liver",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Organ responsible for detoxification and metabolic functions",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_069",
+      "name": "kidney",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Organ filtering blood and producing urine",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_070",
+      "name": "nerve",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Bundle of nerve fibers transmitting electrical signals",
+      "subcategory": "Surgery & Anatomy",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_071",
+      "name": "surgical_anesthesia",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Controlled unconsciousness during surgical procedures",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.86,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_072",
+      "name": "neurological_disease",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Disease affecting nervous system structure and function",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_073",
+      "name": "mental_health",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Psychological and emotional well-being of individual",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_074",
+      "name": "depression",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Mental disorder characterized by persistent sadness and loss of interest",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_075",
+      "name": "anxiety",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Mental state characterized by fear or worry",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_076",
+      "name": "psychology",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Study of mind and behavior",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_077",
+      "name": "emotion",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Complex psychological state involving physiological response",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_078",
+      "name": "schizophrenia",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Severe mental disorder affecting perception and cognition",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_079",
+      "name": "dementia",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Progressive loss of cognitive function",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_080",
+      "name": "epilepsy",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Neurological disorder causing recurrent seizures",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_081",
+      "name": "migraine",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Severe headache often accompanied by neurological symptoms",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_082",
+      "name": "parkinsons_disease",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Progressive neurodegenerative disorder causing movement difficulties",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.88,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_083",
+      "name": "alzheimers_disease",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Progressive dementia characterized by neurological deterioration",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.88,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_084",
+      "name": "brain_development",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Process of neural growth and organization",
+      "subcategory": "Neurology & Mental Health",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_085",
+      "name": "reproduction",
+      "domain": "medicine",
+      "tier": 2,
+      "definition": "Biological process creating offspring",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_086",
+      "name": "pregnancy",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "State of carrying developing offspring in uterus",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.94,
+      "quranic_references": [
+        "23:14",
+        "39:6"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_087",
+      "name": "childbirth",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Process of delivering offspring from uterus",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_088",
+      "name": "fertility",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Capacity to produce offspring",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_089",
+      "name": "contraception",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Methods preventing pregnancy",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "medicine_090",
+      "name": "sexually_transmitted_disease",
+      "domain": "medicine",
+      "tier": 1,
+      "definition": "Infection spread through sexual contact",
+      "subcategory": "Reproductive Medicine",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_006",
+      "name": "building",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Structure constructed for human habitation or use",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.93,
+      "quranic_references": [
+        "18:95"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_007",
+      "name": "bridge",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Structure spanning physical obstacle enabling crossing",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_008",
+      "name": "structure",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Constructed assembly of materials forming rigid framework",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_009",
+      "name": "construction",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Process of assembling materials into buildings or infrastructure",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_010",
+      "name": "foundation",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Base structure supporting building weight",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_011",
+      "name": "concrete",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Building material made from cement, aggregate, and water",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_012",
+      "name": "steel",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Alloy of iron and carbon used in construction",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_013",
+      "name": "wall",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Vertical structure providing enclosure and support",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.92,
+      "quranic_references": [
+        "18:95"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_014",
+      "name": "tower",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Tall vertical structure extending above surroundings",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.91,
+      "quranic_references": [
+        "28:38"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_015",
+      "name": "roof",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Covering providing weatherproofing for structure",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_016",
+      "name": "scaffolding",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Temporary support structure during construction",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_017",
+      "name": "urban_planning",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Design and organization of urban development",
+      "subcategory": "Civil Engineering",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_018",
+      "name": "machine",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Device converting energy into mechanical work",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_019",
+      "name": "engine",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Machine converting fuel energy into mechanical motion",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_020",
+      "name": "mechanics",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Science of motion and forces on bodies",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_021",
+      "name": "motion",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Change in position of object over time",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": [
+        "physics_004",
+        "physics_004",
+        "physics_005"
+      ]
+    },
+    {
+      "id": "engineering_022",
+      "name": "power",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Rate of doing work or energy transfer",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": [
+        "physics_005"
+      ]
+    },
+    {
+      "id": "engineering_023",
+      "name": "tool",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Device used to perform or facilitate work",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_024",
+      "name": "wheel",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Circular device rotating on axle enabling movement",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_025",
+      "name": "pulley",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Mechanical device with grooved wheel for rope/cable",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_026",
+      "name": "friction",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Resistance to motion between surfaces in contact",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_027",
+      "name": "pressure",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Force per unit area exerted on surface",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": [
+        "physics_006"
+      ]
+    },
+    {
+      "id": "engineering_028",
+      "name": "bearing",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Component supporting rotating shaft with minimal friction",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_029",
+      "name": "hydraulics",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Technology using fluid pressure to produce motion",
+      "subcategory": "Mechanical Engineering",
+      "confidence": 0.86,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_030",
+      "name": "electricity",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Phenomenon of charged particles creating forces",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": [
+        "physics_010"
+      ]
+    },
+    {
+      "id": "engineering_031",
+      "name": "circuit",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Path for electrical current through conducting materials",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_032",
+      "name": "power_generation",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Process of producing electrical power from energy source",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_033",
+      "name": "transmission",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "System conveying electrical power over distance",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_034",
+      "name": "electromagnet",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Magnet produced by electrical current in coil",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_035",
+      "name": "transformer",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Device changing voltage of alternating current",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_036",
+      "name": "voltage",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Electrical potential difference between two points",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_037",
+      "name": "current",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Flow of electrical charge through conductor",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_038",
+      "name": "resistance",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Opposition to flow of electrical current",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_039",
+      "name": "capacitor",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Device storing electrical charge",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_040",
+      "name": "battery",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Device converting chemical energy to electrical energy",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_041",
+      "name": "semiconductor",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Material with electrical conductivity between conductors and insulators",
+      "subcategory": "Electrical Engineering",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_042",
+      "name": "water_system",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Infrastructure managing water supply and distribution",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_043",
+      "name": "irrigation",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Artificial application of water to land for agriculture",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_044",
+      "name": "dam",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Structure blocking water flow to create reservoir",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_045",
+      "name": "purification",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Process removing contaminants from water",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_046",
+      "name": "waste_management",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "System handling disposal of waste materials",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_047",
+      "name": "wastewater",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Used water containing dissolved and suspended matter",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_048",
+      "name": "sewage",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Liquid waste from households and industry",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.88,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_049",
+      "name": "canal",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Artificial waterway for transportation and irrigation",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_050",
+      "name": "aqueduct",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Structure conveying water across distance",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_051",
+      "name": "pipeline",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Series of connected tubes conveying fluid",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_052",
+      "name": "reservoir",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Large natural or artificial lake storing water",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_053",
+      "name": "treatment_plant",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Facility processing water or waste materials",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_054",
+      "name": "flood_control",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Systems preventing or mitigating flood damage",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.88,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_055",
+      "name": "environmental_engineering",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Application of engineering to environmental protection",
+      "subcategory": "Water & Environmental",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_056",
+      "name": "material",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Substance from which something is made",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_057",
+      "name": "metal",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Element with properties of high electrical conductivity",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_058",
+      "name": "alloy",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Mixture of metal with other element for enhanced properties",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_059",
+      "name": "ceramic",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Inorganic material made by heating clay or similar substances",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_060",
+      "name": "production",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Process of manufacturing goods through industrial processes",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_061",
+      "name": "smelting",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Process extracting metal from ore by heating",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_062",
+      "name": "casting",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Process pouring molten metal into molds",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_063",
+      "name": "forging",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Process shaping metal by heating and hammering",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_064",
+      "name": "material_science",
+      "domain": "engineering",
+      "tier": 2,
+      "definition": "Study of material properties and behavior",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_065",
+      "name": "composite",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Material combining two or more constituent materials",
+      "subcategory": "Materials & Manufacturing",
+      "confidence": 0.88,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_066",
+      "name": "road",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Path constructed for land vehicle transportation",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_067",
+      "name": "navigation",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Process determining and following route of travel",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_068",
+      "name": "transport",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Movement of goods or people from one place to another",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_069",
+      "name": "railway",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Track system for rail vehicle transportation",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "engineering_070",
+      "name": "vehicle",
+      "domain": "engineering",
+      "tier": 1,
+      "definition": "Machine designed for transportation of people or goods",
+      "subcategory": "Transportation & Infrastructure",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_006",
+      "name": "crop",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Plant or plants cultivated for food or other products",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [
+        "80:31"
+      ],
+      "related_concepts": [
+        "biology_001",
+        "biology_040",
+        "biology_040",
+        "biology_035"
+      ]
+    },
+    {
+      "id": "agriculture_007",
+      "name": "grain",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Seed of cereal plants like wheat, rice, or barley",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [
+        "80:31"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_008",
+      "name": "cereal",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Grain-producing grass plants",
+      "subcategory": "Crop Science",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_009",
+      "name": "vegetable",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Edible plant or part of plant",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_010",
+      "name": "fruit",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Mature ovary of flowering plant containing seeds",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_011",
+      "name": "planting",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Process of placing seeds in soil for growth",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_012",
+      "name": "harvesting",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Gathering of mature crops from fields",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_013",
+      "name": "seed",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Reproductive unit of plant containing embryo",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_014",
+      "name": "germination",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Process of seed beginning to grow",
+      "subcategory": "Crop Science",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_015",
+      "name": "growth_stage",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Phase in plant development from seedling to maturity",
+      "subcategory": "Crop Science",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_016",
+      "name": "yield",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Amount of crop produced per unit area",
+      "subcategory": "Crop Science",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_017",
+      "name": "wheat",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Cereal grain widely cultivated for food",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [
+        "80:31"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_018",
+      "name": "rice",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Staple grain crop grown in flooded paddies",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_019",
+      "name": "maize",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Major grain crop also known as corn",
+      "subcategory": "Crop Science",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_020",
+      "name": "legume",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Plant family including beans and peas with nitrogen-fixing roots",
+      "subcategory": "Food Production",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_021",
+      "name": "soil",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Top layer of earth containing minerals, organic matter, and organisms",
+      "subcategory": "Soil Science",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": [
+        "biology_050",
+        "biology_050"
+      ]
+    },
+    {
+      "id": "agriculture_022",
+      "name": "fertility",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Capability of soil to support plant growth",
+      "subcategory": "Soil Science",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_023",
+      "name": "ph",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Measure of soil acidity or alkalinity",
+      "subcategory": "Soil Science",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_024",
+      "name": "nutrient",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Substance absorbed by plants for growth and metabolism",
+      "subcategory": "Soil Science",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_025",
+      "name": "nitrogen",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Essential soil nutrient for plant protein synthesis",
+      "subcategory": "Soil Science",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_026",
+      "name": "phosphorus",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Essential nutrient for plant energy metabolism",
+      "subcategory": "Soil Science",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_027",
+      "name": "potassium",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Essential nutrient for plant regulation and growth",
+      "subcategory": "Soil Science",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_028",
+      "name": "composting",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Process decomposing organic matter into soil conditioner",
+      "subcategory": "Soil Science",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_029",
+      "name": "amendment",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Substance added to soil to improve its properties",
+      "subcategory": "Soil Science",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_030",
+      "name": "erosion_control",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Practices preventing soil loss from wind or water",
+      "subcategory": "Food Production",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_031",
+      "name": "irrigation_system",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Infrastructure delivering water to crops",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.92,
+      "quranic_references": [
+        "2:265"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_032",
+      "name": "water_source",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Origin of water supply for agricultural use",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_033",
+      "name": "rainfall",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Precipitation of water from atmosphere to ground",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.92,
+      "quranic_references": [
+        "2:265"
+      ],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_034",
+      "name": "drought",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Extended period of abnormally low rainfall",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_035",
+      "name": "flood_irrigation",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Method flooding fields with water for crop growth",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_036",
+      "name": "drip_irrigation",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Efficient system delivering water directly to plant roots",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_037",
+      "name": "sprinkler_system",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "System sprinkling water over crops",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_038",
+      "name": "water_conservation",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Practices reducing water use in agriculture",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_039",
+      "name": "groundwater",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Water held underground in soil and rock",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_040",
+      "name": "well",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Deep hole providing access to groundwater",
+      "subcategory": "Irrigation & Water",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_041",
+      "name": "livestock",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Farm animals raised for food or fiber",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_042",
+      "name": "cattle",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Large bovine animals raised for meat, dairy, or labor",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_043",
+      "name": "sheep",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Wool and meat-producing domesticated animal",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": [
+        "biology_025"
+      ]
+    },
+    {
+      "id": "agriculture_044",
+      "name": "goat",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Dairy and meat-producing farm animal",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_045",
+      "name": "chicken",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Poultry raised for eggs and meat",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.93,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_046",
+      "name": "feeding",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Providing food to livestock",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_047",
+      "name": "breeding",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Controlled reproduction of livestock for desired traits",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_048",
+      "name": "pasture",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Land with grass for grazing livestock",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_049",
+      "name": "dairy",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Production of milk and milk products from animals",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.92,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_050",
+      "name": "veterinary_care",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Medical care and health management of animals",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_051",
+      "name": "herd_management",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Administration of group of livestock",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_052",
+      "name": "animal_genetics",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Study of heredity in farm animals",
+      "subcategory": "Animal Husbandry",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_053",
+      "name": "organic_farming",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Agriculture without synthetic chemicals or genetically modified organisms",
+      "subcategory": "Sustainable Farming",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_054",
+      "name": "crop_rotation_practice",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Practice of growing different crops in sequence on same land",
+      "subcategory": "Food Production",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_055",
+      "name": "pest_management",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Strategies controlling agricultural pests",
+      "subcategory": "Sustainable Farming",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_056",
+      "name": "conservation",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Protection and sustainable use of natural resources",
+      "subcategory": "Sustainable Farming",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_057",
+      "name": "agroforestry",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "System integrating trees with crops and livestock",
+      "subcategory": "Sustainable Farming",
+      "confidence": 0.89,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_058",
+      "name": "biodiversity",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Variety of plant and animal species in agricultural system",
+      "subcategory": "Sustainable Farming",
+      "confidence": 0.9,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_059",
+      "name": "soil_health",
+      "domain": "agriculture",
+      "tier": 1,
+      "definition": "Biological and chemical condition of soil for plant growth",
+      "subcategory": "Sustainable Farming",
+      "confidence": 0.91,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "agriculture_060",
+      "name": "sustainable_practice",
+      "domain": "agriculture",
+      "tier": 2,
+      "definition": "Agricultural method maintaining long-term productivity",
+      "subcategory": "Sustainable Farming",
+      "confidence": 0.85,
+      "quranic_references": [],
+      "related_concepts": []
+    },
+    {
+      "id": "mathematics_001",
+      "name": "inheritance_fractions",
+      "domain": "mathematics",
+      "tier": 1,
+      "subcategory": "Applied Arithmetic",
+      "definition": "Precise fractional shares for inheritance distribution as prescribed in Q4:11-12 (faridah — mandated portions); exact algebra with no room for interpretation",
+      "quranic_references": [
+        "4:11",
+        "4:12",
+        "4:176"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "mathematics_002",
+        "mathematics_003"
+      ]
+    },
+    {
+      "id": "mathematics_002",
+      "name": "calendar_mathematics",
+      "domain": "mathematics",
+      "tier": 1,
+      "subcategory": "Chronometry",
+      "definition": "Correspondence between 300 solar years and 309 lunar years in Q18:25, reflecting the precise 11-day annual drift between solar and lunar calendars",
+      "quranic_references": [
+        "18:25"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "mathematics_001",
+        "mathematics_003"
+      ]
+    },
+    {
+      "id": "mathematics_003",
+      "name": "contract_formalization",
+      "domain": "mathematics",
+      "tier": 1,
+      "subcategory": "Applied Mathematics",
+      "definition": "Quantitative specifications in financial contracts, debts, and legal transactions — Q2:282 enjoins written recording of amounts and terms",
+      "quranic_references": [
+        "2:282"
+      ],
+      "confidence": 0.80,
+      "related_concepts": [
+        "mathematics_001"
+      ]
+    },
+    {
+      "id": "hydrology_001",
+      "name": "precipitation_cycle",
+      "domain": "hydrology",
+      "tier": 1,
+      "subcategory": "Hydrological Cycle",
+      "definition": "Atmospheric water descent and storage in the earth as described in Q23:18; corresponds to the complete precipitation–infiltration cycle in modern hydrology",
+      "quranic_references": [
+        "23:18",
+        "39:21"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "hydrology_002",
+        "hydrology_003"
+      ]
+    },
+    {
+      "id": "hydrology_002",
+      "name": "groundwater_recharge",
+      "domain": "hydrology",
+      "tier": 1,
+      "subcategory": "Hydrogeology",
+      "definition": "Infiltration of rainwater into aquifers and its resurgence as springs (yanabi — Q39:21); corresponds to the aquifer recharge and discharge cycle",
+      "quranic_references": [
+        "39:21",
+        "67:30"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "hydrology_001",
+        "hydrology_003"
+      ]
+    },
+    {
+      "id": "hydrology_003",
+      "name": "river_systems",
+      "domain": "hydrology",
+      "tier": 1,
+      "subcategory": "Fluvial Hydrology",
+      "definition": "River formation, flow, and drainage networks referenced throughout the Quran as observable natural phenomena",
+      "quranic_references": [
+        "13:3",
+        "14:32",
+        "18:86"
+      ],
+      "confidence": 0.82,
+      "related_concepts": [
+        "hydrology_001",
+        "hydrology_002"
+      ]
+    },
+    {
+      "id": "hydrology_004",
+      "name": "water_measurement",
+      "domain": "hydrology",
+      "tier": 1,
+      "subcategory": "Quantitative Hydrology",
+      "definition": "The Quranic phrase 'in a measured amount' (Q23:18) aligns with the quantitative, measurable nature of the hydrological cycle",
+      "quranic_references": [
+        "23:18"
+      ],
+      "confidence": 0.80,
+      "related_concepts": [
+        "hydrology_001"
+      ]
+    },
+    {
+      "id": "oceanography_001",
+      "name": "halocline_barrier",
+      "domain": "oceanography",
+      "tier": 1,
+      "subcategory": "Physical Oceanography",
+      "definition": "The density/salinity barrier between two meeting water bodies (Q55:19-20 — marj al-bahrayn) that prevents complete mixing; corresponds to the halocline observed at estuaries",
+      "quranic_references": [
+        "55:19",
+        "55:20",
+        "25:53"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "oceanography_002",
+        "oceanography_003"
+      ]
+    },
+    {
+      "id": "oceanography_002",
+      "name": "aphotic_zone",
+      "domain": "oceanography",
+      "tier": 1,
+      "subcategory": "Deep-Sea Oceanography",
+      "definition": "Layers of darkness in the deep ocean (Q24:40 — zulumat) corresponding to the aphotic zone where sunlight cannot penetrate below ~200 m",
+      "quranic_references": [
+        "24:40"
+      ],
+      "confidence": 0.85,
+      "related_concepts": [
+        "oceanography_001",
+        "oceanography_003"
+      ]
+    },
+    {
+      "id": "oceanography_003",
+      "name": "estuarine_mixing",
+      "domain": "oceanography",
+      "tier": 1,
+      "subcategory": "Estuarine Oceanography",
+      "definition": "The gradual mixing zone at the interface of fresh and salt water bodies, referenced in Q55:19-20 and Q25:53 as a barzakh (barrier/partition)",
+      "quranic_references": [
+        "55:19",
+        "25:53",
+        "27:61"
+      ],
+      "confidence": 0.83,
+      "related_concepts": [
+        "oceanography_001"
+      ]
+    },
+    {
+      "id": "oceanography_004",
+      "name": "wave_stratification",
+      "domain": "oceanography",
+      "tier": 1,
+      "subcategory": "Physical Oceanography",
+      "definition": "Internal and surface waves producing layered darkness in deep water (Q24:40); modern oceanography identifies internal waves as a distinct stratification mechanism",
+      "quranic_references": [
+        "24:40"
+      ],
+      "confidence": 0.80,
+      "related_concepts": [
+        "oceanography_002"
+      ]
+    },
+    {
+      "id": "geology_001",
+      "name": "isostasy_mountain_roots",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Structural Geology",
+      "definition": "Mountains described as 'pegs' (awtad — Q31:10, Q78:7) with deep roots into the crust; parallels the isostatic model where mountain roots extend downward into the mantle",
+      "quranic_references": [
+        "31:10",
+        "78:7",
+        "16:15"
+      ],
+      "confidence": 0.75,
+      "related_concepts": [
+        "geology_002",
+        "geology_003"
+      ]
+    },
+    {
+      "id": "geology_002",
+      "name": "tectonic_stability",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Geodynamics",
+      "definition": "Mountains acting to stabilize the earth and prevent shaking (rawasi — Q16:15, Q21:31); a valid parallel to the role of lithospheric thickening in tectonic stability",
+      "quranic_references": [
+        "16:15",
+        "21:31",
+        "31:10"
+      ],
+      "confidence": 0.73,
+      "related_concepts": [
+        "geology_001",
+        "geology_004"
+      ]
+    },
+    {
+      "id": "geology_003",
+      "name": "crustal_root_structure",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Structural Geology",
+      "definition": "The deep sub-surface extension of mountain ranges into the lithosphere, analogous to the 'peg' metaphor in Q78:7 — Tier 2 as this requires geological inference",
+      "quranic_references": [
+        "78:7",
+        "31:10"
+      ],
+      "confidence": 0.72,
+      "related_concepts": [
+        "geology_001",
+        "geology_002"
+      ]
+    },
+    {
+      "id": "geology_004",
+      "name": "mineral_formation",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Mineralogy",
+      "definition": "Formation of minerals and rock strata mentioned in Quranic descriptions of earth's layers; Tier 2 — inference required to connect specific verses to mineralogy",
+      "quranic_references": [
+        "57:25",
+        "34:10"
+      ],
+      "confidence": 0.70,
+      "related_concepts": [
+        "geology_002",
+        "geology_003"
+      ]
+    },
+    {
+      "id": "geology_005",
+      "name": "rock_stratification",
+      "domain": "geology",
+      "tier": 2,
+      "subcategory": "Stratigraphy",
+      "definition": "Layered rock formations referenced in discussions of earth's structure; parallels the stratigraphic column of modern geology",
+      "quranic_references": [
+        "18:96",
+        "57:25"
+      ],
+      "confidence": 0.68,
+      "related_concepts": [
+        "geology_004"
+      ]
+    }
+  ]
+}

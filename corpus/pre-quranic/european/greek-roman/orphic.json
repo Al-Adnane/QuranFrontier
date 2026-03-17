@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Ancient Greek Religion (Orphic)",
+    "language": "Ancient Greek",
+    "script": "Greek",
+    "date_range": "600-200 BCE",
+    "text_type": "Orphic Hymns, Gold Tablets",
+    "source": "Orphic Fragments, Derveni Papyrus",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+0370-U+03FF"
+  },
+  "texts": [
+    {
+      "text_id": "orphic_hymns",
+      "text_name_gr": "Ὀρφικοὶ Ὕμνοι",
+      "text_name_en": "Orphic Hymns",
+      "date": "~600-200 BCE",
+      "hymns": [
+        {
+          "hymn_id": "orph_1",
+          "name": "To Protogonos",
+          "greek": "Πρωτόγονον καλέω, Φάνητα, μέγαν θεὸν εὐρυμέδοντα",
+          "transliteration": "Prōtogonon kaleō, Phanēta, megan theon eurymedonta",
+          "translation_en": "I call upon Protogonos, Phanes, great god of wide dominion"
+        },
+        {
+          "hymn_id": "orph_2",
+          "name": "To Night",
+          "greek": "Νύκτα σεμνὴν καλέω, μήτηρ θεῶν τε καὶ ἀνδρῶν",
+          "transliteration": "Nyxta semnēn kaleō, mētēr theōn te kai andrōn",
+          "translation_en": "I call upon holy Night, mother of gods and men"
+        },
+        {
+          "hymn_id": "orph_3",
+          "name": "To Zeus",
+          "greek": "Ζεῦ πολυτίμητε, Ζεῦ κυδιάνειρα, μέγιστε",
+          "transliteration": "Zeū polytimēte, Zeū kydiáneira, megiste",
+          "translation_en": "Zeus most honored, Zeus glorious among men, greatest"
+        },
+        {
+          "hymn_id": "orph_4",
+          "name": "To Dionysus",
+          "greek": "Διόνυσον καλέω, Βρόμιον, Εὐάν, Λυσαῖον",
+          "transliteration": "Dionyson kaleō, Bromion, Euan, Lysaion",
+          "translation_en": "I call upon Dionysus, Bromios, Euhan, the Loosener"
+        },
+        {
+          "hymn_id": "orph_5",
+          "name": "To Earth",
+          "greek": "Γαῖα, θεῶν μήτηρ, πάντων ἕδος ἀκάματον",
+          "transliteration": "Gaia, theōn mētēr, pantōn hedos akamaton",
+          "translation_en": "Earth, mother of gods, unwearied seat of all"
+        },
+        {
+          "hymn_id": "orph_6",
+          "name": "To Memory",
+          "greek": "Μνημοσύνην καλέω, ἣ πάντων μήτηρ ἐγένετο",
+          "transliteration": "Mēmosynēn kaleō, hē pantōn mētēr egeneto",
+          "translation_en": "I call upon Memory, who became mother of all"
+        }
+      ]
+    },
+    {
+      "text_id": "gold_tablets",
+      "text_name_gr": "Χρυσᾶ Πινάκια",
+      "text_name_en": "Orphic Gold Tablets",
+      "date": "~400-200 BCE",
+      "tablets": [
+        {
+          "tablet_id": "gold_1",
+          "name": "Thurioi Tablet A1",
+          "greek": "Εἰπεῖν Περσεφόνῃ· Βοῦν σε πέμπω",
+          "transliteration": "Eipein Persephonē: Boun se pempō",
+          "translation_en": "Say to Persephone: I send you a bull"
+        },
+        {
+          "tablet_id": "gold_2",
+          "name": "Thurioi Tablet A2",
+          "greek": "Παῖς εἰμι Γῆς καὶ Οὐρανοῦ ἀστερόεντος",
+          "transliteration": "Pais eimi Gēs kai Ouranou asteróentos",
+          "translation_en": "I am a child of Earth and starry Heaven"
+        },
+        {
+          "tablet_id": "gold_3",
+          "name": "Petelia Tablet",
+          "greek": "Εὑρήσεις δ᾽ ἐν Ἅιδου δόμοις ἐπ᾽ ἀριστερὰ κρήνην",
+          "transliteration": "Heurēseis d' en Haidou domois ep' aristera krēnēn",
+          "translation_en": "You will find in Hades' halls, on the left, a spring"
+        },
+        {
+          "tablet_id": "gold_4",
+          "name": "Hipponion Tablet",
+          "greek": "Τῇδε ὁδός ἐστιν, ἵνα τε καὶ ἄλλοι μύσται καὶ βάκχοι στείχουσι",
+          "transliteration": "Tēde hodos estin, hina te kai alloi mystai kai bakchoi steichousi",
+          "translation_en": "This is the way where other mystics and bacchants walk"
+        }
+      ]
+    },
+    {
+      "text_id": "orphic_commandments",
+      "text_name_gr": "Ὀρφικοὶ Νόμοι",
+      "text_name_en": "Orphic Precepts",
+      "date": "~500-300 BCE",
+      "precepts": [
+        {
+          "precept_id": "orp_c1",
+          "greek": "Ἅγνευε",
+          "transliteration": "Hagneue",
+          "translation_en": "Be pure"
+        },
+        {
+          "precept_id": "orp_c2",
+          "greek": "Μὴ φόνευε",
+          "transliteration": "Mē phoneue",
+          "translation_en": "Do not kill"
+        },
+        {
+          "precept_id": "orp_c3",
+          "greek": "Ἀπέχου ἐμψύχων",
+          "transliteration": "Apechou empsychōn",
+          "translation_en": "Abstain from living beings (vegetarianism)"
+        },
+        {
+          "precept_id": "orp_c4",
+          "greek": "Μνημόνευε",
+          "transliteration": "Mnēmoneue",
+          "translation_en": "Remember"
+        },
+        {
+          "precept_id": "orp_c5",
+          "greek": "Τέλεσας τὰ τελεστά",
+          "transliteration": "Telesas ta telesta",
+          "translation_en": "Perform the sacred rites"
+        }
+      ]
+    }
+  ],
+  "deities": [
+    {"name": "Phanes/Protogonos", "role": "First-born Creator", "symbol": "Φάνης"},
+    {"name": "Nyx", "role": "Night, Primeval Mother", "symbol": "Νύξ"},
+    {"name": "Zeus", "role": "King of Gods", "symbol": "Ζεύς"},
+    {"name": "Dionysus", "role": "God of Wine/Ecstasy", "symbol": "Διόνυσος"},
+    {"name": "Persephone", "role": "Queen of Underworld", "symbol": "Περσεφόνη"},
+    {"name": "Gaia", "role": "Earth Mother", "symbol": "Γαῖα"}
+  ],
+  "hash": "a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6"
+}

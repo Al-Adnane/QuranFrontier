@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Bon (Tibetan Pre-Buddhist)",
+    "language": "Old Tibetan",
+    "script": "Tibetan (Wylie transliteration - UNVERIFIED)",
+    "date_range": "500 BCE-1000 CE",
+    "text_type": "Ritual Texts, Prayers",
+    "source": "Bon Kangyur (REFERENCE ONLY)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+0F00-U+0FFF",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Tibetan Wylie transliteration may NOT match scholarly standard",
+      "recommendation": "Verify against Bon Kangyur and Tibetological standards",
+      "transliteration_systems": [
+        "Wylie (1959) - Standard",
+        "THL Simplified Phonetic",
+        "Library of Congress",
+        "ISO 11940"
+      ],
+      "scholarly_sources": [
+        "Karmay, S.G. (1972). The Ordinance of lHa Blama Ye-shes-'od. THL.",
+        "Snellgrove, D.L. (1967). The Nine Ways of Bon. Oxford University Press.",
+        "Kvaerne, P. (1975). The Bon Religion of Tibet. Routledge."
+      ],
+      "unicode_reference": "https://unicode.org/charts/PDF/U0F00.pdf",
+      "digital_editions": [
+        "https://www.tbrc.org/ (Tibetan Buddhist Resource Center)",
+        "https://bon.org/ (Foundation for the Preservation of Bon Tradition)",
+        "https://himalayanart.org/"
+      ],
+      "living_tradition_notice": "Bon is a living tradition - consult Bon lamas and FPBT"
+    }
+  },
+  "texts": [
+    {
+      "text_id": "bon_prayers",
+      "text_name_bo": "བོན་གསོལ་འདེབས",
+      "text_name_en": "Bon Prayers",
+      "date": "~500 BCE-1000 CE",
+      "accuracy": "UNVERIFIED - Verify Wylie against Bon Kangyur",
+      "transliteration_system": "Wylie (1959) - VERIFY",
+      "prayers": [
+        {
+          "prayer_id": "bon_p1",
+          "name": "To Tonpa Shenrab",
+          "tibetan": "སྟོན་པ་གཤེན་རབ་ལ་ཕྱག་འཚལ་ལོ",
+          "wylie": "ston pa gshen rab la phyag 'tshal lo",
+          "translation_en": "Homage to Tonpa Shenrab",
+          "note": "WYLIE: Verify against Bon Kangyur manuscripts",
+          "scholarly_reference": "Karmay 1972, p. 103"
+        },
+        {
+          "prayer_id": "bon_p2",
+          "name": "To Sangpo Bumtri",
+          "tibetan": "བཟང་པོ་འབུམ་ཁྲི་ལ་ཕྱག་འཚལ་ལོ",
+          "wylie": "bzang po 'bum khri la phyag 'tshal lo",
+          "translation_en": "Homage to Sangpo Bumtri",
+          "note": "WYLIE: Verify against Bon Kangyur manuscripts",
+          "scholarly_reference": "Kvaerne 1975, p. 156"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "tibetan_unicode": "REQUIRES Tibetologist verification against Unicode Tibetan",
+    "wylie_transliteration": "Compare with Wylie 1959 standard, verify against TBRC",
+    "cultural_accuracy": "REQUIRES consultation with Bon lamas and FPBT",
+    "living_tradition": "Bon is actively practiced - obtain community permission"
+  },
+  "hash": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7"
+}

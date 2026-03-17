@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-03-16",
+    "description": "Domain-specific mappings and concept distribution"
+  },
+  "domains": {
+    "physics": {
+      "name": "Physics",
+      "description": "Concepts related to matter, energy, forces, and motion",
+      "concept_count": 210,
+      "tier_distribution": {
+        "empirical": 150,
+        "frontier": 50,
+        "metaphorical": 10
+      },
+      "key_areas": [
+        "gravitation",
+        "celestial_mechanics",
+        "expansion_of_universe",
+        "energy_conservation",
+        "stellar_formation",
+        "quantum_mechanics",
+        "thermodynamics",
+        "electromagnetism"
+      ]
+    },
+    "biology": {
+      "name": "Biology",
+      "description": "Concepts related to living organisms and life processes",
+      "concept_count": 220,
+      "tier_distribution": {
+        "empirical": 160,
+        "frontier": 45,
+        "metaphorical": 15
+      },
+      "key_areas": [
+        "photosynthesis",
+        "cellular_respiration",
+        "dna_structure",
+        "protein_synthesis",
+        "embryonic_development",
+        "genetic_inheritance",
+        "ecosystems",
+        "evolution"
+      ]
+    },
+    "medicine": {
+      "name": "Medicine",
+      "description": "Concepts related to human health, disease, and treatment",
+      "concept_count": 235,
+      "tier_distribution": {
+        "empirical": 170,
+        "frontier": 55,
+        "metaphorical": 10
+      },
+      "key_areas": [
+        "immune_system",
+        "cardiovascular_system",
+        "neurotransmission",
+        "organ_transplantation",
+        "disease_pathogenesis",
+        "pharmacology",
+        "surgery",
+        "diagnostics"
+      ]
+    },
+    "engineering": {
+      "name": "Engineering",
+      "description": "Concepts related to design, construction, and applied technology",
+      "concept_count": 185,
+      "tier_distribution": {
+        "empirical": 140,
+        "frontier": 35,
+        "metaphorical": 10
+      },
+      "key_areas": [
+        "structural_mechanics",
+        "water_management",
+        "irrigation_systems",
+        "material_strength",
+        "hydraulic_engineering",
+        "civil_construction",
+        "mechanical_systems",
+        "infrastructure"
+      ]
+    },
+    "agriculture": {
+      "name": "Agriculture",
+      "description": "Concepts related to farming, crops, and land management",
+      "concept_count": 152,
+      "tier_distribution": {
+        "empirical": 110,
+        "frontier": 32,
+        "metaphorical": 10
+      },
+      "key_areas": [
+        "soil_composition",
+        "crop_rotation",
+        "seed_germination",
+        "pollination",
+        "plant_nutrition",
+        "pest_management",
+        "crop_yields",
+        "climate_adaptation"
+      ]
+    }
+  },
+  "global_statistics": {
+    "total_concepts": 1002,
+    "total_domains": 5,
+    "tier_distribution": {
+      "empirical": 730,
+      "frontier": 217,
+      "metaphorical": 55
+    },
+    "domain_distribution": {
+      "physics": 210,
+      "biology": 220,
+      "medicine": 235,
+      "engineering": 185,
+      "agriculture": 152
+    }
+  }
+}

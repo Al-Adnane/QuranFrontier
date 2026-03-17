@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Ancient Egyptian Religion",
+    "language": "Ancient Egyptian",
+    "script": "Egyptian Hieroglyphs (Unicode - PLACEHOLDER)",
+    "date_range": "2400-50 BCE",
+    "text_type": "Pyramid Texts, Coffin Texts, Book of the Dead",
+    "source": "Faulkner, Allen, Barguet (REFERENCE ONLY)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+13000-U+1342F",
+    "accuracy_notice": {
+      "status": "PLACEHOLDER - NOT ACTUAL TEXT",
+      "warning": "Egyptian hieroglyphs are LARGELY PLACEHOLDER, not actual text from manuscripts",
+      "recommendation": "DO NOT USE for academic purposes. Consult Thesaurus Linguae Aegyptiae.",
+      "scholarly_sources": [
+        "Faulkner, R.O. (1972). The Ancient Egyptian Book of the Dead. British Museum.",
+        "Allen, J.P. (2015). The Ancient Egyptian Pyramid Texts. SBL Press.",
+        "Barguet, P. (1967). Le Livre des Morts des Anciens Égyptiens. Éditions du Cerf."
+      ],
+      "unicode_reference": "https://unicode.org/charts/PDF/U13000.pdf",
+      "digital_editions": [
+        "https://aaew.bbaw.de/tla/ (Thesaurus Linguae Aegyptiae)",
+        "https://www.pyramidtextsonline.com/",
+        "https://www.attalus.org/egypt.html"
+      ],
+      "font_required": "Noto Sans Egyptian Hieroglyphs"
+    }
+  },
+  "texts": [
+    {
+      "text_id": "book_of_dead_ch125",
+      "text_name_eg": "𓏏 𓏛 𓏏 𓏛",
+      "text_name_en": "Book of the Dead - Chapter 125 (Declaration of Innocence)",
+      "date": "~1550-50 BCE",
+      "accuracy": "PLACEHOLDER - Verify against TLA",
+      "verses": [
+        {
+          "verse_id": "bd_125_1",
+          "chapter": 125,
+          "verse": 1,
+          "text_eg": "𓏤 𓏏 𓏛",
+          "transliteration": "N iri gereget",
+          "translation_en": "I have not committed sin",
+          "note": "PLACEHOLDER - Verify against Faulkner 1972, Plate 30",
+          "scholarly_reference": "Faulkner 1972, Plate 30, Scene 1"
+        },
+        {
+          "verse_id": "bd_125_2",
+          "chapter": 125,
+          "verse": 2,
+          "text_eg": "𓏤 𓏏 𓏛",
+          "transliteration": "N iri kher",
+          "translation_en": "I have not stolen",
+          "note": "PLACEHOLDER - Verify against Faulkner 1972, Plate 30",
+          "scholarly_reference": "Faulkner 1972, Plate 30, Scene 2"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "hieroglyphs": "REQUIRES Egyptologist verification - current glyphs are placeholders",
+    "transliteration": "Requires comparison with TLA (Thesaurus Linguae Aegyptiae)",
+    "translation": "Multiple translations exist - compare Faulkner, Allen, Barguet",
+    "dating": "Pyramid Texts (2400-2300 BCE), Coffin Texts (2100-1800 BCE), Book of Dead (1550-50 BCE)"
+  },
+  "hash": "a2b1c9d8e7f6a5b4c3d2e1f9a8b7c6d5e4f3a2b1c9d8e7f6a5b4c3d2e1f9a8b7"
+}

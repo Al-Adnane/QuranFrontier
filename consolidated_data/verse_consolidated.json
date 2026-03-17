@@ -1,0 +1,70 @@
+[
+  {
+    "surah": 1,
+    "verse": 1,
+    "text_ar": "بسم الله الرحمن الرحيم",
+    "primary_source": "quran.com",
+    "sources": {
+      "quran.com": {
+        "text_ar": "بسم الله الرحمن الرحيم",
+        "metadata": {}
+      },
+      "tanzil.net": {
+        "text_ar": "بسم الله الرحمن الرحيم",
+        "metadata": {}
+      }
+    },
+    "hash_arabic": "4221505b325b11ca88a84d2a210011f9c2bec66edbf359787397239679abb3f0",
+    "canonical_reference": "1:1",
+    "reference": "1:1"
+  },
+  {
+    "surah": 1,
+    "verse": 2,
+    "text_ar": "الحمد لله رب العالمين",
+    "primary_source": "quran.com",
+    "sources": {
+      "quran.com": {
+        "text_ar": "الحمد لله رب العالمين",
+        "metadata": {}
+      },
+      "tanzil.net": {
+        "text_ar": "الحمد لله رب العالمين",
+        "metadata": {}
+      }
+    },
+    "hash_arabic": "c6818a11739652ce65785c27ab3e3f7e8d66776fdc4f2910a1f087872ba4239d",
+    "canonical_reference": "1:2",
+    "reference": "1:2"
+  },
+  {
+    "surah": 112,
+    "verse": 1,
+    "text_ar": "قل هو الله أحد",
+    "primary_source": "quran.com",
+    "sources": {
+      "quran.com": {
+        "text_ar": "قل هو الله أحد",
+        "metadata": {}
+      }
+    },
+    "hash_arabic": "35e3d7f9e31a2c8d96d02c724f8e9a22386bfa4c93cf36404553be8a0675501b",
+    "canonical_reference": "112:1",
+    "reference": "112:1"
+  },
+  {
+    "surah": 114,
+    "verse": 6,
+    "text_ar": "من الجنة والناس",
+    "primary_source": "quran.com",
+    "sources": {
+      "quran.com": {
+        "text_ar": "من الجنة والناس",
+        "metadata": {}
+      }
+    },
+    "hash_arabic": "e1a042453e9f9b84e31f5e92160bf784530c42349823722d20f7a628e9aab57c",
+    "canonical_reference": "114:6",
+    "reference": "114:6"
+  }
+]

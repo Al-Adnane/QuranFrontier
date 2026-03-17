@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Judaism (Hebrew Bible)",
+    "model_type": "Gematria / Graph Theory / Numerology",
+    "source": "Torah, Tanakh, Kabbalistic Texts",
+    "accuracy": "REQUIRES VERIFICATION with Hebraists",
+    "extraction_date": "2026-03-15"
+  },
+  "gematria_system": {
+    "description": "Hebrew letter-number correspondence",
+    "mathematical_structure": {
+      "type": "Bijective Mapping",
+      "domain": "Hebrew Alphabet (22 letters)",
+      "codomain": "Natural Numbers"
+    },
+    "standard_gematria": {
+      "aleph_bet": [
+        {"letter": "א", "name": "Aleph", "value": 1},
+        {"letter": "ב", "name": "Bet", "value": 2},
+        {"letter": "ג", "name": "Gimel", "value": 3},
+        {"letter": "ד", "name": "Dalet", "value": 4},
+        {"letter": "ה", "name": "He", "value": 5},
+        {"letter": "ו", "name": "Vav", "value": 6},
+        {"letter": "ז", "name": "Zayin", "value": 7},
+        {"letter": "ח", "name": "Het", "value": 8},
+        {"letter": "ט", "name": "Tet", "value": 9},
+        {"letter": "י", "name": "Yod", "value": 10},
+        {"letter": "כ", "name": "Kaf", "value": 20},
+        {"letter": "ל", "name": "Lamed", "value": 30},
+        {"letter": "מ", "name": "Mem", "value": 40},
+        {"letter": "נ", "name": "Nun", "value": 50},
+        {"letter": "ס", "name": "Samekh", "value": 60},
+        {"letter": "ע", "name": "Ayin", "value": 70},
+        {"letter": "פ", "name": "Pe", "value": 80},
+        {"letter": "צ", "name": "Tsadi", "value": 90},
+        {"letter": "ק", "name": "Qof", "value": 100},
+        {"letter": "ר", "name": "Resh", "value": 200},
+        {"letter": "ש", "name": "Shin", "value": 300},
+        {"letter": "ת", "name": "Tav", "value": 400}
+      ],
+      "final_forms": [
+        {"letter": "ך", "name": "Kaf Sofit", "value": 500},
+        {"letter": "ם", "name": "Mem Sofit", "value": 600},
+        {"letter": "ן", "name": "Nun Sofit", "value": 700},
+        {"letter": "ף", "name": "Pe Sofit", "value": 800},
+        {"letter": "ץ", "name": "Tsadi Sofit", "value": 900}
+      ]
+    },
+    "word_calculation": {
+      "method": "Sum of letter values",
+      "example": {
+        "word": "אהבה",
+        "translation": "Love",
+        "calculation": "1 + 5 + 2 + 5 = 13"
+      }
+    },
+    "operations": {
+      "mispar_hechrachi": "Standard summation",
+      "mispar_gadol": "Include final forms",
+      "mispar_katan": "Reduce to single digit (digital root)",
+      "atbash": "Letter substitution (first↔last)"
+    }
+  },
+  "tree_of_life": {
+    "description": "Kabbalistic Tree of Life (Etz Chaim)",
+    "mathematical_structure": {
+      "type": "Graph with 10 nodes and 22 edges",
+      "nodes": "10 Sephirot",
+      "edges": "22 Paths (correspond to 22 Hebrew letters)"
+    },
+    "sephirot": [
+      {"id": 1, "name": "Keter", "translation": "Crown", "value": 1},
+      {"id": 2, "name": "Chokhmah", "translation": "Wisdom", "value": 2},
+      {"id": 3, "name": "Binah", "translation": "Understanding", "value": 3},
+      {"id": 4, "name": "Chesed", "translation": "Kindness", "value": 4},
+      {"id": 5, "name": "Gevurah", "translation": "Severity", "value": 5},
+      {"id": 6, "name": "Tiferet", "translation": "Beauty", "value": 6},
+      {"id": 7, "name": "Netzach", "translation": "Eternity", "value": 7},
+      {"id": 8, "name": "Hod", "translation": "Splendor", "value": 8},
+      {"id": 9, "name": "Yesod", "translation": "Foundation", "value": 9},
+      {"id": 10, "name": "Malkhut", "translation": "Kingship", "value": 10}
+    ],
+    "paths": [
+      {"from": "Keter", "to": "Chokhmah", "letter": "י"},
+      {"from": "Keter", "to": "Binah", "letter": "ה"},
+      {"from": "Chokhmah", "to": "Binah", "letter": "ו"},
+      {"from": "Chokhmah", "to": "Chesed", "letter": "ז"},
+      {"from": "Binah", "to": "Gevurah", "letter": "ה"},
+      {"from": "Chesed", "to": "Gevurah", "letter": "ח"},
+      {"from": "Chesed", "to": "Tiferet", "letter": "ד"},
+      {"from": "Gevurah", "to": "Tiferet", "letter": "ג"},
+      {"from": "Tiferet", "to": "Netzach", "letter": "נ"},
+      {"from": "Tiferet", "to": "Hod", "letter": "ס"},
+      {"from": "Tiferet", "to": "Yesod", "letter": "ע"},
+      {"from": "Netzach", "to": "Hod", "letter": "צ"},
+      {"from": "Netzach", "to": "Yesod", "letter": "פ"},
+      {"from": "Hod", "to": "Yesod", "letter": "ק"},
+      {"from": "Yesod", "to": "Malkhut", "letter": "ת"}
+    ],
+    "graph_properties": {
+      "planar": true,
+      "connected": true,
+      "bipartite": false,
+      "chromatic_number": 3,
+      "diameter": 4
+    },
+    "triangles": [
+      {"name": "Supernal Triangle", "nodes": ["Keter", "Chokhmah", "Binah"]},
+      {"name": "Ethical Triangle", "nodes": ["Chesed", "Gevurah", "Tiferet"]},
+      {"name": "Astral Triangle", "nodes": ["Netzach", "Hod", "Yesod"]}
+    ]
+  },
+  "genealogy_graphs": {
+    "description": "Biblical genealogies as directed graphs",
+    "mathematical_structure": {
+      "type": "Directed Acyclic Graph (DAG)",
+      "nodes": "Individuals",
+      "edges": "Parent-child relationships"
+    },
+    "adam_to_noah": {
+      "generations": 10,
+      "structure": "Linear (father to son)",
+      "nodes": ["Adam", "Seth", "Enosh", "Kenan", "Mahalalel", "Jared", "Enoch", "Methuselah", "Lamech", "Noah"]
+    },
+    "noah_to_abraham": {
+      "generations": 10,
+      "structure": "Linear (father to son)",
+      "nodes": ["Noah", "Shem", "Arpachshad", "Shelah", "Eber", "Peleg", "Reu", "Serug", "Nahor", "Terah", "Abraham"]
+    },
+    "graph_metrics": {
+      "total_generations_adam_to_abraham": 20,
+      "average_lifespan_pre_flood": 912,
+      "average_lifespan_post_flood": 335
+    }
+  },
+  "sacred_numbers": {
+    "description": "Numerologically significant numbers in Hebrew Bible",
+    "numbers": {
+      "1": "Unity of God (Shema: 'YHWH is One')",
+      "3": "Patriarchs (Abraham, Isaac, Jacob)",
+      "4": "Matriarchs (Sarah, Rebecca, Rachel, Leah)",
+      "7": "Days of creation, completeness",
+      "10": "Commandments, plagues, generations",
+      "12": "Tribes of Israel",
+      "18": "Chai (life) in gematria",
+      "26": "YHWH (Tetragrammaton) in gematria",
+      "40": "Days/nights of testing (flood, Sinai, wilderness)",
+      "365": "Days in solar year, negative commandments (tradition)"
+    },
+    "mathematical_properties": {
+      "7": "Prime number",
+      "10": "Base of decimal system",
+      "12": "Highly composite (divisible by 1,2,3,4,6,12)",
+      "18": "2 × 9 = 2 × 3²",
+      "26": "2 × 13 (both prime)",
+      "40": "Highly composite (divisible by 1,2,4,5,8,10,20,40)"
+    }
+  },
+  "calendar_mathematics": {
+    "description": "Hebrew calendar calculations",
+    "mathematical_structure": {
+      "type": "Lunisolar Calendar",
+      "cycle": "19-year Metonic cycle"
+    },
+    "metonic_cycle": {
+      "years": 19,
+      "leap_years": 7,
+      "regular_years": 12,
+      "months_in_cycle": 235,
+      "formula": "19 × 12 + 7 = 235 lunar months"
+    },
+    "year_lengths": {
+      "regular": [353, 354, 355],
+      "leap": [383, 384, 385]
+    },
+    "molad_calculation": {
+      "description": "Mean lunar conjunction",
+      "interval": "29 days, 12 hours, 44 minutes, 3+1/3 seconds",
+      "in_parts": "29 days, 12 hours, 793 parts (halakim)"
+    }
+  },
+  "verification_required": {
+    "gematria_values": "Verify against standard Hebrew lexicons",
+    "tree_structure": "Verify against Kabbalistic sources",
+    "genealogy": "Verify against Biblical text"
+  },
+  "hash": "judaism_math_model_v1_2026"
+}

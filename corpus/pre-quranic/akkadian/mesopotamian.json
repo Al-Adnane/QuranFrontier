@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Mesopotamian Religion",
+    "language": "Akkadian/Sumerian",
+    "script": "Cuneiform (Unicode - UNVERIFIED)",
+    "date_range": "2100-1200 BCE",
+    "text_type": "Epic of Gilgamesh, Enuma Elish",
+    "source": "Standard Babylonian Version (REFERENCE ONLY)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+12000-U+123FF",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Cuneiform signs may be INCORRECT for actual Akkadian/Ugaritic texts",
+      "recommendation": "Verify against ORACC and CDLI before any academic use",
+      "scholarly_sources": [
+        "George, A.R. (2003). The Babylonian Gilgamesh Epic. Oxford University Press.",
+        "Lambert, W.G. (2013). Babylonian Creation Myths. Eisenbrauns.",
+        "Foster, B.R. (2005). Before the Muses. CDL Press."
+      ],
+      "unicode_reference": "https://unicode.org/charts/PDF/U12000.pdf",
+      "digital_editions": [
+        "https://oracc.org/ (Open Richly Annotated Cuneiform Corpus)",
+        "https://cdli.ucla.edu/ (Cuneiform Digital Library Initiative)",
+        "https://etcsl.orinst.ox.ac.uk/ (Electronic Text Corpus of Sumerian Literature)"
+      ]
+    }
+  },
+  "texts": [
+    {
+      "text_id": "gilgamesh",
+      "text_name_ak": "𒄑𒂆𒈦",
+      "text_name_en": "Epic of Gilgamesh",
+      "date": "~2100-1200 BCE",
+      "accuracy": "UNVERIFIED - Check against ORACC/CDLI",
+      "tablets": [
+        {
+          "tablet_id": "gil_1_1",
+          "tablet_number": 1,
+          "line": 1,
+          "text_ak": "𒋗 𒀝 𒉪 𒁍 𒊏 𒅗",
+          "transliteration": "ša nagba imuru",
+          "translation_en": "He who saw the Deep",
+          "note": "VERIFY: Compare with George 2003, Tablet I, Line 1",
+          "scholarly_reference": "George 2003, Vol. 1, p. 538"
+        },
+        {
+          "tablet_id": "gil_1_2",
+          "tablet_number": 1,
+          "line": 2,
+          "text_ak": "𒋗 𒄿𒁍𒋗𒅔",
+          "transliteration": "ša idišūma",
+          "translation_en": "Who knew all",
+          "note": "VERIFY: Compare with George 2003, Tablet I, Line 2",
+          "scholarly_reference": "George 2003, Vol. 1, p. 538"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "cuneiform_signs": "Requires Assyriologist verification against CDLI sign lists",
+    "transliteration": "Requires comparison with Chicago Assyrian Dictionary",
+    "translation": "Multiple translations exist - compare George, Foster, Lambert",
+    "dating": "Old Babylonian vs. Standard Babylonian versions differ significantly"
+  },
+  "hash": "b3c2d1e9f8a7b6c5d4e3f2a1b9c8d7e6f5a4b3c2d1e9f8a7b6c5d4e3f2a1b9c8"
+}

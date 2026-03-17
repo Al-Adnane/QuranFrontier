@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Sabean/Sabaean Religion",
+    "language": "Sabaean (Old South Arabian)",
+    "script": "Musnad (South Arabian)",
+    "date_range": "800 BCE-600 CE",
+    "text_type": "Inscriptions, Hymns, Dedications",
+    "source": "Corpus Inscriptionum Semiticarum",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+10A60-U+10A7F"
+  },
+  "texts": [
+    {
+      "text_id": "sabean_inscriptions",
+      "text_name_sb": "𐩪𐩨𐩱𐩣",
+      "text_name_en": "Sabaean Inscriptions",
+      "date": "~800 BCE-600 CE",
+      "inscriptions": [
+        {
+          "inscription_id": "sab_1",
+          "name": "Invocation to Almaqah",
+          "text_sb": "𐩨𐩲𐩡𐩧 𐩱𐩡𐩣𐩤𐩵 𐩥𐩺 𐩱𐩪𐩧𐩺",
+          "transliteration": "bism ʾAlmaqah wa ʾAthrū",
+          "translation_en": "In the name of Almaqah and Athtar"
+        },
+        {
+          "inscription_id": "sab_2",
+          "name": "Temple Dedication",
+          "text_sb": "𐩨𐩲𐩡𐩧 𐩱𐩡𐩣𐩤𐩵 𐩢𐩫𐩵 𐩪𐩲𐩣𐩱",
+          "transliteration": "bism ʾAlmaqah li-ḥimyar",
+          "translation_en": "In the name of Almaqah, for Himyar"
+        },
+        {
+          "inscription_id": "sab_3",
+          "name": "Prayer for Rain",
+          "text_sb": "𐩱𐩡𐩢𐩵 𐩪𐩱𐩲𐩧 𐩣𐩺𐩲𐩣",
+          "transliteration": "ʾalāh baʿal mawtar",
+          "translation_en": "O Lord, bring rain"
+        },
+        {
+          "inscription_id": "sab_4",
+          "name": "Blessing Formula",
+          "text_sb": "𐩥𐩺 𐩪𐩧𐩤𐩺 𐩥𐩺 𐩪𐩲𐩣𐩣",
+          "transliteration": "wa barak wa baʿal",
+          "translation_en": "And bless and grant"
+        },
+        {
+          "inscription_id": "sab_5",
+          "name": "Moon God Invocation",
+          "text_sb": "𐩱𐩡𐩣𐩤𐩵 𐩱𐩡𐩤𐩱𐩧 𐩱𐩡𐩤𐩱𐩣",
+          "transliteration": "ʾAlmaqah al-qamar al-ʾil",
+          "translation_en": "Almaqah, the Moon, the God"
+        }
+      ]
+    },
+    {
+      "text_id": "sabean_prayers",
+      "text_name_sb": "𐩪𐩲𐩣𐩥𐩱𐩲",
+      "text_name_en": "Sabaean Prayers",
+      "date": "~500 BCE-400 CE",
+      "prayers": [
+        {
+          "prayer_id": "sab_p1",
+          "name": "Morning Prayer",
+          "text_sb": "𐩪𐩲𐩤𐩵 𐩱𐩡𐩣𐩤𐩵 𐩪𐩲𐩤𐩵 𐩱𐩪𐩧𐩺",
+          "transliteration": "baʿad ʾAlmaqah baʿad ʾAthrū",
+          "translation_en": "After Almaqah, after Athtar"
+        },
+        {
+          "prayer_id": "sab_p2",
+          "name": "Harvest Prayer",
+          "text_sb": "𐩤𐩱𐩲𐩣 𐩥𐩺 𐩪𐩧𐩫𐩺",
+          "transliteration": "ṣaʿd wa barak",
+          "translation_en": "Increase and bless"
+        },
+        {
+          "prayer_id": "sab_p3",
+          "name": "Protection Prayer",
+          "text_sb": "𐩱𐩡𐩢𐩵 𐩱𐩤𐩱𐩣 𐩣𐩺𐩲𐩣",
+          "transliteration": "ʾalāh anās mawtar",
+          "translation_en": "O God, protect us"
+        }
+      ]
+    },
+    {
+      "text_id": "sabean_commandments",
+      "text_name_sb": "𐩪𐩲𐩧𐩣𐩱𐩲",
+      "text_name_en": "Sabaean Commandments",
+      "date": "~400 BCE-200 CE",
+      "commandments": [
+        {
+          "commandment_id": "sab_c1",
+          "text_sb": "𐩢𐩱 𐩩𐩧𐩤 𐩱𐩡𐩣𐩤𐩵",
+          "transliteration": "lā taḥrif ʾAlmaqah",
+          "translation_en": "Do not deny Almaqah"
+        },
+        {
+          "commandment_id": "sab_c2",
+          "text_sb": "𐩢𐩱 𐩩𐩧𐩤 𐩱𐩡𐩥𐩱𐩲",
+          "transliteration": "lā taḥrif al-ʿawām",
+          "translation_en": "Do not deny the people"
+        },
+        {
+          "commandment_id": "sab_c3",
+          "text_sb": "𐩱𐩤𐩱𐩣 𐩥𐩺 𐩱𐩡𐩤𐩱𐩣",
+          "transliteration": "anās wa al-ʾil",
+          "translation_en": "People and God"
+        }
+      ]
+    }
+  ],
+  "deities": [
+    {"name": "Almaqah", "role": "Moon God, Chief Deity", "symbol": "𐩱𐩡𐩣𐩤𐩵"},
+    {"name": "Athtar", "role": "Morning Star, Venus", "symbol": "𐩱𐩪𐩧𐩺"},
+    {"name": "Shams", "role": "Sun Goddess", "symbol": "𐩱𐩢𐩣𐩺"},
+    {"name": "ʿAthrū", "role": "Protection Deity", "symbol": "𐩱𐩪𐩧𐩺"}
+  ],
+  "hash": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2"
+}

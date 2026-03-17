@@ -1,0 +1,42 @@
+[
+  {
+    "id": "tf_1",
+    "surah": 1,
+    "verse": 1,
+    "source": "tafsir_tabari",
+    "tafsir_text": "بسم الله الرحمن الرحيم: هذه الآية من أعظم آيات القرآن الكريم. قال المفسرون: إنها تتضمن التوحيد والبسملة سنة متبعة.",
+    "tafsir_text_no_diacritics": "بسم الله الرحمن الرحيم: هذه الآية من أعظم آيات القرآن الكريم. قال المفسرون: إنها تتضمن التوحيد والبسملة سنة متبعة.",
+    "has_diacritics": false,
+    "verse_reference": null,
+    "all_verse_references": [],
+    "diacritics_info": {}
+  },
+  {
+    "id": "tf_2",
+    "surah": 2,
+    "verse": 183,
+    "source": "tafsir_qurtubi",
+    "tafsir_text": "كتب عليكم الصيام: معناه فرض الله عليكم الصيام. والصيام من أعظم العبادات وفيه حكم عظيمة. (انظر سورة 2، آية 183)",
+    "tafsir_text_no_diacritics": "كتب عليكم الصيام: معناه فرض الله عليكم الصيام. والصيام من أعظم العبادات وفيه حكم عظيمة. (انظر سورة 2، آية 183)",
+    "has_diacritics": false,
+    "verse_reference": "QURAN_18_3",
+    "all_verse_references": [
+      "QURAN_18_3"
+    ],
+    "diacritics_info": {}
+  },
+  {
+    "id": "tf_3",
+    "surah": 36,
+    "verse": 1,
+    "source": "tafsir_baghawi",
+    "tafsir_text": "يس: اختلف المفسرون في معنى هذه الحروف. قال الجمهور أنها من حروف التهجي. القرآن الكريم (36:1) يبدأ بهذه الحروف المقطعة.",
+    "tafsir_text_no_diacritics": "يس: اختلف المفسرون في معنى هذه الحروف. قال الجمهور أنها من حروف التهجي. القرآن الكريم (36:1) يبدأ بهذه الحروف المقطعة.",
+    "has_diacritics": false,
+    "verse_reference": "QURAN_36_1",
+    "all_verse_references": [
+      "QURAN_36_1"
+    ],
+    "diacritics_info": {}
+  }
+]

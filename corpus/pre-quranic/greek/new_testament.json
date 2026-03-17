@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Christianity",
+    "language": "Koine Greek",
+    "script": "Greek",
+    "date_range": "50-100 CE",
+    "text_type": "New Testament (Gospels)",
+    "source": "Textus Receptus / Nestle-Aland",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "books": [
+    {
+      "book_id": "matthew",
+      "book_name_gr": "Κατά Ματθαίον",
+      "book_name_en": "Gospel According to Matthew",
+      "chapters": 28,
+      "verses": [
+        {
+          "verse_id": "mat_1_1",
+          "chapter": 1,
+          "verse": 1,
+          "text_gr": "Βίβλος γενέσεως Ἰησοῦ Χριστοῦ υἱοῦ Δαυὶδ υἱοῦ Ἀβραάμ",
+          "transliteration": "Biblos geneseōs Iēsou Christou huiou Dauid huiou Abraam",
+          "translation_en": "The book of the genealogy of Jesus Christ, the son of David, the son of Abraham"
+        },
+        {
+          "verse_id": "mat_5_1",
+          "chapter": 5,
+          "verse": 1,
+          "text_gr": "Ἰδὼν δὲ τοὺς ὄχλους ἀνέβη εἰς τὸ ὄρος",
+          "transliteration": "Idōn de tous ochlous anebē eis to oros",
+          "translation_en": "Seeing the crowds, he went up on the mountain"
+        },
+        {
+          "verse_id": "mat_5_3",
+          "chapter": 5,
+          "verse": 3,
+          "text_gr": "Μακάριοι οἱ πτωχοὶ τῷ πνεύματι ὅτι αὐτῶν ἐστιν ἡ βασιλεία τῶν οὐρανῶν",
+          "transliteration": "Makarioi hoi ptōchoi tō pneumati hoti autōn estin hē basileia tōn ouranōn",
+          "translation_en": "Blessed are the poor in spirit, for theirs is the kingdom of heaven"
+        },
+        {
+          "verse_id": "mat_5_5",
+          "chapter": 5,
+          "verse": 5,
+          "text_gr": "Μακάριοι οἱ πραεῖς ὅτι αὐτοὶ κληρονομήσουσιν τὴν γῆν",
+          "transliteration": "Makarioi hoi praeis hoti autoi klēronomēsousin tēn gēn",
+          "translation_en": "Blessed are the meek, for they shall inherit the earth"
+        },
+        {
+          "verse_id": "mat_5_9",
+          "chapter": 5,
+          "verse": 9,
+          "text_gr": "Μακάριοι οἱ εἰρηνοποιοί ὅτι υἱοὶ θεοῦ κληθήσονται",
+          "transliteration": "Makarioi hoi eirēnopoioi hoti huioi theou klēthēsontai",
+          "translation_en": "Blessed are the peacemakers, for they shall be called sons of God"
+        },
+        {
+          "verse_id": "mat_5_39",
+          "chapter": 5,
+          "verse": 39,
+          "text_gr": "Ἀλλ' ὅστις σε ῥαπίσει ἐπὶ τὴν δεξιάν σου σιαγόνα, στρέψον αὐτῷ καὶ τὴν ἄλλην",
+          "transliteration": "All' hostis se rhapisei epi tēn dexian sou siagona, strepson autō kai tēn allēn",
+          "translation_en": "But whoever slaps you on your right cheek, turn the other to him also"
+        },
+        {
+          "verse_id": "mat_5_44",
+          "chapter": 5,
+          "verse": 44,
+          "text_gr": "Ἀγαπᾶτε τοὺς ἐχθροὺς ὑμῶν καὶ προσεύχεσθε ὑπὲρ τῶν διωκόντων ὑμᾶς",
+          "transliteration": "Agapate tous echthrous hymōn kai proseuchesthe hyper tōn diōkontōn hymas",
+          "translation_en": "Love your enemies and pray for those who persecute you"
+        },
+        {
+          "verse_id": "mat_6_9",
+          "chapter": 6,
+          "verse": 9,
+          "text_gr": "Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς ἁγιασθήτω τὸ ὄνομά σου",
+          "transliteration": "Pater hēmōn ho en tois ouranois hagiasthētō to onoma sou",
+          "translation_en": "Our Father in heaven, hallowed be your name"
+        },
+        {
+          "verse_id": "mat_7_12",
+          "chapter": 7,
+          "verse": 12,
+          "text_gr": "Πάντα οὖν ὅσα ἐὰν θέλητε ἵνα ποιῶσιν ὑμῖν οἱ ἄνθρωποι, οὕτως καὶ ὑμεῖς ποιεῖτε αὐτοῖς",
+          "transliteration": "Panta oun hosa ean thelēte hina poiōsin hymin hoi anthrōpoi, houtōs kai hymeis poieite autois",
+          "translation_en": "Therefore, whatever you wish that others would do to you, do also to them"
+        },
+        {
+          "verse_id": "mat_22_37",
+          "chapter": 22,
+          "verse": 37,
+          "text_gr": "Ἀγαπήσεις κύριον τὸν θεόν σου ἐν ὅλῃ τῇ καρδίᾳ σου καὶ ἐν ὅλῃ τῇ ψυχῇ σου καὶ ἐν ὅλῃ τῇ διανοίᾳ σου",
+          "transliteration": "Agapēseis kyrion ton theon sou en holē tē kardia sou kai en holē tē psychē sou kai en holē tē dianoia sou",
+          "translation_en": "You shall love the Lord your God with all your heart, with all your soul, and with all your mind"
+        },
+        {
+          "verse_id": "mat_22_39",
+          "chapter": 22,
+          "verse": 39,
+          "text_gr": "Ἀγαπήσεις τὸν πλησίον σου ὡς σεαυτόν",
+          "transliteration": "Agapēseis ton plēsion sou hōs seauton",
+          "translation_en": "You shall love your neighbor as yourself"
+        }
+      ]
+    },
+    {
+      "book_id": "john",
+      "book_name_gr": "Κατά Ἰωάννην",
+      "book_name_en": "Gospel According to John",
+      "chapters": 21,
+      "verses": [
+        {
+          "verse_id": "jhn_1_1",
+          "chapter": 1,
+          "verse": 1,
+          "text_gr": "Ἐν ἀρχῇ ἦν ὁ λόγος καὶ ὁ λόγος ἦν πρὸς τὸν θεόν καὶ θεὸς ἦν ὁ λόγος",
+          "transliteration": "En archē ēn ho logos kai ho logos ēn pros ton theon kai theos ēn ho logos",
+          "translation_en": "In the beginning was the Word, and the Word was with God, and the Word was God"
+        },
+        {
+          "verse_id": "jhn_1_14",
+          "chapter": 1,
+          "verse": 14,
+          "text_gr": "Καὶ ὁ λόγος σὰρξ ἐγένετο καὶ ἐσκήνωσεν ἐν ἡμῖν",
+          "transliteration": "Kai ho logos sarx egeneto kai eskēnōsen en hēmin",
+          "translation_en": "And the Word became flesh and dwelt among us"
+        },
+        {
+          "verse_id": "jhn_3_16",
+          "chapter": 3,
+          "verse": 16,
+          "text_gr": "Οὕτως γὰρ ἠγάπησεν ὁ θεὸς τὸν κόσμον ὥστε τὸν υἱὸν τὸν μονογενῆ ἔδωκεν",
+          "transliteration": "Houtōs gar ēgapēsen ho theos ton kosmon hōste ton huion ton monogenē edōken",
+          "translation_en": "For God so loved the world that he gave his only Son"
+        },
+        {
+          "verse_id": "jhn_8_12",
+          "chapter": 8,
+          "verse": 12,
+          "text_gr": "Ἐγώ εἰμι τὸ φῶς τοῦ κόσμου ὁ ἀκολουθῶν ἐμοὶ οὐ μὴ περιπατήσῃ ἐν τῇ σκοτίᾳ",
+          "transliteration": "Egō eimi to phōs tou kosmou ho akolouthōn emoi ou mē peripatēsē en tē skotia",
+          "translation_en": "I am the light of the world. Whoever follows me will not walk in darkness"
+        },
+        {
+          "verse_id": "jhn_14_6",
+          "chapter": 14,
+          "verse": 6,
+          "text_gr": "Ἐγώ εἰμι ἡ ὁδὸς καὶ ἡ ἀλήθεια καὶ ἡ ζωή οὐδεὶς ἔρχεται πρὸς τὸν πατέρα εἰ μὴ δι' ἐμοῦ",
+          "transliteration": "Egō eimi hē hodos kai hē alētheia kai hē zōē oudeis erchetai pros ton patera ei mē di' emou",
+          "translation_en": "I am the way, and the truth, and the life. No one comes to the Father except through me"
+        },
+        {
+          "verse_id": "jhn_14_27",
+          "chapter": 14,
+          "verse": 27,
+          "text_gr": "Εἰρήνην ἀφίημι ὑμῖν εἰρήνην τὴν ἐμὴν δίδωμι ὑμῖν",
+          "transliteration": "Eirēnēn aphiēmi hymin eirēnēn tēn emēn didōmi hymin",
+          "translation_en": "Peace I leave with you; my peace I give to you"
+        }
+      ]
+    }
+  ],
+  "hash": "b7e4f3d2c8a5e1f9b6c3d7a2e8f4b1c9d5e7a3f6b2c8d4e9a1f5b3c7d6e2f8a4"
+}

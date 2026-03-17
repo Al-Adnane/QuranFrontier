@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "collection": "pre-quranic-mathematical-models",
+    "tradition": "Maya Civilization",
+    "model_type": "Calendar Systems / Astronomy / Base-20 Arithmetic",
+    "source": "Popol Vuh, Dresden Codex, Inscriptions",
+    "accuracy": "REQUIRES VERIFICATION with Mayanists",
+    "extraction_date": "2026-03-15"
+  },
+  "calendar_systems": {
+    "description": "Maya used multiple interlocking calendar cycles",
+    "mathematical_structure": {
+      "type": "Modular Arithmetic / Chinese Remainder Theorem",
+      "base": 20 (vigesimal)",
+      "cycles": "Multiple LCM calculations"
+    }
+  },
+  "tzolkin": {
+    "name": "Sacred Calendar",
+    "type": "Modular Cycle",
+    "period": 260,
+    "structure": {
+      "numbers": {"count": 13, "range": "1-13"},
+      "day_names": {"count": 20},
+      "formula": "LCM(13, 20) = 260",
+      "total_combinations": 260
+    },
+    "mathematical_properties": {
+      "group_structure": "Z_13 × Z_20",
+      "cycle_length": 260,
+      "generators": [13, 20]
+    }
+  },
+  "haab": {
+    "name": "Solar Calendar",
+    "type": "Modular Cycle",
+    "period": 365,
+    "structure": {
+      "months": {"count": 18, "days_each": 20},
+      "wayeb": {"count": 5, "description": "Unlucky days"},
+      "formula": "18×20 + 5 = 365"
+    },
+    "mathematical_properties": {
+      "group_structure": "Z_365",
+      "cycle_length": 365
+    }
+  },
+  "calendar_round": {
+    "name": "Tzolkin-Haab Synchronization",
+    "type": "LCM Calculation",
+    "period": 18980,
+    "formula": "LCM(260, 365) = 18980 days ≈ 52 years",
+    "significance": "Complete calendar cycle",
+    "mathematical_properties": {
+      "calculation": "260 × 365 / GCD(260,365) = 18980",
+      "years": 52,
+      "tzolkin_cycles": 73,
+      "haab_cycles": 52
+    }
+  },
+  "long_count": {
+    "name": "Linear Count Calendar",
+    "type": "Positional Number System",
+    "base": 20 (vigesimal) with modification",
+    "structure": {
+      "units": [
+        {"name": "Kin", "value": 1, "base": 20},
+        {"name": "Uinal", "value": 20, "base": 18},
+        {"name": "Tun", "value": 360, "base": 20},
+        {"name": "Katun", "value": 7200, "base": 20},
+        {"name": "Baktun", "value": 144000, "base": 20}
+      ],
+      "modification": "Uinal uses base-18 (not 20) to approximate solar year"
+    },
+    "mathematical_properties": {
+      "type": "Mixed radix system",
+      "radices": [20, 18, 20, 20, 20],
+      "zero": true,
+      "positional": true
+    },
+    "creation_date": {
+      "long_count": "13.0.0.0.0",
+      "gregorian": "August 11, 3114 BCE (GMT correlation)",
+      "end_date": "December 21, 2012 (13.0.0.0.0 completion)"
+    }
+  },
+  "astronomy": {
+    "venus_cycle": {
+      "synodic_period": 584,
+      "maya_calculation": 584,
+      "accuracy": "Within 2 hours per year",
+      "cycle_table": "Dresden Codex pages 46-50"
+    },
+    "lunar_cycle": {
+      "synodic_month": 29.53059,
+      "maya_calculation": 29.53086,
+      "accuracy": "Within 2 minutes",
+      "eclipse_prediction": "Table of the Sun (Dresden Codex)"
+    },
+    "mars_cycle": {
+      "synodic_period": 780,
+      "maya_calculation": 780,
+      "accuracy": "Within 1 day"
+    }
+  },
+  "numerology": {
+    "sacred_numbers": {
+      "13": "Levels of heaven, Tzolkin numbers",
+      "20": "Base of number system, day names",
+      "52": "Calendar Round (52 years)",
+      "260": "Tzolkin cycle",
+      "365": "Haab/solar year",
+      "584": "Venus cycle",
+      "1366560": "Calendar Round in days"
+    },
+    "mathematical_constants": {
+      "pi_approximation": "3.1416 (implied in architecture)",
+      "sqrt_2": "1.4142 (implied in proportions)"
+    }
+  },
+  "cosmology": {
+    "structure": {
+      "heavens": 13,
+      "earth": 1,
+      "underworlds": 9,
+      "total_levels": 23
+    },
+    "graph_model": {
+      "type": "Vertical Hierarchy",
+      "nodes": 23,
+      "edges": "Vertical connections between levels"
+    }
+  },
+  "verification_required": {
+    "calendar_calculations": "Verify with Dresden Codex",
+    "astronomy": "Verify against modern astronomical calculations",
+    "long_count": "Verify with Thompson correlation"
+  },
+  "hash": "maya_math_model_v1_2026"
+}

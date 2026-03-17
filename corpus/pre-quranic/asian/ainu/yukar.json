@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Ainu Religion",
+    "language": "Ainu",
+    "script": "Latin (transliteration)",
+    "date_range": "1000 BCE-present",
+    "text_type": "Yukar (Epic Songs), Prayers",
+    "source": "Oral Tradition, Kindaichi Collections",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Ainu is endangered language - verify with native speakers",
+      "recommendation": "Consult Ainu cultural organizations",
+      "scholarly_sources": [
+        "Kindaichi, K. (1951). Ainu no Mukashibanashi.",
+        "Batchelor, J. (1927). Ainu Beliefs and Traditions.",
+        "Refsing, K. (1986). The Ainu Language."
+      ],
+      "living_tradition_notice": "Ainu is endangered - consult Hokkaido Ainu Association"
+    }
+  },
+  "texts": [
+    {
+      "text_id": "ainu_yukar",
+      "text_name_ain": "Yukar",
+      "text_name_en": "Ainu Epic Songs (Yukar)",
+      "date": "~1000 BCE-present",
+      "accuracy": "UNVERIFIED - Consult Ainu speakers",
+      "epics": [
+        {
+          "epic_id": "ainu_e1",
+          "name": "Song of the Bear",
+          "ainu": "Kuma yukar, kamuy yukar",
+          "translation_en": "Bear song, god song",
+          "note": "Verify with Ainu cultural authorities"
+        },
+        {
+          "epic_id": "ainu_e2",
+          "name": "Song of the Owl",
+          "ainu": "Cikap kamuy yukar",
+          "translation_en": "Owl god song",
+          "note": "Verify with Ainu cultural authorities"
+        }
+      ]
+    },
+    {
+      "text_id": "ainu_prayers",
+      "text_name_ain": "Kamuy Nom",
+      "text_name_en": "Ainu Prayers",
+      "date": "~500 BCE-present",
+      "accuracy": "UNVERIFIED",
+      "prayers": [
+        {
+          "prayer_id": "ainu_p1",
+          "name": "To Kamuy Fuchi",
+          "ainu": "Kamuy Fuchi, ape ta",
+          "translation_en": "Kamuy Fuchi, fire grandmother",
+          "note": "Fire goddess - central to Ainu religion"
+        },
+        {
+          "prayer_id": "ainu_p2",
+          "name": "To Kim-un Kamuy",
+          "ainu": "Kim-un kamuy, kuma kamuy",
+          "translation_en": "Mountain god, bear god",
+          "note": "Bear ceremony prayer"
+        }
+      ]
+    },
+    {
+      "text_id": "ainu_precepts",
+      "text_name_ain": "Ainu Precepts",
+      "text_name_en": "Ainu Precepts",
+      "date": "~500 BCE-present",
+      "accuracy": "UNVERIFIED",
+      "precepts": [
+        {
+          "precept_id": "ainu_c1",
+          "ainu": "Kamuy rayke",
+          "translation_en": "Respect the gods"
+        },
+        {
+          "precept_id": "ainu_c2",
+          "ainu": "Ape ta rayke",
+          "translation_en": "Respect the fire"
+        },
+        {
+          "precept_id": "ainu_c3",
+          "ainu": "Kuma rayke",
+          "translation_en": "Respect the bear"
+        }
+      ]
+    }
+  ],
+  "gods": [
+    {"name": "Kamuy Fuchi", "role": "Fire Goddess", "domain": "Fire/Home"},
+    {"name": "Kim-un Kamuy", "role": "Bear God", "domain": "Mountains/Animals"},
+    {"name": "Rep-un Kamuy", "role": "Sea God", "domain": "Ocean/Fishing"},
+    {"name": "Cikap Kamuy", "role": "Owl God", "domain": "Village/Protection"}
+  ],
+  "verification_required": {
+    "language": "Ainu is critically endangered - consult remaining speakers",
+    "cultural_accuracy": "REQUIRES Hokkaido Ainu Association consultation"
+  },
+  "hash": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3"
+}

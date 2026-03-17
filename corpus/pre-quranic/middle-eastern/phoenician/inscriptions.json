@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Phoenician Religion",
+    "language": "Phoenician/Punic",
+    "script": "Phoenician Alphabet",
+    "date_range": "1200-200 BCE",
+    "text_type": "Inscriptions, Votive Offerings",
+    "source": "Phoenician Inscriptions (KAI)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+10900-U+1091F",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Phoenician inscriptions require Semitic epigrapher verification",
+      "recommendation": "Verify against KAI (Kanaanäische und Aramäische Inschriften)",
+      "scholarly_sources": [
+        "Donner, H. & Röllig, W. (2002). Kanaanäische und Aramäische Inschriften.",
+        "Gibson, J.C.L. (1982). Textbook of Syrian Semitic Inscriptions.",
+        "Cross, F.M. (1973). Canaanite Myth and Hebrew Epic."
+      ],
+      "unicode_reference": "https://unicode.org/charts/PDF/U10900.pdf",
+      "digital_editions": [
+        "https://www.titus.uni-frankfurt.de/epigraphik/",
+        "https://www.khi.uni-koeln.de/"
+      ]
+    }
+  },
+  "texts": [
+    {
+      "text_id": "phoenician_inscriptions",
+      "text_name_phn": "𐤐𐤍𐤉𐤌 𐤊𐤕𐤁𐤕",
+      "text_name_en": "Phoenician Inscriptions",
+      "date": "~1200-200 BCE",
+      "accuracy": "UNVERIFIED - Check against KAI",
+      "inscriptions": [
+        {
+          "inscription_id": "phn_i1",
+          "name": "Ahiram Sarcophagus",
+          "phoenician": "𐤀𐤓𐤍 𐤀𐤋𐤆",
+          "transliteration": "ʾrn ʾlz",
+          "translation_en": "This is the sarcophagus",
+          "note": "Verify against KAI 1",
+          "scholarly_reference": "KAI 1, ~1000 BCE"
+        },
+        {
+          "inscription_id": "phn_i2",
+          "name": "Mesha Stele",
+          "phoenician": "𐤀𐤍𐤊 𐤌𐤔𐤏",
+          "transliteration": "ʾnk mšʿ",
+          "translation_en": "I am Mesha",
+          "note": "Verify against KAI 181",
+          "scholarly_reference": "KAI 181, ~840 BCE"
+        },
+        {
+          "inscription_id": "phn_i3",
+          "name": "Karatepe Inscription",
+          "phoenician": "𐤀𐤍𐤊 𐤀𐤆𐤕𐤁𐤏𐤋",
+          "transliteration": "ʾnk ʾztbʿl",
+          "translation_en": "I am Azatiwada",
+          "note": "Verify against KAI 26",
+          "scholarly_reference": "KAI 26, ~800 BCE"
+        }
+      ]
+    },
+    {
+      "text_id": "phoenician_gods",
+      "text_name_phn": "𐤀𐤋𐤌 𐤐𐤍𐤉𐤌",
+      "text_name_en": "Phoenician Pantheon",
+      "date": "~1200-200 BCE",
+      "accuracy": "Via inscriptions - verify against KAI",
+      "gods": [
+        {
+          "god_id": "phn_g1",
+          "name": "El",
+          "phoenician": "𐤀𐤋",
+          "role": "Supreme God",
+          "domain": "Creation",
+          "note": "Chief deity of Canaanite pantheon"
+        },
+        {
+          "god_id": "phn_g2",
+          "name": "Baal",
+          "phoenician": "𐤁𐤏𐤋",
+          "role": "Storm God",
+          "domain": "Storm/Fertility",
+          "note": "Most widely worshipped deity"
+        },
+        {
+          "god_id": "phn_g3",
+          "name": "Astarte",
+          "phoenician": "𐤏𐤔𐤕𐤓𐤕",
+          "role": "Love/War Goddess",
+          "domain": "Love/War",
+          "note": "Consort of Baal"
+        },
+        {
+          "god_id": "phn_g4",
+          "name": "Melqart",
+          "phoenician": "𐤌𐤋𐤒𐤓𐤕",
+          "role": "City God of Tyre",
+          "domain": "City/Sea",
+          "note": "Patron deity of Tyre"
+        },
+        {
+          "god_id": "phn_g5",
+          "name": "Tanit",
+          "phoenician": "𐤕𐤍𐤕",
+          "role": "Carthaginian Goddess",
+          "domain": "Fertility/Protection",
+          "note": "Chief goddess of Carthage"
+        }
+      ]
+    },
+    {
+      "text_id": "phoenician_precepts",
+      "text_name_phn": "𐤐𐤍𐤉𐤌 𐤌𐤑𐤅𐤕",
+      "text_name_en": "Phoenician Precepts",
+      "date": "~1200-200 BCE",
+      "accuracy": "FRAGMENTARY",
+      "precepts": [
+        {
+          "precept_id": "phn_c1",
+          "note": "Limited textual evidence for Phoenician religious precepts"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "phoenician_unicode": "REQUIRES Semitic epigrapher verification",
+    "transliteration": "Compare with KAI, Gibson, Cross",
+    "inscriptions": "Verify against KAI catalogue numbers"
+  },
+  "hash": "b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9"
+}

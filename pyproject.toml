@@ -1,119 +1,73 @@
-[build-system]
-requires = ["setuptools>=68.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "frontier-qu-v4"
-version = "4.0.0"
-description = "FrontierQu v4: Neuro-Symbolic AI with DAG Naskh, Quantum Qiraat, Embodied Tajweed, and Sheaf Neural Networks"
-readme = "README.md"
-requires-python = ">=3.10"
-license = {text = "MIT"}
-authors = [
-    {name = "FrontierQu Team", email = "team@frontierqu.ai"},
-]
-
-dependencies = [
-    # Core ML & Numerics
-    "torch>=2.1.0",
-    "numpy>=1.24.0",
-    "scipy>=1.11.0",
-
-    # Symbolic Computing
-    "sympy>=1.12",
-    "z3-solver>=4.12.0",
-
-    # Graph & Network Computing
-    "networkx>=3.2",
-    "neo4j>=5.13.0",
-
-    # Vector Databases & Knowledge Graphs
-    "weaviate-client>=3.23.0",
-
-    # Quantum Computing
-    "qiskit>=0.43.0",
-    "qiskit-aer>=0.13.0",
-
-    # Probabilistic Programming
-    "numpyro>=0.13.0",
-    "pyro-ppl>=1.8.0",
-
-    # Distributed Computing
-    "ray[tune,serve]>=2.8.0",
-
-    # Language Models & Agents
-    "langgraph>=0.1.0",
-    "langchain>=0.1.0",
-
-    # High-Performance Computing
-    "numba>=0.58.0",
-
-    # Data Validation
-    "pydantic>=2.0.0",
-
-    # Configuration & Serialization
-    "pyyaml>=6.0.0",
-
-    # Data Structures
-    "sortedcontainers>=2.4.0",
-
-    # Visualization
-    "matplotlib>=3.8.0",
-]
-
-[project.optional-dependencies]
-quantum = [
-    "pennylane>=0.32.0",
-    "pennylane-qiskit>=0.33.0",
-]
-
-dev = [
-    "pytest>=7.4.0",
-    "pytest-cov>=4.1.0",
-    "black>=23.7.0",
-    "ruff>=0.0.280",
-    "mypy>=1.4.1",
-]
-
-[project.urls]
-Homepage = "https://frontierqu.ai"
-Documentation = "https://docs.frontierqu.ai"
-Repository = "https://github.com/frontierqu/frontier-qu-v4"
-Issues = "https://github.com/frontierqu/frontier-qu-v4/issues"
-
-[tool.setuptools.packages.find]
-where = ["."]
-include = [
-    "frontier_models*",
-    "frontier_neuro_symbolic*",
-    "frontier_qu_v5*",
-]
-
-[tool.setuptools.package-dir]
-"" = "."
-"frontierqu" = "src/frontierqu"
-
-[tool.setuptools.package-data]
-"*" = ["py.typed", "*.yaml", "*.json"]
-
-[tool.black]
-line-length = 100
-target-version = ["py310", "py311"]
-include = '\.pyi?$'
-
-[tool.ruff]
-line-length = 100
-target-version = "py310"
-select = ["E", "F", "W", "I"]
-
-[tool.mypy]
-python_version = "3.11"
-warn_return_any = false
-warn_unused_configs = true
-disallow_untyped_defs = false
-ignore_missing_imports = true
+# P6 COMPLETE: Pytest Configuration for 100+ Tests
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-python_files = ["test_*.py"]
-addopts = "-v --cov=frontier_models --cov=frontier_neuro_symbolic --cov=frontier_qu_v5 --cov-report=term"
+# Test discovery
+testpaths = [
+    "quran/corpus_extraction",
+    "tests/corpus-extraction",
+]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*", "*Test"]
+python_functions = ["test_*"]
+
+# Test markers
+markers = [
+    "unit: Unit tests (fast, isolated)",
+    "integration: Integration tests (multiple modules)",
+    "slow: Slow tests (>1 second)",
+    "api: Tests requiring API access",
+    "p1: P1 Source Reconstruction tests",
+    "p2: P2 New Domains tests",
+    "p3: P3 Confidence tests",
+    "p4: P4 Overclaim tests",
+    "p5: P5 Tafsir tests",
+    "p6: P6 Test Infrastructure tests",
+]
+
+# Execution settings
+addopts = """
+    -v
+    --tb=short
+    --strict-markers
+    -ra
+    --color=yes
+    --durations=10
+"""
+
+# Timeout settings (prevent hanging tests)
+timeout = 300  # 5 minutes per test
+timeout_func_only = false
+
+# Coverage settings
+[tool.coverage.run]
+source = ["quran/corpus_extraction"]
+branch = true
+omit = [
+    "*/tests/*",
+    "*/__pycache__/*",
+    "*/test_*.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "@abstractmethod",
+]
+show_missing = true
+precision = 2
+
+[tool.coverage.html]
+directory = "coverage_html_report"
+
+# Parallel execution settings (pytest-xdist)
+[tool.pytest-xdist]
+# Auto-detect CPU count for parallel execution
+numprocesses = "auto"
+
+# Load balancing for even distribution
+loadscope = true

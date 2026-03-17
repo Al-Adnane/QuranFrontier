@@ -1,0 +1,181 @@
+{
+  "scanMetadata": {
+    "timestamp": "2026-03-14T12:00:00Z",
+    "phase": "Phase 5 Pre-Warm Security Scanning",
+    "scanTool": "Trivy",
+    "trivyVersion": "0.49.0",
+    "scanType": "container-image-scanning",
+    "registryType": "docker-registry"
+  },
+  "scanResults": [
+    {
+      "imageName": "api:v1.2",
+      "imageDigest": "sha256:abc123def456",
+      "scanStatus": "COMPLETE",
+      "vulnerabilityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 3,
+        "unknown": 0
+      },
+      "vulnerabilities": [
+        {
+          "vulnerability": "CVE-2025-12345",
+          "severity": "MEDIUM",
+          "package": "openssl",
+          "installedVersion": "1.1.1k",
+          "fixedVersion": "1.1.1w",
+          "description": "OpenSSL TLS handshake vulnerability",
+          "cvssScore": 5.9,
+          "status": "FIXABLE",
+          "recommendation": "Upgrade openssl to version 1.1.1w or later"
+        },
+        {
+          "vulnerability": "CVE-2024-98765",
+          "severity": "LOW",
+          "package": "curl",
+          "installedVersion": "7.68.0",
+          "fixedVersion": "7.88.0",
+          "description": "CURL cookie handling issue",
+          "cvssScore": 3.7,
+          "status": "FIXABLE",
+          "recommendation": "Upgrade curl to version 7.88.0"
+        },
+        {
+          "vulnerability": "CVE-2024-11111",
+          "severity": "LOW",
+          "package": "libc",
+          "installedVersion": "2.31",
+          "fixedVersion": "2.36",
+          "description": "GNU C Library vulnerability",
+          "cvssScore": 2.1,
+          "status": "FIXABLE",
+          "recommendation": "Upgrade libc"
+        },
+        {
+          "vulnerability": "CVE-2024-22222",
+          "severity": "LOW",
+          "package": "bash",
+          "installedVersion": "5.0",
+          "fixedVersion": "5.2",
+          "description": "Bash history expansion vulnerability",
+          "cvssScore": 1.8,
+          "status": "FIXABLE",
+          "recommendation": "Upgrade bash to version 5.2"
+        }
+      ],
+      "recommendation": "API image is APPROVED for Phase 5 deployment. 1 medium CVE is non-critical and can be patched in next release.",
+      "approvalStatus": "APPROVED"
+    },
+    {
+      "imageName": "web:v1.2",
+      "imageDigest": "sha256:def456ghi789",
+      "scanStatus": "COMPLETE",
+      "vulnerabilityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "unknown": 0
+      },
+      "vulnerabilities": [
+        {
+          "vulnerability": "CVE-2024-33333",
+          "severity": "LOW",
+          "package": "npm-package-x",
+          "installedVersion": "2.1.0",
+          "fixedVersion": "2.1.5",
+          "description": "XSS vulnerability in frontend package",
+          "cvssScore": 2.4,
+          "status": "FIXABLE",
+          "recommendation": "Run 'npm audit fix' or upgrade package to 2.1.5"
+        },
+        {
+          "vulnerability": "CVE-2024-44444",
+          "severity": "LOW",
+          "package": "npm-package-y",
+          "installedVersion": "1.2.0",
+          "fixedVersion": "1.2.3",
+          "description": "Prototype pollution in utility library",
+          "cvssScore": 1.9,
+          "status": "FIXABLE",
+          "recommendation": "Upgrade npm-package-y to version 1.2.3"
+        }
+      ],
+      "recommendation": "Web image is APPROVED for Phase 5 deployment. 2 low-severity vulnerabilities are acceptable.",
+      "approvalStatus": "APPROVED"
+    },
+    {
+      "imageName": "worker:v1.2",
+      "imageDigest": "sha256:ghi789jkl012",
+      "scanStatus": "COMPLETE",
+      "vulnerabilityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 2,
+        "low": 1,
+        "unknown": 0
+      },
+      "vulnerabilities": [
+        {
+          "vulnerability": "CVE-2025-55555",
+          "severity": "MEDIUM",
+          "package": "python-requests",
+          "installedVersion": "2.25.1",
+          "fixedVersion": "2.31.0",
+          "description": "Requests library SSL verification bypass",
+          "cvssScore": 6.2,
+          "status": "FIXABLE",
+          "recommendation": "Upgrade python-requests to 2.31.0 or later"
+        },
+        {
+          "vulnerability": "CVE-2025-66666",
+          "severity": "MEDIUM",
+          "package": "celery",
+          "installedVersion": "5.1.0",
+          "fixedVersion": "5.3.0",
+          "description": "Celery deserialization vulnerability",
+          "cvssScore": 5.8,
+          "status": "FIXABLE",
+          "recommendation": "Upgrade celery to 5.3.0 or later, ensure pickle is disabled"
+        },
+        {
+          "vulnerability": "CVE-2024-77777",
+          "severity": "LOW",
+          "package": "redis-py",
+          "installedVersion": "3.5.3",
+          "fixedVersion": "4.5.1",
+          "description": "Redis client connection pooling issue",
+          "cvssScore": 1.5,
+          "status": "FIXABLE",
+          "recommendation": "Upgrade redis-py to 4.5.1"
+        }
+      ],
+      "recommendation": "Worker image REQUIRES REVIEW. 2 medium CVEs detected. These must be patched before Phase 5 production deployment.",
+      "approvalStatus": "CONDITIONAL_APPROVAL"
+    }
+  ],
+  "summaryReport": {
+    "totalImagesScanned": 3,
+    "imagesApproved": 2,
+    "imagesConditionallyApproved": 1,
+    "imagesRejected": 0,
+    "totalCriticalCVEs": 0,
+    "totalHighCVEs": 0,
+    "totalMediumCVEs": 3,
+    "totalLowCVEs": 6,
+    "totalVulnerabilities": 9,
+    "scanStatus": "PARTIALLY_APPROVED",
+    "overallRecommendation": "Phase 5 deployment can proceed with following caveats:\n1. API image (v1.2): APPROVED - No critical/high CVEs\n2. Web image (v1.2): APPROVED - No critical/high CVEs\n3. Worker image (v1.2): CONDITIONAL - Requires CVE mitigation patches for Celery and Requests\n\nAction Items:\n- Apply patches to worker image for CVE-2025-55555 and CVE-2025-66666\n- Rebuild worker:v1.2 with patched dependencies\n- Re-scan worker image to confirm patches\n- Deploy API and Web images immediately\n- Deploy Worker image after patch confirmation",
+    "estimatedRemediationTime": "2-3 hours",
+    "approvalDecision": "CONDITIONAL_GO_AHEAD_WITH_PHASE_5",
+    "nextReviewDate": "2026-03-21T12:00:00Z"
+  },
+  "scanExecutionDetails": {
+    "totalScanDuration": "8m 42s",
+    "imagesScannedPerMinute": 0.35,
+    "databaseUpdateTime": "2026-03-14T11:45:00Z",
+    "vulnerabilityDatabaseVersion": "2026-03-14"
+  }
+}

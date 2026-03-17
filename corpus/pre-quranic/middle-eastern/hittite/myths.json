@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Hittite Religion",
+    "language": "Hittite (Nesite)",
+    "script": "Cuneiform",
+    "date_range": "1600-1200 BCE",
+    "text_type": "Ritual Texts, Myths, Prayers",
+    "source": "Hattusa Archives, CTH Catalogue",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC",
+    "unicode_block": "U+12000-U+123FF",
+    "accuracy_notice": {
+      "status": "UNVERIFIED",
+      "warning": "Hittite cuneiform requires Assyriologist verification",
+      "recommendation": "Verify against CTH (Catalogue des Textes Hittites)",
+      "scholarly_sources": [
+        "Güterbock, H.G. & Hoffner, H.A. (1980-). The Hittite Dictionary of the Oriental Institute.",
+        "Pritchard, J.B. (1969). Ancient Near Eastern Texts.",
+        "Beckman, G. (1999). Hittite Diplomatic Texts."
+      ],
+      "unicode_reference": "https://unicode.org/charts/PDF/U12000.pdf",
+      "digital_editions": [
+        "https://www.hethport.uni-wuerzburg.de/",
+        "https://oracc.org/"
+      ]
+    }
+  },
+  "texts": [
+    {
+      "text_id": "hittite_myths",
+      "text_name_hit": "Hittite Myths",
+      "text_name_en": "Hittite Mythological Texts",
+      "date": "~1600-1200 BCE",
+      "accuracy": "UNVERIFIED - Check against CTH",
+      "myths": [
+        {
+          "myth_id": "hit_m1",
+          "name": "Kumarbi Cycle",
+          "hitite": "Kumarbi ITU",
+          "transliteration": "Kumarbi ITU",
+          "translation_en": "Kumarbi myth cycle (succession myth)",
+          "note": "Verify against CTH 344",
+          "scholarly_reference": "CTH 344"
+        },
+        {
+          "myth_id": "hit_m2",
+          "name": "Illuyanka Myth",
+          "hitite": "Illuyanka",
+          "transliteration": "Illuyanka",
+          "translation_en": "Storm god vs. serpent myth",
+          "note": "Verify against CTH 321",
+          "scholarly_reference": "CTH 321"
+        }
+      ]
+    },
+    {
+      "text_id": "hittite_prayers",
+      "text_name_hit": "Hittite Prayers",
+      "text_name_en": "Hittite Prayers",
+      "date": "~1600-1200 BCE",
+      "accuracy": "UNVERIFIED",
+      "prayers": [
+        {
+          "prayer_id": "hit_p1",
+          "name": "Prayer of Mursili II",
+          "hitite": "Mursili II ŠU-ŠU",
+          "transliteration": "Mursili II ŠU-ŠU",
+          "translation_en": "Plague prayer of Mursili II",
+          "note": "Verify against CTH 378",
+          "scholarly_reference": "CTH 378"
+        }
+      ]
+    },
+    {
+      "text_id": "hittite_gods",
+      "text_name_hit": "Hittite Gods",
+      "text_name_en": "Hittite Pantheon",
+      "date": "~1600-1200 BCE",
+      "accuracy": "Via inscriptions - verify against CTH",
+      "gods": [
+        {
+          "god_id": "hit_g1",
+          "name": "Tarhunna",
+          "role": "Storm God",
+          "domain": "Storm/Kingship",
+          "note": "Chief deity of Hittite pantheon"
+        },
+        {
+          "god_id": "hit_g2",
+          "name": "Arinna",
+          "role": "Sun Goddess",
+          "domain": "Sun",
+          "note": "Consort of Tarhunna"
+        },
+        {
+          "god_id": "hit_g3",
+          "name": "Telepinu",
+          "role": "Agricultural God",
+          "domain": "Agriculture",
+          "note": "Disappearing god myth"
+        }
+      ]
+    }
+  ],
+  "verification_required": {
+    "cuneiform": "REQUIRES Hittitologist verification",
+    "translation": "Compare with Güterbock & Hoffner Hittite Dictionary",
+    "cth": "Verify against Catalogue des Textes Hittites"
+  },
+  "hash": "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8"
+}

@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "collection": "pre-quranic",
+    "tradition": "Hinduism",
+    "language": "Sanskrit",
+    "script": "Devanagari",
+    "date_range": "1500-500 BCE",
+    "text_type": "Vedas (Rigveda, Upanishads)",
+    "source": "Critical Edition (Max Müller, Griffith)",
+    "encoding": "UTF-8",
+    "normalized_form": "NFC"
+  },
+  "texts": [
+    {
+      "text_id": "rigveda",
+      "text_name_sa": "ऋग्वेद",
+      "text_name_en": "Rigveda",
+      "date": "~1500-1200 BCE",
+      "mandalas": 10,
+      "hymns": [
+        {
+          "hymn_id": "rv_1_1",
+          "mandala": 1,
+          "sukta": 1,
+          "verse": 1,
+          "text_sa": "अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम्। होतारं रत्नधातमम्॥",
+          "transliteration": "Agnim īḷe purohitaṃ yajñasya devamṛtvijam | hotāraṃ ratnadhātamam ||",
+          "translation_en": "I praise Agni, the high priest of the sacrifice, the divine, the ministrant, who presents the oblation, and is the possessor of great wealth"
+        },
+        {
+          "hymn_id": "rv_1_164_46",
+          "mandala": 1,
+          "sukta": 164,
+          "verse": 46,
+          "text_sa": "इन्द्रं मित्रं वरुणमग्निमाहुरथो दिव्यः स सुपर्णो गरुत्मान्। एकं सद् विप्रा बहुधा वदन्त्यग्निं यमं मातरिश्वानमाहुः॥",
+          "transliteration": "Indraṃ mitraṃ varuṇamagnimāhuratho divyaḥ sa suparṇo garutmān | ekaṃ sad viprā bahudhā vadantyagniṃ yamaṃ mātariśvānamāhuḥ ||",
+          "translation_en": "They call it Indra, Mitra, Varuṇa, Agni, and it is the heavenly bird Garutmān. The wise speak of the One Existence in many ways; they call it Agni, Yama, Mātariśvan"
+        },
+        {
+          "hymn_id": "rv_10_90_1",
+          "mandala": 10,
+          "sukta": 90,
+          "verse": 1,
+          "text_sa": "सहस्रशीर्षा पुरुषः सहस्राक्षः सहस्रपात्। स भूमिं विश्वतो वृत्वात्यतिष्ठद्दशाङ्गुलम्॥",
+          "transliteration": "Sahasraśīrṣā puruṣaḥ sahasrākṣaḥ sahasrapāt | sa bhūmiṃ viśvato vṛtvātyatiṣṭhaddaśāṅgulam ||",
+          "translation_en": "The Purusha has a thousand heads, a thousand eyes, a thousand feet. He encompasses the earth on all sides and extends beyond it by ten fingers"
+        },
+        {
+          "hymn_id": "rv_10_90_2",
+          "mandala": 10,
+          "sukta": 90,
+          "verse": 2,
+          "text_sa": "पुरुष एवेदं सर्वं यद्भूतं यच्च भव्यम्। उतामृतत्वस्येशानो यदन्नेनातिरोहति॥",
+          "transliteration": "Puruṣa evedaṃ sarvaṃ yadbhūtaṃ yacca bhavyam | utāmṛtatvasyeśāno yadannēnātirohati ||",
+          "translation_en": "The Purusha is all this, whatever has been and whatever shall be. He is the lord of immortality, since he grows beyond through food"
+        },
+        {
+          "hymn_id": "rv_10_129_1",
+          "mandala": 10,
+          "sukta": 129,
+          "verse": 1,
+          "text_sa": "नासदासीन्नो सदासीत्तदानीं नासीद्रजो नो व्योमा परो यत्। किमावरीवः कुह कस्य शर्मन्नम्भः किमासीद्गहनं गभीरम्॥",
+          "transliteration": "Nāsadāsīnno sadāsīttadānīṃ nāsīdrajo no vyomā paro yat | kimāvarīvaḥ kuha kasya śarmannambhaḥ kimāsīdgahanaṃ gabhīram ||",
+          "translation_en": "Then was not non-existent nor existent: there was no realm of air, no sky beyond it. What covered in, and where? and what gave shelter? Was water there, unfathomed depth of water?"
+        },
+        {
+          "hymn_id": "rv_10_129_6",
+          "mandala": 10,
+          "sukta": 129,
+          "verse": 6,
+          "text_sa": "यो अस्याध्यक्षः परमे व्योमन्त्सो अङ्ग वेद यदि वा न वेद॥",
+          "transliteration": "Yo asyādhyakṣaḥ parame vyomantsa aṅga veda yadi vā na veda ||",
+          "translation_en": "He who surveys it in the highest heaven, He alone knows—or perhaps He does not know"
+        }
+      ]
+    },
+    {
+      "text_id": "upanishads",
+      "text_name_sa": "उपनिषद",
+      "text_name_en": "Principal Upanishads",
+      "date": "~800-200 BCE",
+      "upanishads": [
+        {
+          "name": "Isha Upanishad",
+          "name_sa": "ईशावास्योपनिषद्",
+          "verses": [
+            {
+              "verse_id": "isha_1",
+              "text_sa": "ईशावास्यमिदं सर्वं यत्किञ्च जगत्यां जगत्। तेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद्धनम्॥",
+              "transliteration": "Īśāvāsyamidaṃ sarvaṃ yatkiñca jagatyāṃ jagat | tena tyaktena bhuñjīthā mā gṛdhaḥ kasyasviddhanam ||",
+              "translation_en": "All this, whatever moves in this moving world, is pervaded by the Lord. Enjoy through renunciation; do not covet anyone's wealth"
+            },
+            {
+              "verse_id": "isha_7",
+              "text_sa": "यस्मिन्सर्वाणि भूतान्यात्मैवाभूद्विजानतः। तत्र को मोहः कः शोक एकत्वमनुपश्यतः॥",
+              "transliteration": "Yasmin sarvāṇi bhūtānyātmaivābhūdvijānataḥ | tatra ko mohaḥ kaḥ śoka ekatvamanupaśyataḥ ||",
+              "translation_en": "When one realizes that all beings have become the Self, what delusion, what sorrow can there be for one who sees unity?"
+            }
+          ]
+        },
+        {
+          "name": "Katha Upanishad",
+          "name_sa": "कठोपनिषद्",
+          "verses": [
+            {
+              "verse_id": "katha_2_23",
+              "text_sa": "नायमात्मा प्रवचनेन लभ्यो न मेधया न बहुना श्रुतेन। यमेवैष वृणुते तेन लभ्यस्तस्यैष आत्मा विवृणुते तनूं स्वाम्॥",
+              "transliteration": "Nāyamātmā pravacanena labhyo na medhayā na bahunā śrutena | yamevaiṣa vṛṇute tena labhyastasyaiṣa ātmā vivṛṇute tanūṃ svām ||",
+              "translation_en": "This Self cannot be attained by instruction, nor by intellect, nor by much learning. He is to be attained only by the one whom the Self chooses; to him the Self reveals its own form"
+            }
+          ]
+        },
+        {
+          "name": "Chandogya Upanishad",
+          "name_sa": "छान्दोग्योपनिषद्",
+          "verses": [
+            {
+              "verse_id": "chhandogya_6_8_7",
+              "text_sa": "तत्त्वमसि श्वेतकेतो",
+              "transliteration": "Tattvamasi śvetaketo",
+              "translation_en": "That thou art, O Shvetaketu"
+            }
+          ]
+        },
+        {
+          "name": "Brihadaranyaka Upanishad",
+          "name_sa": "बृहदारण्यकोपनिषद्",
+          "verses": [
+            {
+              "verse_id": "brihad_1_4_10",
+              "text_sa": "अहं ब्रह्मास्मि",
+              "transliteration": "Ahaṃ brahmāsmi",
+              "translation_en": "I am Brahman"
+            },
+            {
+              "verse_id": "brihad_4_4_5",
+              "text_sa": "स वा एष महानज आत्माजरोऽमरोऽमृतोऽभयो ब्रह्म",
+              "transliteration": "Sa vā eṣa mahānaja ātmājaro'maro'mṛto'bhayo brahma",
+              "translation_en": "This is that great, unborn Self, undecaying, undying, immortal, fearless, Brahman"
+            }
+          ]
+        },
+        {
+          "name": "Mundaka Upanishad",
+          "name_sa": "मुण्डकोपनिषद्",
+          "verses": [
+            {
+              "verse_id": "mundaka_3_1_8",
+              "text_sa": "न चक्षुषा गृह्यते नापि वाचा नान्यैर्देवैस्तपसा कर्मणा वा। ज्ञानप्रसादेन विशुद्धसत्त्वस्ततस्तु तं पश्यते निष्कलं ध्यायमानः॥",
+              "transliteration": "Na cakṣuṣā gṛhyate nāpi vācā nānyairdevaistapasā karmaṇā vā | jñānaprasādena viśuddhasattvastatastu taṃ paśyate niṣkalaṃ dhyāyamānaḥ ||",
+              "translation_en": "He is not grasped by the eye, nor by speech, nor by other senses, nor by austerity or action. When one's nature is purified by the light of knowledge, then one sees Him, the partless, through meditation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text_id": "bhagavad_gita",
+      "text_name_sa": "भगवद्गीता",
+      "text_name_en": "Bhagavad Gita",
+      "date": "~400-200 BCE",
+      "chapters": 18,
+      "verses": [
+        {
+          "verse_id": "bg_2_47",
+          "chapter": 2,
+          "verse": 47,
+          "text_sa": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन। मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥",
+          "transliteration": "Karmaṇyevādhikāraste mā phaleṣu kadācana | mā karmaphalaheturbhūrmā te saṅgo'stvakarmaṇi ||",
+          "translation_en": "You have a right to perform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to not doing your duty"
+        },
+        {
+          "verse_id": "bg_4_7",
+          "chapter": 4,
+          "verse": 7,
+          "text_sa": "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत। अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥",
+          "transliteration": "Yadā yadā hi dharmasya glānirbhavati bhārata | abhyutthānamadharmasya tadātmānaṃ sṛjāmyaham ||",
+          "translation_en": "Whenever there is a decline in righteousness and an increase in unrighteousness, O Arjuna, at that time I manifest myself"
+        },
+        {
+          "verse_id": "bg_4_8",
+          "chapter": 4,
+          "verse": 8,
+          "text_sa": "परित्राणाय साधूनां विनाशाय च दुष्कृताम्। धर्मसंस्थापनार्थाय सम्भवामि युगे युगे॥",
+          "transliteration": "Paritrāṇāya sādhūnāṃ vināśāya ca duṣkṛtām | dharmasaṃsthāpanārthāya sambhavāmi yuge yuge ||",
+          "translation_en": "To protect the righteous, to destroy the wicked, and to reestablish the principles of dharma, I appear age after age"
+        },
+        {
+          "verse_id": "bg_9_22",
+          "chapter": 9,
+          "verse": 22,
+          "text_sa": "अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते। तेषां नित्याभियुक्तानां योगक्षेमं वहाम्यहम्॥",
+          "transliteration": "Ananyāścintayanto māṃ ye janāḥ paryupāsate | teṣāṃ nityābhiyuktānāṃ yogakṣemaṃ vahāmyaham ||",
+          "translation_en": "To those who worship Me, meditating on Me alone, to those who are always steadfast, I carry what they need and preserve what they have"
+        },
+        {
+          "verse_id": "bg_18_66",
+          "chapter": 18,
+          "verse": 66,
+          "text_sa": "सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज। अहं त्वां सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः॥",
+          "transliteration": "Sarvadharmānparityajya māmekaṃ śaraṇaṃ vraja | ahaṃ tvāṃ sarvapāpebhyo mokṣayiṣyāmi mā śucaḥ ||",
+          "translation_en": "Abandon all varieties of religion and just surrender unto Me. I shall deliver you from all sinful reactions. Do not fear"
+        }
+      ]
+    }
+  ],
+  "hash": "c9f6e5d4a3b2c1f8e7d6a5b4c3d2e1f9a8b7c6d5e4f3a2b1c9d8e7f6a5b4c3d2"
+}

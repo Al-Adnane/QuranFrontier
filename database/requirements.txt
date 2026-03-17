@@ -1,0 +1,37 @@
+# FrontierQu Database Requirements
+# Python package dependencies for corpus data ingestion and management
+
+# Core Database
+psycopg2-binary>=2.9.0          # PostgreSQL adapter
+SQLAlchemy>=2.0.0               # SQL toolkit and ORM
+
+# Data Processing
+pandas>=1.4.0                   # Data manipulation
+numpy>=1.22.0                   # Numerical computing
+
+# Configuration and Utilities
+pyyaml>=6.0                     # YAML configuration files
+python-dotenv>=0.20.0           # Environment variable management
+click>=8.0.0                    # CLI framework
+
+# Validation and Quality
+pydantic>=2.0.0                 # Data validation
+marshmallow>=3.18.0             # Object serialization
+
+# Monitoring and Logging
+python-json-logger>=2.0.0       # Structured JSON logging
+prometheus-client>=0.15.0       # Metrics collection (optional)
+
+# Performance and Async
+asyncpg>=0.27.0                 # Async PostgreSQL adapter (optional)
+aiofiles>=22.0.0                # Async file I/O (optional)
+
+# Testing (optional)
+pytest>=7.0.0                   # Testing framework
+pytest-postgresql>=5.0.0        # PostgreSQL test fixtures
+factory-boy>=3.2.0              # Test data factories
+
+# Development
+black>=23.0.0                   # Code formatting
+ruff>=0.1.0                     # Fast Python linter
+mypy>=1.0.0                     # Type checking
