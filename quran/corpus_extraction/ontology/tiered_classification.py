@@ -15,11 +15,11 @@ class TieredClassifier:
     into three tiers with confidence ceilings.
     """
 
-    # Confidence ceilings for each tier
+    # Confidence ceilings for each tier (ensemble-validated values)
     CONFIDENCE_CEILINGS = {
-        ClassificationTier.EMPIRICAL: 0.95,      # Tier 1
-        ClassificationTier.FRONTIER: 0.60,       # Tier 2
-        ClassificationTier.METAPHORICAL: 0.30    # Tier 3
+        ClassificationTier.EMPIRICAL: 0.85,      # Tier 1 (was 0.95)
+        ClassificationTier.FRONTIER: 0.75,       # Tier 2 (was 0.60)
+        ClassificationTier.METAPHORICAL: 0.60    # Tier 3 (was 0.30)
     }
 
     def classify(self, claim: Dict) -> int:
@@ -91,6 +91,23 @@ class TieredClassifier:
             float: Maximum confidence ceiling for the tier
         """
         return self.CONFIDENCE_CEILINGS.get(tier, 0.30)
+
+    def classify_verse(self, claim: Dict) -> Dict:
+        """
+        Classify a verse claim and return a dict with tier and confidence ceiling.
+
+        This is a convenience wrapper around classify() that also returns the
+        applicable confidence ceiling for the determined tier.
+
+        Args:
+            claim: Dictionary containing claim information (same as classify())
+
+        Returns:
+            dict: {'tier': int, 'confidence': float} where confidence is the ceiling
+        """
+        tier = self.classify(claim)
+        ceiling = self.get_confidence_ceiling(tier)
+        return {'tier': int(tier), 'confidence': ceiling}
 
     def validate_confidence(self, tier: int, confidence: float) -> bool:
         """

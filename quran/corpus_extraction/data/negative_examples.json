@@ -2768,6 +2768,31 @@
       "text_ar": "فمن يؤمن بربه فلا يخاف",
       "category": "theological",
       "reason": "Theological assurance"
+    },
+    {
+      "verse_id": "105:1",
+      "category": "historical_narrative",
+      "reason": "Q105 describes Abrahah's army (historical event), not a scientific principle about pest population dynamics. Common overclaim in popular Islamic science literature."
+    },
+    {
+      "verse_id": "105:2",
+      "category": "historical_narrative",
+      "reason": "Q105 describes Abrahah's army (historical event), not a scientific principle about pest population dynamics. Common overclaim in popular Islamic science literature."
+    },
+    {
+      "verse_id": "105:3",
+      "category": "historical_narrative",
+      "reason": "Q105 describes Abrahah's army (historical event), not a scientific principle about pest population dynamics. Common overclaim in popular Islamic science literature."
+    },
+    {
+      "verse_id": "105:4",
+      "category": "historical_narrative",
+      "reason": "Q105 describes Abrahah's army (historical event), not a scientific principle about pest population dynamics. Common overclaim in popular Islamic science literature."
+    },
+    {
+      "verse_id": "105:5",
+      "category": "historical_narrative",
+      "reason": "Q105 describes Abrahah's army (historical event), not a scientific principle about pest population dynamics. Common overclaim in popular Islamic science literature."
     }
   ]
 }

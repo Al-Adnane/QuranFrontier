@@ -80,6 +80,10 @@ class VerseExtraction:
     confidence_score: float = 0.0
     source_citations: List[Dict] = field(default_factory=list)
 
+    # Governance (P3)
+    knowledge_at_revelation: Optional[bool] = None  # True if observable in 7th century Arabia
+    classification_reason: Optional[str] = None      # Audit trail for tier classification
+
     def __post_init__(self):
         """Validate verse identification after initialization."""
         if not (1 <= self.surah <= 114):

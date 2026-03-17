@@ -2901,27 +2901,6 @@
       ]
     },
     {
-      "verse_id": "2:10",
-      "verse_text": "Translation of verse 204",
-      "verse_text_ar": "Verse 204 text",
-      "concepts": [
-        {
-          "concept_id": "engineering_001",
-          "concept_name": "structural_mechanics",
-          "domain": "engineering",
-          "tier": 1,
-          "mapping_confidence": 0.87
-        },
-        {
-          "concept_id": "engineering_036",
-          "concept_name": "voltage",
-          "domain": "engineering",
-          "tier": 1,
-          "mapping_confidence": 0.86
-        }
-      ]
-    },
-    {
       "verse_id": "2:11",
       "verse_text": "Translation of verse 205",
       "verse_text_ar": "Verse 205 text",
@@ -22050,55 +22029,6 @@
       "verse_text": "Translation of verse 1572",
       "verse_text_ar": "Verse 1572 text",
       "concepts": []
-    },
-    {
-      "verse_id": "9:14",
-      "verse_text": "Translation of verse 1573",
-      "verse_text_ar": "Verse 1573 text",
-      "concepts": [
-        {
-          "concept_id": "biology_001",
-          "concept_name": "photosynthesis",
-          "domain": "biology",
-          "tier": 1,
-          "mapping_confidence": 0.9
-        },
-        {
-          "concept_id": "biology_051",
-          "concept_name": "pancreas",
-          "domain": "biology",
-          "tier": 1,
-          "mapping_confidence": 0.87
-        },
-        {
-          "concept_id": "medicine_001",
-          "concept_name": "immune_system",
-          "domain": "medicine",
-          "tier": 1,
-          "mapping_confidence": 0.915
-        },
-        {
-          "concept_id": "medicine_031",
-          "concept_name": "analgesic",
-          "domain": "medicine",
-          "tier": 1,
-          "mapping_confidence": 0.895
-        },
-        {
-          "concept_id": "medicine_061",
-          "concept_name": "muscle",
-          "domain": "medicine",
-          "tier": 1,
-          "mapping_confidence": 0.91
-        },
-        {
-          "concept_id": "physics_055",
-          "concept_name": "diffraction",
-          "domain": "physics",
-          "tier": 1,
-          "mapping_confidence": 0.768
-        }
-      ]
     },
     {
       "verse_id": "9:15",
